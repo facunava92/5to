@@ -1,0 +1,80 @@
+PWD D:/fnavarro/5to/Electronica de Potencia/TP's/TPN2/Informe
+INPUT d:/ASUS/Program Files/texlive/2018/texmf.cnf
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/web2c/texmf.cnf
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT TPN2.tex
+OUTPUT TPN2.log
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/base/article.cls
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/base/article.cls
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/base/size10.clo
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/base/size10.clo
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT TPN2.aux
+INPUT TPN2.aux
+OUTPUT TPN2.aux
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+OUTPUT TPN2.pdf
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT TPN2.aux
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb

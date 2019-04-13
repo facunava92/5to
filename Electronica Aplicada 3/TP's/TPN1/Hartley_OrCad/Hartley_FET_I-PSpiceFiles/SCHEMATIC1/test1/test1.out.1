@@ -1,0 +1,53 @@
+
+**** 04/04/19 01:11:43 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test1"  [ D:\FACUNAVA92\5TO\ELECTRONICA APLICADA 3\TP\TP1\Hartley_OrCad\Hartley_FET_I-PSpiceFiles\SCHEMATIC1
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Users\facun\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source HARTLEY_FET_I
+J_J1         N00189 N00171 0 2N5486/PLP
+L_L1         N00171 N00167  5uH  
+V_V1         N00167 0 -1
+C_C1         N00189 N00171  101pF  
+L_L2         N00308 N00189  5uH  
+V_V2         N00308 0 12
+R_R1         0 N00499  50 TC=0,0 
+X_TX1    N00308 N00189 N00499 0 SCHEMATIC1_TX1 
+
+.subckt SCHEMATIC1_TX1 1 2 3 4  
+K_TX1         L1_TX1 L2_TX1 0,5
+L1_TX1         1 2 5uH
+L2_TX1         3 4 5uH
+.ends SCHEMATIC1_TX1
+
+**** RESUMING test1.cir ****
+.END
+
+ERROR(ORPSIM-15113): Model 5 used by X_TX1.K_TX1 is undefined
+

@@ -1,0 +1,96 @@
+(ExpressProject "Hartley_FET_I"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\hartley_fet_i.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\hartley_fet_i-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\hartley_fet_i-pspicefiles\schematic1\test1.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\hartley_fet_i-pspicefiles\schematic1\test1.sim"
+        (DisplayName "SCHEMATIC1-test1")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (XFRM_LINEAR
+      (FullPartName "XFRM_LINEAR.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "D:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (L
+      (FullPartName "L.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (ER14_3F3
+      (FullPartName "ER14_3F3.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\MAGNETIC.OLB")
+      (DeviceIndex "0"))
+    (0402CS-12N
+      (FullPartName "0402CS-12N.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\COILCRAFT.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (C_elect
+      (FullPartName "C_elect.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (2N5486/PLP
+      (FullPartName "2N5486/PLP.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\PHIL_FET.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "D:\Cadence\SPB_17.2\tools\capture\library\pspice")
+  (MPSSessionName "facun")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Outputs"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 282"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 52 1382 52 373")
+        (Scroll "814 345")
+        (Zoom "232")
+        (Occurrence "/"))
+      (Path
+         "D:\FACUNAVA92\5TO\ELECTRONICA APLICADA 3\TP\TP1\HARTLEY_ORCAD\HARTLEY_FET_I.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1"))))
