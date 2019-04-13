@@ -1,27 +1,64 @@
 \documentclass{article}
 \usepackage{graphicx}
+%permite ecribir acentos directamente
+\usepackage[utf8]{inputenc}
+% Esto es para que el LÁTEX sepa que el texto está en español, se agrega el ingles para el paquete de gráfico de circuitos:
+\usepackage[spanish]{babel}
 
+\usepackage{geometry}
+ \geometry{a4paper,total={170mm,257mm},left=15mm,right=15mm,top=20mm,}
+ 
 \begin{document}
 
-\title{Introduction to \LaTeX{}}
-\author{Facundo Emilio Navarro}
+\begin{titlepage}
+ \centering
+	\includegraphics[scale=0.80]{imagenes/LOGO.jpg} \par
+ 	\vspace{1cm}
+ 	{\scshape\LARGE Universidad Tecnológica Nacional \par}
+ 	{\scshape\large Facultad Regional de Córdoba \par}
+ 	\vspace{1cm}
+	{\bfseries \Large Trabajo Práctico De Laboratorio $N^{\circ} 2$\par}
+	{\bfseries \Large Control de ángulo de conducción de un SCR \par}
+ 	\vspace{1.5cm}
 
-\maketitle
+	\begin{tabular}{ll}
+		Alassia, Francisco	&	60861	\\
+		Amaya, Matías		&	68284	\\
+		Lamas, Matías 		&	65536 	\\
+		Navarro, Facundo 	&	63809 	\\
+		Veron, Misael	 	&	62628
+	\end{tabular}
+	
+	\vspace{1cm}
+	Curso: 5r2 \\
+	Grupo $N^{\circ} 11$
+ 	\vfill
+	{\bfseries \Large Electrónica de Potencia \par}
 
-\begin{abstract}
-Facundo Emilio Navarro
-\end{abstract}
+	\vspace{1.5cm}
+	Docentes: \par
+	Ing. Oros \par
+	Ing. Rabinovich \par
 
-\section{Introducion}
-Here is the text of your introduction.
+ 	\vfill
+	{\large \today\par}
+\end{titlepage}
 
-\begin{equation}
-    \label{simple_equation}
-    \alpha = \sqrt{ \beta }
-\end{equation}
 
-\subsection{Subsection Heading Here}
-Write your subsection text here.
+
+\section{Introducción}
+Diseñar y construir un circuito para el control del ángulo de conducción de un SCR mediante el método escalón-rampa coseno. La tensión en la carga debe ser controlada por una señal de reverencia $V_{reff}$ , que variará entre 0 y 10 $V$.
+
+
+\subsection{Funcionamiento}
+La figura \textcolor{blue}{\ref{fig:figura1}}corresponde al circuito de control del ángulo de conducción de onda completa de un SCR con disparo por UJT. El circuito del método escalón-rampa coseno de la figura , deriva del circuito anterior con el agregado de algunas variantes que permite mayor linealidad entre la tensión de referencia y la tensión en la carga.
+
+\begin{figure}[h]
+ \begin{center}
+	\includegraphics[scale=0.6]]{imagenes/circuit_jfet}
+	\caption{Circuito en Orcad PSpice}\label{fig:circuit_jfet}
+ \end{center}
+\end{figure}
 
 
 \section{Conclusion}
