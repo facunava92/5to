@@ -1,0 +1,5 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{2}% 
+\contentsline {subsection}{\numberline {1.1}Funcionamiento}{2}% 
+\contentsline {section}{\numberline {2}Desarrollo}{3}% 
+\contentsline {subsection}{\numberline {2.1}C\IeC {\'a}lculos}{3}% 
