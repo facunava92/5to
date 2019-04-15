@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.25)  13 APR 2019 19:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.25)  14 APR 2019 19:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -503,12 +503,12 @@ LaTeX Info: Redefining \% on input line 1.
 \openout3 = `TPN2.toc'.
 
  [1]
-<imagenes/fig1.jpg, id=19, 676.32675pt x 304.7385pt>
+<imagenes/fig1.jpg, id=21, 676.32675pt x 304.7385pt>
 File: imagenes/fig1.jpg Graphic file (type jpg)
 <use imagenes/fig1.jpg>
 Package pdftex.def Info: imagenes/fig1.jpg  used on input line 68.
 (pdftex.def)             Requested size: 473.42549pt x 213.31549pt.
-<imagenes/fig2.jpg, id=20, 811.23074pt x 324.61275pt>
+<imagenes/fig2.jpg, id=22, 811.23074pt x 324.61275pt>
 File: imagenes/fig2.jpg Graphic file (type jpg)
 <use imagenes/fig2.jpg>
 Package pdftex.def Info: imagenes/fig2.jpg  used on input line 77.
@@ -516,15 +516,23 @@ Package pdftex.def Info: imagenes/fig2.jpg  used on input line 77.
  [2
 
  <./imagenes/fig1.jpg> <./imagenes/fig2.jpg>]
-[3] (./TPN2.aux
+[3]
+<imagenes/fig3.jpg, id=30, 704.03024pt x 341.47575pt>
+File: imagenes/fig3.jpg Graphic file (type jpg)
+<use imagenes/fig3.jpg>
+Package pdftex.def Info: imagenes/fig3.jpg  used on input line 142.
+(pdftex.def)             Requested size: 512.14963pt x 248.4155pt.
+ [4
+
+ <./imagenes/fig3.jpg>] (./TPN2.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 4867 strings out of 492616
- 67707 string characters out of 6126076
- 156897 words of memory out of 5000000
- 8702 multiletter control sequences out of 15000+600000
+ 4873 strings out of 492616
+ 67812 string characters out of 6126076
+ 157905 words of memory out of 5000000
+ 8707 multiletter control sequences out of 15000+600000
  9342 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,9n,35p,561b,359s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -542,10 +550,10 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><d:/Program Files/texlive/2018
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Program Files/texlive
 /2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/Program Files/tex
 live/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on TPN2.pdf (4 pages, 288812 bytes).
+Output written on TPN2.pdf (5 pages, 358211 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 73 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

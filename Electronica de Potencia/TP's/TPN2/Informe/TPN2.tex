@@ -100,8 +100,8 @@ Para el diseño, los dispositivos elegidos son los siguientes:
 Por consigna, debe efectuarse para una carga resistiva de $220\;V_{RMS}$ y $1\;kW$, entonces
 \begin{align*}
 	I_L &= \frac{P_L}{V_L} \\
-		&= \frac{1000\;W}{220\;V_{RMS}} \\
-		&= 4,54 \; A_{RMS}
+	I_L	&= \frac{1000\;W}{220\;V_{RMS}} \\
+	I_L	&= 4,54 \; A_{RMS}
 \end{align*}
 
 De la hoja de datos del SCR, se tiene:
@@ -121,8 +121,29 @@ Para garantizar que el disparo se encuentre siempre dentro de la zona de disparo
 De la hoja de datos del UJT, se tiene:
 \begin{itemize}\itemsep0em \itemindent=2em
 	\item[•]{\makebox[1.8cm]{$\eta$\hfill}= $0,75$}
-	\item[•]{\makebox[1.8cm]{$R_{BB1(off)}$\hfill}= $7 \; k\Omega$}
-	\item[•]{\makebox[1.8cm]{$R_{B(on)}$\hfill}= $600 \; k\Omega$}
+	\item[•]{\makebox[1.8cm]{$R_{BB(off)}$\hfill}= $7 \; k\Omega$}
+	\item[•]{\makebox[1.8cm]{$R_{BB(on)}$\hfill}= $600 \; k\Omega$}
 \end{itemize}
+%
+Los valores de las resistencias de las bases son, por la relación:
+\begin{align*}
+	\eta &= \frac{R_{BB1}}{R_{BB(off)}} \\
+	\eta &= \frac{R_{BB1}}{R_{BB1} + R_{BB2}}\\
+\end{align*}
+entonces, 
+\[R_{BB1} = 5250 \; \Omega \; ; \; R_{BB2} = 1750 \; \Omega \]
+\clearpage
+%
+\subsubsection{Cálculos de $R_3$, $R_4$ y $V_Z$}
+En la figura \textcolor{blue}{\ref{fig:fig3}} se muestra el circuito equivalente con el agregado de las resistencias que procederemos a calcular como así también la curva característica del UJT.
+%
+\begin{figure}[h]
+ \begin{center}
+	\includegraphics[width=\textwidth]{imagenes/fig3.jpg} 
+	\caption{Circuito equivalente y curva característica}\label{fig:fig3}
+ \end{center}
+\end{figure}
+%
+La corriente que debe circular entre la base 2 y la base 1 debe ser mucho mayor que la requerida por el SCR, entonces
 
 \end{document}
