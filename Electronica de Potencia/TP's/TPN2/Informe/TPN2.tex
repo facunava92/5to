@@ -7,11 +7,12 @@
 
 \usepackage{geometry}
  \geometry{a4paper,total={170mm,257mm},left=15mm,right=15mm,top=20mm,}
- 
+\usepackage{hyperref} 
 \usepackage{amsmath, amsfonts}
 \usepackage{enumitem}
 \usepackage{xcolor}
 \usepackage{textcomp}
+
  
 \begin{document}
 
@@ -144,6 +145,41 @@ En la figura \textcolor{blue}{\ref{fig:fig3}} se muestra el circuito equivalente
  \end{center}
 \end{figure}
 %
-La corriente que debe circular entre la base 2 y la base 1 debe ser mucho mayor que la requerida por el SCR, entonces
+La corriente que debe circular entre la base 2 y la base 1 debe ser mucho mayor que la requerida por el SCR, 
+\[ I_{B2B1(on)} = 15 \; I_G \]
+La tensión en $R_4$, debe ser la necesaria para el disparo del SCR y la corriente en la resistencia será la diferencia entre $I_{B2B1(on)}$ e $I_G$
+\begin{align*}
+V_{GT} &= R_4 * (I_{B2B1(on) - I_G}) \\
+V_{GT} &\approx 82 \; \Omega  
+\end{align*}
 
+Por otro lado, $V_P$ por consigna debe ser 10 V, entonces
+\[V_{E(off)} < 10 \; V \; ; \; V_{E(on)} > 10 \; V\]
+
+Cuando el UJT no está disparado, la tensión entre $R_{BB1}$ y $R_4$ debe ser
+\begin{align*}
+V_{E(off)} &= V_D + \eta V_{B2B1} + V_{R4} \\
+V_{E(off)} &= V_D + V_{B1R4}\\
+\end{align*}
+
+quedando
+
+\[ V_{B1RA} = 9,5 \; V \]
+
+y la corriente 
+\[ I_{B2B1(off)} = \frac{V_{B1RA}}{R_{BB1} + R_4} = 1,782 \; mA \]
+
+La tensión en la base 2 es
+\[ V_{B2} = I_{B2B1(off)} (R_{BB} + R_4) = 12.62 \; V \]
+y en $R_3$
+\[ I_{B2B1(off)} * R_3 = V_Z - V_{B2} \] \label{eq:uno} 
+
+Por otro lado, cuando el UJT es disparado la resistencia $R_{BB}$ desciende a $600 \; \Omega$ entonces
+\begin{align*}
+V_Z &= V_{R3} + V_{B2B1} + V_{R4} \\
+V_Z &= I_{B2B1(on)} (R_3 + R_{BB} + R_4)\\ \label{eq:dos}
+\end{align*}
+
+De lo anterior, se puede formar un sistema de ecuaciones entre las ecuaciones \ref{eq:uno} y \ref{eq:dos}, se obtiene
+\[ R_3 = 180 \; \Omega \]
 \end{document}

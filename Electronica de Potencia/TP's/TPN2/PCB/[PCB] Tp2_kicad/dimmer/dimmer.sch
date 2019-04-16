@@ -213,17 +213,6 @@ Wire Wire Line
 	7150 4550 6350 4550
 Connection ~ 6350 4550
 $Comp
-L dimmer_sch:Transistor_BJT_2N2646 Q1
-U 1 1 5CB53134
-P 7600 4000
-F 0 "Q1" H 7790 4046 50  0000 L CNN
-F 1 "2N2646" H 7790 3955 50  0000 L CNN
-F 2 "lib_fp:TO-18-3" H 7800 3925 50  0001 L CIN
-F 3 "http://www.bucek.name/pdf/2n2646,2647.pdf" H 7600 4000 50  0001 L CNN
-	1    7600 4000
-	1    0    0    -1  
-$EndComp
-$Comp
 L dimmer_sch:Device_R_US R3
 U 1 1 5CB539F8
 P 7700 3650
@@ -343,8 +332,6 @@ F 3 "~" H 3250 3600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7150 4550 8350 4550
-Wire Wire Line
-	8350 3000 8350 4050
 $Comp
 L dimmer_sch:Connector_Generic_Conn_01x02 J2
 U 1 1 5CB3E0B6
@@ -357,7 +344,7 @@ F 3 "~" H 4250 3200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L logo:LOGO G1
+L dimmer-rescue:LOGO-logo G1
 U 1 1 5CB4E2BD
 P 3500 4800
 F 0 "G1" H 3575 4853 60  0000 L CNN
@@ -365,6 +352,19 @@ F 1 "LOGO" H 3575 4747 60  0000 L CNN
 F 2 "lib_fp:logo_utn_fsilk_small" H 3500 4800 50  0001 C CNN
 F 3 "" H 3500 4800 50  0001 C CNN
 	1    3500 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 4000 8350 3000
+$Comp
+L dimmer_sch:2N2647 Q1
+U 1 1 5CB52F99
+P 7600 4000
+F 0 "Q1" H 7790 4046 50  0000 L CNN
+F 1 "2N2647" H 7790 3955 50  0000 L CNN
+F 2 "lib_fp:TO-18-3" H 7800 3925 50  0001 L CIN
+F 3 "" H 7600 4000 50  0001 L CNN
+	1    7600 4000
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
