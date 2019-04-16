@@ -104,27 +104,10 @@ F 3 "~" H 5800 3250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5800 3100 5800 3000
-$Comp
-L dimmer_sch:1N47xxA DZ1
-U 1 1 5CB48759
-P 5800 4200
-F 0 "DZ1" V 5754 4279 50  0000 L CNN
-F 1 "1N47xxA" V 5845 4279 50  0000 L CNN
-F 2 "lib_fp:D_DO-41_SOD81_P10.16mm_Horizontal" H 5800 4025 50  0001 C CNN
-F 3 "https://www.vishay.com/docs/85816/1n4728a.pdf" H 5800 4200 50  0001 C CNN
-	1    5800 4200
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5800 4050 5800 3450
-Wire Wire Line
-	5800 4550 5500 4550
 Wire Wire Line
 	5500 4550 5500 3950
 Wire Wire Line
 	5500 3950 4500 3950
-Wire Wire Line
-	5800 4350 5800 4550
 Connection ~ 4500 3950
 Wire Wire Line
 	4500 3950 4500 3400
@@ -152,7 +135,6 @@ Wire Wire Line
 	6350 3850 6350 3800
 Wire Wire Line
 	6350 3450 5800 3450
-Connection ~ 5800 3450
 Wire Wire Line
 	5800 3450 5800 3400
 $Comp
@@ -166,9 +148,6 @@ F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 6850 4000 50  0001 C CNN
 	1    6850 4000
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	6350 4550 5800 4550
-Connection ~ 5800 4550
 $Comp
 L dimmer_sch:Device_R_US R5
 U 1 1 5CB4E3DE
@@ -331,7 +310,7 @@ F 3 "~" H 3250 3600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7150 4550 8350 4550
+	7150 4550 7700 4550
 $Comp
 L dimmer_sch:Connector_Generic_Conn_01x02 J2
 U 1 1 5CB3E0B6
@@ -367,4 +346,28 @@ F 3 "" H 7600 4000 50  0001 L CNN
 	1    7600 4000
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5500 4550 5800 4550
+$Comp
+L dimmer_sch:Diode_1N47xxA DZ1
+U 1 1 5CB5BBFF
+P 5800 4000
+F 0 "DZ1" V 5754 4079 50  0000 L CNN
+F 1 "Diode_1N47xxA" V 5845 4079 50  0000 L CNN
+F 2 "lib_fp:D_DO-41_SOD81_P10.16mm_Horizontal" H 5800 3825 50  0001 C CNN
+F 3 "" H 5800 4000 50  0001 C CNN
+	1    5800 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5800 3850 5800 3450
+Connection ~ 5800 3450
+Wire Wire Line
+	5800 4150 5800 4550
+Connection ~ 5800 4550
+Wire Wire Line
+	5800 4550 6350 4550
+Connection ~ 7700 4550
+Wire Wire Line
+	7700 4550 8350 4550
 $EndSCHEMATC
