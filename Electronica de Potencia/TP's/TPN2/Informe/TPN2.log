@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.4.9)  16 APR 2019 22:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.4.9)  17 APR 2019 01:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -471,27 +471,27 @@ LaTeX Info: Redefining \% on input line 23.
 )
 \openout1 = `TPN2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 15.
 
 (d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    ... okay on input line 15.
 
 (d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.m
 kii
@@ -527,8 +527,8 @@ ys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \. on input line 16.
-LaTeX Info: Redefining \% on input line 16.
+LaTeX Info: Redefining \. on input line 15.
+LaTeX Info: Redefining \% on input line 15.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -565,7 +565,7 @@ LaTeX Info: Redefining \% on input line 16.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 16.
+Package hyperref Info: Link coloring OFF on input line 15.
 (d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -575,24 +575,24 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count124
 )
-LaTeX Info: Redefining \ref on input line 16.
-LaTeX Info: Redefining \pageref on input line 16.
-LaTeX Info: Redefining \nameref on input line 16.
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
  (./TPN2.out) (./TPN2.out)
 \@outlinefile=\write3
 \openout3 = `TPN2.out'.
 
-<imagenes/LOGO.jpg, id=28, 295.1025pt x 302.12875pt>
+<imagenes/LOGO.jpg, id=40, 295.1025pt x 302.12875pt>
 File: imagenes/LOGO.jpg Graphic file (type jpg)
 <use imagenes/LOGO.jpg>
-Package pdftex.def Info: imagenes/LOGO.jpg  used on input line 20.
+Package pdftex.def Info: imagenes/LOGO.jpg  used on input line 18.
 (pdftex.def)             Requested size: 236.0823pt x 241.70332pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 25.
+LaTeX Font Info:    Try loading font information for U+msa on input line 23.
 
 (d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 25.
+LaTeX Font Info:    Try loading font information for U+msb on input line 23.
 
 (d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -611,137 +611,128 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.55 \clearpage
+l.53 \clearpage
                 [1]
-<imagenes/fig1.jpg, id=57, 676.32675pt x 304.7385pt>
+<imagenes/fig1.jpg, id=72, 676.32675pt x 304.7385pt>
 File: imagenes/fig1.jpg Graphic file (type jpg)
 <use imagenes/fig1.jpg>
-Package pdftex.def Info: imagenes/fig1.jpg  used on input line 68.
+Package pdftex.def Info: imagenes/fig1.jpg  used on input line 66.
 (pdftex.def)             Requested size: 473.42549pt x 213.31549pt.
-<imagenes/fig2.jpg, id=58, 811.23074pt x 324.61275pt>
+<imagenes/fig2.jpg, id=73, 811.23074pt x 324.61275pt>
 File: imagenes/fig2.jpg Graphic file (type jpg)
 <use imagenes/fig2.jpg>
-Package pdftex.def Info: imagenes/fig2.jpg  used on input line 77.
+Package pdftex.def Info: imagenes/fig2.jpg  used on input line 75.
 (pdftex.def)             Requested size: 486.7422pt x 194.76913pt.
  [2
 
  <./imagenes/fig1.jpg> <./imagenes/fig2.jpg>] [3]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 137.
+(hyperref)                removing `math shift' on input line 135.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 137.
+(hyperref)                removing `subscript' on input line 135.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 137.
+(hyperref)                removing `math shift' on input line 135.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 137.
+(hyperref)                removing `math shift' on input line 135.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 137.
+(hyperref)                removing `subscript' on input line 135.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 137.
+(hyperref)                removing `math shift' on input line 135.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 137.
+(hyperref)                removing `math shift' on input line 135.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 137.
+(hyperref)                removing `subscript' on input line 135.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 137.
+(hyperref)                removing `math shift' on input line 135.
 
-<imagenes/fig3.jpg, id=71, 704.03024pt x 341.47575pt>
+<imagenes/fig3.jpg, id=86, 704.03024pt x 341.47575pt>
 File: imagenes/fig3.jpg Graphic file (type jpg)
 <use imagenes/fig3.jpg>
-Package pdftex.def Info: imagenes/fig3.jpg  used on input line 142.
+Package pdftex.def Info: imagenes/fig3.jpg  used on input line 140.
 (pdftex.def)             Requested size: 512.14963pt x 248.4155pt.
 [4
 
  <./imagenes/fig3.jpg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 189.
+(hyperref)                removing `math shift' on input line 187.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 189.
+(hyperref)                removing `subscript' on input line 187.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 189.
+(hyperref)                removing `math shift' on input line 187.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 189.
+(hyperref)                removing `math shift' on input line 187.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 189.
+(hyperref)                removing `subscript' on input line 187.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 189.
+(hyperref)                removing `math shift' on input line 187.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 189.
+(hyperref)                removing `math shift' on input line 187.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 189.
+(hyperref)                removing `subscript' on input line 187.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 189.
+(hyperref)                removing `math shift' on input line 187.
 
-<imagenes/fig5.jpg, id=81, 742.57425pt x 300.52275pt>
+<imagenes/fig5.jpg, id=96, 742.57425pt x 300.52275pt>
 File: imagenes/fig5.jpg Graphic file (type jpg)
 <use imagenes/fig5.jpg>
-Package pdftex.def Info: imagenes/fig5.jpg  used on input line 204.
+Package pdftex.def Info: imagenes/fig5.jpg  used on input line 202.
 (pdftex.def)             Requested size: 512.14963pt x 207.2692pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 209.
 [5 <./imagenes/fig5.jpg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 209.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 250.
+ [6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 250.
  (./TPN2.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 209.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 209.
-
-
-Package rerunfilecheck Warning: File `TPN2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `TPN2.out':
-(rerunfilecheck)             Before: E7A9C918C269873E76B5897E8307FA19;387
-(rerunfilecheck)             After:  B5887FF4571BB94A7519B0533A2FF07F;450.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 209.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 250.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 250.
+Package rerunfilecheck Info: File `TPN2.out' has not changed.
+(rerunfilecheck)             Checksum: 70EB44B77857463798F62759BC4BD21A;578.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 250.
  ) 
 Here is how much of TeX's memory you used:
- 8324 strings out of 492616
- 120988 string characters out of 6123697
- 236461 words of memory out of 5000000
- 12121 multiletter control sequences out of 15000+600000
+ 8330 strings out of 492616
+ 121060 string characters out of 6123697
+ 237497 words of memory out of 5000000
+ 12124 multiletter control sequences out of 15000+600000
  9342 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,9n,35p,561b,387s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,9n,35p,561b,535s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-su
 per-ts1.enc}<d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmbx10.pfb><d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type
@@ -758,10 +749,10 @@ public/amsfonts/cm/cmr7.pfb><d:/ASUS/Program Files/texlive/2018/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy10.pfb><d:/ASUS/Program Files/texlive/2018/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/ASUS/Program Files/texlive/2
 018/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on TPN2.pdf (6 pages, 459331 bytes).
+Output written on TPN2.pdf (7 pages, 464081 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 111 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
- 74 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 159 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -12,9 +12,7 @@
 \usepackage{xcolor}
 \usepackage{textcomp}
 
- 
 \begin{document}
-
 \begin{titlepage}
  \centering
 	\includegraphics[scale=0.80]{imagenes/LOGO.jpg} \par
@@ -205,5 +203,48 @@ Se termina presentando el esquemático final con el agregado de los valores de l
 	\caption{Circuito final}\label{fig:fig5}
  \end{center}
 \end{figure}
+
+\subsection{Mediciones y experimentación}
+
+\section{Conclusión}
+El método escalón-rampa coseno presenta las siguientes ventajas y desventajas:
+
+\begin{itemize}
+\item[•] Ventajas
+	\begin{itemize}
+		\item[*] Se puede emplear para un control preciso de la intensidad lumínica de una lámpara, la temperatura de un soldador u otros dispositivos alimentados con la tensión de la red.
+		\item[*] Requiere de dispositivos de baja potencia.
+		\item[*] Circuito de bajo costo y fácil implementación.
+	\end{itemize}
+\item[•] Desventajas
+	\begin{itemize}
+		\item[*] Para lograr una buena linealidad requiere que los componentes utilizados sean lo más exactos posibles.
+		\item[*] El valor de la resistencia de la carga debe ser menor que la resistencia total del circuito de control.
+	\end{itemize}
+\end{itemize}
+
+Por requisito, la tension máxima de referencia debe ser de $10 \; V$ para ello se coloca una resistencia en serie ubicada en el extremo superior del potenciómentro, sabiendo que:
+\begin{itemize}\itemsep0em \itemindent=2em
+	\item[•]{\makebox[1,7cm]{$I_{R1}$\hfill}= $30 \; mA$}
+	\item[•]{\makebox[1,7cm]{$I_Z$\hfill}= $20 \; mAC$}
+	\item[•]{\makebox[1,7cm]{$I_{B2B1(off)}$\hfill}= $1,8 \;  mA$}
+\end{itemize}
+
+La corriente que circula por la rama del potenciómentro cuanto el UJT se encuentra apagado es:
+\begin{align*}
+I_{pot} &= I_{R1} - I_Z - I_{B2B1(off)} \\
+I_{pot} &= 8,2 \; mA
+\end{align*}
+quedando finalmente
+\begin{align*}
+R_{sup} &= \frac{5,3 \; V}{8,2 \; mA} \\
+R_{sup} &\approx 680 \; \Omega
+\end{align*}
+
+Debido a la no exactitud del valor, tanto del capacitor como el de las resistencias, el circuito presenta una alinealidad entre el giro del potenciómetro en la zona mínima y el ángulo de conducción. Para poder mejorar este defecto se coloca una resistencia en serie ubicada en el extremo inferior para que la tensión del escalón arranque desde un valor mínimo.
+\begin{align*}
+R_{inf} &= \frac{4,8 \; V}{8,2 \; mA} \\
+R_{inf} &\approx 560 \; \Omega
+\end{align*}
 
 \end{document}
