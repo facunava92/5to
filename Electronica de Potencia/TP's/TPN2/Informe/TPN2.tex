@@ -4,7 +4,6 @@
 \usepackage[utf8]{inputenc}
 % Esto es para que el LÁTEX sepa que el texto está en español, se agrega el ingles para el paquete de gráfico de circuitos:
 \usepackage[spanish]{babel}
-
 \usepackage{geometry}
  \geometry{a4paper,total={170mm,257mm},left=15mm,right=15mm,top=20mm,}
 \usepackage{hyperref} 
@@ -172,14 +171,39 @@ y la corriente
 La tensión en la base 2 es
 \[ V_{B2} = I_{B2B1(off)} (R_{BB} + R_4) = 12.62 \; V \]
 y en $R_3$
-\[ I_{B2B1(off)} * R_3 = V_Z - V_{B2} \] \label{eq:uno} 
+
+\begin{equation}
+I_{B2B1(off)} * R_3 = V_Z - V_{B2}  \label{eq:uno}
+\end{equation}
 
 Por otro lado, cuando el UJT es disparado la resistencia $R_{BB}$ desciende a $600 \; \Omega$ entonces
-\begin{align*}
-V_Z &= V_{R3} + V_{B2B1} + V_{R4} \\
-V_Z &= I_{B2B1(on)} (R_3 + R_{BB} + R_4)\\ \label{eq:dos}
-\end{align*}
-
+\begin{align}
+V_Z &= V_{R3} + V_{B2B1} + V_{R4} \nonumber \\
+V_Z &= I_{B2B1(on)} (R_3 + R_{BB} + R_4) \label{eq:dos}
+\end{align}
+%
 De lo anterior, se puede formar un sistema de ecuaciones entre las ecuaciones \ref{eq:uno} y \ref{eq:dos}, se obtiene
 \[ R_3 = 180 \; \Omega \]
+\[ V_Z \approx 13 \; V\]
+%
+\subsubsection{Cálculo de $R_5$, $R_1$ y $C_1$}
+Como se definió al principio $\tau_1$ corresponde a $R_2C_1$ y $\tau_2$ a $R_5C_1$. Se forzará a que el capacitor se encuentre completamente cargado a su valor final luego de un tiempo 20 veces menor al semiciclo de la tensión de red
+\[ \tau_1 = \frac{10 \; ms}{20} = 500 \mu s \]
+Si se elige $C_1 \; = \; 100nF$ entonces
+\[ R_2 = \frac{500 \; \mu s}{100 \; nF} = 5 \; k \Omega \]
+Suponiendo el caso en el que la tensión del escalón es de $0 \; V$, el capacitor deberá cargarse al valor de $10 \; V$ a través de $R_5$ en un tiempo de $10 \; ms$. Suponiendo una señal cuadrada en lugar de una senoidal y la amplitud aplicada a la resistencia $R_1$ de $V_{AC_P} = 311 \; V $, se tiene 
+%
+\[ C_1R_5 = \frac{V_{ACpico}}{V_{C max}} * 10 \; ms \]
+quedando
+\[ R_5 = 3,1 \; M \Omega \]
+
+\subsection{Circuito Final}
+Se termina presentando el esquemático final con el agregado de los valores de los componentes, además se aclara que se agrega dos potenciómetros de tipo trimmer con el fin de calibrar el circuito ante variaciones de los valores de los componentes.
+\begin{figure}[h]
+ \begin{center}
+	\includegraphics[width=\textwidth]{imagenes/fig5.jpg} 
+	\caption{Circuito final}\label{fig:fig5}
+ \end{center}
+\end{figure}
+
 \end{document}

@@ -4,3 +4,5 @@
 \contentsline {section}{\numberline {2}Desarrollo}{3}{section.2}% 
 \contentsline {subsection}{\numberline {2.1}C\IeC {\'a}lculos}{3}{subsection.2.1}% 
 \contentsline {subsubsection}{\numberline {2.1.1}C\IeC {\'a}lculos de $R_3$, $R_4$ y $V_Z$}{4}{subsubsection.2.1.1}% 
+\contentsline {subsubsection}{\numberline {2.1.2}C\IeC {\'a}lculo de $R_5$, $R_1$ y $C_1$}{5}{subsubsection.2.1.2}% 
+\contentsline {subsection}{\numberline {2.2}Circuito Final}{5}{subsection.2.2}% 
