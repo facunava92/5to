@@ -1,0 +1,3 @@
+configurar raspberry con gintea HECHO
+traer router gintea HECHO
+Programa de prueba HECHO

@@ -310,7 +310,7 @@ F 3 "~" H 3250 3600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7150 4550 8350 4550
+	7150 4550 7700 4550
 $Comp
 L dimmer_sch:Connector_Generic_Conn_01x02 J2
 U 1 1 5CB3E0B6
@@ -367,4 +367,7 @@ Wire Wire Line
 Connection ~ 5800 4550
 Wire Wire Line
 	5800 4550 6350 4550
+Connection ~ 7700 4550
+Wire Wire Line
+	7700 4550 8350 4550
 $EndSCHEMATC

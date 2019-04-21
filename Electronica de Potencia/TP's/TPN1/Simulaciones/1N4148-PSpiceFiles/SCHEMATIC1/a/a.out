@@ -1,0 +1,113 @@
+
+**** 04/17/19 02:24:28 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-a"  [ D:\fnavarro\5to\Electronica de Potencia\TP's\TPN1\Simulaciones\1n4148-pspicefiles\schematic1\a.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "a.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\facun\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 15ns 0 1ps 
+.TEMP 27
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 1N4148
+V_V1         N00128 0  
++PULSE 5 0 1ps 1ps 1ps 5ms 10ms
+R_R1         0 N00142  100 TC=0,0 
+X_D1         N00128 N00142 awb1n4148 PARAMS:                
+
+**** RESUMING a.cir ****
+.END
+
+**** 04/17/19 02:24:28 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-a"  [ D:\fnavarro\5to\Electronica de Potencia\TP's\TPN1\Simulaciones\1n4148-pspicefiles\schematic1\a.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_D1.model22    
+          IS    1.000000E-09 
+           N    1.55         
+          BV  120            
+         IBV    1            
+          RS     .5          
+          TT    5.000000E-09 
+         CJO    1.850000E-12 
+          VJ     .65         
+           M     .18         
+          EG    1.11         
+
+
+**** 04/17/19 02:24:28 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-a"  [ D:\fnavarro\5to\Electronica de Potencia\TP's\TPN1\Simulaciones\1n4148-pspicefiles\schematic1\a.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00128)    5.0000 (N00142)    4.2742 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.274E-02
+
+    TOTAL POWER DISSIPATION   2.14E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/17/19 02:24:28 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-a"  [ D:\fnavarro\5to\Electronica de Potencia\TP's\TPN1\Simulaciones\1n4148-pspicefiles\schematic1\a.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .08
+

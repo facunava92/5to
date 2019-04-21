@@ -1,0 +1,44 @@
+
+**** 04/17/19 01:50:25 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-a"  [ D:\fnavarro\5to\Electronica de Potencia\TP's\TPN1\Simulaciones\1N4148-PSpiceFiles\SCHEMATIC1\a.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "a.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\facun\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 1N4148
+D_D1         N00128 N00142 D1N4148_1 
+V_V1         N00128 0  
++PULSE 5 0 1us 1us 1us 5ms 10 ms
+------------------------------$
+ERROR -- Expecting keyword STIMULUS, saw ms.
+
+R_R1         0 N00142  100 TC=0,0 
+
+**** RESUMING a.cir ****
+.END
+

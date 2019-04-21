@@ -1,0 +1,5 @@
+* source 1N4148
+V_V1         N00128 0  
++PULSE 5 0 1ps 1ps 1ps 5ms 10ms
+R_R1         0 N00142  100 TC=0,0 
+X_D1         N00128 N00142 awb1n4148 PARAMS:                
