@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:Circuito Tecnologia-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -14,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_Microchip_PIC16:PIC16F886-IP U2
+L Circuito-Tecnologia-rescue:PIC16F886-IP-MCU_Microchip_PIC16 U2
 U 1 1 5CBA8C4A
 P 4700 3400
 F 0 "U2" H 4700 4681 50  0000 C CNN
@@ -25,7 +26,7 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/41291D.pdf" H 4700 3200 50 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Crystal Y1
+L Circuito-Tecnologia-rescue:Crystal-Device Y1
 U 1 1 5CBA985E
 P 6400 3250
 F 0 "Y1" V 6354 3381 50  0000 L CNN
@@ -48,10 +49,10 @@ Wire Wire Line
 Wire Wire Line
 	6200 3400 6400 3400
 $Comp
-L Device:C_Small C3
+L Circuito-Tecnologia-rescue:C_Small-Device 0,1uF
 U 1 1 5CBB10D6
 P 6700 3100
-F 0 "C3" V 6563 3100 50  0000 C CNN
+F 0 "0,1uF" V 6563 3100 50  0000 C CNN
 F 1 "0.1uF" V 6562 3100 50  0001 C CNN
 F 2 "" H 6700 3100 50  0001 C CNN
 F 3 "~" H 6700 3100 50  0001 C CNN
@@ -59,10 +60,10 @@ F 3 "~" H 6700 3100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C_Small C4
+L Circuito-Tecnologia-rescue:C_Small-Device 0,1uF
 U 1 1 5CBB1C68
 P 6700 3400
-F 0 "C4" V 6850 3400 50  0000 C CNN
+F 0 "0,1uF" V 6850 3400 50  0000 C CNN
 F 1 "0.1uF" V 6900 3400 50  0001 C CNN
 F 2 "" H 6700 3400 50  0001 C CNN
 F 3 "~" H 6700 3400 50  0001 C CNN
@@ -82,7 +83,7 @@ Wire Wire Line
 Wire Wire Line
 	6900 3100 6800 3100
 $Comp
-L power:GND #PWR0101
+L Circuito-Tecnologia-rescue:GND-power #PWR0101
 U 1 1 5CBB2EC2
 P 7050 3300
 F 0 "#PWR0101" H 7050 3050 50  0001 C CNN
@@ -100,7 +101,7 @@ Connection ~ 6900 3250
 Wire Wire Line
 	6900 3250 6900 3100
 $Comp
-L Regulator_Linear:L7805 U1
+L Circuito-Tecnologia-rescue:L7805-Regulator_Linear U1
 U 1 1 5CBB4893
 P 2550 2600
 F 0 "U1" H 2550 2751 50  0000 C CNN
@@ -111,10 +112,10 @@ F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C2
+L Circuito-Tecnologia-rescue:C_Small-Device 0,1uF
 U 1 1 5CBB5A7D
 P 3000 2700
-F 0 "C2" H 2908 2700 50  0000 R CNN
+F 0 "0,1uF" H 2908 2700 50  0000 R CNN
 F 1 "0.1 uF" H 2908 2745 50  0001 R CNN
 F 2 "" H 3000 2700 50  0001 C CNN
 F 3 "~" H 3000 2700 50  0001 C CNN
@@ -122,10 +123,10 @@ F 3 "~" H 3000 2700 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:C_Small C1
+L Circuito-Tecnologia-rescue:C_Small-Device 0,33uF
 U 1 1 5CBB63B6
 P 2100 2700
-F 0 "C1" H 1900 2700 50  0000 L CNN
+F 0 "0,33uF" H 1750 2700 50  0000 L CNN
 F 1 "0.33uF" H 1700 2650 50  0001 L CNN
 F 2 "" H 2100 2700 50  0001 C CNN
 F 3 "~" H 2100 2700 50  0001 C CNN
@@ -146,7 +147,7 @@ Connection ~ 2550 2900
 Wire Wire Line
 	3000 2600 2850 2600
 $Comp
-L power:GND #PWR0102
+L Circuito-Tecnologia-rescue:GND-power #PWR0102
 U 1 1 5CBBA8C3
 P 4750 4600
 F 0 "#PWR0102" H 4750 4350 50  0001 C CNN
@@ -166,10 +167,10 @@ Wire Wire Line
 	4800 4600 4800 4500
 Connection ~ 4750 4600
 $Comp
-L Isolator:SFH617A-1X001 U3
+L Circuito-Tecnologia-rescue:SFH617A-1X001-Isolator PC817C
 U 1 1 5CBBECD8
 P 7650 4100
-F 0 "U3" H 7650 4333 50  0000 C CNN
+F 0 "PC817C" H 7650 4333 50  0000 C CNN
 F 1 "SFH617A-1X001" H 7650 4334 50  0001 C CNN
 F 2 "Package_DIP:DIP-4_W7.62mm" H 7450 3900 50  0001 L CIN
 F 3 "http://www.vishay.com/docs/83740/sfh617a.pdf" H 7650 4100 50  0001 L CNN
@@ -187,7 +188,7 @@ Connection ~ 3250 2600
 Wire Wire Line
 	3250 2600 3400 2600
 $Comp
-L Relay:DIPxx-1Cxx-51x K1
+L Circuito-Tecnologia-rescue:DIPxx-1Cxx-51x-Relay K1
 U 1 1 5CBD5167
 P 8950 2950
 F 0 "K1" H 8900 2650 50  0000 L CNN
@@ -198,7 +199,7 @@ F 3 "https://standexelectronics.com/wp-content/uploads/datasheet_reed_relay_DIP.
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 J1
+L Circuito-Tecnologia-rescue:Conn_01x02-Connector_Generic J1
 U 1 1 5CBDFD63
 P 1350 2700
 F 0 "J1" H 1268 2375 50  0000 C CNN
@@ -212,7 +213,7 @@ Wire Wire Line
 	2100 2600 1550 2600
 Connection ~ 2100 2600
 $Comp
-L power:GND #PWR0105
+L Circuito-Tecnologia-rescue:GND-power #PWR0105
 U 1 1 5CBE15B9
 P 1650 2800
 F 0 "#PWR0105" H 1650 2550 50  0001 C CNN
@@ -227,40 +228,40 @@ Wire Wire Line
 Wire Wire Line
 	1650 2700 1550 2700
 $Comp
-L Transistor_BJT:2N2219 Q1
+L Circuito-Tecnologia-rescue:2N2219-Transistor_BJT Q1
 U 1 1 5CBE48F2
 P 8650 4200
-F 0 "Q1" H 8840 4200 50  0000 L CNN
-F 1 "2N2219" H 8840 4155 50  0001 L CNN
+F 0 "Q1" H 8840 4200 50  0001 L CNN
+F 1 "MMBT5551" H 8840 4155 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-39-3" H 8850 4125 50  0001 L CIN
 F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 8650 4200 50  0001 L CNN
 	1    8650 4200
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_US R3
+L Circuito-Tecnologia-rescue:R_US-Device R3
 U 1 1 5CBEACA4
 P 8200 4200
-F 0 "R3" V 8100 4200 50  0000 C CNN
-F 1 "100" V 8300 4200 50  0001 C CNN
+F 0 "R3" V 8100 4200 50  0001 C CNN
+F 1 "510" V 8300 4200 50  0000 C CNN
 F 2 "" V 8240 4190 50  0001 C CNN
 F 3 "~" H 8200 4200 50  0001 C CNN
 	1    8200 4200
 	0    1    1    0   
 $EndComp
 $Comp
-L Diode:1N4148 D1
+L Circuito-Tecnologia-rescue:1N4148-Diode D1
 U 1 1 5CBC1B51
 P 8350 3000
-F 0 "D1" H 8300 2900 50  0000 L CNN
-F 1 "1N4148" H 8200 3100 50  0001 L CNN
+F 0 "D1" H 8300 2900 50  0001 L CNN
+F 1 "1N4148" H 8200 3100 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 8350 2825 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8350 3000 50  0001 C CNN
 	1    8350 3000
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR01
+L Circuito-Tecnologia-rescue:GND-power #PWR01
 U 1 1 5CC06B8D
 P 8750 4500
 F 0 "#PWR01" H 8750 4250 50  0001 C CNN
@@ -272,7 +273,7 @@ F 3 "" H 8750 4500 50  0001 C CNN
 $EndComp
 Connection ~ 4700 2300
 $Comp
-L Connector_Generic:Conn_01x03 J2
+L Circuito-Tecnologia-rescue:Conn_01x03-Connector_Generic J2
 U 1 1 5CC0BC33
 P 10000 3000
 F 0 "J2" H 10080 2996 50  0000 L CNN
@@ -307,7 +308,7 @@ Wire Wire Line
 Wire Wire Line
 	9650 3100 9800 3100
 $Comp
-L Device:LED D2
+L Circuito-Tecnologia-rescue:LED-Device D2
 U 1 1 5CC1A569
 P 6750 4200
 F 0 "D2" H 6743 4416 50  0000 C CNN
@@ -322,10 +323,10 @@ Wire Wire Line
 Wire Wire Line
 	6900 4200 7350 4200
 $Comp
-L Device:R_US R1
+L Circuito-Tecnologia-rescue:R_US-Device 1k
 U 1 1 5CC23A41
 P 7300 3250
-F 0 "R1" H 7200 3250 50  0000 C CNN
+F 0 "1k" H 7200 3250 50  0000 C CNN
 F 1 "100" V 7400 3250 50  0001 C CNN
 F 2 "" V 7340 3240 50  0001 C CNN
 F 3 "~" H 7300 3250 50  0001 C CNN
@@ -359,7 +360,7 @@ Wire Wire Line
 Wire Wire Line
 	8350 2850 8350 2300
 Wire Wire Line
-	8350 2300 9050 2300
+	8350 2300 8750 2300
 Connection ~ 9050 2300
 Wire Wire Line
 	7950 4000 8000 4000
@@ -372,7 +373,7 @@ Wire Wire Line
 	8000 2300 8350 2300
 Connection ~ 8350 2300
 $Comp
-L power:+5V #PWR02
+L Circuito-Tecnologia-rescue:+5V-power #PWR02
 U 1 1 5CC3D910
 P 3250 2200
 F 0 "#PWR02" H 3250 2050 50  0001 C CNN
@@ -389,10 +390,10 @@ Connection ~ 6350 4200
 Wire Wire Line
 	6350 4200 6000 4200
 $Comp
-L Device:R_US R2
+L Circuito-Tecnologia-rescue:R_US-Device 10k
 U 1 1 5CC42B30
 P 6350 3900
-F 0 "R2" V 6250 3900 50  0000 C CNN
+F 0 "10k" V 6250 3900 50  0000 C CNN
 F 1 "100" V 6450 3900 50  0001 C CNN
 F 2 "" V 6390 3890 50  0001 C CNN
 F 3 "~" H 6350 3900 50  0001 C CNN
@@ -404,7 +405,7 @@ Wire Wire Line
 Wire Wire Line
 	2550 2950 2550 2900
 $Comp
-L power:GND #PWR?
+L Circuito-Tecnologia-rescue:GND-power #PWR?
 U 1 1 5CC481AD
 P 2550 2950
 F 0 "#PWR?" H 2550 2700 50  0001 C CNN
@@ -417,7 +418,7 @@ $EndComp
 Wire Wire Line
 	6350 3750 6350 3700
 $Comp
-L power:+5V #PWR03
+L Circuito-Tecnologia-rescue:+5V-power #PWR03
 U 1 1 5CC3FA58
 P 6350 3700
 F 0 "#PWR03" H 6350 3550 50  0001 C CNN
@@ -427,4 +428,9 @@ F 3 "" H 6350 3700 50  0001 C CNN
 	1    6350 3700
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	8750 2650 8750 2300
+Connection ~ 8750 2300
+Wire Wire Line
+	8750 2300 9050 2300
 $EndSCHEMATC
