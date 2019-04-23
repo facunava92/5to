@@ -7,4 +7,4 @@
 \contentsline {subsubsection}{\numberline {2.1.2}C\IeC {\'a}lculo de $R_5$, $R_1$ y $C_1$}{5}{subsubsection.2.1.2}% 
 \contentsline {subsection}{\numberline {2.2}Circuito Final}{5}{subsection.2.2}% 
 \contentsline {subsection}{\numberline {2.3}Mediciones y experimentaci\IeC {\'o}n}{6}{subsection.2.3}% 
-\contentsline {section}{\numberline {3}Conclusi\IeC {\'o}n}{6}{section.3}% 
+\contentsline {section}{\numberline {3}Conclusi\IeC {\'o}n}{7}{section.3}% 
