@@ -1,4 +1,0 @@
-(sym_lib_table
-  (lib (name dimmer_sch)(type Legacy)(uri ${KIPRJMOD}/lib_sch/dimmer_sch.lib)(options "")(descr ""))
-  (lib (name dimmer-rescue)(type Legacy)(uri ${KIPRJMOD}/dimmer-rescue.lib)(options "")(descr ""))
-)

@@ -1,4 +1,4 @@
-17108931796960
+18642522651134
 lib_fp
 C_Rect_L13.5mm_W5.0mm_P10.00mm_FKS3_FKP3_MKS4
 C, Rect series, Radial, pin pitch=10.00mm, , length*width=13.5*5mm^2, Capacitor, http://www.wima.com/EN/WIMA_FKS_3.pdf, http://www.wima.com/EN/WIMA_MKS_4.pdf
@@ -27,6 +27,13 @@ logo_utn_fsilk_small
 0
 0
 0
+lib_fp
+PinSocket_1x02_P2.54mm_Vertical
+Through hole straight socket strip, 1x02, 2.54mm pitch, single row (from Kicad 4.0.7), script generated
+Through hole socket strip THT 1x02 2.54mm single row
+0
+2
+2
 lib_fp
 Potentiometer_Alps_RK163_Single_Horizontal
 Potentiometer, horizontal, Alps RK163 Single, http://www.alps.com/prod/info/E/HTML/Potentiometer/RotaryPotentiometers/RK16/RK16_list.html

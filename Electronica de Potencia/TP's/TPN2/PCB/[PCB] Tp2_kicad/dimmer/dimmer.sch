@@ -26,7 +26,7 @@ F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4500 4200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3050 4700 3050 4550
+	3050 4700 3050 4650
 Wire Wire Line
 	3050 3600 3050 3000
 Wire Wire Line
@@ -34,7 +34,7 @@ Wire Wire Line
 Wire Wire Line
 	4150 3000 3750 3000
 $Comp
-L dimmer_sch:Diode_1N4007 D1
+L dimmer_sch:1N4007 D1
 U 1 1 5CB41FF5
 P 4500 3250
 F 0 "D1" V 4454 3329 50  0000 L CNN
@@ -51,12 +51,12 @@ Wire Wire Line
 Wire Wire Line
 	4500 4050 4500 3950
 Wire Wire Line
-	4500 4350 4500 4550
+	4500 4350 4500 4650
 Wire Wire Line
-	4500 4550 3050 4550
-Connection ~ 3050 4550
+	4500 4650 3050 4650
+Connection ~ 3050 4650
 Wire Wire Line
-	3050 4550 3050 3700
+	3050 4650 3050 3700
 $Comp
 L dimmer_sch:1N4007 D3
 U 1 1 5CB4471B
@@ -87,12 +87,12 @@ $EndComp
 Wire Wire Line
 	5050 4050 5050 3800
 Wire Wire Line
-	5050 4350 5050 4550
+	5050 4350 5050 4650
 Wire Wire Line
-	5050 4550 4500 4550
-Connection ~ 4500 4550
+	5050 4650 4500 4650
+Connection ~ 4500 4650
 $Comp
-L dimmer_sch:Device_R_US R1
+L dimmer_sch:dimmer-rescue_Device_R_US-dimmer_sch R1
 U 1 1 5CB46F56
 P 5800 3250
 F 0 "R1" H 5870 3296 50  0000 L CNN
@@ -105,7 +105,7 @@ $EndComp
 Wire Wire Line
 	5800 3100 5800 3000
 Wire Wire Line
-	5500 4550 5500 3950
+	5500 4650 5500 3950
 Wire Wire Line
 	5500 3950 4500 3950
 Connection ~ 4500 3950
@@ -121,7 +121,7 @@ Wire Wire Line
 Wire Wire Line
 	5500 3000 5800 3000
 $Comp
-L dimmer_sch:Device_R_POT R2
+L dimmer_sch:dimmer-rescue_Device_R_POT-dimmer_sch R2
 U 1 1 5CB4BC13
 P 6350 4000
 F 0 "R2" H 6281 4046 50  0000 R CNN
@@ -149,7 +149,7 @@ F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 6850 4000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L dimmer_sch:Device_R_US R5
+L dimmer_sch:dimmer-rescue_Device_R_US-dimmer_sch R5
 U 1 1 5CB4E3DE
 P 7150 3650
 F 0 "R5" H 7218 3696 50  0000 L CNN
@@ -162,7 +162,7 @@ $EndComp
 Wire Wire Line
 	6350 4150 6350 4200
 Wire Wire Line
-	6500 4000 6700 4000
+	6500 4000 6650 4000
 Wire Wire Line
 	7150 3800 7150 4000
 Wire Wire Line
@@ -173,7 +173,7 @@ Wire Wire Line
 	7150 3000 5800 3000
 Connection ~ 5800 3000
 $Comp
-L dimmer_sch:Device_C C1
+L dimmer_sch:dimmer-rescue_Device_C-dimmer_sch C1
 U 1 1 5CB50EF3
 P 7150 4300
 F 0 "C1" H 7265 4346 50  0000 L CNN
@@ -187,12 +187,12 @@ Wire Wire Line
 	7150 4150 7150 4000
 Connection ~ 7150 4000
 Wire Wire Line
-	7150 4450 7150 4550
+	7150 4450 7150 4650
 Wire Wire Line
-	7150 4550 6350 4550
-Connection ~ 6350 4550
+	7150 4650 6650 4650
+Connection ~ 6350 4650
 $Comp
-L dimmer_sch:Device_R_US R3
+L dimmer_sch:dimmer-rescue_Device_R_US-dimmer_sch R3
 U 1 1 5CB539F8
 P 7700 3650
 F 0 "R3" H 7768 3696 50  0000 L CNN
@@ -208,21 +208,21 @@ Wire Wire Line
 	7700 3450 7700 3500
 Connection ~ 6350 3450
 $Comp
-L dimmer_sch:Device_R_US R4
+L dimmer_sch:dimmer-rescue_Device_R_US-dimmer_sch R4
 U 1 1 5CB56B3A
-P 7700 4400
-F 0 "R4" H 7768 4446 50  0000 L CNN
-F 1 "82" H 7768 4355 50  0000 L CNN
-F 2 "lib_fp:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7740 4390 50  0001 C CNN
-F 3 "~" H 7700 4400 50  0001 C CNN
-	1    7700 4400
+P 7700 4450
+F 0 "R4" H 7768 4496 50  0000 L CNN
+F 1 "82" H 7768 4405 50  0000 L CNN
+F 2 "lib_fp:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7740 4440 50  0001 C CNN
+F 3 "~" H 7700 4450 50  0001 C CNN
+	1    7700 4450
 	1    0    0    -1  
 $EndComp
-Connection ~ 7150 4550
+Connection ~ 7150 4650
 Wire Wire Line
 	7700 4250 7700 4200
 $Comp
-L dimmer_sch:Triac_Thyristor_TIC106 Q2
+L dimmer_sch:dimmer-rescue_Triac_Thyristor_TIC106-dimmer_sch Q2
 U 1 1 5CB5862B
 P 8350 4150
 F 0 "Q2" H 8438 4196 50  0000 L CNN
@@ -238,9 +238,9 @@ Connection ~ 7150 3000
 Wire Wire Line
 	8200 4250 7700 4250
 Wire Wire Line
-	8350 4300 8350 4550
+	8350 4300 8350 4650
 $Comp
-L dimmer_sch:Device_R_POT_TRIM RV1
+L dimmer_sch:dimmer-rescue_Device_R_POT_TRIM-dimmer_sch RV1
 U 1 1 5CB49215
 P 6350 3650
 F 0 "RV1" H 6280 3696 50  0000 R CNN
@@ -260,7 +260,7 @@ Connection ~ 6500 3450
 Wire Wire Line
 	6500 3450 7700 3450
 $Comp
-L dimmer_sch:Device_R_POT_TRIM RV2
+L dimmer_sch:dimmer-rescue_Device_R_POT_TRIM-dimmer_sch RV2
 U 1 1 5CB4C207
 P 6350 4350
 F 0 "RV2" H 6280 4396 50  0000 R CNN
@@ -271,13 +271,13 @@ F 3 "~" H 6350 4350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6350 4500 6350 4550
+	6350 4500 6350 4650
 Wire Wire Line
 	6500 4350 6500 4200
 Wire Wire Line
 	6500 4200 6350 4200
 $Comp
-L dimmer_sch:Device_Fuse F1
+L dimmer_sch:dimmer-rescue_Device_Fuse-dimmer_sch F1
 U 1 1 5CB3DBB7
 P 3600 3000
 F 0 "F1" V 3797 3000 50  0000 C CNN
@@ -288,7 +288,7 @@ F 3 "~" H 3600 3000 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L dimmer_sch:power_GND #PWR01
+L dimmer_sch:dimmer-rescue_power_GND-dimmer_sch #PWR01
 U 1 1 5CB3F7B4
 P 3050 4700
 F 0 "#PWR01" H 3050 4450 50  0001 C CNN
@@ -299,44 +299,44 @@ F 3 "" H 3050 4700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L dimmer_sch:Connector_Generic_Conn_01x02 J1
+L dimmer_sch:dimmer-rescue_Connector_Generic_Conn_01x02-dimmer_sch J1
 U 1 1 5CB3ADF7
 P 3250 3600
 F 0 "J1" H 3168 3275 50  0000 C CNN
-F 1 "Conn_01x02" H 3168 3366 50  0000 C CNN
+F 1 "Vin" H 3168 3366 50  0000 C CNN
 F 2 "lib_fp:TerminalBlock_bornier-2_P5.08mm" H 3250 3600 50  0001 C CNN
 F 3 "~" H 3250 3600 50  0001 C CNN
 	1    3250 3600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7150 4550 7700 4550
+	7150 4650 7700 4650
 $Comp
-L dimmer_sch:Connector_Generic_Conn_01x02 J2
+L dimmer_sch:dimmer-rescue_Connector_Generic_Conn_01x02-dimmer_sch J2
 U 1 1 5CB3E0B6
 P 4250 3200
 F 0 "J2" V 4214 3012 50  0000 R CNN
-F 1 "Conn_01x02" V 4123 3012 50  0000 R CNN
+F 1 "Vout" V 4123 3012 50  0000 R CNN
 F 2 "lib_fp:TerminalBlock_bornier-2_P5.08mm" H 4250 3200 50  0001 C CNN
 F 3 "~" H 4250 3200 50  0001 C CNN
 	1    4250 3200
 	0    1    1    0   
 $EndComp
 $Comp
-L dimmer-rescue:LOGO-logo G1
+L dimmer_sch:dimmer-rescue_LOGO-logo G1
 U 1 1 5CB4E2BD
-P 3500 4800
-F 0 "G1" H 3575 4853 60  0000 L CNN
-F 1 "LOGO" H 3575 4747 60  0000 L CNN
-F 2 "lib_fp:logo_utn_fsilk_small" H 3500 4800 50  0001 C CNN
-F 3 "" H 3500 4800 50  0001 C CNN
-	1    3500 4800
+P 3700 4350
+F 0 "G1" H 3775 4403 60  0000 L CNN
+F 1 "LOGO" H 3775 4297 60  0000 L CNN
+F 2 "lib_fp:logo_utn_fsilk_small" H 3700 4350 50  0001 C CNN
+F 3 "" H 3700 4350 50  0001 C CNN
+	1    3700 4350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	8350 4000 8350 3000
 $Comp
-L dimmer_sch:2N2647 Q1
+L dimmer_sch:dimmer_sch_2N2647 Q1
 U 1 1 5CB52F99
 P 7600 4000
 F 0 "Q1" H 7790 4046 50  0000 L CNN
@@ -347,9 +347,9 @@ F 3 "" H 7600 4000 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5500 4550 5800 4550
+	5500 4650 5800 4650
 $Comp
-L dimmer_sch:Diode_1N47xxA DZ1
+L dimmer_sch:dimmer-rescue_Diode_1N47xxA-dimmer_sch DZ1
 U 1 1 5CB5BBFF
 P 5800 4000
 F 0 "DZ1" V 5754 4079 50  0000 L CNN
@@ -363,11 +363,76 @@ Wire Wire Line
 	5800 3850 5800 3450
 Connection ~ 5800 3450
 Wire Wire Line
-	5800 4150 5800 4550
-Connection ~ 5800 4550
+	5800 4150 5800 4650
+Connection ~ 5800 4650
 Wire Wire Line
-	5800 4550 6350 4550
-Connection ~ 7700 4550
+	5800 4650 6350 4650
 Wire Wire Line
-	7700 4550 8350 4550
+	7700 4650 8350 4650
+Wire Wire Line
+	7700 4300 7700 4250
+Connection ~ 7700 4250
+Wire Wire Line
+	7700 4600 7700 4650
+Connection ~ 7700 4650
+Wire Wire Line
+	6650 3800 6650 4000
+Connection ~ 6650 4000
+Wire Wire Line
+	6650 4000 6700 4000
+Text Label 8900 3250 2    50   ~ 0
+Vref+
+Text Label 9400 3250 0    50   ~ 0
+Vref-
+Text Label 6650 3800 2    50   ~ 0
+Vref+
+Text Label 6650 4550 2    50   ~ 0
+Vref-
+Wire Wire Line
+	6650 4550 6650 4650
+Connection ~ 6650 4650
+Wire Wire Line
+	6650 4650 6350 4650
+Text Label 9950 3250 2    50   ~ 0
+Load+
+Text Label 10450 3250 0    50   ~ 0
+Load-
+Text Label 4250 2850 1    50   ~ 0
+Load-
+Wire Wire Line
+	4150 2850 4150 3000
+Text Label 4150 2850 1    50   ~ 0
+Load+
+Wire Wire Line
+	4250 2850 4250 3000
+$Comp
+L dimmer_sch:Connector_TestPoint_2Pole TP1
+U 1 1 5CC28AAA
+P 9150 3250
+F 0 "TP1" H 9150 3445 50  0000 C CNN
+F 1 "TestPoint_2Pole" H 9150 3354 50  0000 C CNN
+F 2 "lib_fp:PinSocket_1x02_P2.54mm_Vertical" H 9150 3250 50  0001 C CNN
+F 3 "~" H 9150 3250 50  0001 C CNN
+	1    9150 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 3250 8950 3250
+Wire Wire Line
+	9400 3250 9350 3250
+$Comp
+L dimmer_sch:Connector_TestPoint_2Pole TP2
+U 1 1 5CC3044A
+P 10200 3250
+F 0 "TP2" H 10200 3445 50  0000 C CNN
+F 1 "TestPoint_2Pole" H 10200 3354 50  0000 C CNN
+F 2 "lib_fp:PinSocket_1x02_P2.54mm_Vertical" H 10200 3250 50  0001 C CNN
+F 3 "~" H 10200 3250 50  0001 C CNN
+	1    10200 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 3250 10000 3250
+Wire Wire Line
+	10450 3250 10400 3250
 $EndSCHEMATC
