@@ -16,8 +16,20 @@
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{Electronica de Potencia}
-\rhead{TP1 : Control de ángulo de conducción de un SCR}
+\rhead{TP2 : Control de ángulo de conducción de un SCR}
 \rfoot{Page \thepage}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{colortbl}
+
+\pgfplotstableset{% global config, for example in the preamble
+  every head row/.style={before row=\toprule,after row=\midrule},
+  every last row/.style={after row=\bottomrule},
+  fixed,precision=1,
+}
 
 \begin{document}
 \begin{titlepage}
@@ -47,8 +59,8 @@
 
 	\vspace{1.5cm}
 	Docentes: \par
-	Ing. Oros \par
-	Ing. Rabinovich \par
+	Ing. Oros, Ramón \par
+	Ing. Avramovich, Javier \par
 
  	\vfill
 	{\large \today\par}
@@ -206,69 +218,91 @@ quedando
 Se termina presentando el esquemático final con el agregado de los valores de los componentes, además se aclara que se agrega dos potenciómetros de tipo trimmer con el fin de calibrar el circuito ante variaciones de los valores de los componentes.
 \begin{figure}[h]
  \begin{center}
-	\includegraphics[width=\textwidth]{imagenes/fig5.jpg} 
-	\caption{Circuito final}\label{fig:fig5}
+	\includegraphics[width=\textwidth]{imagenes/fig4.jpg} 
+	\caption{Circuito final}\label{fig:fig4}
  \end{center}
 \end{figure}
 
 \clearpage
 
 \subsection{Mediciones y experimentación}
+
+Como forma de demostración que el circuito con el método de control de \textit{escalón rampa-coseno} provee un control totalmente lineal entre la tensión de referencia $V_{REF}$ establecida por el usuario y la potencia aprovechada por la carga, es necesario efectuar un barrido de la misma ($V_{REF}$) y medir tanto el valor resultante de tensión eficaz aplicada a la carga como el ángulo de onda que conduce.
 \begin{center}
-\begin{tabular}{| c | c | c |}
-\hline
-$V_{REF}$ (Capacitor) & $V_{RMS}$ (Carga) & Angulo [grados] \\
-\hline
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-&&\\
-\hline 
-\end{tabular}
+\pgfplotstabletypeset[
+  columns/vref/.style={column name=$V_{REF}$ (Capacitor)},
+  columns/load/.style={column name= $V_{RMS}$ (Carga)},
+  columns/angle/.style={column name= Angulo [grados]},
+]{tablas/lineal.txt}
 \end{center}
+%
+Los datos recopilados por la tabla pueden ser traspasados a dos gráficos en función de la tensión de referencia de modo de comprobar la linealidad entre la transferencia de control y la potencia de carga a la salida.
+%
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture} [scale=1.4]
+\begin{axis}[
+    xlabel=$V_{REF}$ (Capacitor),
+    ylabel=$V_{RMS}$ (Carga),
+    legend pos=south east,
+    legend entries={Voltage de la carga},
+    grid=major,
+    ]
+  \addplot [red,mark=*] table [x=vref,y=load] {tablas/lineal.txt};
+\end{axis}
+\end{tikzpicture}
+	\caption{Tensión eficaz en la carga contra $V_{REF}$ }
+\end{figure}
+
+El primer gráfico ilustra la relación entre la tension eficaz aplicada a la carga respecto al nivel de tension aplicado con el control del potenciomentro, lo que se traduce en luminosidad, siendo el nivel mas bajo a la lámpara apagada y el mayor a plena luminiscencia.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture} [scale=1.4]
+\begin{axis}[
+    xlabel=$V_{REF}$ (Capacitor),
+    ylabel=Angulo de conducción,
+    legend pos=north west,
+    legend entries={Angulo de conducción},
+    grid=major
+    ]
+  \addplot table [x=vref,y=angle] {tablas/lineal.txt};
+\end{axis}
+\end{tikzpicture}
+	\caption{Angulo de conducción contra $V_{REF}$ }
+\end{figure}
+
+El segundo gráfico también se puede traducir en lo mismo, este expresa la relación de transferencia pero de forma indirecta ya que relaciona la tensión de referencia con respecto al ángulo de conducción que sera directamente proporcional a la tensión eficaz aplicada sobre la carga, a mayores ángulos la señal que incursiona sobre la carga se vuelve cada vez mas senoidal.
+\subsection{Tensión en el capacitor y en la carga}
+Se obtuvieron las siguientes capturas de pantallas, en todos los casos la imagen de la izquierda representa la tensión en el capacitor, y la de la derecha la tensión en la carga.
+%
+\begin{figure}[h]
+ \begin{center}
+	\includegraphics[width=\textwidth]{imagenes/fig5.jpg} 
+	\caption{Tensión máxima en la carga}\label{fig:fig5}
+ \end{center}
+\end{figure}
+
+La figura \textcolor{blue}{\ref{fig:fig5}} se obtiene cuando la lámpara está irradiando a máxima potencia. Una característica notable es que la forma de onda compuesta por la rampa y el escalón se ve como un pulso de muy corta duración. Esto puede entenderse recordando que para máxima luminosidad la carga debe conducir la mayor porción de onda posible, lo que se traduce en un instante de disparo muy temprano con un nivel máximo en el pedestal. Así, la velocidad con que debe alcanzarse el umbral de disparo hace que en el flanco de subida del pedestal pueda apreciarse perfectamente la rampa del escalón que corresponde a la constante de tiempo más rápida (entre el capacitor y el potenciómetro) y que como consecuencia de ello se vuelva muy difícil apreciar el efecto que la segunda rampa tiene.
+
+ La escasa duración de la señal total de control se debe a que una vez que el UJT se dispara, su resistencia entre emisor y B2 disminuye súbitamente provocando una señal de             disparo hacia el SCR lo que provoca una descarga rápida de la tensión del capacitor, así en el caso de máxima potencia, como el umbral se alcanza muy rápidamente, de la misma               forma debe descargarse esta tensión para tener cuanto antes el disparo en el tiristor. 
+%
+\begin{figure}[h]
+ \begin{center}
+	\includegraphics[width=\textwidth]{imagenes/fig6.jpg} 
+	\caption{Tensión media en la carga}\label{fig:fig6}
+ \end{center}
+\end{figure}
+%
+En la figura \textcolor{blue}{\ref{fig:fig6}}, se demuestra que cuando se disminuye la luminosidad en la lámpara, el disparo se realiza en un lapso temporal más grande dado que el ancho de la señal de control es mayor que para el caso de máxima potencia. Esto se debe a que el UJT se gatilla en una porción de ciclo más tarde y el capacitor se descarga súbitamente en ese instante. Debe observarse también que siempre la señal alcanza el umbral de disparo, pero aquí la tensión en el pedestal no es máxima (pues ese caso corresponde a máximo brillo) sino que está en un valor inferior y es la tensión superpuesta de la rampa coseno es la que posibilita el valor máximo, además, que a causa de su baja pendiente se confunde en instantes iniciales con el pedestal. 
+%
+\begin{figure}[h]
+ \begin{center}
+	\includegraphics[width=\textwidth]{imagenes/fig7.jpg} 
+	\caption{Tensión mínima en la carga}\label{fig:fig7}
+ \end{center}
+\end{figure}
+%
 
 \clearpage
 \section{Conclusión}
