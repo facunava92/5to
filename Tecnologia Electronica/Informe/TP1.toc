@@ -16,3 +16,4 @@
 \contentsline {subsubsection}{\numberline {3.1.10}Regulador de Tensi\IeC {\'o}n LM7805}{4}{subsubsection.3.1.10}% 
 \contentsline {subsubsection}{\numberline {3.1.11}$\lambda _{pT}$ del sistema}{5}{subsubsection.3.1.11}% 
 \contentsline {subsection}{\numberline {3.2}An\IeC {\'a}lisis por cuenta partes}{5}{subsection.3.2}% 
+\contentsline {subsubsection}{\numberline {3.2.1}An\IeC {\'a}lisis del modo de fallas y sus efectos FMEA}{6}{subsubsection.3.2.1}% 

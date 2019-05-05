@@ -11,7 +11,7 @@
 \usepackage{fancyhdr}
 \usepackage{siunitx}
 \usepackage{amsmath}
-
+\usepackage{multirow}
 
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows}
@@ -343,4 +343,52 @@ como previamente se hizo con la ecuación \ref{eq:lambda},
 {MTBF}\bigr|_{Sistema}	&= 732,66 \;  [A\tilde{n}os] 
 \end{align*}
 Aquí se pone en evidencia lo antes expuesto, la vida media difiere ya que los métodos consideran distinta variables, siendo el análisis por stress el más fidedigno, ya que considera mayor cantidad de aspectos reales, aunque para ser un sistema tentativo el método por cuenta partes cumple su función, en nuestro caso expone la longevidad del correcto funcionamiento de nuestro circuito.
+
+\subsubsection{Análisis del modo de fallas y sus efectos FMEA}
+El análisis de modos de fallas y efectos (Failure Mode and Effect Analysis) es un método utilizado para prevenir fallas y analizar los riesgos de un proceso mediante la identificación de causas y efectos a fin de determinar las acciones que se utilizaran para inhibir las fallas
+
+El modo de fallas está relacionado con el hecho de como un proceso puede ser llevado a operar de manera deficiente y está compuesto por tres elementos:
+ 
+\begin{itemize}\itemsep0em \itemindent=2em
+  \item Efecto
+  \item Causa
+  \item Detección  
+\end{itemize}
+
+El efecto es la consecuencia de lo que la falla puede causar, la causa es lo que indica la razón por la que se produjo el error y la detección es la forma utilizada en el control del proceso para evitar las posibles fallas.
+
+\begin{center}
+\begin{tabular}{| c | c | c | c | c |}
+
+\hline
+Componente & $\alpha$ & Modo de falla & $\beta$ \\ 
+\hline
+\multirow{3}*{Diodo 1N4148} 	& 0,51 &		Abierto 					& No elimina transitorios 		& 0,1 					\\
+								\cline{2-4}
+								& \multirow{2}*{Corto}		& No enciende relé				& \multirow{2}*{1} 		\\
+	
+								&							& Aumenta $I_C$ de transistor	& 						\\
+\hline
+\multirow{3}*{Capacitores C1 y C2}				& Abierto					& \multirow{3}*{7805 no estable}				& \multirow{3}*{0,1}	\\
+												\cline{2-2}
+												& Corto				 		&											&						\\
+												\cline{2-2}
+												& Cambio de valor			&											&						\\
+\hline
+\multirow{3}*{Capacitores C3 y C4}				& Abierto					& \multirow{3}*{Oscilador no estable}				& \multirow{3}*{1}	\\
+												\cline{2-2}
+												& Corto				 		&											&						\\
+												\cline{2-2}
+												& Cambio de valor			&											&						\\
+\hline
+
+
+
+
+\end{tabular}
+\end{center}
+
+
+
 \end{document}
+
