@@ -1,0 +1,19 @@
+[8932]  Error log for : Hartley_Linear.DS814.dsf
+	[8932]	Read lock timed out : Lock being acquired for 'header load' {GetISimDataSetsForProject}
+	[8932]	Unable to acquire file lock for the data set
+	[8932]	Read lock timed out : Lock being acquired for 'header load' {GetISimDataSetsForProject}
+	[8932]	Unable to acquire file lock for the data set
+	[8932]	Read lock timed out : Lock being acquired for 'header load' {GetISimDataSetsForProject}
+	[8932]	Unable to acquire file lock for the data set
+	[8932]	Read lock timed out : Lock being acquired for 'header load' {GetISimDataSetsForProject}
+	[8932]	Unable to acquire file lock for the data set
+	[8932]	Read lock timed out : Lock being acquired for 'header load' {GetISimDataSetsForProject}
+	[8932]	Unable to acquire file lock for the data set
+	[8932]	Read lock timed out : Lock being acquired for 'header load' {GetISimDataSetsForProject}
+	[8932]	Unable to acquire file lock for the data set
+	[8932]	This data set was only partially written - unable to read
+	[8932]	This data set was only partially written - unable to read
+	[8932]	Read lock timed out : Lock being acquired for 'header load' {GetISimDataSetsForProject}
+	[8932]	Unable to acquire file lock for the data set
+	[8932]	Read lock timed out : Lock being acquired for 'header load' {GetISimDataSetsForProject}
+	[8932]	Unable to acquire file lock for the data set
