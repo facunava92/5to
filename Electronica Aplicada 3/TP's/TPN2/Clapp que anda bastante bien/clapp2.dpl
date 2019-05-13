@@ -1,0 +1,32 @@
+<Qucs Schematic 0.0.19>
+<Properties>
+  <View=0,0,1289,800,1,0,0>
+  <Grid=10,10,0>
+  <DataSet=tp2_2_clapp_2.dat>
+  <DataDisplay=clapp2.sch>
+  <OpenDisplay=1>
+  <Script=tp2_2_clapp_2.m>
+  <RunScript=0>
+  <showFrame=0>
+  <FrameText0=Título>
+  <FrameText1=Dibujado por:>
+  <FrameText2=Fecha:>
+  <FrameText3=Revisión:>
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+  <Rect 220 421 612 331 3 #c0c0c0 1 00 1 0 0.2 1 1 -0.1 0.5 1.1 1 -0.1 0.5 1.1 315 0 225 "" "" "">
+	<"CARGA.Vt" #0000ff 0 3 0 0 0>
+  </Rect>
+  <Rect 900 412 259 182 3 #c0c0c0 1 00 0 0 2e+08 2e+08 1 -0.282504 0.5 0.781383 1 -1 0.5 1 315 0 225 "" "" "">
+	<"y" #0000ff 0 3 0 0 0>
+	  <Mkr 1e+08 74 -278 3 0 0>
+  </Rect>
+</Diagrams>
+<Paintings>
+</Paintings>
