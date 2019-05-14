@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:BJT-BU208-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -335,90 +336,90 @@ Wire Wire Line
 $Comp
 L Diode:1N4148 D?
 U 1 1 5CDA9EFD
-P 5750 4600
-F 0 "D?" H 5750 4500 50  0000 C CNN
-F 1 "MUR160" H 5750 4700 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5750 4425 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5750 4600 50  0001 C CNN
-	1    5750 4600
+P 5850 4600
+F 0 "D?" H 5850 4500 50  0000 C CNN
+F 1 "MUR160" H 5850 4700 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5850 4425 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5850 4600 50  0001 C CNN
+	1    5850 4600
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	5600 4600 5300 4600
+	5700 4600 5600 4600
 $Comp
 L Diode:1N4148 D?
 U 1 1 5CDAD3F1
-P 6300 4600
-F 0 "D?" H 6300 4500 50  0000 C CNN
-F 1 "MUR160" H 6300 4700 50  0000 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6300 4425 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6300 4600 50  0001 C CNN
-	1    6300 4600
+P 6200 4600
+F 0 "D?" H 6200 4500 50  0000 C CNN
+F 1 "MUR160" H 6200 4700 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6200 4425 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6200 4600 50  0001 C CNN
+	1    6200 4600
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	6150 4600 5900 4600
+	6050 4600 6000 4600
 $Comp
 L Diode:1N4148 D?
 U 1 1 5CDAF349
-P 5300 4950
-F 0 "D?" V 5346 4871 50  0000 R CNN
-F 1 "1N4148" V 5255 4871 50  0000 R CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5300 4775 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5300 4950 50  0001 C CNN
-	1    5300 4950
+P 5600 5100
+F 0 "D?" V 5646 5021 50  0000 R CNN
+F 1 "1N4148" V 5555 5021 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5600 4925 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 5600 5100 50  0001 C CNN
+	1    5600 5100
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	5300 4800 5300 4600
+	5600 4950 5600 4600
 $Comp
 L Transistor_BJT:BC328 Q?
 U 1 1 5CDB563C
-P 5200 5800
-F 0 "Q?" H 5391 5846 50  0000 L CNN
-F 1 "BC369" H 5391 5755 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5400 5725 50  0001 L CIN
-F 3 "http://www.redrok.com/PNP_BC327_-45V_-800mA_0.625W_Hfe100_TO-92.pdf" H 5200 5800 50  0001 L CNN
-	1    5200 5800
+P 5500 5800
+F 0 "Q?" H 5691 5846 50  0000 L CNN
+F 1 "BC369" H 5691 5755 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5700 5725 50  0001 L CIN
+F 3 "http://www.redrok.com/PNP_BC327_-45V_-800mA_0.625W_Hfe100_TO-92.pdf" H 5500 5800 50  0001 L CNN
+	1    5500 5800
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:-5V #PWR?
 U 1 1 5CDB79B3
-P 5300 6100
-F 0 "#PWR?" H 5300 6200 50  0001 C CNN
-F 1 "-5V" H 5315 6273 50  0000 C CNN
-F 2 "" H 5300 6100 50  0001 C CNN
-F 3 "" H 5300 6100 50  0001 C CNN
-	1    5300 6100
+P 5600 6150
+F 0 "#PWR?" H 5600 6250 50  0001 C CNN
+F 1 "-5V" H 5615 6323 50  0000 C CNN
+F 2 "" H 5600 6150 50  0001 C CNN
+F 3 "" H 5600 6150 50  0001 C CNN
+	1    5600 6150
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	5300 6100 5300 6050
+	5600 6150 5600 6050
 $Comp
 L Device:R_US R?
 U 1 1 5CDB991D
-P 4950 6050
-F 0 "R?" V 4850 6050 50  0000 C CNN
-F 1 "1k" V 5050 6050 50  0000 C CNN
-F 2 "" V 4990 6040 50  0001 C CNN
-F 3 "~" H 4950 6050 50  0001 C CNN
-	1    4950 6050
+P 5150 6050
+F 0 "R?" V 5050 6050 50  0000 C CNN
+F 1 "1k" V 5250 6050 50  0000 C CNN
+F 2 "" V 5190 6040 50  0001 C CNN
+F 3 "~" H 5150 6050 50  0001 C CNN
+	1    5150 6050
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5100 6050 5300 6050
-Connection ~ 5300 6050
+	5300 6050 5600 6050
+Connection ~ 5600 6050
 Wire Wire Line
-	5300 6050 5300 6000
+	5600 6050 5600 6000
 Wire Wire Line
-	4800 6050 4700 6050
+	5000 6050 4700 6050
 Wire Wire Line
 	4700 6050 4700 5800
 Wire Wire Line
 	4700 3650 5000 3650
 Wire Wire Line
-	5000 5800 4700 5800
+	5300 5800 4700 5800
 Connection ~ 4700 5800
 $Comp
 L Device:R_US R?
@@ -443,18 +444,14 @@ Wire Wire Line
 $Comp
 L Transistor_BJT:BC337 Q?
 U 1 1 5CDC12F5
-P 6600 5550
-F 0 "Q?" H 6791 5596 50  0000 L CNN
-F 1 "BU208" H 6791 5505 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6800 5475 50  0001 L CIN
-F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf" H 6600 5550 50  0001 L CNN
-	1    6600 5550
+P 6600 5450
+F 0 "Q?" H 6791 5496 50  0000 L CNN
+F 1 "BU208" H 6791 5405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6800 5375 50  0001 L CIN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf" H 6600 5450 50  0001 L CNN
+	1    6600 5450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6700 5350 6700 4600
-Wire Wire Line
-	6700 4600 6450 4600
 $Comp
 L power:GND #PWR?
 U 1 1 5CDC57C6
@@ -467,7 +464,7 @@ F 3 "" H 6700 6150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6700 6150 6700 5750
+	6700 6150 6700 5650
 $Comp
 L Device:R_US R?
 U 1 1 5CDC79A9
@@ -479,7 +476,6 @@ F 3 "~" H 6700 3150 50  0001 C CNN
 	1    6700 3150
 	1    0    0    -1  
 $EndComp
-Connection ~ 6700 4600
 $Comp
 L power:+15V #PWR?
 U 1 1 5CDC9C4E
@@ -497,16 +493,53 @@ Text Notes 6650 3250 1    50   ~ 0
 15W
 Text Notes 5250 3200 1    50   ~ 0
 3W
-Connection ~ 5300 4600
 Wire Wire Line
-	6400 5550 5300 5550
-Connection ~ 5300 5550
+	6400 5450 5600 5450
+Connection ~ 5600 5450
 Wire Wire Line
-	5300 5550 5300 5600
+	5600 5450 5600 5600
+Wire Wire Line
+	5600 5250 5600 5450
+$Comp
+L Device:Jumper_NC_Small JP?
+U 1 1 5CD9CA06
+P 6450 4600
+F 0 "JP?" H 6450 4721 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 6450 4721 50  0001 C CNN
+F 2 "" H 6450 4600 50  0001 C CNN
+F 3 "~" H 6450 4600 50  0001 C CNN
+	1    6450 4600
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	6700 3300 6700 4600
 Wire Wire Line
-	5300 3850 5300 4600
+	6700 4600 6550 4600
+Connection ~ 6700 4600
 Wire Wire Line
-	5300 5100 5300 5550
+	6700 4600 6700 5250
+$Comp
+L Device:Jumper_NC_Dual JP?
+U 1 1 5CDA481A
+P 5300 4150
+F 0 "JP?" H 5300 4297 50  0000 C CNN
+F 1 "Jumper_NC_Dual" H 5300 4388 50  0001 C CNN
+F 2 "" H 5300 4150 50  0001 C CNN
+F 3 "~" H 5300 4150 50  0001 C CNN
+	1    5300 4150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5300 4050 5300 3850
+Wire Wire Line
+	5550 4150 5600 4150
+Wire Wire Line
+	5600 4150 5600 4600
+Connection ~ 5600 4600
+Wire Wire Line
+	4950 4150 4950 5450
+Wire Wire Line
+	4950 5450 5600 5450
+Wire Wire Line
+	4950 4150 5050 4150
 $EndSCHEMATC

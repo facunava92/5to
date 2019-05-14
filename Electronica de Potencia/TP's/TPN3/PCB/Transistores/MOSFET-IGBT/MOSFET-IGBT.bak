@@ -1,0 +1,388 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Screw_Terminal_01x03 J?
+U 1 1 5CDA3F5E
+P 3150 4250
+F 0 "J?" H 3230 4292 50  0000 L CNN
+F 1 "PWM_IN" H 3230 4201 50  0000 L CNN
+F 2 "" H 3150 4250 50  0001 C CNN
+F 3 "~" H 3150 4250 50  0001 C CNN
+	1    3150 4250
+	1    0    0    -1  
+$EndComp
+Text Label 2650 4150 2    50   ~ 0
+PWM_A
+Text Label 2650 4400 2    50   ~ 0
+PWM_B
+Wire Wire Line
+	2950 4150 2650 4150
+$Comp
+L power:GND #PWR?
+U 1 1 5CDA47F5
+P 2650 4250
+F 0 "#PWR?" H 2650 4000 50  0001 C CNN
+F 1 "GND" V 2655 4122 50  0000 R CNN
+F 2 "" H 2650 4250 50  0001 C CNN
+F 3 "" H 2650 4250 50  0001 C CNN
+	1    2650 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2650 4250 2950 4250
+Wire Wire Line
+	2650 4400 2650 4350
+Wire Wire Line
+	2650 4350 2950 4350
+$Comp
+L Diode:1N4148 D?
+U 1 1 5CDA5C46
+P 4200 3500
+F 0 "D?" V 4154 3579 50  0000 L CNN
+F 1 "1N4148" V 4245 3579 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4200 3325 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4200 3500 50  0001 C CNN
+	1    4200 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5CDA8AD3
+P 4200 4500
+F 0 "D?" V 4154 4579 50  0000 L CNN
+F 1 "1N4148" V 4245 4579 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4200 4325 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4200 4500 50  0001 C CNN
+	1    4200 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5CDAAC55
+P 4750 3500
+F 0 "D?" V 4704 3579 50  0000 L CNN
+F 1 "1N4148" V 4795 3579 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4750 3325 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4750 3500 50  0001 C CNN
+	1    4750 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Transformer_1P_1S T?
+U 1 1 5CDAD0CD
+P 5400 4000
+F 0 "T?" H 5400 4300 50  0000 C CNN
+F 1 "50:50" H 5400 3750 50  0000 C CNN
+F 2 "" H 5400 4000 50  0001 C CNN
+F 3 "~" H 5400 4000 50  0001 C CNN
+	1    5400 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5CDAEFEA
+P 3150 3600
+F 0 "J?" H 3230 3592 50  0000 L CNN
+F 1 "Vin" H 3230 3501 50  0000 L CNN
+F 2 "" H 3150 3600 50  0001 C CNN
+F 3 "~" H 3150 3600 50  0001 C CNN
+	1    3150 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5CDAF70A
+P 2900 3750
+F 0 "#PWR?" H 2900 3500 50  0001 C CNN
+F 1 "GND" H 2905 3577 50  0000 C CNN
+F 2 "" H 2900 3750 50  0001 C CNN
+F 3 "" H 2900 3750 50  0001 C CNN
+	1    2900 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 3750 2900 3700
+Wire Wire Line
+	2900 3700 2950 3700
+$Comp
+L power:+15V #PWR?
+U 1 1 5CDB0039
+P 2900 3550
+F 0 "#PWR?" H 2900 3400 50  0001 C CNN
+F 1 "+15V" H 2915 3723 50  0000 C CNN
+F 2 "" H 2900 3550 50  0001 C CNN
+F 3 "" H 2900 3550 50  0001 C CNN
+	1    2900 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 3550 2900 3600
+Wire Wire Line
+	2900 3600 2950 3600
+$Comp
+L Diode:1N4148 D?
+U 1 1 5CDB5DA8
+P 4750 4500
+F 0 "D?" V 4704 4579 50  0000 L CNN
+F 1 "1N4148" V 4795 4579 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4750 4325 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4750 4500 50  0001 C CNN
+	1    4750 4500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5000 3800 4750 3800
+Wire Wire Line
+	4750 3800 4750 3650
+Wire Wire Line
+	4750 3800 3800 3800
+Connection ~ 4750 3800
+Text Label 3800 3800 2    50   ~ 0
+PWM_A
+Wire Wire Line
+	4750 4350 4750 3800
+Wire Wire Line
+	5000 4200 4200 4200
+Text Label 3800 4200 2    50   ~ 0
+PWM_B
+Wire Wire Line
+	4200 4350 4200 4200
+Connection ~ 4200 4200
+Wire Wire Line
+	4200 4200 3800 4200
+Wire Wire Line
+	4200 4200 4200 3650
+$Comp
+L power:GND #PWR?
+U 1 1 5CDBB0FB
+P 4450 4800
+F 0 "#PWR?" H 4450 4550 50  0001 C CNN
+F 1 "GND" H 4455 4627 50  0000 C CNN
+F 2 "" H 4450 4800 50  0001 C CNN
+F 3 "" H 4450 4800 50  0001 C CNN
+	1    4450 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 4800 4200 4800
+Wire Wire Line
+	4200 4800 4200 4650
+Wire Wire Line
+	4450 4800 4750 4800
+Wire Wire Line
+	4750 4800 4750 4650
+Connection ~ 4450 4800
+Wire Wire Line
+	4500 3050 4200 3050
+Wire Wire Line
+	4200 3050 4200 3350
+Wire Wire Line
+	4750 3350 4750 3050
+Wire Wire Line
+	4750 3050 4500 3050
+Connection ~ 4500 3050
+$Comp
+L Device:Q_NIGBT_GCE Q?
+U 1 1 5CDBEC5A
+P 6850 3800
+F 0 "Q?" H 7040 3846 50  0000 L CNN
+F 1 "FGPF7N60RUFD " H 7040 3755 50  0000 L CNN
+F 2 "" H 7050 3900 50  0001 C CNN
+F 3 "~" H 6850 3800 50  0001 C CNN
+	1    6850 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5CDC053C
+P 6300 4000
+F 0 "R?" H 6368 4046 50  0000 L CNN
+F 1 "220" H 6368 3955 50  0000 L CNN
+F 2 "" V 6340 3990 50  0001 C CNN
+F 3 "~" H 6300 4000 50  0001 C CNN
+	1    6300 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5CDC0FF3
+P 6950 4400
+F 0 "#PWR?" H 6950 4150 50  0001 C CNN
+F 1 "GND" H 6955 4227 50  0000 C CNN
+F 2 "" H 6950 4400 50  0001 C CNN
+F 3 "" H 6950 4400 50  0001 C CNN
+	1    6950 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 4200 6300 4200
+Wire Wire Line
+	6300 4150 6300 4200
+Connection ~ 6300 4200
+Wire Wire Line
+	6300 4200 5800 4200
+Wire Wire Line
+	6300 3850 6300 3800
+Connection ~ 6300 3800
+Wire Wire Line
+	6300 3800 5800 3800
+Wire Wire Line
+	6950 4200 6950 4400
+Wire Wire Line
+	6950 4000 6950 4200
+Connection ~ 6950 4200
+$Comp
+L Device:R_US R?
+U 1 1 5CDC3BAC
+P 7550 2850
+F 0 "R?" H 7618 2896 50  0000 L CNN
+F 1 "15" H 7618 2805 50  0000 L CNN
+F 2 "" V 7590 2840 50  0001 C CNN
+F 3 "~" H 7550 2850 50  0001 C CNN
+	1    7550 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NC_Dual JP?
+U 1 1 5CDC4C16
+P 7550 3200
+F 0 "JP?" H 7550 3347 50  0000 C CNN
+F 1 "Jumper_NC_Dual" H 7550 3438 50  0001 C CNN
+F 2 "" H 7550 3200 50  0001 C CNN
+F 3 "~" H 7550 3200 50  0001 C CNN
+	1    7550 3200
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7550 3100 7550 3000
+Wire Wire Line
+	6950 3600 6950 3200
+Wire Wire Line
+	6950 3200 7300 3200
+$Comp
+L power:+15V #PWR?
+U 1 1 5CDC63BE
+P 7550 2600
+F 0 "#PWR?" H 7550 2450 50  0001 C CNN
+F 1 "+15V" H 7565 2773 50  0000 C CNN
+F 2 "" H 7550 2600 50  0001 C CNN
+F 3 "" H 7550 2600 50  0001 C CNN
+	1    7550 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 2600 7550 2700
+$Comp
+L Device:Jumper_NC_Small JP?
+U 1 1 5CDC7EF0
+P 6500 3800
+F 0 "JP?" H 6500 3921 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 6500 3921 50  0001 C CNN
+F 2 "" H 6500 3800 50  0001 C CNN
+F 3 "~" H 6500 3800 50  0001 C CNN
+	1    6500 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 3800 6300 3800
+Wire Wire Line
+	6650 3800 6600 3800
+Wire Wire Line
+	6300 3800 6300 3550
+$Comp
+L Transistor_FET:IRF8301M Q?
+U 1 1 5CDC9E4F
+P 8000 3800
+F 0 "Q?" H 8206 3846 50  0000 L CNN
+F 1 "IRF840" H 8206 3755 50  0000 L CNN
+F 2 "Package_DirectFET:DirectFET_MT" H 8000 3800 50  0001 C CIN
+F 3 "https://www.infineon.com/dgdl/irf8301mpbf.pdf?fileId=5546d462533600a40153560d0e7a1d58" H 8000 3800 50  0001 L CNN
+	1    8000 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 3600 8100 3450
+Wire Wire Line
+	8100 3200 7800 3200
+Wire Wire Line
+	6950 4200 8100 4200
+Wire Wire Line
+	8100 4200 8100 4000
+$Comp
+L Device:Jumper_NC_Small JP?
+U 1 1 5CDD2019
+P 7700 3800
+F 0 "JP?" H 7700 3921 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 7700 3921 50  0001 C CNN
+F 2 "" H 7700 3800 50  0001 C CNN
+F 3 "~" H 7700 3800 50  0001 C CNN
+	1    7700 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 3800 7600 3550
+Wire Wire Line
+	6300 3550 7600 3550
+$Comp
+L power:+15V #PWR?
+U 1 1 5CDBA827
+P 4500 2600
+F 0 "#PWR?" H 4500 2450 50  0001 C CNN
+F 1 "+15V" H 4515 2773 50  0000 C CNN
+F 2 "" H 4500 2600 50  0001 C CNN
+F 3 "" H 4500 2600 50  0001 C CNN
+	1    4500 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 2600 4500 3050
+$Comp
+L Connector:TestPoint_Probe TP?
+U 1 1 5CDF2A14
+P 8100 3450
+F 0 "TP?" H 8253 3551 50  0000 L CNN
+F 1 "TP_VDS" H 8253 3460 50  0000 L CNN
+F 2 "" H 8300 3450 50  0001 C CNN
+F 3 "~" H 8300 3450 50  0001 C CNN
+	1    8100 3450
+	1    0    0    -1  
+$EndComp
+Connection ~ 8100 3450
+Wire Wire Line
+	8100 3450 8100 3200
+$Comp
+L Connector:TestPoint_Probe TP?
+U 1 1 5CDF4DF4
+P 6300 3800
+F 0 "TP?" H 6550 3950 50  0000 L CNN
+F 1 "TP_VBE_VGS" H 6450 3850 50  0000 L CNN
+F 2 "" H 6500 3800 50  0001 C CNN
+F 3 "~" H 6500 3800 50  0001 C CNN
+	1    6300 3800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Probe TP?
+U 1 1 5CDFA8CD
+P 6950 4200
+F 0 "TP?" H 7102 4301 50  0000 L CNN
+F 1 "GND" H 7102 4210 50  0000 L CNN
+F 2 "" H 7150 4200 50  0001 C CNN
+F 3 "~" H 7150 4200 50  0001 C CNN
+	1    6950 4200
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
