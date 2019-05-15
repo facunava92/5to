@@ -192,7 +192,6 @@ F 3 "~" H 7825 2975 50  0001 C CNN
 	1    7825 2975
 	1    0    0    -1  
 $EndComp
-NoConn ~ 4975 4025
 $Comp
 L Connector:Conn_01x01_Female J3
 U 1 1 5CB000E8
@@ -212,42 +211,11 @@ Wire Wire Line
 	6275 3175 6375 3175
 Wire Wire Line
 	5925 4075 6225 4075
-$Comp
-L Device:R_POT RV1
-U 1 1 5CD676F6
-P 4975 3875
-F 0 "RV1" H 4906 3921 50  0000 R CNN
-F 1 "R_POT" H 4906 3830 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alps_RK163_Single_Horizontal" H 4975 3875 50  0001 C CNN
-F 3 "~" H 4975 3875 50  0001 C CNN
-	1    4975 3875
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4975 3725 4975 3375
 Wire Wire Line
-	5125 3875 5125 4075
-$Comp
-L Device:R_POT RV2
-U 1 1 5CD6A114
-P 5525 3875
-F 0 "RV2" H 5456 3921 50  0000 R CNN
-F 1 "R_POT" H 5456 3830 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alps_RK163_Single_Horizontal" H 5525 3875 50  0001 C CNN
-F 3 "~" H 5525 3875 50  0001 C CNN
-	1    5525 3875
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5125 4075 5675 4075
-Wire Wire Line
 	5525 3725 5525 3575
 Connection ~ 5525 3575
-Wire Wire Line
-	5675 3875 5675 4075
-Connection ~ 5675 4075
-Wire Wire Line
-	5675 4075 5925 4075
 $Comp
 L Device:C C4
 U 1 1 5CD70F78
@@ -378,5 +346,35 @@ Wire Wire Line
 Connection ~ 5275 2625
 Wire Wire Line
 	5275 2625 5525 2625
-NoConn ~ 5525 4025
+$Comp
+L Device:R R?
+U 1 1 5CDBE2EA
+P 4975 3900
+F 0 "R?" H 5045 3946 50  0000 L CNN
+F 1 "R" H 5045 3855 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4905 3900 50  0001 C CNN
+F 3 "~" H 4975 3900 50  0001 C CNN
+	1    4975 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5CDBEAEB
+P 5525 3900
+F 0 "R?" H 5595 3946 50  0000 L CNN
+F 1 "R" H 5595 3855 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5455 3900 50  0001 C CNN
+F 3 "~" H 5525 3900 50  0001 C CNN
+	1    5525 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4975 4050 4975 4075
+Wire Wire Line
+	4975 4075 5525 4075
+Wire Wire Line
+	5525 4050 5525 4075
+Connection ~ 5525 4075
+Wire Wire Line
+	5525 4075 5925 4075
 $EndSCHEMATC
