@@ -1,0 +1,35 @@
+<Qucs Schematic 0.0.19>
+<Properties>
+  <View=0,80,858,760,1,0,148>
+  <Grid=10,10,0>
+  <DataSet=tp1Cap.dat>
+  <DataDisplay=tp1Cap.sch>
+  <OpenDisplay=1>
+  <Script=tp1Cap.m>
+  <RunScript=0>
+  <showFrame=0>
+  <FrameText0=Título>
+  <FrameText1=Dibujado por:>
+  <FrameText2=Fecha:>
+  <FrameText3=Revisión:>
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+  <Rect 110 413 573 313 3 #c0c0c0 1 00 1 0 5e+06 5e+07 1 -15915.5 50000 175070 1 -1 0.5 1 315 0 225 "" "" "">
+	<"modZ" #0000ff 0 3 0 0 0>
+  </Rect>
+  <Tab 60 690 796 228 3 #c0c0c0 1 00 1 990 1 1 1 0 1 1 1 0 1 1000 315 0 225 "" "" "">
+	<"XC" #0000ff 0 3 1 0 0>
+	<"XL" #0000ff 0 3 1 0 0>
+	<"ZT" #0000ff 0 3 1 0 0>
+	<"modZ" #0000ff 0 3 1 0 0>
+	<"Zp" #0000ff 0 3 1 0 0>
+  </Tab>
+</Diagrams>
+<Paintings>
+</Paintings>
