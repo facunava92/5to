@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name BJT-BU208)(type Legacy)(uri ${KIPRJMOD}/lib_sch/BJT-BU208.lib)(options "")(descr ""))
+)
