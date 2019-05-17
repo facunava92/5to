@@ -590,4 +590,15 @@ Wire Wire Line
 Connection ~ 7500 5500
 Wire Wire Line
 	7500 5500 7500 5075
+$Comp
+L BJT-BU208:logo G1
+U 1 1 5CDEF98D
+P 9100 2400
+F 0 "G1" H 9100 2370 60  0001 C CNN
+F 1 "logo" H 9100 2430 60  0001 C CNN
+F 2 "lib_fp:logo_utn_fsilk_small" H 9100 2400 50  0001 C CNN
+F 3 "" H 9100 2400 50  0001 C CNN
+	1    9100 2400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

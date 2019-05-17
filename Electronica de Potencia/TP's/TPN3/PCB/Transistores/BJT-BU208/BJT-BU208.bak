@@ -447,7 +447,7 @@ U 1 1 5CDC12F5
 P 7400 4875
 F 0 "Q3" H 7591 4921 50  0000 L CNN
 F 1 "BU208" H 7591 4830 50  0000 L CNN
-F 2 "lib_fp:TO-92_Inline" H 7600 4800 50  0001 L CIN
+F 2 "lib_fp:TO-3" H 7600 4800 50  0001 L CIN
 F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf" H 7400 4875 50  0001 L CNN
 	1    7400 4875
 	1    0    0    -1  
@@ -590,4 +590,15 @@ Wire Wire Line
 Connection ~ 7500 5500
 Wire Wire Line
 	7500 5500 7500 5075
+$Comp
+L BJT-BU208:logo G?
+U 1 1 5CDEF98D
+P 9100 2400
+F 0 "G?" H 9100 2370 60  0001 C CNN
+F 1 "logo" H 9100 2430 60  0001 C CNN
+F 2 "" H 9100 2400 50  0001 C CNN
+F 3 "" H 9100 2400 50  0001 C CNN
+	1    9100 2400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "D:\\fnavarro\\5to\\Electronica de Potencia\\TP's\\TPN3\\PCB\\Transistores\\BJT-BU208\\BJT-BU208.sch")
-    (date "16/5/2019 03:39:20")
+    (date "17/5/2019 13:40:14")
     (tool "Eeschema (5.1.0)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -189,7 +189,13 @@
       (datasheet ~)
       (libsource (lib BJT-BU208) (part TestPoint_Probe) (description ""))
       (sheetpath (names /) (tstamps /))
-      (tstamp 5CDD692B)))
+      (tstamp 5CDD692B))
+    (comp (ref G1)
+      (value logo)
+      (footprint lib_fp:logo_utn_fsilk_small)
+      (libsource (lib BJT-BU208) (part logo) (description ""))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5CDEF98D)))
   (libparts
     (libpart (lib BJT-BU208) (part 1N4148)
       (aliases
@@ -345,7 +351,11 @@
       (pins
         (pin (num 1) (name C) (type passive))
         (pin (num 2) (name B) (type input))
-        (pin (num 3) (name E) (type passive)))))
+        (pin (num 3) (name E) (type passive))))
+    (libpart (lib BJT-BU208) (part logo)
+      (fields
+        (field (name Reference) "#G")
+        (field (name Value) logo))))
   (libraries
     (library (logical BJT-BU208)
       (uri "D:\\fnavarro\\5to\\Electronica de Potencia\\TP's\\TPN3\\PCB\\Transistores\\BJT-BU208/lib_sch/BJT-BU208.lib")))
