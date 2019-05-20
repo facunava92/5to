@@ -184,20 +184,14 @@ Connection ~ 3250 4125
 Wire Wire Line
 	3250 4125 3400 4125
 Wire Wire Line
-	3250 4725 3250 4575
-Wire Wire Line
 	4150 4275 4150 4125
 Wire Wire Line
 	4150 4125 4000 4125
-Wire Wire Line
-	4150 4575 4150 4725
 Wire Wire Line
 	4350 4075 4350 4125
 Wire Wire Line
 	4350 4125 4150 4125
 Connection ~ 4150 4125
-Wire Wire Line
-	3250 4725 4150 4725
 $Comp
 L BJT-BU208:GND #PWR04
 U 1 1 5CD9E1AF
@@ -210,7 +204,7 @@ F 3 "" H 3700 4775 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3700 4775 3700 4425
+	3700 4775 3700 4750
 $Comp
 L BJT-BU208:CP1 C1
 U 1 1 5CD9F127
@@ -601,4 +595,15 @@ F 3 "" H 9100 2400 50  0001 C CNN
 	1    9100 2400
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4150 4575 4150 4750
+Wire Wire Line
+	4150 4750 3700 4750
+Connection ~ 3700 4750
+Wire Wire Line
+	3700 4750 3700 4425
+Wire Wire Line
+	3700 4750 3250 4750
+Wire Wire Line
+	3250 4750 3250 4575
 $EndSCHEMATC
