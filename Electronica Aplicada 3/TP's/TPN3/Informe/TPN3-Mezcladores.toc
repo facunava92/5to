@@ -1,0 +1,10 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{2}{section.1}% 
+\contentsline {section}{\numberline {2}Definici\IeC {\'o}n de par\IeC {\'a}metros}{2}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}P\IeC {\'e}rdida por conversi\IeC {\'o}n [CL]}{2}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Aislamiento [ISO]}{3}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}P\IeC {\'e}rdidas por Compresi\IeC {\'o}n [CP]}{3}{subsection.2.3}% 
+\contentsline {subsection}{\numberline {2.4}Figura de Ruido - Rango Din\IeC {\'a}mico}{3}{subsection.2.4}% 
+\contentsline {subsection}{\numberline {2.5}Tipos de mezcladores}{3}{subsection.2.5}% 
+\contentsline {section}{\numberline {3}Experiencia pr\IeC {\'a}ctica}{4}{section.3}% 
+\contentsline {subsubsection}{\numberline {3.0.1}Mezclador de terminaci\IeC {\'o}n \IeC {\'u}nica}{4}{subsubsection.3.0.1}% 

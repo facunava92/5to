@@ -1,0 +1,166 @@
+\documentclass[twocolumn]{article}
+\usepackage{graphicx}
+%permite ecribir acentos directamente
+\usepackage[utf8]{inputenc}
+% Esto es para que el LÁTEX sepa que el texto está en español, se agrega el ingles para el paquete de gráfico de circuitos:
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+ \geometry{a4paper,total={170mm,257mm},left=15mm,right=15mm,top=20mm,}
+\usepackage{hyperref} 
+\usepackage{amsmath, amsfonts}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Electrónica Aplicada III}
+\rhead{TP3 :Mezcladores}
+\rfoot{Página \thepage}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{colortbl}
+
+\pgfplotstableset{% global config, for example in the preamble
+  every head row/.style={before row=\toprule,after row=\midrule},
+  every last row/.style={after row=\bottomrule},
+  fixed,precision=1,
+}
+
+\begin{document}
+\begin{titlepage}
+ \centering
+	\includegraphics[scale=0.80]{imagenes/LOGO.jpg} \par
+ 	\vspace{1cm}
+ 	{\scshape\LARGE Universidad Tecnológica Nacional \par}
+ 	{\scshape\large Facultad Regional de Córdoba \par}
+ 	\vspace{1cm}
+	{\bfseries \Large Trabajo Práctico De Laboratorio $N^{\circ} 3$\par}
+	{\bfseries \Large Mezcladores \par}
+ 	\vspace{1.5cm}
+
+	\begin{tabular}{ll}
+		Alassia, Francisco	&	60861	\\
+		Amaya, Matías		&	68284	\\
+		Lamas, Matías 		&	65536 	\\
+		Navarro, Facundo 	&	63809 	\\
+		Veron, Misael	 	&	62628
+	\end{tabular}
+	
+	\vspace{1cm}
+	Curso: 5r2 \\
+	Grupo $N^{\circ} 4$
+ 	\vfill
+	{\bfseries \Large Electrónica Aplicada III \par}
+
+	\vspace{1.5cm}
+	Docentes: \par
+	Ing. Rabinovich, Daniel \par
+	Ing. Yoaquino, Leandro \par
+
+ 	\vfill
+	{\large \today\par}
+\end{titlepage}
+
+%##################################### INDICE  #####################################################
+\onecolumn
+\tableofcontents
+\clearpage
+
+%##################################### INDICE  #####################################################
+\twocolumn
+\section{Introducción}
+Un mezclador es un dispositivo electrónico que realiza el desplazamiento en frecuencia de la potencia de una señal. Un multiplicador ideal es, desde el punta de vista matemático, un perfecto mezclador que produce la suma y diferencia de las frecuencias de entrada como se muestra en \textcolor{blue}{\ref{fig:fig0}}.
+
+\begin{figure}[!ht]
+  \centering    
+	\includegraphics[scale=0.3]{imagenes/fig0.jpg}
+	\caption{Mezclador ideal}\label{fig:fig0}
+\end{figure}
+
+En el proceso de recepción y transmisión de información en Radio Frecuencias son de fundamental utilidad los mezcladores. Cualquier dispositivo alineal puede ser un mezclador, diodos, transistores bipolares, FETs, etc. La no linealidad es necesaria para producir nuevas frecuencias. La elección del o dispositivo y del circuito depende de las consideraciones que se realicen sobre la ganancia o pérdida de conversión, rango dinámico, ancho de banda, figura de ruido, aislación entre los puertos, generación de frecuencias indeseables, costo y adaptación de sus puertos.
+
+\begin{figure}[!ht]
+  \centering    
+	\includegraphics[scale=0.4]{imagenes/fig1.jpg}
+	\caption{Esquema down-converter y up-converter}\label{fig:fig1}
+\end{figure}
+
+En cuanto a las características de la señal de salida, estos dispositivos pueden ser de dos tipos: uno se llama \textit{up}, donde la frecuencia de salida es mayor que la frecuencia de entrada y se emplean en procesos de transmisión; el otro tipo de mezclador se denomina \textit{down}, en este caso la frecuencia de salida es menor a la de entrada y se utiliza generalmente en procesos de recepción. Esto se representa en la figura \textcolor{blue}{\ref{fig:fig1}}
+
+Como se mencionó anteriormente, en el proceso de recepción la señal de \textit{RF} es \textit{down converted}. El receptor cuenta con un oscilador local (LO) cuya frecuencia es determinada por la señal de \textit{RF} que se desea sintonizar. En la \textcolor{blue}{\ref{fig:fig2}} se muestra el espectro en frecuencia para un conversor de este tipo, donde $LO$ representa al oscilador local a la frecuencia $f_{LO}$ y \textit{RF} es la señal\textit{IF} a sintonizar a la frecuencia $f_{RF}$. La señal de \textit{RF} es mezclada con la señal del oscilador local produciendo la suma y diferencia de ambas frecuencias. La suma $f_{LO}$ $+$ $f_{RF}$ queda fuera de rango de operación del sistema y la diferencia $f_{LO}$ $-$ $f_{RF}$ es la señal de frecuencia intermedia \textit{IF} a la frecuencia $f_{IF}$, que es filtrada y amplificada. Es importante destacar que también aparece una señal imagen \textit{IM} a una frecuencia $f_{IM}$ que debe ser eliminada por el filtro de \textit{RF}. Dicho filtro debe ser suficientemente selectivo para eliminar esta componente imagen.
+
+\begin{figure}[!ht]
+  \centering    
+	\includegraphics[scale=0.4]{imagenes/fig2.jpg}
+	\caption{Frecuencias en un mezclador downconverter}\label{fig:fig2}
+\end{figure}
+
+Para el caso de un upconverter, la señal LO es multiplicada por la señal  resultando la \textit{RF} modulada en doble banda lateral con portadora suprimida. En otras palabras luego de realizar el producto se obtiene $f_{RF}$ = $f_{OL}$ $\pm$ $f_{IF}$, pero generalmente es usada solo una de estas señales de \textit{RF}, lo que hace necesaria también la implementación de un filtro.
+
+Desde el punto de vista de la potencia, los mezcladores se clasifican en pasivos o activos. Un mezclador pasivo emplea diodos u otro dispositivo no lineal, donde la señal LO provee la potencia para producir la suma y la diferencia de frecuencias. Los mezcladores activos emplean FET o transistores alimentados con fuentes de tensión continua que proveen la potencia para el proceso de mezclado. 
+
+\section{Definición de parámetros}
+\subsection{Pérdida por conversión [CL]}
+La Pérdida por Conversión ó \textit{Conversion Loss} para el caso particular de un conversor down, es definida como el cociente entre la señal de entrada \textit{RF} y la señal de salida \textit{IF} deseada.
+
+\begin{figure}[!ht]
+  \centering    
+	\includegraphics[scale=0.38]{imagenes/fig3.jpg}
+	\caption{Perdida por conversión de un mezclador}\label{fig:fig3}
+\end{figure}
+
+Para el caso de un mezclador ideal, la potencia de entrada es divida a la mitad y distribuida en cada una de las dos componentes resultantes, produciendo un desplazamiento en frecuencia de la potencia. Entonces la pérdida por conversión se calcula como la relación entre la potencia de entrada y cualquiera de las resultantes de la mezcla:
+
+\[CL = 10 \cdot log \left( \frac{P_{out} \; [mW]}{P_{in} [out]} \right) \]
+
+\begin{equation}
+CL = P_{in} \; [dBm]- P{out} \; [dBm] \label{eq:1}
+\end{equation}
+
+En un mezclador pasivo ideal la perdida por conversión parte de $3v\; [dB]$ ya que se emplea solo una de las resultantes del producto. Para el caso de un mezclador práctico balanceado o doblemente balanceado este factor es menor a $6 \; [dB]$. La pérdida por conversión depende de la potencia aplicada por la señal del oscilador local y debe ser tenida en cuenta para el cálculo de la "Figura de Ruido". Es común, en receptores de calidad, el uso de un amplificador con ganancia mayor a este factor de pérdida para lograr que el mezclador afecte en menor medida la figura de ruido.
+
+\subsection{Aislamiento [ISO]}
+En la práctica se desea que exista una aislación entre los puertos \textit{LO}, \textit{RF} y \textit{IF} del mezclador, pero esto no siempre se cumple. La aislación entre un par de puertos A - B cuyas componentes fundamentales se encuentra en $f_A$ y $f_B$ respectivamente, se determina como la diferencia entre la potencia de la componente fundamental del puerto A y la potencia que posee la componente en la frecuencia $f_A$ del puerto B. En un mezclador de un solo diodo no suele existir aislamiento entre sus puertos. En el caso de los balanceados la aislación depende de las características de los diodos utilizados, por este motivo los fabricantes emplean dispositivos diseñados para tal fin. Un amplificador doble balanceado que hace uso de estos diodos particulares la aislación toma valores de $30 \; [dB]$. 
+
+\subsection{Pérdidas por Compresión [CP]}
+Para un mezclador down ideal la salida \textit{IF} debe ser proporcional a la señal de entrada \textit{RF}, en la práctica ocurre que a medida que la señal de entrada se aproxima a los $10\;[dB]$ por debajo de la potencia del oscilador local, la salida de frecuencia intermedia comienza a saturarse y la pérdida por conversión incrementa. Los fabricantes especifican el punto de $1 \; [dB]$ de compresión ya que se relaciona directamente con la potencia del oscilador local, un mayor valor de esta potencia permite lograr un punto de compresión de $1 \; [dB]$ más alto, incrementando el rango dinámico del mezclador. Se determina por medio de un barrido del parámetro $P_{RF}$ realizando una gráfica de la potencia de frecuencia intermedia $P_{IF}$ en función de $P_{RF}$. En un caso ideal, esta relación es lineal, sin embargo en la práctica para determinado valor de $P_{RF}$ esta relación se aleja de la linealidad. Definiendo entonces a la pérdida por compresión como el valor de $P_{RF}$ a partir del cual la gráfica real de $P_{IF}$ = $f(P_{RF})$ se aleja un decibel de la gráfica ideal. 
+
+\begin{figure}[!ht]
+  \centering    
+	\includegraphics[scale=0.45]{imagenes/fig4.jpg}
+	\caption{Punto de compresion de 1[dB] de un mezclador}\label{fig:fig4}
+\end{figure}
+
+\subsection{Figura de Ruido - Rango Dinámico}
+ El rango dinámico se define como el grado de variación útil en que puede operar el mezclador. El valor superior del rango se encuentra determinado por el punto de compresión de $1 \; [dB]$ y el valor inferior es limitado por la figura de ruido. La figura de ruido, salvo excepciones, es aproximadamente igual que la pérdida por conversión. Se trata que sea lo menor posible para obtener un mayor rango dinámico de aplicación.
+
+\subsection{Tipos de mezcladores}  
+Según las exigencias del diseño, no en todos los casos se debe permitir que una o varias componentes de frecuencia aplicada en un puerto se filtren en otro, esto se define como la aislación entre puertos. Una forma de eliminar o atenúar estas componentes de frecuencia, es empleando un número par de dispositivos dispuestos en forma simétrica. Los tipos de mezcladores se pueden clasificar según su balanceo o equilibrio, es decir según la simetría de la configuración y paridad entre sus dispositivos. Las configuraciones más comunes son:
+
+\begin{itemize}\itemsep0em
+\item[•]  Mezcladores de terminación única.
+\item[•]  Mezcladores de balanceo simple
+\item[•]  Mezcladores de balanceo doble.
+\end{itemize}
+
+\clearpage
+
+\section{Experiencia práctica}
+Diseñar, calcular y simular diferentes mezcladores para ser utilizados en un receptor superheterodino de FM con las siguientes características:
+
+\begin{itemize}\itemsep0em
+\item[•]  $f_{IF} = 10,7 \; [Mhz]$.
+\item[•]  $f_{RF} = 88-108 \; [Mhz]; P_{RF} = -10 \; [dBm]$.
+\item[•]  $P_{LO} = 8 \;[dBm]$.
+\end{itemize}
+
+\subsubsection{Mezclador de terminación única}
+Son aquellos mezcladores que emplean un único dispositivo alineal, ya sea un diodo o un transistor. Al poseer un solo dispositivo (impar), no hay simetrías que permitan eliminar frecuencias no deseadas en algunos de los terminales. En el caso de emplear un transistor, se logran niveles de aislación interesantes más por la unilateralidad que por simetría. Generalmente se emplean FETs, debido a su característica de transferencia más cuadrática que los BJT (generan menor cantidad de productos de intermodulación), permitiendo ganancias de conversión mayor que uno $(G_C = P_{IF}/P_{RF})$, y cierta aislación de \textit{OL} dada por la unilateralidad del dispositivo. En aplicaciones no muy comprometidas, su uso se justifica en los costos.
+
+\end{document}
