@@ -75,7 +75,7 @@
 %##################################### INDICE  #####################################################
 \twocolumn
 \section{Introducción}
-Un mezclador es un dispositivo electrónico que realiza el desplazamiento en frecuencia de la potencia de una señal. Un multiplicador ideal es, desde el punta de vista matemático, un perfecto mezclador que produce la suma y diferencia de las frecuencias de entrada como se muestra en \textcolor{blue}{\ref{fig:fig0}}.
+Un mezclador es un dispositivo electrónico que realiza el desplazamiento en frecuencia de la potencia de una señal. Un multiplicador ideal es, desde el punta de vista matemático, un perfecto mezclador que produce la suma y diferencia de las frecuencias de entrada, un diagrama en bloque del mismo se muestra en la figura \textcolor{blue}{\ref{fig:fig0}}.
 
 \begin{figure}[!ht]
   \centering    
@@ -93,7 +93,7 @@ En el proceso de recepción y transmisión de información en Radio Frecuencias 
 
 En cuanto a las características de la señal de salida, estos dispositivos pueden ser de dos tipos: uno se llama \textit{up}, donde la frecuencia de salida es mayor que la frecuencia de entrada y se emplean en procesos de transmisión; el otro tipo de mezclador se denomina \textit{down}, en este caso la frecuencia de salida es menor a la de entrada y se utiliza generalmente en procesos de recepción. Esto se representa en la figura \textcolor{blue}{\ref{fig:fig1}}
 
-Como se mencionó anteriormente, en el proceso de recepción la señal de \textit{RF} es \textit{down converted}. El receptor cuenta con un oscilador local (LO) cuya frecuencia es determinada por la señal de \textit{RF} que se desea sintonizar. En la \textcolor{blue}{\ref{fig:fig2}} se muestra el espectro en frecuencia para un conversor de este tipo, donde $LO$ representa al oscilador local a la frecuencia $f_{LO}$ y \textit{RF} es la señal\textit{IF} a sintonizar a la frecuencia $f_{RF}$. La señal de \textit{RF} es mezclada con la señal del oscilador local produciendo la suma y diferencia de ambas frecuencias. La suma $f_{LO}$ $+$ $f_{RF}$ queda fuera de rango de operación del sistema y la diferencia $f_{LO}$ $-$ $f_{RF}$ es la señal de frecuencia intermedia \textit{IF} a la frecuencia $f_{IF}$, que es filtrada y amplificada. Es importante destacar que también aparece una señal imagen \textit{IM} a una frecuencia $f_{IM}$ que debe ser eliminada por el filtro de \textit{RF}. Dicho filtro debe ser suficientemente selectivo para eliminar esta componente imagen.
+Como se mencionó anteriormente, en el proceso de recepción la señal de \textit{RF} es \textit{down converted}. El receptor cuenta con un oscilador local (LO) cuya frecuencia es determinada por la señal de \textit{RF} que se desea sintonizar. En la \textcolor{blue}{\ref{fig:fig2}} se muestra el espectro en frecuencia para un conversor de este tipo, donde $LO$ representa al oscilador local a la frecuencia $f_{LO}$ y \textit{RF} es la señal \textit{IF} a sintonizar a la frecuencia $f_{RF}$. La señal de \textit{RF} es mezclada con la señal del oscilador local produciendo la suma y diferencia de ambas frecuencias. La suma $f_{LO}$ $+$ $f_{RF}$ queda fuera de rango de operación del sistema y la diferencia $f_{LO}$ $-$ $f_{RF}$ es la señal de frecuencia intermedia \textit{IF} a la frecuencia $f_{IF}$, que es filtrada y amplificada. Es importante destacar que también aparece una señal imagen \textit{IM} a una frecuencia $f_{IM}$ que debe ser eliminada por el filtro de \textit{RF}. Dicho filtro debe ser suficientemente selectivo para eliminar esta componente imagen.
 
 \begin{figure}[!ht]
   \centering    
@@ -120,10 +120,10 @@ Para el caso de un mezclador ideal, la potencia de entrada es divida a la mitad 
 \[CL = 10 \cdot log \left( \frac{P_{out} \; [mW]}{P_{in} [out]} \right) \]
 
 \begin{equation}
-CL = P_{in} \; [dBm]- P{out} \; [dBm] \label{eq:1}
+CL = P_{in} \; [dBm]- P_{out} \; [dBm] \label{eq:1}
 \end{equation}
 
-En un mezclador pasivo ideal la perdida por conversión parte de $3v\; [dB]$ ya que se emplea solo una de las resultantes del producto. Para el caso de un mezclador práctico balanceado o doblemente balanceado este factor es menor a $6 \; [dB]$. La pérdida por conversión depende de la potencia aplicada por la señal del oscilador local y debe ser tenida en cuenta para el cálculo de la "Figura de Ruido". Es común, en receptores de calidad, el uso de un amplificador con ganancia mayor a este factor de pérdida para lograr que el mezclador afecte en menor medida la figura de ruido.
+En un mezclador pasivo ideal la perdida por conversión parte de $3 \; [dB]$ ya que se emplea solo una de las resultantes del producto. Para el caso de un mezclador práctico balanceado o doblemente balanceado este factor es menor a $6 \; [dB]$. La pérdida por conversión depende de la potencia aplicada por la señal del oscilador local y debe ser tenida en cuenta para el cálculo de la "Figura de Ruido". Es común, en receptores de calidad, el uso de un amplificador con ganancia mayor a este factor de pérdida para lograr que el mezclador afecte en menor medida la figura de ruido.
 
 \subsection{Aislamiento [ISO]}
 En la práctica se desea que exista una aislación entre los puertos \textit{LO}, \textit{RF} y \textit{IF} del mezclador, pero esto no siempre se cumple. La aislación entre un par de puertos A - B cuyas componentes fundamentales se encuentra en $f_A$ y $f_B$ respectivamente, se determina como la diferencia entre la potencia de la componente fundamental del puerto A y la potencia que posee la componente en la frecuencia $f_A$ del puerto B. En un mezclador de un solo diodo no suele existir aislamiento entre sus puertos. En el caso de los balanceados la aislación depende de las características de los diodos utilizados, por este motivo los fabricantes emplean dispositivos diseñados para tal fin. Un amplificador doble balanceado que hace uso de estos diodos particulares la aislación toma valores de $30 \; [dB]$. 
@@ -156,7 +156,7 @@ Diseñar, calcular y simular diferentes mezcladores para ser utilizados en un re
 
 \begin{itemize}\itemsep0em
 \item[•]  $f_{IF} = 10,7 \; [Mhz]$.
-\item[•]  $f_{RF} = 88-108 \; [Mhz]; P_{RF} = -10 \; [dBm]$.
+\item[•]  $f_{RF} = 88-108 \; [Mhz]; \; P_{RF} = -10 \; [dBm]$.
 \item[•]  $P_{LO} = 8 \;[dBm]$.
 \end{itemize}
 
