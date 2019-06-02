@@ -375,7 +375,7 @@ F 1 "BC558" H 6491 5180 50  0000 L CNN
 F 2 "lib_fp:TO-92_Inline" H 6500 5150 50  0001 L CIN
 F 3 "http://www.redrok.com/PNP_BC327_-45V_-800mA_0.625W_Hfe100_TO-92.pdf" H 6300 5225 50  0001 L CNN
 	1    6300 5225
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L BJT-BU208:-5V #PWR08
