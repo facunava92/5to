@@ -399,11 +399,8 @@ Wire Wire Line
 	6300 3800 6650 3800
 Wire Wire Line
 	6950 3800 6950 3200
-Connection ~ 6650 3800
 Wire Wire Line
 	8025 3200 8025 3800
-Wire Wire Line
-	6650 3800 7725 3800
 Wire Wire Line
 	6300 3575 6300 3800
 Wire Wire Line
@@ -416,4 +413,7 @@ Text Label 3800 4200 2    50   ~ 0
 PWM_B
 Text Notes 5525 4825 0    50   ~ 0
 unir masas
+Connection ~ 6650 3800
+Wire Wire Line
+	6650 3800 7725 3800
 $EndSCHEMATC

@@ -414,4 +414,6 @@ Text Label 3800 3800 2    50   ~ 0
 PWM_A
 Text Label 3800 4200 2    50   ~ 0
 PWM_B
+Text Notes 5525 4825 0    50   ~ 0
+unir masas
 $EndSCHEMATC
