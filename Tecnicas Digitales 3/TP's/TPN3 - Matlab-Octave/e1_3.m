@@ -43,6 +43,6 @@ subplot(2,4,6); imshow(E); title('Ejercicio 6')
 
 %Ejercicio 7. Crear una función que permita ajustar el brillo y el 
 %contraste de la imagen 
-F=brillo_contraste(I, 0.5, 0.2);
+F=brillo_contraste(I,0.5, 0.2);
 subplot(2,4,7); imshow(F); title('Ejercicio 7')
 

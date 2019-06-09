@@ -131,7 +131,7 @@ for n=1: (N+N-1)   %Convolucion con producto mediante bucle for
    z(n)=p(i)*r(i)+ z(n);
    end
 end
-t2= toc     %1.550949 [s]
+t2= toc;    %1.550949 [s]
 
 tic         %Convolucion mediante funcion de Matlab
 a=conv(p,l);
@@ -143,3 +143,7 @@ T3=sprintf('Convolucion mediante funcion de Matlab : %f [s]' , t3);
 disp(T1)
 disp(T2)
 disp(T3)
+
+disp('Presionar una tecla para continuar!') % Press a key here.You can see the message 'Paused: Press any key' in        
+                                            % the lower left corner of MATLAB window.
+pause;
