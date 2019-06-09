@@ -1,27 +1,41 @@
-% %Guía 3, Ejercicio 3
-% 
-% %PUNTO 3.1
-% [r, fs] = audioread('numeros.wav'); % fs=44100 Hz, nbits=24bits
-% Ts = 1/fs;
-% h = zeros(1, (0.3/Ts) ); %13230 muestras equivalen al retardo
-% 
-% 
-% for n=1 : (0.3/Ts) %con este for cargo el vector h con la muestra 1 en la posicion requerida
-% 	if n == (0.3/Ts)
-% 		h(n) = 1;
-% 	end
-% end
-% 
-% %convolucionar la señal r con la señal h para genera una señal I. Luego eliminar las ultimas muestras de la señal I, de tal manera que I y r tengan la misma longitud
-% I = conv(r, h');
-% NI = length(I);
-% Nr = length(r);
-% I = I(1:1:Nr); %se cargan desde la muestra 1 a la muestra Nr del vector I, así I y r tienen la misma longitud
-% M = [r , I]; %se combinan las dos señales en una matriz de tal manera de obtener una señal estereo a partir de la señal mono original
-% %sound(M, fs, nbits)
-% audiowrite('NumerosEnStereo.wav',M,fs)
+% Ejericico 1. Experimentaremos con un filtro muy simple: el filtro de retardo. 
+% Este filtro consiste en un impulso desplazado y su único efecto es retardar 
+% la señal de entrada
+clear all;
+clc;
+close all;
 
-%PUNTO 3.2 "filtro peine" o filtro comb
+[r, fs]=audioread('numeros.wav'); % tambien se puede usar wavread() 
+sound(r, fs); %Reproduce 
+
+
+disp('Presiona para reproducior audio con delay!') % Press a key here.You can see the message 'Paused: Press any key' in        
+                                            % the lower left corner of MATLAB window.
+pause;
+
+info = audioinfo('numeros.wav');
+
+Total_bits = info.BitsPerSample * r; %Total de bits =bitspormuestra * totalmuestras
+Delay_300=0.3*fs; %Numero de muestras equivalentes a un retardo de 300 ms
+h=zeros(Delay_300, 1);      %Se crea una funcion impulso en 300 ms
+h(end)=1;
+l=conv(h,r);
+l=l(1:length(r), 1);       %elimina elementos para que l tenga igua longitud que r
+estereo=[r, l];            %concatena dos vectores o pistas mono en una estereo
+audiowrite('numeros_estereo.wav', estereo, fs); %tambien se puede usar wavwrite()
+sound(estereo, fs); %Se comprueba un retraso entre ambas pistas
+
+disp('Presionar una tecla para continuar!') % Press a key here.You can see the message 'Paused: Press any key' in        
+                                            % the lower left corner of MATLAB window.
+pause;
+
+%Ejercicio2. A continuación utilizaremos una extensión del filtro de retardo
+%llamada filtro peine (comb filter)
+
+clear all;
+clc;
+close all;
+
 [r, fs] = audioread('numeros.wav'); % fs=44100 Hz,
 Ts = 1/fs;
 K = (0.020*fs); 
@@ -50,5 +64,7 @@ y = y(1:Nr);
 y_max = max(y);
 y = y(:) ./ y_max;
 sound(y , fs)
+figure();
+stem(h);
 
-audiowrite('NumerosFiltroPeine.wav',y,fs)
+audiowrite('numeros_peine.wav',y,fs)
