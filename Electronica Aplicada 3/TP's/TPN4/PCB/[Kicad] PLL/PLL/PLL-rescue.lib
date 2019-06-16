@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# PLL-rescue_+12V-power
+# +12V-power
 #
-DEF PLL-rescue_+12V-power #PWR 0 0 Y Y 1 F P
+DEF +12V-power #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "PLL-rescue_+12V-power" 0 140 50 H V C CNN
+F1 "+12V-power" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -16,11 +16,11 @@ X +12V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# PLL-rescue_4017-4xxx
+# 4017-4xxx
 #
-DEF PLL-rescue_4017-4xxx U 0 40 Y Y 1 L N
+DEF 4017-4xxx U 0 40 Y Y 1 L N
 F0 "U" -300 650 50 H V C CNN
-F1 "PLL-rescue_4017-4xxx" -300 -750 50 H V C CNN
+F1 "4017-4xxx" -300 -750 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -47,11 +47,11 @@ X Q8 9 500 -300 200 L 50 50 1 0 O
 ENDDRAW
 ENDDEF
 #
-# PLL-rescue_4046-4xxx
+# 4046-4xxx
 #
-DEF PLL-rescue_4046-4xxx U 0 40 Y Y 1 L N
+DEF 4046-4xxx U 0 40 Y Y 1 L N
 F0 "U" -300 550 50 H V C CNN
-F1 "PLL-rescue_4046-4xxx" -300 -650 50 H V C CNN
+F1 "4046-4xxx" -300 -650 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -78,11 +78,11 @@ X VCOin 9 500 0 200 L 50 50 1 0 I
 ENDDRAW
 ENDDEF
 #
-# PLL-rescue_CP1_Small-Device
+# CP1_Small-Device
 #
-DEF PLL-rescue_CP1_Small-Device C 0 10 N N 1 F N
+DEF CP1_Small-Device C 0 10 N N 1 F N
 F0 "C" 10 70 50 H V L CNN
-F1 "PLL-rescue_CP1_Small-Device" 10 -80 50 H V L CNN
+F1 "CP1_Small-Device" 10 -80 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -98,11 +98,11 @@ X ~ 2 0 -100 80 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# PLL-rescue_C_Small-Device
+# C_Small-Device
 #
-DEF PLL-rescue_C_Small-Device C 0 10 N N 1 F N
+DEF C_Small-Device C 0 10 N N 1 F N
 F0 "C" 10 70 50 H V L CNN
-F1 "PLL-rescue_C_Small-Device" 10 -80 50 H V L CNN
+F1 "C_Small-Device" 10 -80 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -116,11 +116,11 @@ X ~ 2 0 -100 80 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# PLL-rescue_C_Variable-Device
+# C_Variable-Device
 #
-DEF PLL-rescue_C_Variable-Device C 0 10 N N 1 F N
+DEF C_Variable-Device C 0 10 N N 1 F N
 F0 "C" 25 -75 50 H V L CNN
-F1 "PLL-rescue_C_Variable-Device" 25 -150 50 H V L CNN
+F1 "C_Variable-Device" 25 -150 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -134,11 +134,11 @@ X ~ 2 0 -150 120 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# PLL-rescue_GND-power
+# GND-power
 #
-DEF PLL-rescue_GND-power #PWR 0 0 Y Y 1 F P
+DEF GND-power #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "PLL-rescue_GND-power" 0 -150 50 H V C CNN
+F1 "GND-power" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -147,11 +147,11 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# PLL-rescue_LED-Device
+# LED-Device
 #
-DEF PLL-rescue_LED-Device D 0 40 N N 1 F N
+DEF LED-Device D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "PLL-rescue_LED-Device" 0 -100 50 H V C CNN
+F1 "LED-Device" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -170,11 +170,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# PLL-rescue_R_POT_TRIM_US-Device
+# R_POT_TRIM_US-Device
 #
-DEF PLL-rescue_R_POT_TRIM_US-Device RV 0 40 Y N 1 F N
+DEF R_POT_TRIM_US-Device RV 0 40 Y N 1 F N
 F0 "RV" -175 0 50 V V C CNN
-F1 "PLL-rescue_R_POT_TRIM_US-Device" -100 0 50 V V C CNN
+F1 "R_POT_TRIM_US-Device" -100 0 50 V V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -194,11 +194,11 @@ X 3 3 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# PLL-rescue_R_US-Device
+# R_US-Device
 #
-DEF PLL-rescue_R_US-Device R 0 0 N Y 1 F N
+DEF R_US-Device R 0 0 N Y 1 F N
 F0 "R" 100 0 50 V V C CNN
-F1 "PLL-rescue_R_US-Device" -100 0 50 V V C CNN
+F1 "R_US-Device" -100 0 50 V V C CNN
 F2 "" 40 -10 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -215,11 +215,29 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# PLL-rescue_Screw_Terminal_01x02-Connector
+# SW_SPDT-Switch
 #
-DEF PLL-rescue_Screw_Terminal_01x02-Connector J 0 40 Y N 1 F N
+DEF SW_SPDT-Switch SW 0 0 Y N 1 F N
+F0 "SW" 0 170 50 H V C CNN
+F1 "SW_SPDT-Switch" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C -80 0 20 0 0 0 N
+C 80 -100 20 0 0 0 N
+C 80 100 20 0 1 0 N
+P 2 0 1 0 -60 10 65 90 N
+X A 1 200 100 100 L 50 50 1 1 P
+X B 2 -200 0 100 R 50 50 1 1 P
+X C 3 200 -100 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Screw_Terminal_01x02-Connector
+#
+DEF Screw_Terminal_01x02-Connector J 0 40 Y N 1 F N
 F0 "J" 0 100 50 H V C CNN
-F1 "PLL-rescue_Screw_Terminal_01x02-Connector" 0 -200 50 H V C CNN
+F1 "Screw_Terminal_01x02-Connector" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -238,11 +256,11 @@ X Pin_2 2 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# PLL-rescue_TestPoint_Probe-Connector
+# TestPoint_Probe-Connector
 #
-DEF PLL-rescue_TestPoint_Probe-Connector TP 0 30 N N 1 F N
+DEF TestPoint_Probe-Connector TP 0 30 N N 1 F N
 F0 "TP" 65 230 50 H V C CNN
-F1 "PLL-rescue_TestPoint_Probe-Connector" 65 160 50 H V C CNN
+F1 "TestPoint_Probe-Connector" 65 160 50 H V C CNN
 F2 "" 200 0 50 H I C CNN
 F3 "" 200 0 50 H I C CNN
 $FPLIST

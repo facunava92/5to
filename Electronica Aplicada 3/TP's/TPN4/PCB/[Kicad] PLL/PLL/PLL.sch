@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:PLL-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -14,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L 4xxx:4017 U1
+L PLL-rescue:4017-4xxx U1
 U 1 1 5D03BE37
 P 4025 4250
 F 0 "U1" H 3775 4900 50  0000 C CNN
@@ -25,7 +26,7 @@ F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4017bms-22bms
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_US R1
+L PLL-rescue:R_US-Device R1
 U 1 1 5D03DC80
 P 5400 5050
 F 0 "R1" H 5150 5100 50  0000 L CNN
@@ -36,7 +37,7 @@ F 3 "~" H 5400 5050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED D1
+L PLL-rescue:LED-Device D1
 U 1 1 5D03FB9E
 P 2750 4575
 F 0 "D1" V 2786 4459 50  0000 R CNN
@@ -47,29 +48,7 @@ F 3 "~" H 2750 4575 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Switch:SW_SPDT SW1
-U 1 1 5D0408D4
-P 7850 3950
-F 0 "SW1" H 7825 3775 50  0000 C CNN
-F 1 "SW_SPDT" H 7850 3775 50  0001 C CNN
-F 2 "lib_fp:PinHeader_1x03_P2.54mm_Vertical" H 7850 3950 50  0001 C CNN
-F 3 "~" H 7850 3950 50  0001 C CNN
-	1    7850 3950
-	-1   0    0    -1  
-$EndComp
-$Comp
-L 4xxx:4046 U2
-U 1 1 5D04140C
-P 6600 4200
-F 0 "U2" H 6350 4750 50  0000 C CNN
-F 1 "4046" H 6800 3550 50  0000 C CNN
-F 2 "lib_fp:DIP-16_W7.62mm_LongPads" H 6600 4200 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/HEF4046B.pdf" H 6600 4200 50  0001 C CNN
-	1    6600 4200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR09
+L PLL-rescue:GND-power #PWR09
 U 1 1 5D0464B6
 P 4025 5200
 F 0 "#PWR09" H 4025 4950 50  0001 C CNN
@@ -82,7 +61,7 @@ $EndComp
 Wire Wire Line
 	4025 5200 4025 5150
 $Comp
-L power:+12V #PWR08
+L PLL-rescue:+12V-power #PWR08
 U 1 1 5D04819C
 P 4025 3225
 F 0 "#PWR08" H 4025 3075 50  0001 C CNN
@@ -93,7 +72,7 @@ F 3 "" H 4025 3225 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP1_Small C3
+L PLL-rescue:CP1_Small-Device C3
 U 1 1 5D048F94
 P 4150 3375
 F 0 "C3" H 4241 3422 50  0000 L CNN
@@ -107,7 +86,7 @@ Wire Wire Line
 	4150 3275 4025 3275
 Connection ~ 4025 3275
 $Comp
-L power:GND #PWR010
+L PLL-rescue:GND-power #PWR010
 U 1 1 5D049AB6
 P 4150 3475
 F 0 "#PWR010" H 4150 3225 50  0001 C CNN
@@ -120,7 +99,7 @@ $EndComp
 Wire Wire Line
 	4025 3225 4025 3275
 $Comp
-L Device:C_Small C2
+L PLL-rescue:C_Small-Device C2
 U 1 1 5D04AB9C
 P 3875 3375
 F 0 "C2" H 3575 3425 50  0000 L CNN
@@ -135,7 +114,7 @@ Wire Wire Line
 Wire Wire Line
 	4025 3275 3875 3275
 $Comp
-L power:GND #PWR07
+L PLL-rescue:GND-power #PWR07
 U 1 1 5D04BC49
 P 3875 3475
 F 0 "#PWR07" H 3875 3225 50  0001 C CNN
@@ -146,14 +125,14 @@ F 3 "" H 3875 3475 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR016
+L PLL-rescue:GND-power #PWR016
 U 1 1 5D04CA1A
-P 6600 5075
-F 0 "#PWR016" H 6600 4825 50  0001 C CNN
-F 1 "GND" H 6604 4907 50  0000 C CNN
-F 2 "" H 6600 5075 50  0001 C CNN
-F 3 "" H 6600 5075 50  0001 C CNN
-	1    6600 5075
+P 6600 5275
+F 0 "#PWR016" H 6600 5025 50  0001 C CNN
+F 1 "GND" H 6604 5107 50  0000 C CNN
+F 2 "" H 6600 5275 50  0001 C CNN
+F 3 "" H 6600 5275 50  0001 C CNN
+	1    6600 5275
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -163,7 +142,7 @@ Wire Wire Line
 Wire Wire Line
 	5550 4400 5550 4700
 $Comp
-L power:GND #PWR011
+L PLL-rescue:GND-power #PWR011
 U 1 1 5D050E57
 P 5400 5275
 F 0 "#PWR011" H 5400 5025 50  0001 C CNN
@@ -174,9 +153,9 @@ F 3 "" H 5400 5275 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6600 5075 6600 5000
+	6600 5275 6600 5000
 $Comp
-L power:+12V #PWR015
+L PLL-rescue:+12V-power #PWR015
 U 1 1 5D053CE4
 P 6600 3275
 F 0 "#PWR015" H 6600 3125 50  0001 C CNN
@@ -187,7 +166,7 @@ F 3 "" H 6600 3275 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP1_Small C6
+L PLL-rescue:CP1_Small-Device C6
 U 1 1 5D053CEA
 P 6725 3425
 F 0 "C6" H 6816 3472 50  0000 L CNN
@@ -203,7 +182,7 @@ Connection ~ 6600 3325
 Wire Wire Line
 	6600 3275 6600 3325
 $Comp
-L Device:C_Small C5
+L PLL-rescue:C_Small-Device C5
 U 1 1 5D053CF3
 P 6450 3425
 F 0 "C5" H 6150 3475 50  0000 L CNN
@@ -214,11 +193,9 @@ F 3 "~" H 6450 3425 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6600 3325 6600 3500
-Wire Wire Line
 	6600 3325 6450 3325
 $Comp
-L power:GND #PWR014
+L PLL-rescue:GND-power #PWR014
 U 1 1 5D053EF9
 P 6450 3525
 F 0 "#PWR014" H 6450 3275 50  0001 C CNN
@@ -229,7 +206,7 @@ F 3 "" H 6450 3525 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR017
+L PLL-rescue:GND-power #PWR017
 U 1 1 5D054535
 P 6725 3525
 F 0 "#PWR017" H 6725 3275 50  0001 C CNN
@@ -240,7 +217,7 @@ F 3 "" H 6725 3525 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+12V #PWR04
+L PLL-rescue:+12V-power #PWR04
 U 1 1 5D05567F
 P 2750 3975
 F 0 "#PWR04" H 2750 3825 50  0001 C CNN
@@ -251,7 +228,7 @@ F 3 "" H 2750 3975 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_US R3
+L PLL-rescue:R_US-Device R3
 U 1 1 5D05685E
 P 2750 4200
 F 0 "R3" H 2825 4250 50  0000 L CNN
@@ -267,12 +244,8 @@ Wire Wire Line
 	2750 4050 2750 3975
 Wire Wire Line
 	4525 4850 5100 4850
-Wire Wire Line
-	5100 4850 5100 3900
-Wire Wire Line
-	5100 3900 6100 3900
 $Comp
-L Connector:Screw_Terminal_01x02 J2
+L PLL-rescue:Screw_Terminal_01x02-Connector J2
 U 1 1 5D05FA70
 P 1925 3525
 F 0 "J2" H 2005 3517 50  0000 L CNN
@@ -285,7 +258,7 @@ $EndComp
 Wire Wire Line
 	1725 3425 1575 3425
 $Comp
-L power:GND #PWR03
+L PLL-rescue:GND-power #PWR03
 U 1 1 5D0619A8
 P 1650 3575
 F 0 "#PWR03" H 1650 3325 50  0001 C CNN
@@ -300,7 +273,7 @@ Wire Wire Line
 Wire Wire Line
 	1650 3525 1725 3525
 $Comp
-L Connector:Screw_Terminal_01x02 J1
+L PLL-rescue:Screw_Terminal_01x02-Connector J1
 U 1 1 5D063274
 P 1900 4000
 F 0 "J1" H 1980 3992 50  0000 L CNN
@@ -313,7 +286,7 @@ $EndComp
 Wire Wire Line
 	1700 4000 1625 4000
 $Comp
-L power:GND #PWR02
+L PLL-rescue:GND-power #PWR02
 U 1 1 5D06327C
 P 1625 4150
 F 0 "#PWR02" H 1625 3900 50  0001 C CNN
@@ -328,7 +301,7 @@ Wire Wire Line
 Wire Wire Line
 	1625 4100 1700 4100
 $Comp
-L power:+12V #PWR01
+L PLL-rescue:+12V-power #PWR01
 U 1 1 5D0635E3
 P 1625 4000
 F 0 "#PWR01" H 1625 3850 50  0001 C CNN
@@ -340,12 +313,10 @@ F 3 "" H 1625 4000 50  0001 C CNN
 $EndComp
 Text GLabel 1575 3425 0    50   Input ~ 0
 f_in
-Text GLabel 6000 3800 0    50   Input ~ 0
+Text GLabel 5975 3900 0    50   Input ~ 0
 f_in
-Wire Wire Line
-	6100 3800 6000 3800
 $Comp
-L Connector:TestPoint_Probe TP2
+L PLL-rescue:TestPoint_Probe-Connector TP2
 U 1 1 5D066A8E
 P 7175 3800
 F 0 "TP2" H 7329 3902 50  0000 L CNN
@@ -357,31 +328,19 @@ F 3 "~" H 7375 3800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7100 3800 7175 3800
-Wire Wire Line
-	7100 3900 7500 3900
-Wire Wire Line
-	7500 3900 7500 3850
-Wire Wire Line
-	7500 3850 7650 3850
-Wire Wire Line
-	7100 4000 7500 4000
-Wire Wire Line
-	7500 4000 7500 4050
-Wire Wire Line
-	7500 4050 7650 4050
 $Comp
-L Device:R_US R6
+L PLL-rescue:R_US-Device R6
 U 1 1 5D06D844
-P 8625 4100
-F 0 "R6" V 8700 4050 50  0000 L CNN
-F 1 "100" V 8525 4000 50  0000 L CNN
-F 2 "lib_fp:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8665 4090 50  0001 C CNN
-F 3 "~" H 8625 4100 50  0001 C CNN
-	1    8625 4100
+P 8625 4150
+F 0 "R6" V 8700 4100 50  0000 L CNN
+F 1 "100" V 8525 4050 50  0000 L CNN
+F 2 "lib_fp:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8665 4140 50  0001 C CNN
+F 3 "~" H 8625 4150 50  0001 C CNN
+	1    8625 4150
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR020
+L PLL-rescue:GND-power #PWR020
 U 1 1 5D06FD70
 P 8625 4700
 F 0 "#PWR020" H 8625 4450 50  0001 C CNN
@@ -396,7 +355,7 @@ Wire Wire Line
 Wire Wire Line
 	3175 3750 3525 3750
 $Comp
-L power:GND #PWR06
+L PLL-rescue:GND-power #PWR06
 U 1 1 5D072DC3
 P 3425 4175
 F 0 "#PWR06" H 3425 3925 50  0001 C CNN
@@ -416,22 +375,22 @@ Connection ~ 3425 4050
 Wire Wire Line
 	3425 4050 3425 4175
 $Comp
-L power:GND #PWR013
+L PLL-rescue:GND-power #PWR013
 U 1 1 5D074D13
-P 6075 5075
-F 0 "#PWR013" H 6075 4825 50  0001 C CNN
-F 1 "GND" H 6079 4907 50  0000 C CNN
-F 2 "" H 6075 5075 50  0001 C CNN
-F 3 "" H 6075 5075 50  0001 C CNN
-	1    6075 5075
+P 6075 5275
+F 0 "#PWR013" H 6075 5025 50  0001 C CNN
+F 1 "GND" H 6079 5107 50  0000 C CNN
+F 2 "" H 6075 5275 50  0001 C CNN
+F 3 "" H 6075 5275 50  0001 C CNN
+	1    6075 5275
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6075 5075 6075 4700
+	6075 5275 6075 4700
 Wire Wire Line
 	6075 4700 6100 4700
 $Comp
-L Device:R_US R4
+L PLL-rescue:R_US-Device R4
 U 1 1 5D076D70
 P 7275 4750
 F 0 "R4" H 7350 4800 50  0000 L CNN
@@ -446,28 +405,28 @@ Wire Wire Line
 Wire Wire Line
 	7275 4500 7100 4500
 $Comp
-L power:GND #PWR018
+L PLL-rescue:GND-power #PWR018
 U 1 1 5D07906B
-P 7275 5075
-F 0 "#PWR018" H 7275 4825 50  0001 C CNN
-F 1 "GND" H 7279 4907 50  0000 C CNN
-F 2 "" H 7275 5075 50  0001 C CNN
-F 3 "" H 7275 5075 50  0001 C CNN
-	1    7275 5075
+P 7275 5275
+F 0 "#PWR018" H 7275 5025 50  0001 C CNN
+F 1 "GND" H 7279 5107 50  0000 C CNN
+F 2 "" H 7275 5275 50  0001 C CNN
+F 3 "" H 7275 5275 50  0001 C CNN
+	1    7275 5275
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7275 5075 7275 4900
+	7275 5275 7275 4900
 Wire Wire Line
 	8625 4350 8625 4300
 Wire Wire Line
 	7100 4200 7500 4200
 $Comp
-L Device:C_Small C1
+L PLL-rescue:C_Small-Device C1
 U 1 1 5D08B1EA
 P 5950 4150
 F 0 "C1" H 5800 4250 50  0000 L CNN
-F 1 "100n" H 5700 4075 50  0000 L CNN
+F 1 "330p" H 5700 4075 50  0000 L CNN
 F 2 "lib_fp:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 5950 4150 50  0001 C CNN
 F 3 "~" H 5950 4150 50  0001 C CNN
 	1    5950 4150
@@ -478,7 +437,7 @@ Wire Wire Line
 Wire Wire Line
 	6100 4200 6100 4250
 $Comp
-L Device:LED D2
+L PLL-rescue:LED-Device D2
 U 1 1 5D091A36
 P 8050 4900
 F 0 "D2" V 8086 4784 50  0000 R CNN
@@ -489,7 +448,7 @@ F 3 "~" H 8050 4900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR019
+L PLL-rescue:GND-power #PWR019
 U 1 1 5D091A3C
 P 8075 5075
 F 0 "#PWR019" H 8075 4825 50  0001 C CNN
@@ -500,7 +459,7 @@ F 3 "" H 8075 5075 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_US R5
+L PLL-rescue:R_US-Device R5
 U 1 1 5D091A42
 P 8050 4575
 F 0 "R5" H 7900 4625 50  0000 L CNN
@@ -526,7 +485,7 @@ Connection ~ 7175 3800
 Wire Wire Line
 	7100 4400 8050 4400
 $Comp
-L Connector:TestPoint_Probe TP1
+L PLL-rescue:TestPoint_Probe-Connector TP1
 U 1 1 5D0A9B68
 P 3075 4775
 F 0 "TP1" H 3230 4877 50  0000 L CNN
@@ -537,7 +496,7 @@ F 3 "~" H 3275 4775 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR05
+L PLL-rescue:GND-power #PWR05
 U 1 1 5D0AF46A
 P 2750 4825
 F 0 "#PWR05" H 2750 4575 50  0001 C CNN
@@ -555,15 +514,15 @@ Connection ~ 2750 4775
 Wire Wire Line
 	2750 4775 2750 4825
 Wire Wire Line
-	8125 3950 8100 3950
+	8150 4000 8100 4000
 Wire Wire Line
 	5600 4000 5950 4000
 $Comp
-L Device:C_Variable C4
+L PLL-rescue:C_Variable-Device C4
 U 1 1 5D0BC112
 P 5600 4150
 F 0 "C4" H 5475 4250 50  0000 L CNN
-F 1 "680p" H 5325 4075 50  0000 L CNN
+F 1 "0p" H 5325 4075 50  0000 L CNN
 F 2 "lib_fp:TrimmerCapacitor" H 5600 4150 50  0001 C CNN
 F 3 "~" H 5600 4150 50  0001 C CNN
 	1    5600 4150
@@ -572,7 +531,7 @@ $EndComp
 Wire Wire Line
 	5950 4300 5600 4300
 $Comp
-L Device:R_POT_TRIM_US RV1
+L PLL-rescue:R_POT_TRIM_US-Device RV1
 U 1 1 5D0CD8E8
 P 5400 4700
 F 0 "RV1" H 5325 4825 50  0000 R CNN
@@ -592,7 +551,7 @@ Wire Wire Line
 Wire Wire Line
 	5400 5275 5400 5200
 $Comp
-L Device:R_POT_TRIM_US RV2
+L PLL-rescue:R_POT_TRIM_US-Device RV2
 U 1 1 5D0DB87B
 P 5775 4700
 F 0 "RV2" H 5700 4825 50  0000 R CNN
@@ -612,7 +571,7 @@ Connection ~ 5925 4500
 Wire Wire Line
 	5925 4500 6100 4500
 $Comp
-L Device:R_US R2
+L PLL-rescue:R_US-Device R2
 U 1 1 5D0E711A
 P 5775 5050
 F 0 "R2" H 5575 5100 50  0000 L CNN
@@ -623,7 +582,7 @@ F 3 "~" H 5775 5050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR012
+L PLL-rescue:GND-power #PWR012
 U 1 1 5D0E7949
 P 5775 5275
 F 0 "#PWR012" H 5775 5025 50  0001 C CNN
@@ -636,27 +595,22 @@ $EndComp
 Wire Wire Line
 	5775 5275 5775 5200
 $Comp
-L Device:R_POT_TRIM_US RV3
+L PLL-rescue:R_POT_TRIM_US-Device RV3
 U 1 1 5D0E9A55
-P 8275 3950
-F 0 "RV3" V 8065 3950 50  0000 C CNN
-F 1 "1k" V 8158 3950 50  0000 C CNN
-F 2 "lib_fp:Potentiometer_Bourns_3266Y_Vertical" H 8275 3950 50  0001 C CNN
-F 3 "~" H 8275 3950 50  0001 C CNN
-	1    8275 3950
+P 8300 4000
+F 0 "RV3" V 8090 4000 50  0000 C CNN
+F 1 "1k" V 8183 4000 50  0000 C CNN
+F 2 "lib_fp:Potentiometer_Bourns_3266Y_Vertical" H 8300 4000 50  0001 C CNN
+F 3 "~" H 8300 4000 50  0001 C CNN
+	1    8300 4000
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
-	8275 4100 8100 4100
+	8300 4150 8100 4150
 Wire Wire Line
-	8100 4100 8100 3950
-Connection ~ 8100 3950
+	8100 4150 8100 4000
 Wire Wire Line
-	8100 3950 8050 3950
-Wire Wire Line
-	8425 3950 8625 3950
-Wire Wire Line
-	8625 4300 8625 4250
+	8450 4000 8625 4000
 Connection ~ 8625 4300
 Wire Wire Line
 	6100 4050 5950 4050
@@ -673,11 +627,11 @@ Wire Wire Line
 Wire Wire Line
 	7500 4300 7500 4200
 $Comp
-L Device:C_Variable C8
+L PLL-rescue:C_Variable-Device C8
 U 1 1 5D1148E7
 P 8875 4450
 F 0 "C8" H 8975 4525 50  0000 L CNN
-F 1 "680n" H 8975 4375 50  0000 L CNN
+F 1 "100n" H 8975 4375 50  0000 L CNN
 F 2 "lib_fp:TrimmerCapacitor" H 8875 4450 50  0001 C CNN
 F 3 "~" H 8875 4450 50  0001 C CNN
 	1    8875 4450
@@ -691,14 +645,42 @@ Connection ~ 8625 4600
 Wire Wire Line
 	8625 4600 8625 4550
 $Comp
-L Device:C_Small C7
+L PLL-rescue:C_Small-Device C7
 U 1 1 5D06E1B8
 P 8625 4450
 F 0 "C7" H 8350 4500 50  0000 L CNN
-F 1 "680n" H 8350 4375 50  0000 L CNN
+F 1 "100n" H 8350 4375 50  0000 L CNN
 F 2 "lib_fp:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 8625 4450 50  0001 C CNN
 F 3 "~" H 8625 4450 50  0001 C CNN
 	1    8625 4450
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	6100 3900 5975 3900
+Wire Wire Line
+	5100 3800 5100 4850
+Wire Wire Line
+	5100 3800 6100 3800
+Text Notes 8325 4150 0    50   ~ 0
+50
+Text Notes 5200 4775 0    50   ~ 0
+48k
+Text Notes 5550 4775 0    50   ~ 0
+27k
+Wire Wire Line
+	6600 3325 6600 3500
+$Comp
+L PLL-rescue:4046-4xxx U2
+U 1 1 5D04140C
+P 6600 4200
+F 0 "U2" H 6350 4750 50  0000 C CNN
+F 1 "4046" H 6800 3550 50  0000 C CNN
+F 2 "lib_fp:DIP-16_W7.62mm_LongPads" H 6600 4200 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/HEF4046B.pdf" H 6600 4200 50  0001 C CNN
+	1    6600 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 4000 8100 4000
+Connection ~ 8100 4000
 $EndSCHEMATC

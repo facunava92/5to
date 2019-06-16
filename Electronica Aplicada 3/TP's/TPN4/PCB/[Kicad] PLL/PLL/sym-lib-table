@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name PLL-rescue)(type Legacy)(uri ${KIPRJMOD}/PLL-rescue.lib)(options "")(descr ""))
+)
