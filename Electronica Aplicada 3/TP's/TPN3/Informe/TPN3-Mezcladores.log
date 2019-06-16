@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.4.9)  27 MAY 2019 23:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.4.9)  16 JUN 2019 19:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -105,6 +105,10 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 
 Package geometry Warning: Over-specification in `h'-direction.
     `width' (483.69684pt) is ignored.
+
+
+Package geometry Warning: Over-specification in `v'-direction.
+    `height' (731.23582pt) is ignored.
 
 (d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
@@ -1010,6 +1014,10 @@ Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
 ) (./TPN3-Mezcladores.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
+
+
+LaTeX Warning: Label `fig:fig4' multiply defined.
+
 )
 \openout1 = `TPN3-Mezcladores.aux'.
 
@@ -1029,8 +1037,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 35.
-
-(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
+ (d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 35.
@@ -1080,15 +1087,15 @@ LaTeX Info: Redefining \% on input line 35.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(42.67912pt, 512.14963pt, 42.67912pt)
-* v-part:(T,H,B)=(56.9055pt, 731.23582pt, 56.90552pt)
+* h-part:(L,W,R)=(28.45274pt, 540.60239pt, 28.45274pt)
+* v-part:(T,H,B)=(42.67912pt, 751.15277pt, 51.21495pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=512.14963pt
-* \textheight=731.23582pt
-* \oddsidemargin=-29.59087pt
-* \evensidemargin=-29.59087pt
-* \topmargin=-52.36449pt
+* \textwidth=540.60239pt
+* \textheight=751.15277pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-66.59087pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -1132,7 +1139,7 @@ ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into
 your preamble.
  on input line 35.
 
-<imagenes/LOGO.jpg, id=43, 295.1025pt x 302.12875pt>
+<imagenes/LOGO.jpg, id=63, 295.1025pt x 302.12875pt>
 File: imagenes/LOGO.jpg Graphic file (type jpg)
 <use imagenes/LOGO.jpg>
 Package pdftex.def Info: imagenes/LOGO.jpg  used on input line 38.
@@ -1166,22 +1173,22 @@ l.73 \clearpage
 
 
 ]
-<imagenes/fig0.jpg, id=72, 643.80525pt x 486.618pt>
+<imagenes/fig0.jpg, id=97, 643.80525pt x 486.618pt>
 File: imagenes/fig0.jpg Graphic file (type jpg)
 <use imagenes/fig0.jpg>
 Package pdftex.def Info: imagenes/fig0.jpg  used on input line 82.
 (pdftex.def)             Requested size: 193.14307pt x 145.98653pt.
-<imagenes/fig1.jpg, id=73, 597.23125pt x 372.39125pt>
+<imagenes/fig1.jpg, id=98, 597.23125pt x 372.39125pt>
 File: imagenes/fig1.jpg Graphic file (type jpg)
 <use imagenes/fig1.jpg>
 Package pdftex.def Info: imagenes/fig1.jpg  used on input line 90.
 (pdftex.def)             Requested size: 238.88826pt x 148.95386pt.
-<imagenes/fig2.jpg, id=76, 578.76225pt x 330.63525pt>
+<imagenes/fig2.jpg, id=101, 578.76225pt x 330.63525pt>
 File: imagenes/fig2.jpg Graphic file (type jpg)
 <use imagenes/fig2.jpg>
 Package pdftex.def Info: imagenes/fig2.jpg  used on input line 100.
 (pdftex.def)             Requested size: 231.5008pt x 132.25175pt.
-<imagenes/fig3.jpg, id=77, 651.03226pt x 235.47975pt>
+<imagenes/fig3.jpg, id=102, 651.03226pt x 235.47975pt>
 File: imagenes/fig3.jpg Graphic file (type jpg)
 <use imagenes/fig3.jpg>
 Package pdftex.def Info: imagenes/fig3.jpg  used on input line 114.
@@ -1189,41 +1196,69 @@ Package pdftex.def Info: imagenes/fig3.jpg  used on input line 114.
  [2
 
 
- <./imagenes/fig0.jpg> <./imagenes/fig1.jpg> <./imagenes/fig2.jpg>]
-<imagenes/fig4.jpg, id=87, 453.49425pt x 366.77025pt>
+ <./imagenes/fig0.jpg> <./imagenes/fig1.jpg> <./imagenes/fig2.jpg> <./imagenes/
+fig3.jpg>]
+<imagenes/fig4.jpg, id=113, 453.49425pt x 366.77025pt>
 File: imagenes/fig4.jpg Graphic file (type jpg)
 <use imagenes/fig4.jpg>
 Package pdftex.def Info: imagenes/fig4.jpg  used on input line 136.
 (pdftex.def)             Requested size: 204.07053pt x 165.04507pt.
- [3 <./imagenes/fig3.jpg> <./imagenes/fig4.jpg>]
+ [3 <./imagenes/fig4.jpg>]
+<imagenes/circuito1.jpg, id=122, 593.21625pt x 313.77225pt>
+File: imagenes/circuito1.jpg Graphic file (type jpg)
+<use imagenes/circuito1.jpg>
+Package pdftex.def Info: imagenes/circuito1.jpg  used on input line 170.
+(pdftex.def)             Requested size: 265.3012pt x 140.3296pt.
+<imagenes/IF1.jpg, id=124, 754.61925pt x 504.08325pt>
+File: imagenes/IF1.jpg Graphic file (type jpg)
+<use imagenes/IF1.jpg>
+Package pdftex.def Info: imagenes/IF1.jpg  used on input line 177.
+(pdftex.def)             Requested size: 211.29195pt x 141.14233pt.
+<imagenes/CL1.jpg, id=125, 725.71124pt x 489.62926pt>
+File: imagenes/CL1.jpg Graphic file (type jpg)
+<use imagenes/CL1.jpg>
+Package pdftex.def Info: imagenes/CL1.jpg  used on input line 185.
+(pdftex.def)             Requested size: 265.3012pt x 179.00082pt.
+<imagenes/ISO1.jpg, id=126, 760.64175pt x 508.90125pt>
+File: imagenes/ISO1.jpg Graphic file (type jpg)
+<use imagenes/ISO1.jpg>
+Package pdftex.def Info: imagenes/ISO1.jpg  used on input line 205.
+(pdftex.def)             Requested size: 265.3012pt x 177.49689pt.
+ [4
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 163.
+ <./imagenes/circuito1.jpg> <./imagenes/IF1.jpg> <./imagenes/CL1.jpg> <./imagen
+es/ISO1.jpg>]
+PGFPlots: reading {tablas/CPL1.txt}
+PGFPlots: reading {tablas/CPL1.txt}
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 229.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
-[4
+[5
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
  (./TPN3-Mezcladores.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 229.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 229.
 Package rerunfilecheck Info: File `TPN3-Mezcladores.out' has not changed.
-(rerunfilecheck)             Checksum: EE52BBA88BEB336AC306A3A4B9C92305;647.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
+(rerunfilecheck)             Checksum: BF27498458782C8DE50A81FCA5BAB84B;1044.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 229.
  ) 
 Here is how much of TeX's memory you used:
- 28647 strings out of 492616
- 690647 string characters out of 6123697
- 918274 words of memory out of 5000000
- 32066 multiletter control sequences out of 15000+600000
+ 29151 strings out of 492616
+ 704562 string characters out of 6123697
+ 956701 words of memory out of 5000000
+ 32551 multiletter control sequences out of 15000+600000
  9688 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,13n,96p,1151b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,19n,100p,1151b,2192s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-su
 per-ts1.enc}<d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmbx10.pfb><d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type
@@ -1240,10 +1275,10 @@ msfonts/cm/cmr12.pfb><d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type1
 onts/type1/public/amsfonts/cm/cmsy7.pfb><d:/ASUS/Program Files/texlive/2018/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><d:/ASUS/Program Files/texliv
 e/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on TPN3-Mezcladores.pdf (5 pages, 415449 bytes).
+Output written on TPN3-Mezcladores.pdf (6 pages, 926191 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
- 115 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 192 PDF objects out of 1000 (max. 8388607)
+ 159 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
+ 175 words of extra memory for PDF output out of 10000 (max. 10000000)
 
