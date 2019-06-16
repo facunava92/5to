@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name MOSFET-IGBT)(type Legacy)(uri ${KIPRJMOD}/lib_sch/MOSFET-IGBT.lib)(options "")(descr ""))
+  (lib (name MOSFET-IGBT-rescue)(type Legacy)(uri ${KIPRJMOD}/MOSFET-IGBT-rescue.lib)(options "")(descr ""))
 )
