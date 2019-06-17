@@ -1355,7 +1355,7 @@
   (gr_text Generador (at 104.14 34.798) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (gr_text ">3V 15-25 kHz" (at 103.886 36.322) (layer F.SilkS)
+  (gr_text ">1V|15-25 kHz" (at 103.886 36.322) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.15)))
   )
   (gr_text + (at 74.295 52.705) (layer F.SilkS)
