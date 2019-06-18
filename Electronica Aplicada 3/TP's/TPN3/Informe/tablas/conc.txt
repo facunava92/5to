@@ -1,0 +1,4 @@
+Mixer	CL	CP	ISO(RF-IF)	ISO(LO-IF)	ISO(LO-RF)
+Unica	1	1	1		1		1
+Unica	1	1	1		1		1
+Unica	1	1	1		1		1
