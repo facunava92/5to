@@ -5,7 +5,7 @@
 % Esto es para que el LÁTEX sepa que el texto está en español, se agrega el ingles para el paquete de gráfico de circuitos:
 \usepackage[spanish]{babel}
 \usepackage{geometry}
- \geometry{a4paper,total={170mm,257mm},left=15mm,right=15mm,top=20mm,}
+ \geometry{a4paper,total={170mm,257mm},left=10mm,right=10mm,top=15mm,bottom=18mm}
 \usepackage{hyperref} 
 \usepackage{amsmath, amsfonts}
 \usepackage{enumitem}
@@ -160,7 +160,70 @@ Diseñar, calcular y simular diferentes mezcladores para ser utilizados en un re
 \item[•]  $P_{LO} = 8 \;[dBm]$.
 \end{itemize}
 
-\subsubsection{Mezclador de terminación única}
+\subsection{Mezclador de terminación única}
 Son aquellos mezcladores que emplean un único dispositivo alineal, ya sea un diodo o un transistor. Al poseer un solo dispositivo (impar), no hay simetrías que permitan eliminar frecuencias no deseadas en algunos de los terminales. En el caso de emplear un transistor, se logran niveles de aislación interesantes más por la unilateralidad que por simetría. Generalmente se emplean FETs, debido a su característica de transferencia más cuadrática que los BJT (generan menor cantidad de productos de intermodulación), permitiendo ganancias de conversión mayor que uno $(G_C = P_{IF}/P_{RF})$, y cierta aislación de \textit{OL} dada por la unilateralidad del dispositivo. En aplicaciones no muy comprometidas, su uso se justifica en los costos.
+
+\subsubsection{Circuito}
+La simulación se implementa en en software AWR. A continuación se muestra el esquemático
+\begin{figure}[h]
+  \centering    
+	\includegraphics[width=\columnwidth]{imagenes/circuito1.jpg}
+	\caption{Mezclador de terminación única con diodo.}\label{fig:fig4}
+\end{figure}
+
+El circuito anterior produce el espectro de fourier de salida que se muestra en la figura \textcolor{blue}{\ref{fig:IF1}}.
+\begin{figure}[h]
+  \centering    
+	\includegraphics[scale=0.28]{imagenes/IF1.jpg}
+	\caption{Espectro de Fourier de IF.}\label{fig:IF1}
+\end{figure}
+%
+\subsubsection{Perdida por conversión}
+%
+\begin{figure}[h]
+  \centering    
+	\includegraphics[width=\columnwidth]{imagenes/CL1.jpg}
+	\caption{Perdida por conversión de mezclador terminación única.}\label{fig:CL1}
+\end{figure}
+\[C.L._{T.U.} = -13.971 \; [dB] \]
+%
+\subsubsection{Figura de ruido}
+%
+La figura de ruido se considera aproximadamente igual a la pérdida por conversión, excepto en los casos que se tengan diodos muy ruidosos.
+\[NF_{SSB} \approx -13.971 \; [dB] \]
+%
+\subsubsection{Aislación entre puertos}
+%
+\begin{itemize}\itemsep0em
+\item[•]  $f_{IF} = 10,7 \; [Mhz]$.
+\item[•]  $f_{RF} = 88-108 \; [Mhz]; \; P_{RF} = -10 \; [dBm]$.
+\item[•]  $P_{LO} = 8 \;[dBm]$.
+\end{itemize}
+%
+\begin{figure}[h]
+  \centering    
+	\includegraphics[width=\columnwidth]{imagenes/ISO1.jpg}
+	\caption{Aislación entre puertos, terminación única.}\label{fig:ISO1}
+\end{figure}
+\clearpage
+%
+\subsubsection{Pérdida por compresión}
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture} [scale=1]
+\begin{axis}[
+    xlabel=LO PORT,
+    ylabel=RF PORT,
+    legend pos=south east,
+    legend entries={Voltage de la carga},
+    grid=major,
+    ]
+  \addplot [red] table [x=LO,y=RF] {tablas/CPL1.txt};
+  \addplot [blue] table[x=LO,y=ideal] {tablas/CPL1.txt};
+\end{axis}
+\end{tikzpicture}
+	\caption{Tensión eficaz en la carga contra $V_{REF}$ }
+\end{figure}
+
 
 \end{document}

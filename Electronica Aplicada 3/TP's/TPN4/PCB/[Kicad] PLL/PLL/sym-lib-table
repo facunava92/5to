@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name PLL_sch)(type Legacy)(uri ${KIPRJMOD}/lib_sch/PLL_sch.lib)(options "")(descr ""))
+)

@@ -1,0 +1,3 @@
+eval $(ssh-agent)
+ssh-add /d/fnavarro/.ssh/keys/fnavarro_key/fnavarro_key
+git pull
