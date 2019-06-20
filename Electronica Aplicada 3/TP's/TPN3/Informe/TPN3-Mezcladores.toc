@@ -13,3 +13,16 @@
 \contentsline {subsubsection}{\numberline {3.1.3}Figura de ruido}{4}{subsubsection.3.1.3}% 
 \contentsline {subsubsection}{\numberline {3.1.4}Aislaci\IeC {\'o}n entre puertos}{4}{subsubsection.3.1.4}% 
 \contentsline {subsubsection}{\numberline {3.1.5}P\IeC {\'e}rdida por compresi\IeC {\'o}n}{5}{subsubsection.3.1.5}% 
+\contentsline {subsection}{\numberline {3.2}Mezcladores de balanceo simple}{5}{subsection.3.2}% 
+\contentsline {subsubsection}{\numberline {3.2.1}Circuito}{5}{subsubsection.3.2.1}% 
+\contentsline {subsubsection}{\numberline {3.2.2}Perdida por conversi\IeC {\'o}n}{5}{subsubsection.3.2.2}% 
+\contentsline {subsubsection}{\numberline {3.2.3}Figura de ruido}{5}{subsubsection.3.2.3}% 
+\contentsline {subsubsection}{\numberline {3.2.4}Aislaci\IeC {\'o}n entre puertos}{5}{subsubsection.3.2.4}% 
+\contentsline {subsubsection}{\numberline {3.2.5}P\IeC {\'e}rdida por compresi\IeC {\'o}n}{6}{subsubsection.3.2.5}% 
+\contentsline {subsection}{\numberline {3.3}Mezcladores de balanceo doble}{6}{subsection.3.3}% 
+\contentsline {subsubsection}{\numberline {3.3.1}Circuito}{6}{subsubsection.3.3.1}% 
+\contentsline {subsubsection}{\numberline {3.3.2}Perdida por conversi\IeC {\'o}n}{6}{subsubsection.3.3.2}% 
+\contentsline {subsubsection}{\numberline {3.3.3}Figura de ruido}{6}{subsubsection.3.3.3}% 
+\contentsline {subsubsection}{\numberline {3.3.4}Aislaci\IeC {\'o}n entre puertos}{6}{subsubsection.3.3.4}% 
+\contentsline {subsubsection}{\numberline {3.3.5}P\IeC {\'e}rdida por compresi\IeC {\'o}n}{7}{subsubsection.3.3.5}% 
+\contentsline {section}{\numberline {4}Conclusi\IeC {\'o}n}{7}{section.4}% 

@@ -1,0 +1,3 @@
+[288]  Error log for : Balanced_Mixer.DS2.dsf
+	[288]	Read lock timed out : Lock being acquired for 'header load' {GetISimDataSetsForProject}
+	[288]	Unable to acquire file lock for the data set

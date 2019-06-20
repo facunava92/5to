@@ -5,7 +5,7 @@
 % Esto es para que el LÁTEX sepa que el texto está en español, se agrega el ingles para el paquete de gráfico de circuitos:
 \usepackage[spanish]{babel}
 \usepackage{geometry}
- \geometry{a4paper,total={170mm,257mm},left=10mm,right=10mm,top=15mm,bottom=18mm}
+ \geometry{a4paper,total={170mm,257mm},left=10mm,right=10mm,top=15mm,bottom=15mm}
 \usepackage{hyperref} 
 \usepackage{amsmath, amsfonts}
 \usepackage{enumitem}
@@ -17,7 +17,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{Electrónica Aplicada III}
-\rhead{TP3 :Mezcladores}
+\rhead{TP3:Mezcladores}
 \rfoot{Página \thepage}
 
 \usepackage{pgfplots}
@@ -26,11 +26,30 @@
 \usepackage{array}
 \usepackage{colortbl}
 
+\usetikzlibrary{intersections}
+\usepackage{siunitx}
+
+\usepackage{booktabs,caption}
+\usepackage[flushleft]{threeparttable}
+
 \pgfplotstableset{% global config, for example in the preamble
   every head row/.style={before row=\toprule,after row=\midrule},
   every last row/.style={after row=\bottomrule},
   fixed,precision=1,
 }
+
+\usepackage{tikz,pgfplots}            
+
+\pgfplotsset{compat=1.12}
+\usetikzlibrary{intersections}
+
+\tikzset{
+    every pin/.style={font=\tiny, outer sep=0},
+    every pin edge/.style={gray,very thin,shorten >=-1mm},
+    small dot/.style={fill=black,circle,scale=0.3}
+}
+
+\usepackage{adjustbox}
 
 \begin{document}
 \begin{titlepage}
@@ -138,7 +157,19 @@ Para un mezclador down ideal la salida \textit{IF} debe ser proporcional a la se
 \end{figure}
 
 \subsection{Figura de Ruido - Rango Dinámico}
- El rango dinámico se define como el grado de variación útil en que puede operar el mezclador. El valor superior del rango se encuentra determinado por el punto de compresión de $1 \; [dB]$ y el valor inferior es limitado por la figura de ruido. La figura de ruido, salvo excepciones, es aproximadamente igual que la pérdida por conversión. Se trata que sea lo menor posible para obtener un mayor rango dinámico de aplicación.
+ El rango dinámico se define como el grado de variación útil en que puede operar el mezclador. El valor superior del rango se encuentra determinado por el punto de compresión de $1 \; [dB]$ y el valor inferior es limitado por la figura de ruido. 
+
+La figura de ruido es la cantidad de ruido aportado por el mixer a la señal convertida, sumada las pérdidas por conversión. Por definición, es el cociente entre la relación señal-ruido RF en la entrada y la relación señal-ruido FI en el puerto de salida, es decir, 
+\begin{align*}
+NF_{SSB} &= 10 \cdot log{\frac{SNR_i}{SNRo}} \\
+		 &= 10 \cdot log{\frac{P_{RF_{in}}}{P_{N_{in}}}} - 10 \cdot \log{\frac{P_{IF_{out}}}{P_{N_{out}}}} \\
+		 &= [P_{RF_{in}} - P_{IF_{out}}] + [P_{N_{out}} - P_{N_{in}}] \\
+NF_{SSB} &= CL_{SSB} + P_{N_{mixer}}
+\end{align*}
+
+Se debe considerar que salvo solamente en casos específico de poseer diodos o transistores muy ruidosos, la figura de ruido es aproximadamente igual a la pérdida de conversión. En hojas de datos, generalmente, se especifica la figura de ruido de banda única ($NF_{SSB}$), ya que aunque el producto de la mezcla produce ambas bandas, inferior y superior, solo se desea uno de esos productos descartando el otro, causando que se pierda la mitad de la potencia de entrada y haciendo que la figura de ruido de banda lateral única esté 3 decibeles por encima de la figura de ruido de doble banda lateral ($NF_DSB$). Esta consideración se toma a menudo, debido a que medir la figura de ruido de doble banda lateral es sencillo.Se trata que sea lo menor posible para obtener un mayor rango dinámico de aplicación.
+
+El ruido aportado, contiene principalmente 3 componentes: Térmico (Jhonson), ruido de disparo (Shot) y ruido de flicker. Generalmente, la figura de ruido de banda única está alrededor de los 0,5 dB por encima de la pérdida por conversión.
 
 \subsection{Tipos de mezcladores}  
 Según las exigencias del diseño, no en todos los casos se debe permitir que una o varias componentes de frecuencia aplicada en un puerto se filtren en otro, esto se define como la aislación entre puertos. Una forma de eliminar o atenúar estas componentes de frecuencia, es empleando un número par de dispositivos dispuestos en forma simétrica. Los tipos de mezcladores se pueden clasificar según su balanceo o equilibrio, es decir según la simetría de la configuración y paridad entre sus dispositivos. Las configuraciones más comunes son:
@@ -164,11 +195,11 @@ Diseñar, calcular y simular diferentes mezcladores para ser utilizados en un re
 Son aquellos mezcladores que emplean un único dispositivo alineal, ya sea un diodo o un transistor. Al poseer un solo dispositivo (impar), no hay simetrías que permitan eliminar frecuencias no deseadas en algunos de los terminales. En el caso de emplear un transistor, se logran niveles de aislación interesantes más por la unilateralidad que por simetría. Generalmente se emplean FETs, debido a su característica de transferencia más cuadrática que los BJT (generan menor cantidad de productos de intermodulación), permitiendo ganancias de conversión mayor que uno $(G_C = P_{IF}/P_{RF})$, y cierta aislación de \textit{OL} dada por la unilateralidad del dispositivo. En aplicaciones no muy comprometidas, su uso se justifica en los costos.
 
 \subsubsection{Circuito}
-La simulación se implementa en en software AWR. A continuación se muestra el esquemático
+La simulación se implementa en el software AWR. A continuación se muestra el esquemático
 \begin{figure}[h]
   \centering    
-	\includegraphics[width=\columnwidth]{imagenes/circuito1.jpg}
-	\caption{Mezclador de terminación única con diodo.}\label{fig:fig4}
+	\includegraphics[scale=0.6]{imagenes/circuito1.jpg}
+	\caption{Mezclador de terminación única con diodo.}\label{fig:circuito1}
 \end{figure}
 
 El circuito anterior produce el espectro de fourier de salida que se muestra en la figura \textcolor{blue}{\ref{fig:IF1}}.
@@ -185,19 +216,19 @@ El circuito anterior produce el espectro de fourier de salida que se muestra en 
 	\includegraphics[width=\columnwidth]{imagenes/CL1.jpg}
 	\caption{Perdida por conversión de mezclador terminación única.}\label{fig:CL1}
 \end{figure}
-\[C.L._{T.U.} = -13.971 \; [dB] \]
+\[C.L._{T.U.} = 13.971 \; [dB] \]
 %
 \subsubsection{Figura de ruido}
 %
 La figura de ruido se considera aproximadamente igual a la pérdida por conversión, excepto en los casos que se tengan diodos muy ruidosos.
-\[NF_{SSB} \approx -13.971 \; [dB] \]
+\[N.F. \approx 13.971 \; [dB] \]
 %
 \subsubsection{Aislación entre puertos}
 %
 \begin{itemize}\itemsep0em
-\item[•]  $f_{IF} = 10,7 \; [Mhz]$.
-\item[•]  $f_{RF} = 88-108 \; [Mhz]; \; P_{RF} = -10 \; [dBm]$.
-\item[•]  $P_{LO} = 8 \;[dBm]$.
+\item[•]  $ISO_{RF-IF} = 10,88 \; [dB]$.
+\item[•]  $ISO_{LO-IF} = 13,40 \; [dB]$.
+\item[•]  $ISO_{LO-RF} = 13,40 \; [dB]$.
 \end{itemize}
 %
 \begin{figure}[h]
@@ -212,18 +243,264 @@ La figura de ruido se considera aproximadamente igual a la pérdida por conversi
 \centering
 \begin{tikzpicture} [scale=1]
 \begin{axis}[
-    xlabel=LO PORT,
-    ylabel=RF PORT,
+	xmin=-5, xmax=20,
+	ymin=-23.1, ymax=-12,
+	xtick={-5,0,5.6,10,15,20},
+	ytick={-14.9305,-13.886, -12, -16, -18, -20, -22},
+    xlabel=Potencia del puerto RF,    
+    ylabel=Potencia del puerto IF,
     legend pos=south east,
-    legend entries={Voltage de la carga},
     grid=major,
     ]
-  \addplot [red] table [x=LO,y=RF] {tablas/CPL1.txt};
-  \addplot [blue] table[x=LO,y=ideal] {tablas/CPL1.txt};
+    
+	\addplot [red] 	table[x=LO,y=ideal] {tablas/CPL1.txt};  
+	\addplot [blue] table[x=LO,y=RF] 	{tablas/CPL1.txt};
+	\addplot[solid,
+			mark=*, 
+			mark options={solid,fill=yellow!80!black,draw=black, scale=0.5},
+			black] 
+			coordinates {(5.6,-13.886) (5.6,-14.9305)};
+
+	\path [draw=gray, dashed, thick] (5.6,-14.9305) -- (5.6,-23);
+	\path [draw=gray, dashed, thick] (5.6,-14.9305) -- (-6,-14.9305);
+	\path [draw=gray, dashed, thick] (5.6,-13.886)  -- (-6,-13.886);
+	
+	\draw [decorate, decoration={brace,amplitude=2pt,raise=1pt}] (5.6,-13.886)  -- (5.6,-14.9305) node [midway, anchor=south west,yshift=-1mm, outer sep=1pt,font=\tiny]{1dB};
+	
+	\addlegendentry{Ideal}
+	\addlegendentry{Real}
 \end{axis}
 \end{tikzpicture}
-	\caption{Tensión eficaz en la carga contra $V_{REF}$ }
+	\caption{Perdida por compresión terminación única}
 \end{figure}
+
+Perdida por compresión = $5.6 \; [dB]$
+
+\subsection{Mezcladores de balanceo simple}
+Este tipo de mezclador posee un par de dispositivos alineales, normalmente diodos o FETs, dispuestos en forma equilibrada de tal manera que el terminal de entrada quede aislado de los otros dos terminales.
+
+\subsubsection{Circuito}
+La simulación se implementa en el software AWR. A continuación se muestra el esquemático
+\begin{figure}[h]
+  \centering    
+	\includegraphics[width=\columnwidth]{imagenes/circuito2.jpg}
+	\caption{Mezclador de balanceo simple.}\label{fig:circuito2}
+\end{figure}
+
+El circuito anterior produce el espectro de Fourier de salida que se muestra en la figura \textcolor{blue}{\ref{fig:IF2}}.
+\begin{figure}[h]
+  \centering    
+	\includegraphics[width=\columnwidth]{imagenes/IF2.jpg}
+	\caption{Espectro de Fourier de IF.}\label{fig:IF2}
+\end{figure}
+%
+\subsubsection{Perdida por conversión}
+%
+\begin{figure}[h]
+  \centering    
+	\includegraphics[width=\columnwidth]{imagenes/CL2.jpg}
+	\caption{Perdida por conversión de mezclador de balanceo simple.}\label{fig:CL2}
+\end{figure}
+\[C.L._{B.S.} = 11.46 \; [dB] \]
+%
+\subsubsection{Figura de ruido}
+%
+La figura de ruido se considera aproximadamente igual a la pérdida por conversión, excepto en los casos que se tengan diodos muy ruidosos.
+\[N.F. \approx 11.46 \; [dB] \]
+%
+\subsubsection{Aislación entre puertos}
+%
+\begin{itemize}\itemsep0em
+\item[•]  $ISO_{RF-IF} = 4,204 \; [dB]$.
+\item[•]  $ISO_{LO-IF} = 88,35 \; [dB]$.
+\item[•]  $ISO_{LO-RF} = 88,35 \; [dB]$.
+\end{itemize}
+%
+\begin{figure}[h!]
+  \centering    
+	\includegraphics[scale=0.3]{imagenes/ISO2.jpg}
+	\caption{Aislación entre puertos, balanceo simple.}\label{fig:ISO2}
+\end{figure}
+\clearpage
+%
+\subsubsection{Pérdida por compresión}
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture} [scale=1]
+\begin{axis}[
+	xmin=0, xmax=20,
+	ymin=-18, ymax=-5,
+	xtick={0,5,10,11.5,15,20},
+	ytick={-6, -9.02058,-8,-10 , -12, -14, -16, -18},
+    xlabel=Potencia del puerto RF,    
+    ylabel=Potencia del puerto IF,
+    legend pos=south east,
+    grid=major,
+    ]
+    
+	\addplot [red] 	table[x=LO,y=ideal] {tablas/CPL4.txt};  
+	\addplot [blue] table[x=LO,y=RF] 	{tablas/CPL4.txt};
+	\addplot[solid,
+			mark=*, 
+			mark options={solid,fill=yellow!80!black,draw=black, scale=0.5},
+			black] 
+			coordinates {(11.5,-8) (11.5,-9.02058)};
+
+	\path [draw=gray, dashed, thick] (11.5,-9.02058) -- (11.5,-23);
+	\path [draw=gray, dashed, thick] (11.5,-9.02058) -- (-6,-9.02058);
+	\path [draw=gray, dashed, thick] (11.5,-8)  -- (-6,-8);
+	
+	\draw [decorate, decoration={brace,amplitude=2pt,raise=1pt}] (11.5,-8)  -- (11.5,-9.02058) node [midway, anchor=south west,yshift=-1mm, outer sep=1pt,font=\tiny]{1dB};
+	
+	\addlegendentry{Ideal}
+	\addlegendentry{Real}
+\end{axis}
+\end{tikzpicture}
+	\caption{Perdida por compresión de mezclador de balanceo simple}
+\end{figure}
+%
+Perdida por compresión = $11,5 \; [dB]$
+%
+\subsection{Mezcladores de balanceo doble}
+Todos los terminales están aislados entre sí, por lo que las frecuencias de las señales de entrada no aparecen a la salida. Los dos transformadores proveen aislación a todos los puertos, de esta forma se evita que las componentes de LO aparezcan en otros puertos o mejor dicho se vea reducida. Es necesario que la implementación de este puente sea equilibrado para así obtener un perfecto bloqueo de la señal.
+
+\subsubsection{Circuito}
+La simulación se implementa en el software AWR. A continuación se muestra el esquemático
+\begin{figure}[h]
+  \centering    
+	\includegraphics[width=\columnwidth]{imagenes/circuito3.jpg}
+	\caption{Mezclador de balanceo doble.}\label{fig:circuito3}
+\end{figure}
+
+El circuito anterior produce el espectro de Fourier de salida que se muestra en la figura \textcolor{blue}{\ref{fig:IF3}}.
+\begin{figure}[h]
+  \centering    
+	\includegraphics[scale=0.3]{imagenes/IF3.jpg}
+	\caption{Espectro de Fourier de IF.}\label{fig:IF3}
+\end{figure}
+%
+\subsubsection{Perdida por conversión}
+%
+\begin{figure}[h]
+  \centering    
+	\includegraphics[scale=0.3]{imagenes/CL3.jpg}
+	\caption{Perdida por conversión de mezclador de balanceo doble.}\label{fig:CL3}
+\end{figure}
+\[C.L._{B.D.} = 5.097 6 \; [dB] \]
+%
+\subsubsection{Figura de ruido}
+%
+La figura de ruido se considera aproximadamente igual a la pérdida por conversión, excepto en los casos que se tengan diodos muy ruidosos.
+\[N.F. \approx 5.097 \; [dB] \]
+%
+\subsubsection{Aislación entre puertos}
+%
+\begin{itemize}\itemsep0em
+\item[•]  $ISO_{RF-IF} = 235,5 \; [dB]$.
+\item[•]  $ISO_{LO-IF} = 292,4 \; [dB]$.
+\item[•]  $ISO_{LO-RF} = 92.02 \; [dB]$.
+\end{itemize}
+%
+\begin{figure}[h]
+  \centering    
+	\includegraphics[scale=0.3]{imagenes/ISO3.jpg}
+	\caption{Aislación entre puertos, balanceo doble.}\label{fig:ISO3}
+\end{figure}
+\clearpage
+%
+\subsubsection{Pérdida por compresión}
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture} [scale=1]
+\begin{axis}[
+	xmin=-5, xmax=20,
+	ymin=-12, ymax=-3,
+	xtick={0,2.6,5,10,15,20, -5},
+	ytick={-4.44354,-5.48021, -10, -8, -12, -6, -4},
+    xlabel=Potencia del puerto RF,    
+    ylabel=Potencia del Puerto IF,
+    legend pos=south east,
+    grid=major,
+    ]
+    
+	\addplot [red] 	table[x=LO,y=ideal] {tablas/CPL3.txt};  
+	\addplot [blue] table[x=LO,y=RF] 	{tablas/CPL3.txt};
+	\addplot[solid,
+			mark=*, 
+			mark options={solid,fill=yellow!80!black,draw=black, scale=0.5},
+			black] 
+			coordinates {(2.6,-5.48021) (2.6,-4.44354)};
+
+	\path [draw=gray, dashed, thick] (2.6,-4.44354) -- (2.6,-23);
+	\path [draw=gray, dashed, thick] (2.6,-4.44354) -- (-6,-4.44354);
+	\path [draw=gray, dashed, thick] (2.6,-5.48021)  -- (-6,-5.48021);
+	
+	\draw [decorate, decoration={brace,amplitude=6pt,raise=1pt}] (2.6,-5.48021)  -- (2.6,-4.44354) node [midway, anchor=south east,yshift=-3.5mm, outer sep=6pt,font=\tiny]{1dB};
+	
+	\addlegendentry{Ideal}
+	\addlegendentry{Real}
+\end{axis}
+\end{tikzpicture}
+	\caption{Pérdida por compresión de mezclador de balanceo doble.
+	}
+\end{figure}
+
+Perdida por compresión = $2.6\; [dB]$
+
+\section{Conclusión}
+ Como modo de finalizar se agrupan los valores obtenidos en las siguientes tablas
+\begin{table}[h]
+	\centering
+  \begin{threeparttable}
+     \begin{tabular}{lccc}
+        \toprule
+        Mixer 				& $C.L.$ 	& $C.P.$ 	& $N.F.$  \\
+        \midrule
+        Terminacion Unica   & 13,971   	& 5,6    	& 13,971 \\
+        Balanceo Simple     & 11,46   	& 11,5    	& 11,46	 \\
+        Balanceo Doble    	& 5,097     & 2,6    	& 5,097  \\
+        \bottomrule
+     \end{tabular}
+    \begin{tablenotes}
+      \small
+      \item Valores en dB.
+    \end{tablenotes}
+    \caption{Perdida por conversión, compresión y figura de ruido.}
+  \end{threeparttable}
+\end{table}
+
+\begin{table}[h]
+	\begin{adjustbox}{width=\columnwidth,center}
+  \begin{threeparttable}
+     \begin{tabular}{lccc}
+        \toprule
+        Mixer 				&$ISO_{(RF-IF)}$ 	& $ISO_{(LO-IF)}$ 	& $ISO_{(LO-RF)}$ \\
+        \midrule
+        Terminacion Unica   & 10,88        		& 13,40    			& 13,40 \\
+        Balanceo Simple     & 4,204        		& 88,35    			& 88,35 \\
+        Balanceo Doble    	& 235,5        		& 292,4    			& 92,02 \\
+        \bottomrule
+     \end{tabular}
+    \begin{tablenotes}
+      \small
+      \item Valores en dB.
+    \end{tablenotes}
+    \caption{Aislaciones entre puertos}
+  \end{threeparttable}
+  \end{adjustbox}
+\end{table}
+
+Observando los resultados obtenidos se estableció una comparación entre los 3 tipos de configuraciones analizadas, considerando que se independizó del dispositivo alineal empleado, ya que se empleó un diodo genérico para los 3 casos, y que existen programas de simulación que imitan en mayor medida el comportamiento y las condiciones reales en RF. 
+
+Analizando desde el punto de vista de la aislación entre puertos, el esquema de doble balance posee un mejor desempeño, ya que existe una aislación total (galvánica) en ambos sentidos, entre los 3 puertos, producto del empleo de transformadores de punto medio donde los amperes por vuelta de cada secundario son iguales y están en contrafase, anulando cualquier componente de cada puerto en los demás, lo que se visualiza en los espectros de la simulación. Esto hace notar la relevancia de la paridad entre los dispositivos alineales. Luego, en el circuito de balance simple se observa una aislación total, en este caso, solamente en el puerto del oscilador, mientras que los demás puertos poseen una aislación nula y que se podría compensar mediante el uso de filtros. Por último, en la configuración de terminación única se puede remarcar que existe algún tipo de aislación desde el puerto FI hacia los demás puertos, debido a la unilateralidad del diodo.
+
+Por otro lado, analizando las pérdidas por conversión se visualiza que el mezclador de doble posee el mejor rendimiento, convirtiendo en mayor medida la potencia de entrada RF en potencia de salida FI. 
+
+Observando las figuras de ruido de banda única, no se puede establecer un criterio de comparación debido a que el ruido aportado por los dispositivos es despreciable, simplificando el criterio a que la figura de ruido sea idéntica a las pérdidas por conversión. 
+
+ Una configuración de terminación única se lo emplea en aplicaciones donde se busca reducir costes o donde existen frecuencias muy elevadas, destacando su simplicidad y añadiendo solamente filtros selectivos.
+ 
+ Si bien todas las características del la configuración de balance doble son buenas, hay que poner en el otro extremo de la balanza la complejidad, costo y volumen que significa en comparación con las otras topologías analizadas.
 
 
 \end{document}
