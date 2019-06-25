@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.17)  18 JUN 2019 11:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.17)  25 JUN 2019 13:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1471,7 +1471,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 54.
 (d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<imagenes/LOGO.jpg, id=115, 295.1025pt x 302.12875pt>
+<imagenes/LOGO.jpg, id=131, 295.1025pt x 302.12875pt>
 File: imagenes/LOGO.jpg Graphic file (type jpg)
 <use imagenes/LOGO.jpg>
 Package pdftex.def Info: imagenes/LOGO.jpg  used on input line 57.
@@ -1497,22 +1497,22 @@ l.92 \clearpage
 
 
 ]
-<imagenes/fig0.jpg, id=162, 643.80525pt x 486.618pt>
+<imagenes/fig0.jpg, id=183, 643.80525pt x 486.618pt>
 File: imagenes/fig0.jpg Graphic file (type jpg)
 <use imagenes/fig0.jpg>
 Package pdftex.def Info: imagenes/fig0.jpg  used on input line 101.
 (pdftex.def)             Requested size: 193.14307pt x 145.98653pt.
-<imagenes/fig1.jpg, id=163, 597.23125pt x 372.39125pt>
+<imagenes/fig1.jpg, id=184, 597.23125pt x 372.39125pt>
 File: imagenes/fig1.jpg Graphic file (type jpg)
 <use imagenes/fig1.jpg>
 Package pdftex.def Info: imagenes/fig1.jpg  used on input line 109.
 (pdftex.def)             Requested size: 238.88826pt x 148.95386pt.
-<imagenes/fig2.jpg, id=166, 578.76225pt x 330.63525pt>
+<imagenes/fig2.jpg, id=187, 578.76225pt x 330.63525pt>
 File: imagenes/fig2.jpg Graphic file (type jpg)
 <use imagenes/fig2.jpg>
 Package pdftex.def Info: imagenes/fig2.jpg  used on input line 119.
 (pdftex.def)             Requested size: 231.5008pt x 132.25175pt.
-<imagenes/fig3.jpg, id=167, 651.03226pt x 235.47975pt>
+<imagenes/fig3.jpg, id=188, 651.03226pt x 235.47975pt>
 File: imagenes/fig3.jpg Graphic file (type jpg)
 <use imagenes/fig3.jpg>
 Package pdftex.def Info: imagenes/fig3.jpg  used on input line 133.
@@ -1522,28 +1522,28 @@ Package pdftex.def Info: imagenes/fig3.jpg  used on input line 133.
 
  <./imagenes/fig0.jpg> <./imagenes/fig1.jpg> <./imagenes/fig2.jpg> <./imagenes/
 fig3.jpg>]
-<imagenes/fig4.jpg, id=179, 453.49425pt x 366.77025pt>
+<imagenes/fig4.jpg, id=199, 453.49425pt x 366.77025pt>
 File: imagenes/fig4.jpg Graphic file (type jpg)
 <use imagenes/fig4.jpg>
 Package pdftex.def Info: imagenes/fig4.jpg  used on input line 155.
 (pdftex.def)             Requested size: 204.07053pt x 165.04507pt.
  [3 <./imagenes/fig4.jpg>]
-<imagenes/circuito1.jpg, id=189, 356.532pt x 227.04825pt>
+<imagenes/circuito1.jpg, id=209, 356.532pt x 227.04825pt>
 File: imagenes/circuito1.jpg Graphic file (type jpg)
 <use imagenes/circuito1.jpg>
 Package pdftex.def Info: imagenes/circuito1.jpg  used on input line 201.
 (pdftex.def)             Requested size: 213.92084pt x 136.23pt.
-<imagenes/IF1.jpg, id=191, 754.61925pt x 504.08325pt>
+<imagenes/IF1.jpg, id=211, 754.61925pt x 504.08325pt>
 File: imagenes/IF1.jpg Graphic file (type jpg)
 <use imagenes/IF1.jpg>
 Package pdftex.def Info: imagenes/IF1.jpg  used on input line 208.
 (pdftex.def)             Requested size: 211.29195pt x 141.14233pt.
-<imagenes/CL1.jpg, id=192, 725.71124pt x 489.62926pt>
+<imagenes/CL1.jpg, id=212, 731.73375pt x 490.2315pt>
 File: imagenes/CL1.jpg Graphic file (type jpg)
 <use imagenes/CL1.jpg>
 Package pdftex.def Info: imagenes/CL1.jpg  used on input line 216.
-(pdftex.def)             Requested size: 265.3012pt x 179.00082pt.
-<imagenes/ISO1.jpg, id=193, 760.64175pt x 508.90125pt>
+(pdftex.def)             Requested size: 265.3012pt x 177.7399pt.
+<imagenes/ISO1.jpg, id=213, 760.64175pt x 508.90125pt>
 File: imagenes/ISO1.jpg Graphic file (type jpg)
 <use imagenes/ISO1.jpg>
 Package pdftex.def Info: imagenes/ISO1.jpg  used on input line 236.
@@ -1554,45 +1554,45 @@ Package pdftex.def Info: imagenes/ISO1.jpg  used on input line 236.
 es/ISO1.jpg>]
 PGFPlots: reading {tablas/CPL1.txt}
 PGFPlots: reading {tablas/CPL1.txt}
-<imagenes/circuito2.jpg, id=202, 560.69475pt x 247.52475pt>
+<imagenes/circuito2.jpg, id=222, 766.062pt x 433.01775pt>
 File: imagenes/circuito2.jpg Graphic file (type jpg)
 <use imagenes/circuito2.jpg>
 Package pdftex.def Info: imagenes/circuito2.jpg  used on input line 286.
-(pdftex.def)             Requested size: 265.3012pt x 117.11847pt.
-<imagenes/IF2.jpg, id=204, 712.46175pt x 475.17525pt>
+(pdftex.def)             Requested size: 265.3012pt x 149.96611pt.
+<imagenes/IF2.jpg, id=224, 725.71124pt x 490.2315pt>
 File: imagenes/IF2.jpg Graphic file (type jpg)
 <use imagenes/IF2.jpg>
 Package pdftex.def Info: imagenes/IF2.jpg  used on input line 293.
-(pdftex.def)             Requested size: 265.3012pt x 176.94318pt.
+(pdftex.def)             Requested size: 265.3012pt x 179.221pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<imagenes/CL2.jpg, id=205, 737.75626pt x 494.44725pt>
+<imagenes/CL2.jpg, id=225, 732.336pt x 489.62926pt>
 File: imagenes/CL2.jpg Graphic file (type jpg)
 <use imagenes/CL2.jpg>
 Package pdftex.def Info: imagenes/CL2.jpg  used on input line 301.
-(pdftex.def)             Requested size: 265.3012pt x 177.8047pt.
+(pdftex.def)             Requested size: 265.3012pt x 177.3796pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<imagenes/ISO2.jpg, id=206, 732.93825pt x 489.62926pt>
+<imagenes/ISO2.jpg, id=226, 732.93825pt x 489.027pt>
 File: imagenes/ISO2.jpg Graphic file (type jpg)
 <use imagenes/ISO2.jpg>
 Package pdftex.def Info: imagenes/ISO2.jpg  used on input line 321.
-(pdftex.def)             Requested size: 219.88316pt x 146.88991pt.
+(pdftex.def)             Requested size: 219.88316pt x 146.70923pt.
 [5
 
  <./imagenes/circuito2.jpg> <./imagenes/IF2.jpg> <./imagenes/CL2.jpg> <./imagen
 es/ISO2.jpg>]
-PGFPlots: reading {tablas/CPL4.txt}
-PGFPlots: reading {tablas/CPL4.txt}
-<imagenes/circuito3.jpg, id=217, 867.84225pt x 443.85825pt>
+PGFPlots: reading {tablas/CPL2.txt}
+PGFPlots: reading {tablas/CPL2.txt}
+<imagenes/circuito3.jpg, id=237, 849.1725pt x 409.53pt>
 File: imagenes/circuito3.jpg Graphic file (type jpg)
 <use imagenes/circuito3.jpg>
 Package pdftex.def Info: imagenes/circuito3.jpg  used on input line 371.
-(pdftex.def)             Requested size: 265.3012pt x 135.69148pt.
-<imagenes/IF3.jpg, id=219, 728.12025pt x 487.22025pt>
+(pdftex.def)             Requested size: 265.3012pt x 127.94656pt.
+<imagenes/IF3.jpg, id=239, 728.12025pt x 487.22025pt>
 File: imagenes/IF3.jpg Graphic file (type jpg)
 <use imagenes/IF3.jpg>
 Package pdftex.def Info: imagenes/IF3.jpg  used on input line 378.
@@ -1601,7 +1601,7 @@ Package pdftex.def Info: imagenes/IF3.jpg  used on input line 378.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<imagenes/CL3.jpg, id=220, 734.14275pt x 493.24275pt>
+<imagenes/CL3.jpg, id=240, 734.14275pt x 493.24275pt>
 File: imagenes/CL3.jpg Graphic file (type jpg)
 <use imagenes/CL3.jpg>
 Package pdftex.def Info: imagenes/CL3.jpg  used on input line 386.
@@ -1609,7 +1609,7 @@ Package pdftex.def Info: imagenes/CL3.jpg  used on input line 386.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<imagenes/ISO3.jpg, id=221, 734.14275pt x 493.24275pt>
+<imagenes/ISO3.jpg, id=241, 734.14275pt x 493.24275pt>
 File: imagenes/ISO3.jpg Graphic file (type jpg)
 <use imagenes/ISO3.jpg>
 Package pdftex.def Info: imagenes/ISO3.jpg  used on input line 406.
@@ -1620,26 +1620,37 @@ Package pdftex.def Info: imagenes/ISO3.jpg  used on input line 406.
 es/ISO3.jpg>]
 PGFPlots: reading {tablas/CPL3.txt}
 PGFPlots: reading {tablas/CPL3.txt}
- [7
+
+Underfull \hbox (badness 1028) in paragraph at lines 493--494
+\OT1/cmr/m/n/10 ter^^S^^Psti-ca que pre-sen-tan p^^Serdi-das de con-ver-si^^Son
+ (3[dB] a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 506--506
+[]\OT1/cmr/bx/n/12 Perdida por com-pre-si^^Son y ran-go
+ []
+
+[7
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 506.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 506.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 514.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 514.
  (./TPN3-Mezcladores.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 506.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 506.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 514.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 514.
 Package rerunfilecheck Info: File `TPN3-Mezcladores.out' has not changed.
-(rerunfilecheck)             Checksum: 225325D20E8F9765DD647C117E14DE7D;2056.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 506.
+(rerunfilecheck)             Checksum: 0B662AE79EDFDB85AB4E6B54A10BE695;2368.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 514.
  ) 
 Here is how much of TeX's memory you used:
- 43565 strings out of 492609
- 1007451 string characters out of 6123310
- 1239721 words of memory out of 5000000
- 46830 multiletter control sequences out of 15000+600000
+ 43574 strings out of 492609
+ 1007592 string characters out of 6123310
+ 1238636 words of memory out of 5000000
+ 46835 multiletter control sequences out of 15000+600000
  544314 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,19n,107p,1151b,2205s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1664,10 +1675,10 @@ ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><d:/Program Files (x
 cmsy7.pfb><d:/Program Files (x86)/texlive/2019/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmti10.pfb><d:/Program Files (x86)/texlive/2019/texmf-dist/fonts/type
 1/public/cm-super/sfrm1000.pfb>
-Output written on TPN3-Mezcladores.pdf (8 pages, 2066511 bytes).
+Output written on TPN3-Mezcladores.pdf (8 pages, 1840659 bytes).
 PDF statistics:
- 315 PDF objects out of 1000 (max. 8388607)
- 267 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 500000)
- 319 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 335 PDF objects out of 1000 (max. 8388607)
+ 287 compressed objects within 3 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 351 words of extra memory for PDF output out of 10000 (max. 10000000)
 

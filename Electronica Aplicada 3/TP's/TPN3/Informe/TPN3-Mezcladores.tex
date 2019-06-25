@@ -216,12 +216,12 @@ El circuito anterior produce el espectro de fourier de salida que se muestra en 
 	\includegraphics[width=\columnwidth]{imagenes/CL1.jpg}
 	\caption{Perdida por conversión de mezclador terminación única.}\label{fig:CL1}
 \end{figure}
-\[C.L._{T.U.} = 13.971 \; [dB] \]
+\[C.L._{T.U.} = 14,398 \; [dB] \]
 %
 \subsubsection{Figura de ruido}
 %
 La figura de ruido se considera aproximadamente igual a la pérdida por conversión, excepto en los casos que se tengan diodos muy ruidosos.
-\[N.F. \approx 13.971 \; [dB] \]
+\[N.F. \approx 14,398 \; [dB] \]
 %
 \subsubsection{Aislación entre puertos}
 %
@@ -301,19 +301,19 @@ El circuito anterior produce el espectro de Fourier de salida que se muestra en 
 	\includegraphics[width=\columnwidth]{imagenes/CL2.jpg}
 	\caption{Perdida por conversión de mezclador de balanceo simple.}\label{fig:CL2}
 \end{figure}
-\[C.L._{B.S.} = 11.46 \; [dB] \]
+\[C.L._{B.S.} = 8,653 \; [dB] \]
 %
 \subsubsection{Figura de ruido}
 %
 La figura de ruido se considera aproximadamente igual a la pérdida por conversión, excepto en los casos que se tengan diodos muy ruidosos.
-\[N.F. \approx 11.46 \; [dB] \]
+\[N.F. \approx 8,653 \; [dB] \]
 %
 \subsubsection{Aislación entre puertos}
 %
 \begin{itemize}\itemsep0em
-\item[•]  $ISO_{RF-IF} = 4,204 \; [dB]$.
-\item[•]  $ISO_{LO-IF} = 88,35 \; [dB]$.
-\item[•]  $ISO_{LO-RF} = 88,35 \; [dB]$.
+\item[•]  $ISO_{RF-IF} = 42,3 \; [dB]$.
+\item[•]  $ISO_{LO-IF} = 7,396 \; [dB]$.
+\item[•]  $ISO_{LO-RF} = 90,39 \; [dB]$.
 \end{itemize}
 %
 \begin{figure}[h!]
@@ -328,29 +328,29 @@ La figura de ruido se considera aproximadamente igual a la pérdida por conversi
 \centering
 \begin{tikzpicture} [scale=1]
 \begin{axis}[
-	xmin=0, xmax=20,
+	xmin=-5, xmax=20,
 	ymin=-18, ymax=-5,
-	xtick={0,5,10,11.5,15,20},
-	ytick={-6, -9.02058,-8,-10 , -12, -14, -16, -18},
+	xtick={0,3.2,5,10,15,20},
+	ytick={-6,-8,-10.2276,-11.2576,-12, -14, -16, -18},
     xlabel=Potencia del puerto RF,    
     ylabel=Potencia del puerto IF,
     legend pos=south east,
     grid=major,
     ]
     
-	\addplot [red] 	table[x=LO,y=ideal] {tablas/CPL4.txt};  
-	\addplot [blue] table[x=LO,y=RF] 	{tablas/CPL4.txt};
+	\addplot [red] 	table[x=RF,y=ideal] {tablas/CPL2.txt};  
+	\addplot [blue] table[x=RF,y=LO] 	{tablas/CPL2.txt};
 	\addplot[solid,
 			mark=*, 
 			mark options={solid,fill=yellow!80!black,draw=black, scale=0.5},
 			black] 
-			coordinates {(11.5,-8) (11.5,-9.02058)};
+			coordinates {(3.2,-10.2276) (3.2,-11.2576)};
 
-	\path [draw=gray, dashed, thick] (11.5,-9.02058) -- (11.5,-23);
-	\path [draw=gray, dashed, thick] (11.5,-9.02058) -- (-6,-9.02058);
-	\path [draw=gray, dashed, thick] (11.5,-8)  -- (-6,-8);
+	\path [draw=gray, dashed, thick] (3.2,-11.2576) -- (3.2,-23);
+	\path [draw=gray, dashed, thick] (3.2,-11.2576) -- (-6,-11.2576);
+	\path [draw=gray, dashed, thick] (3.2,-10.2276) -- (-6,-10.2276);
 	
-	\draw [decorate, decoration={brace,amplitude=2pt,raise=1pt}] (11.5,-8)  -- (11.5,-9.02058) node [midway, anchor=south west,yshift=-1mm, outer sep=1pt,font=\tiny]{1dB};
+	\draw [decorate, decoration={brace,amplitude=2pt,raise=1pt}] (3.2,-10.2276)  -- (3.2,-11.2576) node [midway, anchor=south west,yshift=-1mm, outer sep=1pt,font=\tiny]{1dB};
 	
 	\addlegendentry{Ideal}
 	\addlegendentry{Real}
@@ -359,7 +359,7 @@ La figura de ruido se considera aproximadamente igual a la pérdida por conversi
 	\caption{Perdida por compresión de mezclador de balanceo simple}
 \end{figure}
 %
-Perdida por compresión = $11,5 \; [dB]$
+Perdida por compresión = $3,2 \; [dB]$
 %
 \subsection{Mezcladores de balanceo doble}
 Todos los terminales están aislados entre sí, por lo que las frecuencias de las señales de entrada no aparecen a la salida. Los dos transformadores proveen aislación a todos los puertos, de esta forma se evita que las componentes de LO aparezcan en otros puertos o mejor dicho se vea reducida. Es necesario que la implementación de este puente sea equilibrado para así obtener un perfecto bloqueo de la señal.
@@ -456,8 +456,8 @@ Perdida por compresión = $2.6\; [dB]$
         \toprule
         Mixer 				& $C.L.$ 	& $C.P.$ 	& $N.F.$  \\
         \midrule
-        Terminacion Unica   & 13,971   	& 5,6    	& 13,971 \\
-        Balanceo Simple     & 11,46   	& 11,5    	& 11,46	 \\
+        Terminacion Unica   & 14,398   	& 5,6    	& 14,398 \\
+        Balanceo Simple     & 8,653   	& 3,2    	& 8,653	 \\
         Balanceo Doble    	& 5,097     & 2,6    	& 5,097  \\
         \bottomrule
      \end{tabular}
@@ -477,7 +477,7 @@ Perdida por compresión = $2.6\; [dB]$
         Mixer 				&$ISO_{(RF-IF)}$ 	& $ISO_{(LO-IF)}$ 	& $ISO_{(LO-RF)}$ \\
         \midrule
         Terminacion Unica   & 10,88        		& 13,40    			& 13,40 \\
-        Balanceo Simple     & 4,204        		& 88,35    			& 88,35 \\
+        Balanceo Simple     & 42,3        		& 7,396    			& 90,39 \\
         Balanceo Doble    	& 235,5        		& 292,4    			& 92,02 \\
         \bottomrule
      \end{tabular}
@@ -490,17 +490,25 @@ Perdida por compresión = $2.6\; [dB]$
   \end{adjustbox}
 \end{table}
 
-Observando los resultados obtenidos se estableció una comparación entre los 3 tipos de configuraciones analizadas, considerando que se independizó del dispositivo alineal empleado, ya que se empleó un diodo genérico para los 3 casos, y que existen programas de simulación que imitan en mayor medida el comportamiento y las condiciones reales en RF. 
+Los mezcladores a diodos tienen como principal característica que presentan pérdidas de conversión (3[dB] a 15[dB]), es decir que no proporcionan ganancia. A consecuencia de estas pérdidas el ruido del sistema aumentará, necesitando un bloque de de amplificación, lo que aumenta la distorsión incrementándose el coste del sistema debido a que se hace necesario una etapa de preamplificación de bajo ruido.
 
-Analizando desde el punto de vista de la aislación entre puertos, el esquema de doble balance posee un mejor desempeño, ya que existe una aislación total (galvánica) en ambos sentidos, entre los 3 puertos, producto del empleo de transformadores de punto medio donde los amperes por vuelta de cada secundario son iguales y están en contrafase, anulando cualquier componente de cada puerto en los demás, lo que se visualiza en los espectros de la simulación. Esto hace notar la relevancia de la paridad entre los dispositivos alineales. Luego, en el circuito de balance simple se observa una aislación total, en este caso, solamente en el puerto del oscilador, mientras que los demás puertos poseen una aislación nula y que se podría compensar mediante el uso de filtros. Por último, en la configuración de terminación única se puede remarcar que existe algún tipo de aislación desde el puerto FI hacia los demás puertos, debido a la unilateralidad del diodo.
+A favor de este tipo de mezcladores se puede resaltar que presenta un ancho de banda grande y bajo coste. Ademas no necesitan ninguna polarización de bias para operar y tienen una capacidad de conmutación rápida.
 
-Por otro lado, analizando las pérdidas por conversión se visualiza que el mezclador de doble posee el mejor rendimiento, convirtiendo en mayor medida la potencia de entrada RF en potencia de salida FI. 
-
-Observando las figuras de ruido de banda única, no se puede establecer un criterio de comparación debido a que el ruido aportado por los dispositivos es despreciable, simplificando el criterio a que la figura de ruido sea idéntica a las pérdidas por conversión. 
+Observando los resultados obtenidos se estableció una comparación entre los 3 tipos de configuraciones analizadas, considerando que se independizó del dispositivo alineal empleado, ya que se empleó un diodo genérico para los 3 casos, y que existen programas de simulación que imitan en mayor medida el comportamiento y las condiciones reales en RF (NI AWR). 
 
  Una configuración de terminación única se lo emplea en aplicaciones donde se busca reducir costes o donde existen frecuencias muy elevadas, destacando su simplicidad y añadiendo solamente filtros selectivos.
  
  Si bien todas las características del la configuración de balance doble son buenas, hay que poner en el otro extremo de la balanza la complejidad, costo y volumen que significa en comparación con las otras topologías analizadas.
 
+\subsection{Perdida por conversión}
+Analizando las pérdidas por conversión se visualiza que el \textit{mezclador de terminación única} posee una elevada pérdida, casi el doble o el tripe en comparación con las otras topologías analizadas, seguido por el \textit{mezclador de balanceo simple} y siendo el \textit{mezclador de balanceo doble} el que muestra el mejor rendimiento, convirtiendo en mayor medida la potencia de entrada RF en potencia de salida FI.
 
+\subsection{Perdida por compresión y rango dinámico}
+Desde la perspectiva del rango dinámico, el mezclador de terminación única se ve limitado por una alta figura de ruido y una pérdida por compresión óptima para la simplicidad del circuito. Mejorando paulativamente en las otras configuraciones, sobre todo por la disminución de las figuras de ruido, pero desde el punto de vista de la \textit{compresión} se observa que se pierde la linealidad a menores valores de potencia del puerto RF en forma descendente desde la terminación única, balanceo simple y finalmente el balanceo doble.
+
+\subsection{Aislamiento entre puertos}
+Analizando desde el punto de vista de la aislación entre puertos, el esquema de doble balance posee un mejor desempeño, ya que existe una aislación total (galvánica) en ambos sentidos, entre los 3 puertos, producto del empleo de transformadores de punto medio donde los amperes por vuelta de cada secundario son iguales y están en contrafase, anulando cualquier componente de cada puerto en los demás, lo que se visualiza en los espectros de la simulación. Esto hace notar la relevancia de la paridad entre los dispositivos alineales. Luego, en el circuito de balance simple se observa una aislación total, en este caso, solamente en el puerto $RF$, mientras que la aislación entre el puerto $IF$ y $FR$ se podría compensar mediante el uso de filtros. Por último, en la configuración de terminación única se puede remarcar que existe algún tipo de aislación desde el puerto FI hacia los demás puertos, debido a la unilateralidad del diodo.
+
+\subsection{Frecuencia imagen}
+ Como agregado, cabe recalcar el concepto de frecuencia de la imagen. Esta es una frecuencia de entrada no deseada que es demodulada por receptores superheterodinos junto con la señal de entrada deseada. Esto hace que se reciban dos estaciones al mismo tiempo, lo que produce interferencias, por lo que es escencial incluir un filtro lo suficientemente selectivo, en cualquiera de las topologías, con el fin de eliminar esta frecuencia no deseada, ya que ninguna de las etapas posteriores es capaz de eliminar esta interferencia.
 \end{document}
