@@ -1,0 +1,34 @@
+Component,Description,Part,References,Value,Footprint,Quantity Per PCB,Datasheet
+1,,C_Variable,C4,0p,TrimmerCapacitor,1,~
+2,,C_Small,C2 C5 C7,100n,C_Disc_D5.0mm_W2.5mm_P2.50mm,3,~
+3,,C_Variable,C8,100n,TrimmerCapacitor,1,~
+4,,CP1_Small,C3 C6,100u,C_Radial_D5.0mm_H11.0mm_P2.00mm,2,~
+5,,C_Small,C1,330p,C_Disc_D5.0mm_W2.5mm_P2.50mm,1,~
+6,,LED,D1 D2,LED,LED_D3.0mm_Clear,2,~
+7,,Screw_Terminal_01x02,J1,Alimentacion,TerminalBlock_bornier-2_P5.08mm,1,~
+8,,Screw_Terminal_01x02,J2,SeñalDeReferencia,TerminalBlock_bornier-2_P5.08mm,1,~
+9,,BC337,Q1,BC337,TO-92_Inline,1,https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf
+10,,R_US,R6 R7,100,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,2,~
+11,,R_US,R2 R4 R8,10k,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,3,~
+12,,R_US,R3 R5,1k,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,2,~
+13,,R_US,R1,8.2k,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,1,~
+14,,R_POT_TRIM_US,RV3,1k,Potentiometer_Bourns_3266Y_Vertical,1,~
+15,,R_POT_TRIM_US,RV1 RV2,50k,Potentiometer_Bourns_3266Y_Vertical,2,~
+16,,4017,U1,4017,DIP-16_W7.62mm_LongPads,1,http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4017bms-22bms.pdf
+17,,4046,U2,4046,DIP-16_W7.62mm_LongPads,1,https://assets.nexperia.com/documents/data-sheet/HEF4046B.pdf
+
+
+
+
+
+Component Groups:,17
+Component Count:,26
+Fitted Components:,26
+Number of PCBs:,1
+Total components:,26
+Schematic Version:,
+Schematic Date:,
+PCB Variant:,default
+BoM Date:,lun 01 jul 2019 00:37:35 -03
+Schematic Source:,/run/media/fnavarro/Datos/fnavarro/5to/Electronica Aplicada 3/TP's/TPN4/PCB/[Kicad] PLL/PLL/PLL.sch
+KiCad Version:,Eeschema 5.1.2
