@@ -95,7 +95,7 @@
 %##################################### INDICE  #####################################################
 \twocolumn
 \section{Introducción}
-Un ``Phase Locked Loop`` ($PLL$) o bucle de fase enganchado consta de una serie de bloques interconectados que le permiten al sistema ajustarse y modificar su frecuencia hasta que no exista diferencia de fase entre las señales de entrada y salida. Es un sistema de control realimentado, donde la señal de realimentación es una frecuencia en lugar de una tensión. 
+Un ``Phase Locked Loop" ($PLL$) o bucle de fase enganchado consta de una serie de bloques interconectados que le permiten al sistema ajustarse y modificar su frecuencia hasta que no exista diferencia de fase entre las señales de entrada y salida. Es un sistema de control realimentado, donde la señal de realimentación es una frecuencia en lugar de una tensión. 
 
 Se lo conoce también como sintetizador de frecuencia, ya que permite disponer de una frecuencia muy estable y precisa.
 
@@ -115,7 +115,7 @@ El $PLL$ tiene dos modos de operación,
 \section{Marco Teórico}
 \subsection{Estados de funcionamiento}
 \begin{itemize}
-	\item \textit{Estado dinámico}: Cuando la salida no está enganchada o sincronizada con la referencia. Como un caso particular de este caso se encuentra el estado de ``corrida libre``.
+	\item \textit{Estado dinámico}: Cuando la salida no está enganchada o sincronizada con la referencia. Como un caso particular de este caso se encuentra el estado de ``corrida libre".
 	\item \textit{Estado estático}: Corresponde cuando la salida está enganchada o sincronizada con la referencia. También se denomina estado fijo. 
 \end{itemize}
 
@@ -164,7 +164,7 @@ El $VCO$ actúa como un integrador de los errores de fase. Mantiene el estado fi
 \subsection{Rangos de funcionamiento}
 \begin{itemize}
 	\item \textit{Corrida libre}: Corresponde a la frecuencia de salida $fo$ del $VCO$ cuando el $PLL$ no se encuentra enganchado.
-	\item \textit{Rango de sostén}: Rango en el cual el $PLL$ puede mantener el ``tracking`` o seguimiento de fase. El $PLL$ está enganchado con la señal de referencia si ésta se reduce o incrementa lentamente. Si, en cambio, varía mucho, el $PLL$ puede perder el enganche en los extremos.
+	\item \textit{Rango de sostén}: Rango en el cual el $PLL$ puede mantener el ``tracking" o seguimiento de fase. El $PLL$ está enganchado con la señal de referencia si ésta se reduce o incrementa lentamente. Si, en cambio, varía mucho, el $PLL$ puede perder el enganche en los extremos.
 
 	\item \textit{Rango de captura}: A partir del $PLL$ desenganchado, es el rango de frecuencias en el que el mismo puede engancharse a la frecuencia de entrada. Este define el rango de operación del $PLL$.
 \end{itemize}
@@ -270,7 +270,7 @@ Para facilitar el ajuste general del circuito, se utilizaron resistencias variab
 	\caption{Circuito implementado.}\label{fig:fig6}
 \end{figure}
 
-Para la medición del rango de captura, se ajustó la señal de entrada fuera del rango de trabajo, para luego acercarla lentamente por ambos extremos hasta encontrar la frecuencia de ``enganche``, si ésta estaba fuera de las especificaciones a través de las resistencias variables $RV1$ y $RV2$ se ajustaban para que estuvieran dentro de los parámetros de diseño.
+Para la medición del rango de captura, se ajustó la señal de entrada fuera del rango de trabajo, para luego acercarla lentamente por ambos extremos hasta encontrar la frecuencia de ``enganche", si ésta estaba fuera de las especificaciones a través de las resistencias variables $RV1$ y $RV2$ se ajustaban para que estuvieran dentro de los parámetros de diseño.
 
 Luego para el rango de sostén, una vez enganchado el $PLL$ en las frecuencias especificadas, se variaba levemente la frecuencia en los extremos hasta que el sistema perdiera el sincronismo.
 
@@ -335,27 +335,66 @@ Finalmente, el sobrepasamiento se observa al medir la entrada del $VCO$ (voltaje
 
 Como no es posible observar el comportamiento transitorio de la frecuencia de salida lo que se realiza es observar el comportamiento de la tensión $V_d$ a partir de las cuales se obtiene el sobrepasamiento porcentual $M_{p}$.
 
-Por otra parte para la misma forma de onda se determina el tiempo de pico $t_p$ y el tiempo en el que el transitorio se considera extinto.
+Por otra parte para la misma forma de onda se determina el tiempo de pico $t_p$. 
 
 \begin{figure}[H]
   \centering    
-  \includegraphics[width=\columnwidth]{imagenes/sobre1.jpg}
-  \caption{Sobrepasamiento.}\label{fig:sobre1}
+  \includegraphics[width=\columnwidth]{imagenes/Ymax.jpg}
+  \caption{$Y(max) - Y(\infty)$.}\label{fig:Ymax$}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h]
   \centering    
-  \includegraphics[width=\columnwidth]{imagenes/sobre2.jpg}
-  \caption{Sobrepasamiento.}\label{fig:sobre2}
+  \includegraphics[width=\columnwidth]{imagenes/Yinf.jpg}
+  \caption{$Y(\infty)$}\label{fig:Yinf}
+\end{figure}
+
+\begin{figure}[h]
+  \centering    
+  \includegraphics[width=\columnwidth]{imagenes/tp.jpg}
+  \caption{Tiempo de pico($t_{p}$)}\label{fig:tp}
 \end{figure}
 
 De dicha medición se obtuvo el valor de $t_p = $ $us$. Con las mediciones obtenidas se procede a calcular el $M_p$.
 \[ M_p = \frac{Y(max) - Y(\infty)} {Y(\infty)} * 100 \]
 
-Obtenido el $M_p$ se procede a calcular el $\xi$ de nuestro PLL. Donde recordamos que,
+Obtenido el $M_p$ se procede a calcular el $\xi$ de nuestro $PLL$. Donde recordamos que,
 \[ \xi = \frac{\sigma}{\omega n} \]
 
-Para la obtención de $\sigma$ despejamos de esta variable ....  
+Para la obtención de $\sigma$ despejamos de esta variable de la ecuación \textcolor{blue}{\ref{eq1}}
+\begin{equation}
+	M_{p} = e^{-\frac{\pi \sigma}{\omega_{n}}}
+	\label{eq1}
+\end{equation}
+
+Para esto necesitamos de la relación $\omega_{p}$
+\[
+	\omega_{p} = \frac{\pi}{t_{p}}
+\] 
+
+De la cual podemos explicitar,
+\begin{align*}
+	\sigma &= - \frac{\omega_{p} \cdot \ln({M_{p})}}{\pi} \\
+		   &= - \frac{\ln(M_{p})}{t_p}\\
+	\sigma &=    
+\end{align*}
+
+Con $\sigma$ calculado, se obtiene $\omega_{n}$ según lo siguiente,
+\begin{align*}
+	\omega_{n} &= \sqrt{{\omega_{n}}^{2}+ {\sigma}^{2}} \\
+	\omega_{n} &=
+\end{align*}
+
+Finalmente obtenemos $\xi$,
+
+\begin{align*}
+  \xi &= \frac{\sigma}{\omega_{n}} \\
+      &= \frac{}{} \\
+  \xi &=
+\end{align*}
+
+Como podemos comprobar el valor obtenido es similar al dado por la condición de diseño ($\xi = 0,4$).
+ 
 \section{Conclusión}
 El cálculo de los componentes de la red se realiza según las especificaciones indicadas en el práctico, empleando la hoja de datos proporcionada por el fabricante del integrado $CD4046$, donde se hace uso de gráficas para la obtención de las magnitudes a implementar, por lo que la exactitud de éstas no es muy buena.
 
@@ -377,7 +416,6 @@ C1                       &          &                \\ \hline
 C2                       &          &                \\ \hline
 \end{tabular}
 \end{table}
-
 
 \end{document}
 
