@@ -278,13 +278,13 @@ A continuación se exponen los resultados.
 \begin{itemize}
 	\item Rango de captura
 		\begin{itemize}
-			\item $f_1$ = 
-			\item $f_3$ = 
+			\item $f_1$ = 14,720 $kHz$
+			\item $f_3$ = 25,690 $kHz$
 		\end{itemize}
 	\item Rango de sostén
 		\begin{itemize}
-		  \item $f_4$ = 
-		  \item $f_2$ =
+		  \item $f_4$ = 14,700 $kHz$
+		  \item $f_2$ = 25,986 $kHz$
 		\end{itemize}
 \end{itemize}
 
@@ -294,9 +294,9 @@ Para el cálculo de la ganancia de lazo, se mide con un osciloscopio el desfasar
 \begin{itemize}
 	\item \textbf{$f_{s1}: 16 kHz$}
 	  \begin{itemize}
-		  \item $T_1$ =
-		  \item $\tau_1$ =
-		  \item $\theta_1$ =
+		  \item $T_1$ = 62,5 $[us]$
+		  \item $\tau_1$ = 10,4 $[us]$
+		  \item $\theta_1$ = 1,04 $[rad]$ 
 	  \end{itemize}
 \end{itemize}
 
@@ -310,9 +310,9 @@ Para el cálculo de la ganancia de lazo, se mide con un osciloscopio el desfasar
 \begin{itemize}[*]
 	\item \textbf{$f_{s2}: 22 kHz$}
 	  \begin{itemize}
-		  \item $T_2$ =
-		  \item $\tau_2$ =
-		  \item $\theta_2$ =
+		  \item $T_2$ = 45,45 $[us]$
+		  \item $\tau_2$ = 14,80 $[us]$
+		  \item $\theta_2$ = 2,04  $[rad]$
 	  \end{itemize}
 \end{itemize}
 
@@ -325,9 +325,9 @@ Para el cálculo de la ganancia de lazo, se mide con un osciloscopio el desfasar
 
 La ganancia de lazo se puede calcular como hemos visto anteriormente,
 \begin{align*}
-	\frac{K_o K_d}{N} &= \frac{\Delta \omega s}{\Delta \theta} \\
-					  &= \frac{2 \pi (f_{s2} - f_{s1})} {\theta_2 - \theta_1} \\
-					  &= 
+	\frac{K_o K_d}{N}  &= \frac{\Delta \omega s}{\Delta \theta} \\
+					   &= \frac{2 \pi (f_{s2} - f_{s1})} {\theta_2 - \theta_1} \\
+	\frac{K_o K_d}{N}  &= 37699,11
 \end{align*}
 
 \subsection{Sobrepasamiento y constante de tiempo}
@@ -355,8 +355,8 @@ Por otra parte para la misma forma de onda se determina el tiempo de pico $t_p$.
   \caption{Tiempo de pico($t_{p}$)}\label{fig:tp}
 \end{figure}
 
-De dicha medición se obtuvo el valor de $t_p = $ $us$. Con las mediciones obtenidas se procede a calcular el $M_p$.
-\[ M_p = \frac{Y(max) - Y(\infty)} {Y(\infty)} * 100 \]
+De dicha medición se obtuvo el valor de $t_p = 120$ $[us]$. Con las mediciones obtenidas se procede a calcular el $M_p$.
+\[ M_p = \frac{Y(max) - Y(\infty)} {Y(\infty)} * 100 = \frac{1,04}{3,68} * 100 = 28,26 \%\]
 
 Obtenido el $M_p$ se procede a calcular el $\xi$ de nuestro $PLL$. Donde recordamos que,
 \[ \xi = \frac{\sigma}{\omega n} \]
@@ -369,33 +369,34 @@ Para la obtención de $\sigma$ despejamos de esta variable de la ecuación \text
 
 Para esto necesitamos de la relación $\omega_{p}$
 \[
-	\omega_{p} = \frac{\pi}{t_{p}}
+	\omega_{p} = \frac{\pi}{t_{p}} = 26179,94 
 \] 
 
 De la cual podemos explicitar,
 \begin{align*}
 	\sigma &= - \frac{\omega_{p} \cdot \ln({M_{p})}}{\pi} \\
 		   &= - \frac{\ln(M_{p})}{t_p}\\
-	\sigma &=    
+	\sigma &=   10530,77
 \end{align*}
 
 Con $\sigma$ calculado, se obtiene $\omega_{n}$ según lo siguiente,
 \begin{align*}
-	\omega_{n} &= \sqrt{{\omega_{n}}^{2}+ {\sigma}^{2}} \\
-	\omega_{n} &=
+	\omega_{n} &= \sqrt{{\omega_{p}}^{2}+ {\sigma}^{2}} \\
+	\omega_{n} &= 28218,54
 \end{align*}
 
 Finalmente obtenemos $\xi$,
 
 \begin{align*}
   \xi &= \frac{\sigma}{\omega_{n}} \\
-      &= \frac{}{} \\
-  \xi &=
+      &= \frac{10530,77}{28218,54} \\
+  \xi &= 0,37
 \end{align*}
 
 Como podemos comprobar el valor obtenido es similar al dado por la condición de diseño ($\xi = 0,4$).
  
 \section{Conclusión}
+Se pudo evidenciar el comportamiento del seguimiento de frecuencia con una notable precisión en el momento que el $PLL$ se encontraba ``enganchado".
 El cálculo de los componentes de la red se realiza según las especificaciones indicadas en el práctico, empleando la hoja de datos proporcionada por el fabricante del integrado $CD4046$, donde se hace uso de gráficas para la obtención de las magnitudes a implementar, por lo que la exactitud de éstas no es muy buena.
 
 Este es uno de los motivos por el cual en el momento de implementar nuestro $PLL$, los valores calculados durante el desarrollo de este informe debieron ser modificados, y éstos quedaron determinados a prueba y error de los integrantes del grupo para que dicho $PLL$ trabaje en la zona deseada.
@@ -408,12 +409,12 @@ A continuación se mostrará una tabla informativa con los valores obtenidos med
 \centering
 \begin{tabular}{|l|l|l|}
 \hline
-						 & Cálculos & Implementación \\ \hline
-R1                       &          &                \\ \hline
-R2                       &          &                \\ \hline
-R3                       &          &                \\ \hline
-C1                       &          &                \\ \hline
-C2                       &          &                \\ \hline
+						  & Cálculos       & Implementación		\\ \hline
+R1                        & 161 $k \Omega$ & 56 $k\Omega$		\\ \hline
+R2                        & 100 k $\Omega$ & 37 $k \Omega$		\\ \hline
+R3                        & 15 k $\Omega$  & 150 $\Omega$		\\ \hline
+C1                        & 140 $pF$       & 330 $pF$			\\ \hline
+C2                        & 10 $nF$        & 220 $nF$			\\ \hline
 \end{tabular}
 \end{table}
 
