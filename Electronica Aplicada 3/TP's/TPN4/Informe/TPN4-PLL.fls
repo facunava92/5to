@@ -1,4 +1,4 @@
-PWD /run/media/fnavarro/DATA/fnavarro/5to/Electronica Aplicada 3/TP's/TPN4/Informe
+PWD /run/media/fnavarro/Datos/fnavarro/5to/Electronica Aplicada 3/TP's/TPN4/Informe
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT TPN4-PLL.tex
@@ -324,10 +324,10 @@ INPUT TPN4-PLL.out
 INPUT TPN4-PLL.out
 INPUT TPN4-PLL.out
 INPUT TPN4-PLL.out
+OUTPUT TPN4-PLL.pdf
 INPUT ./TPN4-PLL.out
 INPUT ./TPN4-PLL.out
 OUTPUT TPN4-PLL.out
-OUTPUT TPN4-PLL.pdf
 INPUT /usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 INPUT /usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 INPUT /usr/share/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
