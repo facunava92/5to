@@ -13,7 +13,7 @@
 \usepackage{textcomp}
 \usepackage{fancyhdr}
 \usepackage{multicol}
-
+\usepackage{float}
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{Electrónica Aplicada III}
@@ -213,15 +213,20 @@ El circuito anterior produce el espectro de fourier de salida que se muestra en 
 %
 \begin{figure}[h]
   \centering    
-	\includegraphics[width=\columnwidth]{imagenes/CL1.jpg}
+	\includegraphics[scale=0.30]{imagenes/CL1.jpg}
 	\caption{Perdida por conversión de mezclador terminación única.}\label{fig:CL1}
 \end{figure}
 \[C.L._{T.U.} = 14,398 \; [dB] \]
 %
 \subsubsection{Figura de ruido}
 %
-La figura de ruido se considera aproximadamente igual a la pérdida por conversión, excepto en los casos que se tengan diodos muy ruidosos.
-\[N.F. \approx 14,398 \; [dB] \]
+La figura de ruido resultante de la simulación es el que se observa en la figura \textcolor{blue}{\ref{fig:fig1}}
+\begin{figure}[h]
+  \centering    
+	\includegraphics[scale=0.30]{imagenes/FN1}
+	\caption{Figura de ruido, terminación única.}\label{fig:FN1}
+\end{figure}
+\[N.F._{T.U.} = 6,26 \; [dB] \]
 %
 \subsubsection{Aislación entre puertos}
 %
@@ -233,15 +238,15 @@ La figura de ruido se considera aproximadamente igual a la pérdida por conversi
 %
 \begin{figure}[h]
   \centering    
-	\includegraphics[width=\columnwidth]{imagenes/ISO1.jpg}
+	\includegraphics[scale=0.25]{imagenes/ISO1.jpg}
 	\caption{Aislación entre puertos, terminación única.}\label{fig:ISO1}
 \end{figure}
 \clearpage
 %
 \subsubsection{Pérdida por compresión}
-\begin{figure}[h!]
+\begin{figure}[h]
 \centering
-\begin{tikzpicture} [scale=1]
+\begin{tikzpicture} [scale=0.9]
 \begin{axis}[
 	xmin=-5, xmax=20,
 	ymin=-23.1, ymax=-12,
@@ -281,32 +286,37 @@ Este tipo de mezclador posee un par de dispositivos alineales, normalmente diodo
 
 \subsubsection{Circuito}
 La simulación se implementa en el software AWR. A continuación se muestra el esquemático
-\begin{figure}[h]
+\begin{figure}[H]
   \centering    
 	\includegraphics[width=\columnwidth]{imagenes/circuito2.jpg}
 	\caption{Mezclador de balanceo simple.}\label{fig:circuito2}
 \end{figure}
 
 El circuito anterior produce el espectro de Fourier de salida que se muestra en la figura \textcolor{blue}{\ref{fig:IF2}}.
-\begin{figure}[h]
+\begin{figure}[H]
   \centering    
-	\includegraphics[width=\columnwidth]{imagenes/IF2.jpg}
+	\includegraphics[scale=0.35]{imagenes/IF2.jpg}
 	\caption{Espectro de Fourier de IF.}\label{fig:IF2}
 \end{figure}
 %
 \subsubsection{Perdida por conversión}
 %
-\begin{figure}[h]
+\begin{figure}[H]
   \centering    
-	\includegraphics[width=\columnwidth]{imagenes/CL2.jpg}
+	\includegraphics[scale=0.35]{imagenes/CL2.jpg}
 	\caption{Perdida por conversión de mezclador de balanceo simple.}\label{fig:CL2}
 \end{figure}
 \[C.L._{B.S.} = 8,653 \; [dB] \]
 %
 \subsubsection{Figura de ruido}
 %
-La figura de ruido se considera aproximadamente igual a la pérdida por conversión, excepto en los casos que se tengan diodos muy ruidosos.
-\[N.F. \approx 8,653 \; [dB] \]
+La figura de ruido resultante de la simulación es la que se observa en la figura \textcolor{blue}{\ref{fig:FN2}}
+\[N.F._{B.S.} = 3,557 \; [dB] \]
+\begin{figure}[H]
+  \centering    
+	\includegraphics[scale=0.35]{imagenes/FN2}
+	\caption{Figura de ruido, balanceo simple.}\label{fig:FN2}
+\end{figure}
 %
 \subsubsection{Aislación entre puertos}
 %
@@ -316,17 +326,16 @@ La figura de ruido se considera aproximadamente igual a la pérdida por conversi
 \item[•]  $ISO_{LO-RF} = 90,39 \; [dB]$.
 \end{itemize}
 %
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering    
 	\includegraphics[scale=0.3]{imagenes/ISO2.jpg}
 	\caption{Aislación entre puertos, balanceo simple.}\label{fig:ISO2}
 \end{figure}
-\clearpage
 %
 \subsubsection{Pérdida por compresión}
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
-\begin{tikzpicture} [scale=1]
+\begin{tikzpicture} [scale=0.9]
 \begin{axis}[
 	xmin=-5, xmax=20,
 	ymin=-18, ymax=-5,
@@ -390,9 +399,14 @@ El circuito anterior produce el espectro de Fourier de salida que se muestra en 
 %
 \subsubsection{Figura de ruido}
 %
-La figura de ruido se considera aproximadamente igual a la pérdida por conversión, excepto en los casos que se tengan diodos muy ruidosos.
-\[N.F. \approx 5.097 \; [dB] \]
-%
+La figura de ruido resultante de la simulación es la que se observa en la figura \textcolor{blue}{\ref{fig:FN3}}
+\[N.F._{B.D.} = 3.43856 \; [dB] \]
+\begin{figure}[H]
+  \centering    
+	\includegraphics[width=\columnwidth]{imagenes/FN3}
+	\caption{Figura de ruido, balanceo simple.}\label{fig:FN3}
+\end{figure}
+\vfill
 \subsubsection{Aislación entre puertos}
 %
 \begin{itemize}\itemsep0em
@@ -406,7 +420,6 @@ La figura de ruido se considera aproximadamente igual a la pérdida por conversi
 	\includegraphics[scale=0.3]{imagenes/ISO3.jpg}
 	\caption{Aislación entre puertos, balanceo doble.}\label{fig:ISO3}
 \end{figure}
-\clearpage
 %
 \subsubsection{Pérdida por compresión}
 \begin{figure}[h!]
@@ -447,6 +460,7 @@ La figura de ruido se considera aproximadamente igual a la pérdida por conversi
 
 Perdida por compresión = $2.6\; [dB]$
 
+\clearpage
 \section{Conclusión}
  Como modo de finalizar se agrupan los valores obtenidos en las siguientes tablas
 \begin{table}[h]

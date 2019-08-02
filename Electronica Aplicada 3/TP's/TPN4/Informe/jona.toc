@@ -1,0 +1,16 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{2}{section.1}% 
+\contentsline {section}{\numberline {2}Marco Te\IeC {\'o}rico}{2}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Estados de funcionamiento}{2}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Bloques y principio de funcionamiento}{2}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}Rangos de funcionamiento}{3}{subsection.2.3}% 
+\contentsline {section}{\numberline {3}Dise\IeC {\~n}o de red $PLL$}{3}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}C\IeC {\'a}lculos de componentes}{3}{subsection.3.1}% 
+\contentsline {subsubsection}{\numberline {3.1.1}C1 y R2}{3}{subsubsection.3.1.1}% 
+\contentsline {subsubsection}{\numberline {3.1.2}R1}{3}{subsubsection.3.1.2}% 
+\contentsline {subsubsection}{\numberline {3.1.3}R3 y C2}{4}{subsubsection.3.1.3}% 
+\contentsline {section}{\numberline {4}Experiencia pr\IeC {\'a}ctica}{4}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Rangos de funcionamiento}{4}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Ganancia de lazo}{4}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.3}Sobrepasamiento y constante de tiempo}{5}{subsection.4.3}% 
+\contentsline {section}{\numberline {5}Conclusi\IeC {\'o}n}{6}{section.5}% 

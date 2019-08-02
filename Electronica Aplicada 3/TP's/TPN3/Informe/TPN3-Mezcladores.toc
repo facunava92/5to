@@ -17,16 +17,16 @@
 \contentsline {subsubsection}{\numberline {3.2.1}Circuito}{5}{subsubsection.3.2.1}% 
 \contentsline {subsubsection}{\numberline {3.2.2}Perdida por conversi\IeC {\'o}n}{5}{subsubsection.3.2.2}% 
 \contentsline {subsubsection}{\numberline {3.2.3}Figura de ruido}{5}{subsubsection.3.2.3}% 
-\contentsline {subsubsection}{\numberline {3.2.4}Aislaci\IeC {\'o}n entre puertos}{5}{subsubsection.3.2.4}% 
+\contentsline {subsubsection}{\numberline {3.2.4}Aislaci\IeC {\'o}n entre puertos}{6}{subsubsection.3.2.4}% 
 \contentsline {subsubsection}{\numberline {3.2.5}P\IeC {\'e}rdida por compresi\IeC {\'o}n}{6}{subsubsection.3.2.5}% 
 \contentsline {subsection}{\numberline {3.3}Mezcladores de balanceo doble}{6}{subsection.3.3}% 
 \contentsline {subsubsection}{\numberline {3.3.1}Circuito}{6}{subsubsection.3.3.1}% 
 \contentsline {subsubsection}{\numberline {3.3.2}Perdida por conversi\IeC {\'o}n}{6}{subsubsection.3.3.2}% 
 \contentsline {subsubsection}{\numberline {3.3.3}Figura de ruido}{6}{subsubsection.3.3.3}% 
-\contentsline {subsubsection}{\numberline {3.3.4}Aislaci\IeC {\'o}n entre puertos}{6}{subsubsection.3.3.4}% 
+\contentsline {subsubsection}{\numberline {3.3.4}Aislaci\IeC {\'o}n entre puertos}{7}{subsubsection.3.3.4}% 
 \contentsline {subsubsection}{\numberline {3.3.5}P\IeC {\'e}rdida por compresi\IeC {\'o}n}{7}{subsubsection.3.3.5}% 
-\contentsline {section}{\numberline {4}Conclusi\IeC {\'o}n}{7}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}Perdida por conversi\IeC {\'o}n}{7}{subsection.4.1}% 
-\contentsline {subsection}{\numberline {4.2}Perdida por compresi\IeC {\'o}n y rango din\IeC {\'a}mico}{7}{subsection.4.2}% 
-\contentsline {subsection}{\numberline {4.3}Aislamiento entre puertos}{7}{subsection.4.3}% 
-\contentsline {subsection}{\numberline {4.4}Frecuencia imagen}{7}{subsection.4.4}% 
+\contentsline {section}{\numberline {4}Conclusi\IeC {\'o}n}{8}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Perdida por conversi\IeC {\'o}n}{8}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Perdida por compresi\IeC {\'o}n y rango din\IeC {\'a}mico}{8}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.3}Aislamiento entre puertos}{8}{subsection.4.3}% 
+\contentsline {subsection}{\numberline {4.4}Frecuencia imagen}{8}{subsection.4.4}% 

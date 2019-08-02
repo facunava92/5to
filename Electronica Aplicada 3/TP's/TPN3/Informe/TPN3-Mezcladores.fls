@@ -1,4 +1,4 @@
-PWD /run/media/fnavarro/Datos/fnavarro/5to/Electronica Aplicada 3/TP's/TPN3/Informe
+PWD /run/media/fnavarro/DATA/fnavarro/5to/Electronica Aplicada 3/TP's/TPN3/Informe
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT TPN3-Mezcladores.tex
@@ -85,6 +85,8 @@ INPUT /usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 INPUT /usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/multicol.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/multicol.sty
+INPUT /usr/share/texmf-dist/tex/latex/float/float.sty
+INPUT /usr/share/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.sty
 INPUT /usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.sty
 INPUT /usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex
@@ -396,6 +398,9 @@ INPUT ./imagenes/IF1.jpg
 INPUT imagenes/CL1.jpg
 INPUT ./imagenes/CL1.jpg
 INPUT ./imagenes/CL1.jpg
+INPUT imagenes/FN1.jpg
+INPUT ./imagenes/FN1.jpg
+INPUT ./imagenes/FN1.jpg
 INPUT imagenes/ISO1.jpg
 INPUT ./imagenes/ISO1.jpg
 INPUT ./imagenes/ISO1.jpg
@@ -410,6 +415,9 @@ INPUT ./imagenes/IF2.jpg
 INPUT imagenes/CL2.jpg
 INPUT ./imagenes/CL2.jpg
 INPUT ./imagenes/CL2.jpg
+INPUT imagenes/FN2.jpg
+INPUT ./imagenes/FN2.jpg
+INPUT ./imagenes/FN2.jpg
 INPUT imagenes/ISO2.jpg
 INPUT ./imagenes/ISO2.jpg
 INPUT ./imagenes/ISO2.jpg
@@ -424,6 +432,9 @@ INPUT ./imagenes/IF3.jpg
 INPUT imagenes/CL3.jpg
 INPUT ./imagenes/CL3.jpg
 INPUT ./imagenes/CL3.jpg
+INPUT imagenes/FN3.jpg
+INPUT ./imagenes/FN3.jpg
+INPUT ./imagenes/FN3.jpg
 INPUT imagenes/ISO3.jpg
 INPUT ./imagenes/ISO3.jpg
 INPUT ./imagenes/ISO3.jpg
