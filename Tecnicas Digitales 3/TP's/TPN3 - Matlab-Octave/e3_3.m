@@ -6,7 +6,7 @@ clc;
 close all;
 
 [r, fs]=audioread('numeros.wav'); % tambien se puede usar wavread() 
-sound(r, fs); %Reproduce 
+sound(r, fs); %Reproduce  
 
 
 disp('Presiona para reproducior audio con delay!') % Press a key here.You can see the message 'Paused: Press any key' in        
@@ -47,24 +47,27 @@ i = 0;
 j=1; 
 for n=1 : N 
 	switch n
-		case 1
-			h(n) = (a^i) * 1;
+		case 1                     % respuesta al impulso
+			h(n) = (a^i) * 1;           % respuesta al impulso
 		case j*K
-			i = i + 1;
+			i = i + 1;              % respuesta al impulso
 			j = j +1;
-			h(n) = (a^i) * 1;
+			h(n) = (a^i) * 1;       % respuesta al impulso
 		otherwise
-			h(n) = 0;
+			h(n) = 0;     % respuesta al impulso
 	end
 end
 
-Nr = length(r);
-y = conv(r , h); 
-y = y(1:Nr);
-y_max = max(y);
+Nr = length(r);             %tamaño de la muesta 
+y = conv(r , h);            %convolucion 
+y = y(1:Nr);                % la convolucion tenga un tamaño osea los n sean desde 1 hasta  Nr(osea el tamaño de r)
+y_max = max(y);             %
 y = y(:) ./ y_max;
 sound(y , fs)
 figure();
 stem(h);
 
 audiowrite('numeros_peine.wav',y,fs)
+
+
+

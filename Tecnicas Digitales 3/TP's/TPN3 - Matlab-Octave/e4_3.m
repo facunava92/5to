@@ -9,17 +9,25 @@ close all;
 clc;
 F=4;                %Filas de x
 C=4;                %Columnas de x
+
 M=2;                %Filas de h
 N=2;                %Columnas de h
+
 x=[1,1,1,1 ; 1,-2,-1,0 ; 1,0,0,0 ; 1,-1,-1,2];
+
 h=[-1, 1; 1, -2];
+
 y=zeros(F+M-1, C+N-1);
+
 A=zeros((2*N+F-2), (2*M+C-2));
+
 t=zeros(M, N);
+
 
 for j=1 : N
 h(1:1:M,j)= h(end:-1:1, j);
 end;
+
 for i=1 : M
 h(i,1:1:N)= h(i, end:-1:1);
 end;
@@ -45,6 +53,9 @@ disp('Presionar una tecla para continuar!') % Press a key here.You can see the m
                                             % the lower left corner of MATLAB window.
 pause;
 
+
+
+
 % Ejercicio 2. Genere una nueva matriz ?h ?aleatoria con números aleatorios entre 0 y 5 
 % mediante la función ?rand ?y la función de redondeo ?floor?. Convolucione
 % con la matriz ?x ? del ejemplo y compare la salida con el resultado de la
@@ -61,28 +72,36 @@ x=[1,1,1,1;1,-2,-1,0;1,0,0,0;1,-1,-1,2];
 h=floor(rand(M,N)*5);            %Generacion de matriz con elementos 
                                  %aleatorios entre 1 y 5
 
-y=zeros(F+M-1, C+N-1);
-z=zeros(F+M-1, C+N-1);
-A=zeros((2*N+F-2), (2*M+C-2));
+y=zeros(F+M-1, C+N-1);         %matriz resultado 
+
+z=zeros(F+M-1, C+N-1);          
+
+A=zeros((2*N+F-2),(2*M+C-2));      
+
 t=zeros(M, N);
 
+
+
 for j=1 : N                      %Inversion de filas
-hi(1:1:M,j)= h(end:-1:1, j);
+hi(1:1:M,j)= h(end:-1:1, j);      % empiece de 1 hasta M , columna j=1 2 3 4 .. hasta N 
 end;    
 for i=1 : M                      %Inversion de columnas
-hi(i,1:1:N)= hi(i, end:-1:1);
+hi(i,1:1:N)= hi(i, end:-1:1);        % hi nueva matriz invertida H 
 end;
 
+
+
 for i=1 : F                      %Matriz ampliada A con matriz x en el centro
-    for j=1 : C
+    for j= 1 : C
        A(i+1, j+1)= x(i,j);
     end;
 end;
 
+
 for i=1 : length(y)              %Convolucion en 2D
-    for j=1 : length(y)
+    for j=1 : length(y)               % empieze en 1 hasta el tamaño de y (mayor) 
         t=A(i:i+1, j:j+1);
-        y(i,j)=sum(sum(hi.*t));
+        y(i,j)=sum(sum(hi.*t));            % multiplique el elemento i por el elemnto  
     end;
 end;
 
@@ -132,8 +151,12 @@ Prom=(M_d(:,:,1)+M_d(:,:,2)+M_d(:,:,3))./3; %Conversion a gris = promedio
 M_i=uint8(Prom);                             %Conversion a integer para bits
 h=h.*10;
 
-subplot(1,2,1); imshow(M_i); title('Imagen Original');
-subplot(1,2,2); imshow(uint8(conv2(h, Prom))); title('Imagen Convolucionada');
+subplot(1,2,1);                    % me permite subdividir la ventana de graricacion en m filas y n clumnas
+imshow(M_i);
+title('Imagen Original');
+subplot(1,2,2); 
+imshow(uint8(conv2(h, Prom)));
+title('Imagen Convolucionada');
 
 disp('Presionar una tecla para continuar!') % Press a key here.You can see the message 'Paused: Press any key' in        
 %                                             the lower left corner of MATLAB window.
