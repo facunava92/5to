@@ -1,0 +1,47 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{2}% 
+\contentsline {section}{\numberline {2}Enunciado}{2}% 
+\contentsline {section}{\numberline {3}Marco Te\IeC {\'o}rico}{2}% 
+\contentsline {subsection}{\numberline {3.1}Calsificaci\IeC {\'o}n}{2}% 
+\contentsline {subsection}{\numberline {3.2}Ventajas y Desventajas}{3}% 
+\contentsline {subsubsection}{\numberline {3.2.1}Ventajas}{3}% 
+\contentsline {subsubsection}{\numberline {3.2.2}Desventajas}{3}% 
+\contentsline {subsection}{\numberline {3.3}Fuente de alimentaci\IeC {\'o}n off-line forward bidireccional de medio puente}{3}% 
+\contentsline {subsubsection}{\numberline {3.3.1}Fuente off-line}{3}% 
+\contentsline {subsubsection}{\numberline {3.3.2}Fuente Half-Bridge}{3}% 
+\contentsline {subsubsection}{\numberline {3.3.3}Transformador de potencia}{4}% 
+\contentsline {subsubsection}{\numberline {3.3.4}Funcionamiento}{5}% 
+\contentsline {subsubsection}{\numberline {3.3.5}Modo de conducci\IeC {\'o}n dicontinua DCM}{6}% 
+\contentsline {section}{\numberline {4}Dise\IeC {\~n}o de la fuente conmutada}{6}% 
+\contentsline {subsection}{\numberline {4.1}Datos iniciales}{6}% 
+\contentsline {subsection}{\numberline {4.2}C\IeC {\'a}lculos iniciales}{6}% 
+\contentsline {subsection}{\numberline {4.3}Circuito de Entrada de L\IeC {\'\i }nea - Filtro EMI/EMC}{7}% 
+\contentsline {subsection}{\numberline {4.4}Circuito de Rectificaci\IeC {\'o}n}{7}% 
+\contentsline {subsubsection}{\numberline {4.4.1}Puente Rectificador}{8}% 
+\contentsline {subsubsection}{\numberline {4.4.2}Capacitores y Resistencias de Filtro}{8}% 
+\contentsline {subsection}{\numberline {4.5}Circuito generador del PWM}{9}% 
+\contentsline {subsection}{\numberline {4.6}Selecci\IeC {\'o}n del dispositivo de conmutaci\IeC {\'o}n}{10}% 
+\contentsline {subsubsection}{\numberline {4.6.1}Encendido o Saturaci\IeC {\'o}n}{10}% 
+\contentsline {subsubsection}{\numberline {4.6.2}Apagado o Corte}{10}% 
+\contentsline {subsection}{\numberline {4.7}Driver de los MOSFET}{10}% 
+\contentsline {subsubsection}{\numberline {4.7.1}IR2110}{10}% 
+\contentsline {subsubsection}{\numberline {4.7.2}Velocidad de Conmutaci\IeC {\'o}n}{11}% 
+\contentsline {subsection}{\numberline {4.8}Transformador de Potencia}{12}% 
+\contentsline {subsubsection}{\numberline {4.8.1}Material y Cazoleta}{12}% 
+\contentsline {subsubsection}{\numberline {4.8.2}Excursi\IeC {\'o}n de la densidad de flujo}{12}% 
+\contentsline {subsubsection}{\numberline {4.8.3}Comprobaci\IeC {\'o}n del tama\IeC {\~n}o de la cazoleta}{13}% 
+\contentsline {subsubsection}{\numberline {4.8.4}N\IeC {\'u}mero de vueltas del primario y del secundario}{14}% 
+\contentsline {subsubsection}{\numberline {4.8.5}Di\IeC {\'a}metro de los conductores}{15}% 
+\contentsline {subsubsection}{\numberline {4.8.6}Capacitor de acople $C_{14}$}{15}% 
+\contentsline {subsection}{\numberline {4.9}Circuito de salida}{15}% 
+\contentsline {subsubsection}{\numberline {4.9.1}Rectificadores}{16}% 
+\contentsline {subsubsection}{\numberline {4.9.2}Inductor}{16}% 
+\contentsline {subsubsection}{\numberline {4.9.3}Capacitor}{18}% 
+\contentsline {subsection}{\numberline {4.10}Circuito Final}{18}% 
+\contentsline {section}{\numberline {5}Mediciones}{20}% 
+\contentsline {subsubsection}{\numberline {5.0.1}Tensi\IeC {\'o}n de salida CC}{20}% 
+\contentsline {subsubsection}{\numberline {5.0.2}Ripple de la Tensi\IeC {\'o}n de salida CA}{21}% 
+\contentsline {subsubsection}{\numberline {5.0.3}Se\IeC {\~n}al de comando del PWM}{21}% 
+\contentsline {subsubsection}{\numberline {5.0.4}Tensi\IeC {\'o}n de compuerta y de drenador de los MOSFETs}{22}% 
+\contentsline {subsubsection}{\numberline {5.0.5}Primario del transformador}{22}% 
+\contentsline {section}{\numberline {6}Conclusiones}{22}% 
