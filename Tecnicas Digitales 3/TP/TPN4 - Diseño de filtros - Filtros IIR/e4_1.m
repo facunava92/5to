@@ -36,8 +36,8 @@ plot(fd,HdB);				  %Grafico filtro
 
   %Ripple de la banda de paso
   for i=1 : Kfc
-	if HdB(i+1) < Hd::B(i)
-	  A=0;
+	if HdB(i+1) < HdB(i)
+	  Rp=HdB(i)-Gp;
 	end
   end
 	%Atenuacion en la banda de rechazo
