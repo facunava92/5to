@@ -1,4 +1,4 @@
-16310324908440319
+16318140181584319
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -72926,9 +72926,44 @@ IEC-C8
 4
 2
 lib_fp
+MP1584
+
+
+0
+8
+4
+lib_fp
 NTC-16
 
 
 0
 2
 2
+lib_fp
+Rocker
+
+
+0
+2
+2
+lib_fp
+TO-220-3_Vertical
+TO-220-3, Vertical, RM 2.54mm, see https://www.vishay.com/docs/66542/to-220-1.pdf
+TO-220-3 Vertical RM 2.54mm
+0
+3
+3
+lib_fp
+TerminalBlock_bornier-2_P5.08mm
+simple 2-pin terminal block, pitch 5.08mm, revamped version of bornier2
+terminal block bornier2
+0
+2
+2
+lib_fp
+Transformador_EE25
+
+
+0
+10
+4
