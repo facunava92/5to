@@ -1,0 +1,2350 @@
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 ;------------------------------------------------------------------------------
+                      00002 ;
+                      00003 ; Title:                        ds30 Loader for PIC12F and PIC16F
+                      00004 ;
+                      00005 ; File description:     Main firmwarefile
+                      00006 ;
+                      00007 ; Copyright:            Copyright 2011-2012 Mikael Gustafsson
+                      00008 ;
+                      00009 ; Version:                      1.0.2 March 2012
+                      00010 ;
+                      00011 ; Webpage:                      http://mrmackey.no-ip.org/elektronik/ds30loader/
+                      00012 ;
+                      00013 ; Thanks to:            Claudio Chiculita, this code is based on the Tiny PIC bootloader
+                      00014 ;
+                      00015 ; History:                      1.0.2 Bugfix: brg16 for some devices including 16f88x
+                      00016 ;                                                 Improvement: configurable write verification for both 
+                            flash and eeprom
+                      00017 ;                                                 Improvement: added configurable delay for tx enable pi
+                            n
+                      00018 ;                                                 Improvement: status register is cleared on exit, impro
+                            ves compatibility with some compilers
+                      00019 ;                                                 Improvement: separate timeouts for hello and data rx
+                      00020 ;                                                 Improvement: new settting KICK_WD
+                      00021 ;                                                 Change: size is now 256 words
+                      00022 ;                                                 New feature: read functionality, commercial version on
+                            ly
+                      00023 ;                                                 New feature: I2C operation, commercial version only
+                      00024 ;                                       1.0.1 Bugfix: BRG16 was broken
+                      00025 ;                                                 Improvement: supports uart 2
+                      00026 ;                                                 Improvement: send unknown command
+                      00027 ;                                                 Improvement: PIC12 support
+                      00028 ;                                                 Improvement: support new PIC16's that has no eeprom
+                      00029 ;                                       1.0.0 Improvement: improved timeout calculation
+                      00030 ;                                             Improvement: higher baudrates setting
+                      00031 ;                                             New feature: auto baud rate detection
+                      00032 ;                                                 Bugfix: tx enable tris bit was not cleared
+                      00033 ;                                       0.9.4 Improvement: New setting, HELLORETRIES
+                      00034 ;                                             Bugfix: Banksel added for RCREG to be compatible with some
+                             devices including 1827;                                        
+                      00035 ;                                       0.9.3 added tx enable code
+                      00036 ;                                                 compatible with pic16 with extended instruction set
+                      00037 ;                                       0.9.2 -
+                      00038 ;                                       0.9.1 Moved goto to usr appl. to make room for page selection
+                      00039 ;                                       0.9.0 Initial release
+                      00040 ;                                                                             
+                      00041 ;------------------------------------------------------------------------------
+                      00042 
+                      00043 ;-----------------------------------------------------------------------------
+                      00044 ;    This file is part of ds30 Loader.
+                      00045 ;
+                      00046 ;    ds30 Loader is free software: you can redistribute it and/or modify
+                      00047 ;    it under the terms of the GNU General Public License as published by
+                      00048 ;    the Free Software Foundation.
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00049 ;
+                      00050 ;    ds30 Loader is distributed in the hope that it will be useful,
+                      00051 ;    but WITHOUT ANY WARRANTY; without even the implied warranty of
+                      00052 ;    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+                      00053 ;    GNU General Public License for more details.
+                      00054 ;
+                      00055 ;    You should have received a copy of the GNU General Public License
+                      00056 ;    along with ds30 Loader. If not, see <http://www.gnu.org/licenses/>.
+                      00057 ;------------------------------------------------------------------------------
+                      00058 
+                      00059 
+                      00060 ;------------------------------------------------------------------------------
+                      00061 ; Includes
+                      00062 ;------------------------------------------------------------------------------ 
+                      00063                 #include "settings.inc"
+                      00001 ;------------------------------------------------------------------------------
+                      00002 ;
+                      00003 ; Title:                        ds30 Loader for PIC12F and PIC16F
+                      00004 ;
+                      00005 ; File description:     user settings and configuration bits
+                      00006 ;
+                      00007 ; Copyright:            Copyright 2010-2012 Mikael Gustafsson
+                      00008 ;                                                                             
+                      00009 ;------------------------------------------------------------------------------
+                      00010 
+                      00011 ;------------------------------------------------------------------------------
+                      00012 ;    This file is part of ds30 Loader.
+                      00013 ;
+                      00014 ;    ds30 Loader is free software: you can redistribute it and/or modify
+                      00015 ;    it under the terms of the GNU General Public License as published by
+                      00016 ;    the Free Software Foundation.
+                      00017 ;
+                      00018 ;    ds30 Loader is distributed in the hope that it will be useful,
+                      00019 ;    but WITHOUT ANY WARRANTY; without even the implied warranty of
+                      00020 ;    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+                      00021 ;    GNU General Public License for more details.
+                      00022 ;
+                      00023 ;    You should have received a copy of the GNU General Public License
+                      00024 ;    along with ds30 Loader. If not, see <http://www.gnu.org/licenses/>.
+                      00025 ;------------------------------------------------------------------------------
+                      00026 
+                      00027 
+                      00028 ;------------------------------------------------------------------------------
+                      00029 ; Device
+                      00030 ;------------------------------------------------------------------------------
+                      00031                 LIST            P=16F877A
+                      00032 
+                      00033 
+                      00034 ;------------------------------------------------------------------------------
+                      00035 ; Includes
+                      00036 ;------------------------------------------------------------------------------
+                      00037         #include        "devices.inc"
+                      00001 ;------------------------------------------------------------------------------
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00002 ;
+                      00003 ; Title:                        ds30 Loader for PIC12F and PIC16F
+                      00004 ;
+                      00005 ; File description:     device specific constants
+                      00006 ;
+                      00007 ; Copyright:            Copyright 2010-2012 Mikael Gustafsson
+                      00008 ;                                                                             
+                      00009 ;------------------------------------------------------------------------------
+                      00010 
+                      00011 ;-----------------------------------------------------------------------------
+                      00012 ;    This file is part of ds30 Loader.
+                      00013 ;
+                      00014 ;    ds30 Loader is free software: you can redistribute it and/or modify
+                      00015 ;    it under the terms of the GNU General Public License as published by
+                      00016 ;    the Free Software Foundation.
+                      00017 ;
+                      00018 ;    ds30 Loader is distributed in the hope that it will be useful,
+                      00019 ;    but WITHOUT ANY WARRANTY; without even the implied warranty of
+                      00020 ;    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+                      00021 ;    GNU General Public License for more details.
+                      00022 ;
+                      00023 ;    You should have received a copy of the GNU General Public License
+                      00024 ;    along with ds30 Loader. If not, see <http:;www.gnu.org/licenses/>.
+                      00025 ;------------------------------------------------------------------------------ 
+                      00026                 
+                      00027                 
+                      00028                 radix DEC
+                      00029                 
+                      00030 ;------------------------------------------------------------------------------
+                      00031 ; Includes
+                      00032 ;------------------------------------------------------------------------------                 
+                      00033                 #include        "devices_PIC16F.inc"
+                      00001 ;------------------------------------------------------------------------------
+                      00002 ;
+                      00003 ; Title:                        ds30 Loader for PIC12F and PIC16F
+                      00004 ;
+                      00005 ; File description:     device specific constants
+                      00006 ;
+                      00007 ; Copyright:            Copyright 2010-2012 Mikael Gustafsson
+                      00008 ;                                                                             
+                      00009 ;------------------------------------------------------------------------------
+                      00010 
+                      00011 ;-----------------------------------------------------------------------------
+                      00012 ;    This file is part of ds30 Loader.
+                      00013 ;
+                      00014 ;    ds30 Loader is free software: you can redistribute it and/or modify
+                      00015 ;    it under the terms of the GNU General Public License as published by
+                      00016 ;    the Free Software Foundation.
+                      00017 ;
+                      00018 ;    ds30 Loader is distributed in the hope that it will be useful,
+                      00019 ;    but WITHOUT ANY WARRANTY; without even the implied warranty of
+                      00020 ;    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+                      00021 ;    GNU General Public License for more details.
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00022 ;
+                      00023 ;    You should have received a copy of the GNU General Public License
+                      00024 ;    along with ds30 Loader. If not, see <http:;www.gnu.org/licenses/>.
+                      00025 ;------------------------------------------------------------------------------
+                      00026         ifdef   __16F882
+                      00027                 #include        p16F882.inc
+                      00028                 #define         VALID_DEV               1
+                      00029                 #define         MAX_FLASH               0x0800
+                      00030                 #define         RAM_START               
+                      00031                 #define         RAM_SIZEB               128
+                      00032                 #define         DEVICEID                456
+                      00033                 #define         HAS_EE                  1
+                      00034                 #define         PAGESIZEW               16
+                      00035                 #define         ROWSIZEW                4
+                      00036                 #define         AUTOERASE               1
+                      00037         endif
+                      00038         ifdef   __16F87
+                      00039                 #include        p16F87.inc
+                      00040                 #define         VALID_DEV               1
+                      00041                 #define         MAX_FLASH               0x1000
+                      00042                 #define         RAM_START               
+                      00043                 #define         RAM_SIZEB               368
+                      00044                 #define         DEVICEID                457
+                      00045                 #define         HAS_EE                  1
+                      00046                 #define         PAGESIZEW               32
+                      00047                 #define         ROWSIZEW                4
+                      00048         endif
+                      00049         ifdef   __16F88
+                      00050                 #include        p16F88.inc
+                      00051                 #define         VALID_DEV               1
+                      00052                 #define         MAX_FLASH               0x1000
+                      00053                 #define         RAM_START               
+                      00054                 #define         RAM_SIZEB               368
+                      00055                 #define         DEVICEID                458
+                      00056                 #define         HAS_EE                  1
+                      00057                 #define         PAGESIZEW               32
+                      00058                 #define         ROWSIZEW                4
+                      00059         endif
+                      00060         ifdef   __16F883
+                      00061                 #include        p16F883.inc
+                      00062                 #define         VALID_DEV               1
+                      00063                 #define         MAX_FLASH               0x1000
+                      00064                 #define         RAM_START               
+                      00065                 #define         RAM_SIZEB               256
+                      00066                 #define         DEVICEID                459
+                      00067                 #define         HAS_EE                  1
+                      00068                 #define         PAGESIZEW               16
+                      00069                 #define         ROWSIZEW                4
+                      00070                 #define         AUTOERASE               1
+                      00071         endif
+                      00072         ifdef   __16F884
+                      00073                 #include        p16F884.inc
+                      00074                 #define         VALID_DEV               1
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00075                 #define         MAX_FLASH               0x1000
+                      00076                 #define         RAM_START               
+                      00077                 #define         RAM_SIZEB               256
+                      00078                 #define         DEVICEID                460
+                      00079                 #define         HAS_EE                  1
+                      00080                 #define         PAGESIZEW               16
+                      00081                 #define         ROWSIZEW                4
+                      00082                 #define         AUTOERASE               1
+                      00083         endif
+                      00084         ifdef   __16F886
+                      00085                 #include        p16F886.inc
+                      00086                 #define         VALID_DEV               1
+                      00087                 #define         MAX_FLASH               0x2000
+                      00088                 #define         RAM_START               
+                      00089                 #define         RAM_SIZEB               368
+                      00090                 #define         DEVICEID                461
+                      00091                 #define         HAS_EE                  1
+                      00092                 #define         PAGESIZEW               16
+                      00093                 #define         ROWSIZEW                8
+                      00094                 #define         AUTOERASE               1
+                      00095         endif
+                      00096         ifdef   __16F887
+                      00097                 #include        p16F887.inc
+                      00098                 #define         VALID_DEV               1
+                      00099                 #define         MAX_FLASH               0x2000
+                      00100                 #define         RAM_START               
+                      00101                 #define         RAM_SIZEB               368
+                      00102                 #define         DEVICEID                462
+                      00103                 #define         HAS_EE                  1
+                      00104                 #define         PAGESIZEW               16
+                      00105                 #define         ROWSIZEW                8
+                      00106                 #define         AUTOERASE               1
+                      00107         endif
+                      00108         ifdef   __16F1933
+                      00109                 #include        p16F1933.inc
+                      00110                 #define         VALID_DEV               1
+                      00111                 #define         MAX_FLASH               0x1000
+                      00112                 #define         RAM_START               
+                      00113                 #define         RAM_SIZEB               256
+                      00114                 #define         DEVICEID                463
+                      00115                 #define         HAS_EE                  1
+                      00116                 #define         PAGESIZEW               32
+                      00117                 #define         ROWSIZEW                8
+                      00118         endif
+                      00119         ifdef   __16F1936
+                      00120                 #include        p16F1936.inc
+                      00121                 #define         VALID_DEV               1
+                      00122                 #define         MAX_FLASH               0x2000
+                      00123                 #define         RAM_START               
+                      00124                 #define         RAM_SIZEB               512
+                      00125                 #define         DEVICEID                464
+                      00126                 #define         HAS_EE                  1
+                      00127                 #define         PAGESIZEW               32
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE  6
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00128                 #define         ROWSIZEW                8
+                      00129         endif
+                      00130         ifdef   __16F1937
+                      00131                 #include        p16F1937.inc
+                      00132                 #define         VALID_DEV               1
+                      00133                 #define         MAX_FLASH               0x2000
+                      00134                 #define         RAM_START               
+                      00135                 #define         RAM_SIZEB               512
+                      00136                 #define         DEVICEID                465
+                      00137                 #define         HAS_EE                  1
+                      00138                 #define         PAGESIZEW               32
+                      00139                 #define         ROWSIZEW                8
+                      00140         endif
+                      00141         ifdef   __16F1939
+                      00142                 #include        p16F1939.inc
+                      00143                 #define         VALID_DEV               1
+                      00144                 #define         MAX_FLASH               0x4000
+                      00145                 #define         RAM_START               
+                      00146                 #define         RAM_SIZEB               1024
+                      00147                 #define         DEVICEID                466
+                      00148                 #define         HAS_EE                  1
+                      00149                 #define         PAGESIZEW               32
+                      00150                 #define         ROWSIZEW                8
+                      00151         endif
+                      00152         ifdef   __16F1947
+                      00153                 #include        p16F1947.inc
+                      00154                 #define         VALID_DEV               1
+                      00155                 #define         MAX_FLASH               0x4000
+                      00156                 #define         RAM_START               
+                      00157                 #define         RAM_SIZEB               1024
+                      00158                 #define         DEVICEID                467
+                      00159                 #define         HAS_UART2               1
+                      00160                 #define         HAS_EE                  1
+                      00161                 #define         PAGESIZEW               32
+                      00162                 #define         ROWSIZEW                8
+                      00163         endif
+                      00164         ifdef   __16F1827
+                      00165                 #include        p16F1827.inc
+                      00166                 #define         VALID_DEV               1
+                      00167                 #define         MAX_FLASH               0x1000
+                      00168                 #define         RAM_START               
+                      00169                 #define         RAM_SIZEB               384
+                      00170                 #define         DEVICEID                468
+                      00171                 #define         HAS_EE                  1
+                      00172                 #define         PAGESIZEW               32
+                      00173                 #define         ROWSIZEW                8
+                      00174         endif
+                      00175         ifdef   __16F1826
+                      00176                 #include        p16F1826.inc
+                      00177                 #define         VALID_DEV               1
+                      00178                 #define         MAX_FLASH               0x0800
+                      00179                 #define         RAM_START               
+                      00180                 #define         RAM_SIZEB               256
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE  7
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00181                 #define         DEVICEID                469
+                      00182                 #define         HAS_EE                  1
+                      00183                 #define         PAGESIZEW               32
+                      00184                 #define         ROWSIZEW                8
+                      00185         endif
+                      00186         ifdef   __16F720
+                      00187                 #include        p16F720.inc
+                      00188                 #define         VALID_DEV               1
+                      00189                 #define         MAX_FLASH               0x800
+                      00190                 #define         RAM_START               
+                      00191                 #define         RAM_SIZEB               128
+                      00192                 #define         DEVICEID                470
+                      00193                 #define         PAGESIZEW               32
+                      00194                 #define         ROWSIZEW                32
+                      00195         endif
+                      00196         ifdef   __16F721
+                      00197                 #include        p16F721.inc
+                      00198                 #define         VALID_DEV               1
+                      00199                 #define         MAX_FLASH               0x1000
+                      00200                 #define         RAM_START               
+                      00201                 #define         RAM_SIZEB               256
+                      00202                 #define         DEVICEID                471
+                      00203                 #define         PAGESIZEW               32
+                      00204                 #define         ROWSIZEW                32
+                      00205         endif
+                      00206         ifdef   __16F1825
+                      00207                 #include        p16F1825.inc
+                      00208                 #define         VALID_DEV               1
+                      00209                 #define         MAX_FLASH               0x2000
+                      00210                 #define         RAM_START               
+                      00211                 #define         RAM_SIZEB               1024
+                      00212                 #define         DEVICEID                472
+                      00213                 #define         HAS_EE                  1
+                      00214                 #define         PAGESIZEW               32
+                      00215                 #define         ROWSIZEW                32
+                      00216         endif
+                      00217         ifdef   __16F1938
+                      00218                 #include        p16F1938.inc
+                      00219                 #define         VALID_DEV               1
+                      00220                 #define         MAX_FLASH               0x4000
+                      00221                 #define         RAM_START               
+                      00222                 #define         RAM_SIZEB               1024
+                      00223                 #define         DEVICEID                473
+                      00224                 #define         HAS_EE                  1
+                      00225                 #define         PAGESIZEW               32
+                      00226                 #define         ROWSIZEW                8
+                      00227         endif
+                      00228         ifdef   __16F1934
+                      00229                 #include        p16F1934.inc
+                      00230                 #define         VALID_DEV               1
+                      00231                 #define         MAX_FLASH               0x1000
+                      00232                 #define         RAM_START               
+                      00233                 #define         RAM_SIZEB               256
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE  8
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00234                 #define         DEVICEID                474
+                      00235                 #define         HAS_EE                  1
+                      00236                 #define         PAGESIZEW               32
+                      00237                 #define         ROWSIZEW                8
+                      00238         endif
+                      00239         ifdef   __16F1946
+                      00240                 #include        p16F1946.inc
+                      00241                 #define         VALID_DEV               1
+                      00242                 #define         MAX_FLASH               0x2000
+                      00243                 #define         RAM_START               
+                      00244                 #define         RAM_SIZEB               512
+                      00245                 #define         DEVICEID                475
+                      00246                 #define         HAS_UART2               1
+                      00247                 #define         HAS_EE                  1
+                      00248                 #define         PAGESIZEW               32
+                      00249                 #define         ROWSIZEW                8
+                      00250         endif
+                      00251         ifdef   __16F1829
+                      00252                 #include        p16F1829.inc
+                      00253                 #define         VALID_DEV               1
+                      00254                 #define         MAX_FLASH               0x2000
+                      00255                 #define         RAM_START               
+                      00256                 #define         RAM_SIZEB               1024
+                      00257                 #define         DEVICEID                476
+                      00258                 #define         HAS_EE                  1
+                      00259                 #define         PAGESIZEW               32
+                      00260                 #define         ROWSIZEW                32
+                      00261         endif
+                      00262         ifdef   __16F1526
+                      00263                 #include        p16F1526.inc
+                      00264                 #define         VALID_DEV               1
+                      00265                 #define         MAX_FLASH               0x2000
+                      00266                 #define         RAM_START               
+                      00267                 #define         RAM_SIZEB               768
+                      00268                 #define         DEVICEID                477
+                      00269                 #define         HAS_UART2               1
+                      00270                 #define         PAGESIZEW               32
+                      00271                 #define         ROWSIZEW                32
+                      00272         endif
+                      00273         ifdef   __16F1527
+                      00274                 #include        p16F1527.inc
+                      00275                 #define         VALID_DEV               1
+                      00276                 #define         MAX_FLASH               0x4000
+                      00277                 #define         RAM_START               
+                      00278                 #define         RAM_SIZEB               1536
+                      00279                 #define         DEVICEID                478
+                      00280                 #define         HAS_UART2               1
+                      00281                 #define         PAGESIZEW               32
+                      00282                 #define         ROWSIZEW                32
+                      00283         endif
+                      00284         ifdef   __16F1516
+                      00285                 #include        p16F1516.inc
+                      00286                 #define         VALID_DEV               1
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE  9
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00287                 #define         MAX_FLASH               0x2000
+                      00288                 #define         RAM_START               
+                      00289                 #define         RAM_SIZEB               512
+                      00290                 #define         DEVICEID                479
+                      00291                 #define         PAGESIZEW               32
+                      00292                 #define         ROWSIZEW                32
+                      00293         endif
+                      00294         ifdef   __16F818
+                      00295                 #include        p16F818.inc
+                      00296                 #define         VALID_DEV               1
+                      00297                 #define         MAX_FLASH               0x0400
+                      00298                 #define         RAM_START               
+                      00299                 #define         RAM_SIZEB               128
+                      00300                 #define         DEVICEID                480
+                      00301                 #define         HAS_EE                  1
+                      00302                 #define         PAGESIZEW               64
+                      00303                 #define         ROWSIZEW                8
+                      00304         endif
+                      00305         ifdef   __16F819
+                      00306                 #include        p16F819.inc
+                      00307                 #define         VALID_DEV               1
+                      00308                 #define         MAX_FLASH               0x0800
+                      00309                 #define         RAM_START               
+                      00310                 #define         RAM_SIZEB               256
+                      00311                 #define         DEVICEID                481
+                      00312                 #define         HAS_EE                  1
+                      00313                 #define         PAGESIZEW               64
+                      00314                 #define         ROWSIZEW                8
+                      00315         endif
+                      00316         ifdef   __16F873
+                      00317                 #include        p16F873.inc
+                      00318                 #define         VALID_DEV               1
+                      00319                 #define         MAX_FLASH               0x1000
+                      00320                 #define         RAM_START               
+                      00321                 #define         RAM_SIZEB               192
+                      00322                 #define         DEVICEID                482
+                      00323                 #define         HAS_EE                  1
+                      00324                 #define         PAGESIZEW               1
+                      00325                 #define         ROWSIZEW                1
+                      00326                 #define         AUTOERASE               1
+                      00327         endif
+                      00328         ifdef   __16F874
+                      00329                 #include        p16F874.inc
+                      00330                 #define         VALID_DEV               1
+                      00331                 #define         MAX_FLASH               0x1000
+                      00332                 #define         RAM_START               
+                      00333                 #define         RAM_SIZEB               192
+                      00334                 #define         DEVICEID                483
+                      00335                 #define         HAS_EE                  1
+                      00336                 #define         PAGESIZEW               1
+                      00337                 #define         ROWSIZEW                1
+                      00338                 #define         AUTOERASE               1
+                      00339         endif
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 10
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00340         ifdef   __16F876
+                      00341                 #include        p16F876.inc
+                      00342                 #define         VALID_DEV               1
+                      00343                 #define         MAX_FLASH               0x2000
+                      00344                 #define         RAM_START               
+                      00345                 #define         RAM_SIZEB               368
+                      00346                 #define         DEVICEID                484
+                      00347                 #define         HAS_EE                  1
+                      00348                 #define         PAGESIZEW               1
+                      00349                 #define         ROWSIZEW                1
+                      00350                 #define         AUTOERASE               1
+                      00351         endif
+                      00352         ifdef   __16F877
+                      00353                 #include        p16F877.inc
+                      00354                 #define         VALID_DEV               1
+                      00355                 #define         MAX_FLASH               0x2000
+                      00356                 #define         RAM_START               
+                      00357                 #define         RAM_SIZEB               368
+                      00358                 #define         DEVICEID                485
+                      00359                 #define         HAS_EE                  1
+                      00360                 #define         PAGESIZEW               1
+                      00361                 #define         ROWSIZEW                1
+                      00362                 #define         AUTOERASE               1
+                      00363         endif
+                      00364         ifdef   __16F1822
+                      00365                 #include        p16F1822.inc
+                      00366                 #define         VALID_DEV               1
+                      00367                 #define         MAX_FLASH               0x800
+                      00368                 #define         RAM_START               
+                      00369                 #define         RAM_SIZEB               128
+                      00370                 #define         DEVICEID                486
+                      00371                 #define         HAS_EE                  1
+                      00372                 #define         PAGESIZEW               16
+                      00373                 #define         ROWSIZEW                16
+                      00374         endif
+                      00375         ifdef   __16F1823
+                      00376                 #include        p16F1823.inc
+                      00377                 #define         VALID_DEV               1
+                      00378                 #define         MAX_FLASH               0x800
+                      00379                 #define         RAM_START               
+                      00380                 #define         RAM_SIZEB               128
+                      00381                 #define         DEVICEID                487
+                      00382                 #define         HAS_EE                  1
+                      00383                 #define         PAGESIZEW               16
+                      00384                 #define         ROWSIZEW                16
+                      00385         endif
+                      00386         ifdef   __16F1824
+                      00387                 #include        p16F1824.inc
+                      00388                 #define         VALID_DEV               1
+                      00389                 #define         MAX_FLASH               0x1000
+                      00390                 #define         RAM_START               
+                      00391                 #define         RAM_SIZEB               256
+                      00392                 #define         DEVICEID                488
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 11
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00393                 #define         HAS_EE                  1
+                      00394                 #define         PAGESIZEW               32
+                      00395                 #define         ROWSIZEW                32
+                      00396         endif
+                      00397         ifdef   __16F1828
+                      00398                 #include        p16F1828.inc
+                      00399                 #define         VALID_DEV               1
+                      00400                 #define         MAX_FLASH               0x1000
+                      00401                 #define         RAM_START               
+                      00402                 #define         RAM_SIZEB               256
+                      00403                 #define         DEVICEID                489
+                      00404                 #define         HAS_EE                  1
+                      00405                 #define         PAGESIZEW               32
+                      00406                 #define         ROWSIZEW                32
+                      00407         endif
+                      00408         ifdef   __16F876A
+                      00409                 #include        p16F876A.inc
+                      00410                 #define         VALID_DEV               1
+                      00411                 #define         MAX_FLASH               0x2000
+                      00412                 #define         RAM_START               
+                      00413                 #define         RAM_SIZEB               368
+                      00414                 #define         DEVICEID                490
+                      00415                 #define         HAS_EE                  1
+                      00416                 #define         PAGESIZEW               4
+                      00417                 #define         ROWSIZEW                4
+                      00418                 #define         AUTOERASE               1
+                      00419         endif
+                      00420         ifdef   __16F877A
+                      00421                 #include        p16F877A.inc
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ;  MPASM PIC16F877A processor include
+                      00005 ; 
+                      00006 ;  (c) Copyright 1999-2013 Microchip Technology, All rights reserved
+                      00007 ;==========================================================================
+                      00008 
+                      00566         LIST
+                      00422                 #define         VALID_DEV               1
+                      00423                 #define         MAX_FLASH               0x2000
+                      00424                 #define         RAM_START               
+                      00425                 #define         RAM_SIZEB               368
+                      00426                 #define         DEVICEID                491
+                      00427                 #define         HAS_EE                  1
+                      00428                 #define         PAGESIZEW               4
+                      00429                 #define         ROWSIZEW                4
+                      00430                 #define         AUTOERASE               1
+                      00431         endif
+                      00432         ifdef   __16F873A
+                      00433                 #include        p16F873A.inc
+                      00434                 #define         VALID_DEV               1
+                      00435                 #define         MAX_FLASH               0x1000
+                      00436                 #define         RAM_START               
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 12
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00437                 #define         RAM_SIZEB               192
+                      00438                 #define         DEVICEID                492
+                      00439                 #define         HAS_EE                  1
+                      00440                 #define         PAGESIZEW               4
+                      00441                 #define         ROWSIZEW                4
+                      00442                 #define         AUTOERASE               1
+                      00443         endif
+                      00444         ifdef   __16F874A
+                      00445                 #include        p16F874A.inc
+                      00446                 #define         VALID_DEV               1
+                      00447                 #define         MAX_FLASH               0x1000
+                      00448                 #define         RAM_START               
+                      00449                 #define         RAM_SIZEB               192
+                      00450                 #define         DEVICEID                493
+                      00451                 #define         HAS_EE                  1
+                      00452                 #define         PAGESIZEW               4
+                      00453                 #define         ROWSIZEW                4
+                      00454                 #define         AUTOERASE               1
+                      00455         endif
+                      00456         ifdef   __16F1517
+                      00457                 #include        p16F1517.inc
+                      00458                 #define         VALID_DEV               1
+                      00459                 #define         MAX_FLASH               0x2000
+                      00460                 #define         RAM_START               
+                      00461                 #define         RAM_SIZEB               512
+                      00462                 #define         DEVICEID                496
+                      00463                 #define         PAGESIZEW               32
+                      00464                 #define         ROWSIZEW                32
+                      00465         endif
+                      00466         ifdef   __16F1518
+                      00467                 #include        p16F1518.inc
+                      00468                 #define         VALID_DEV               1
+                      00469                 #define         MAX_FLASH               0x4000
+                      00470                 #define         RAM_START               
+                      00471                 #define         RAM_SIZEB               1024
+                      00472                 #define         DEVICEID                497
+                      00473                 #define         PAGESIZEW               32
+                      00474                 #define         ROWSIZEW                32
+                      00475         endif
+                      00476         ifdef   __16F1519
+                      00477                 #include        p16F1519.inc
+                      00478                 #define         VALID_DEV               1
+                      00479                 #define         MAX_FLASH               0x4000
+                      00480                 #define         RAM_START               
+                      00481                 #define         RAM_SIZEB               1024
+                      00482                 #define         DEVICEID                498
+                      00483                 #define         PAGESIZEW               32
+                      00484                 #define         ROWSIZEW                32
+                      00485         endif
+                      00486         ifdef   __16F1847
+                      00487                 #include        p16F1847.inc
+                      00488                 #define         VALID_DEV               1
+                      00489                 #define         MAX_FLASH               0x2000
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 13
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00490                 #define         RAM_START               
+                      00491                 #define         RAM_SIZEB               1024
+                      00492                 #define         DEVICEID                499
+                      00493                 #define         HAS_EE                  1
+                      00494                 #define         PAGESIZEW               32
+                      00495                 #define         ROWSIZEW                32
+                      00496         endif
+                      00034                 #include        "devices_PIC12F.inc"
+                      00001 ;------------------------------------------------------------------------------
+                      00002 ;
+                      00003 ; Title:                        ds30 Loader for PIC12F and PIC16F
+                      00004 ;
+                      00005 ; File description:     device specific constants
+                      00006 ;
+                      00007 ; Copyright:            Copyright 2010-2012 Mikael Gustafsson
+                      00008 ;                                                                             
+                      00009 ;------------------------------------------------------------------------------
+                      00010 
+                      00011 ;-----------------------------------------------------------------------------
+                      00012 ;    This file is part of ds30 Loader.
+                      00013 ;
+                      00014 ;    ds30 Loader is free software: you can redistribute it and/or modify
+                      00015 ;    it under the terms of the GNU General Public License as published by
+                      00016 ;    the Free Software Foundation.
+                      00017 ;
+                      00018 ;    ds30 Loader is distributed in the hope that it will be useful,
+                      00019 ;    but WITHOUT ANY WARRANTY; without even the implied warranty of
+                      00020 ;    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+                      00021 ;    GNU General Public License for more details.
+                      00022 ;
+                      00023 ;    You should have received a copy of the GNU General Public License
+                      00024 ;    along with ds30 Loader. If not, see <http:;www.gnu.org/licenses/>.
+                      00025 ;------------------------------------------------------------------------------
+                      00026         ifdef   __12F1822
+                      00027                 #include        p12F1822.inc
+                      00028                 #define         VALID_DEV               1
+                      00029                 #define         MAX_FLASH               0x800
+                      00030                 #define         RAM_START               
+                      00031                 #define         RAM_SIZEB               128
+                      00032                 #define         DEVICEID                494
+                      00033                 #define         HAS_EE                  1
+                      00034                 #define         PAGESIZEW               16
+                      00035                 #define         ROWSIZEW                16
+                      00036         endif
+                      00037         ifdef   __12F1840
+                      00038                 #include        p12F1840.inc
+                      00039                 #define         VALID_DEV               1
+                      00040                 #define         MAX_FLASH               0x1000
+                      00041                 #define         RAM_START               
+                      00042                 #define         RAM_SIZEB               256
+                      00043                 #define         DEVICEID                495
+                      00044                 #define         HAS_EE                  1
+                      00045                 #define         PAGESIZEW               32
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 14
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00046                 #define         ROWSIZEW                32
+                      00047         endif
+                      00035                 
+                      00036                                                 
+                      00037 ;------------------------------------------------------------------------------
+                      00038 ; 
+                      00039 ;------------------------------------------------------------------------------                 
+                      00040                 ifndef VALID_DEV
+                      00041                         error "Unknown device specified"
+                      00042                 endif
+                      00038 
+                      00039 
+                      00040 ;------------------------------------------------------------------------------
+                      00041 ; User preferences
+                      00042 ;------------------------------------------------------------------------------
+                      00043                 radix DEC
+                      00044 
+                      00045                 #define         FOSC                    20000000                ;xxx
+                      00046                 #define         BLINIT                  2000                    ;xxx hello receive timeo
+                            ut [ms]
+                      00047                 #define         HELLOTRIES              2                               ;xxx number of n
+                            on hello characters received before branching to the user application
+                      00048                 #define         BLTIME                  2000                    ;xxx data receive timeou
+                            t [ms]
+                      00049                 
+                      00050 
+                      00051 ;------------------------------------------------------------------------------
+                      00052 ; UART settings
+                      00053 ;------------------------------------------------------------------------------
+                      00054                 #define         USE_UART1               1                               ;xxx uncomment t
+                            o use uart1
+                      00055                 ;#define        USE_UART2               1                               ;xxx uncomment t
+                            o use uart2
+                      00056                 #define         BAUDRATE                19200                   ;xxx baudrate
+                      00057                 ;#define        USE_ABAUD               1                               ;xxx auto baud r
+                            ate detection, only available on enhanced mid-range devices(?)
+                      00058                 #define         USE_BRGH                1                               ;xxx
+                      00059                 ;#define        USE_BRG16               1                               ;xxx 16-bit brg,
+                             only available on enhanced mid-range devices(?)
+                      00060 
+                      00061                 ;#define        USE_TXENABLE    1                               ;xxx uncomment to use a 
+                            tx enable pin           
+                      00062                 #ifdef USE_TXENABLE
+                      00063                         #define TXE_DELAY               10                              ;xxx time in us 
+                            to wait before transmitting after pulling the tx enable pin high
+                      00064                         #define TRISR_TXE               TRISB                   ;xxx tris register conta
+                            ining tx enable
+                      00065                         #define PORTR_TXE               PORTB                   ;xxx port register conta
+                            ining tx enable
+                      00066                         #define TRISB_TXE               TRISB0                  ;xxx tris bit for tx ena
+                            ble
+                      00067                         #define PORTB_TXE               RB0                             ;xxx port bit fo
+                            r tx enable
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 15
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00068                 #endif
+                      00069 
+                      00070 
+                      00071 ;------------------------------------------------------------------------------
+                      00072 ; Advanced settings
+                      00073 ;------------------------------------------------------------------------------
+                      00074                 ;#define        KICK_WD                 1                               ;xxx uncomment i
+                            f the watchdog is enabled
+                      00075                 #define         WRITE_VER               1                               ;xxx do flash wr
+                            ite verification
+                      00076                 #define         EWRITE_VER              1                               ;xxx do eeprom w
+                            rite verification
+                      00077 
+                      00078                 #define         BLPLW                   256                             ;bootloader plac
+                            ement, words from end, should be a multiple of 64
+                      00079                 
+                      00080                                 
+                      00081 ;------------------------------------------------------------------------------
+                      00082 ; Configuration bits, these macros can be found at the end of the inc-files located in 
+                      00083 ; C:\Program Files\Microchip\MPASM Suite\
+                      00084 ;
+                      00085 ; These can also be set in MPLAB IDE instead, they are found in Configure->Configuration bits...
+                      00086 ;------------------------------------------------------------------------------
+                      00087                 ; Template for standard PIC16F, usually two-three letter like PIC16F88 or PIC16F877
+                      00088                 ;_CONFIG,     _DEBUG_OFF &_HS_OSC & _WDT_OFF & _PWRTE_OFF & _MCLR_ON & _BODEN_OFF & _LVP
+                            _OFF
+                      00089                 ;_CONFIG    _CONFIG2 _IESO_OFF & _FCMEN_OFF
+                      00090 ;_config _HS_OSC & _WDT_OFF & _PWRTE_ON & _BODEN_OFF & _LVP_OFF & _CP_OFF & _CPD_OFF & _DEBUG_OFF
+                      00091         ;       _Config _HS_OSC , WDT_OFF, PWRTE_ON, LVP_OFF
+                      00092 
+                      00093                 ; Template for enhanced PIC16F, usually four letter like PIC16F1936
+                      00094                 ;__CONFIG    _CONFIG1, _FOSC_HS & _WDTE_OFF & _PWRTE_ON & _MCLRE_ON & _BOREN_OFF & _IESO
+                            _OFF & _FCMEN_OFF 
+                      00095                 ;__CONFIG    _CONFIG2, _PLLEN_ON & _LVP_OFF
+                      00096                 
+                      00097 
+                      00098 ;------------------------------------------------------------------------------
+                      00099 ; ds30 Loader commercial version
+                      00100 ;------------------------------------------------------------------------------
+                      00101 ;-Supports read of flash and EEPROM
+                      00102 ;-Supports software UART
+                      00103 ;-Read more at www.ds30loader.com
+                      00104 
+                      00105 
+                      00106 ;------------------------------------------------------------------------------
+                      00107 ; End of file
+                      00108 ;------------------------------------------------------------------------------ 
+                      00064                 #include "user_code.inc"
+                      00001 ;------------------------------------------------------------------------------
+                      00002 ;
+                      00003 ; Title:                        ds30 Loader for PIC12F and PIC16F
+                      00004 ;
+                      00005 ; File description:     user init and exit code
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 16
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00006 ;
+                      00007 ; Copyright:            Copyright © 2011, Mikael Gustafsson
+                      00008 ;                                                                             
+                      00009 ;------------------------------------------------------------------------------
+                      00010 
+                      00011 ;------------------------------------------------------------------------------
+                      00012 ;    This file is part of ds30 Loader.
+                      00013 ;
+                      00014 ;    ds30 Loader is free software: you can redistribute it and/or modify
+                      00015 ;    it under the terms of the GNU General Public License as published by
+                      00016 ;    the Free Software Foundation.
+                      00017 ;
+                      00018 ;    ds30 Loader is distributed in the hope that it will be useful,
+                      00019 ;    but WITHOUT ANY WARRANTY; without even the implied warranty of
+                      00020 ;    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+                      00021 ;    GNU General Public License for more details.
+                      00022 ;
+                      00023 ;    You should have received a copy of the GNU General Public License
+                      00024 ;    along with ds30 Loader. If not, see <http://www.gnu.org/licenses/>.
+                      00025 ;------------------------------------------------------------------------------
+                      00026 
+                      00027 
+                      00028 ;------------------------------------------------------------------------------
+                      00029 ; UserInit()
+                      00030 ; Description: this is executed immediately on start-up before the boot loader code
+                      00031 ;------------------------------------------------------------------------------
+                      00032 UserInit macro  
+                      00033                 ifndef DEV_MODE
+                      00034                         ; Set internal oscillator to 8MHz
+                      00035                         ;banksel        OSCCON
+                      00036                         ;bsf            OSCCON, IRCF0   ;bank 1
+                      00037                         ;bsf            OSCCON, IRCF1
+                      00038                         ;bsf            OSCCON, IRCF2                                   
+                      00039                         
+                      00040                         ; Make uart pins digital
+                      00041                         ifdef   ANSEL                           
+                      00042                                 error Do you need to configura uart pins to be digital? If not, remove t
+                            his line
+                      00043                                 ;banksel ANSEL
+                      00044                         endif
+                      00045                         ifdef   ANSELA
+                      00046                                 error Do you need to configura uart pins to be digital? If not, remove t
+                            his line
+                      00047                                 ;banksel ANSELA
+                      00048                         endif
+                      00049                 endif ;DEV_MODE
+                      00050                 endm
+                      00051                 
+                      00052                 
+                      00053 ;------------------------------------------------------------------------------
+                      00054 ; UserExit()
+                      00055 ; Description: this is executed right before the user application is loadaed
+                      00056 ;------------------------------------------------------------------------------
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 17
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00057 UserExit macro
+                      00058                 
+                      00059                 endm
+                      00060                 
+                      00061 
+                      00062 ;------------------------------------------------------------------------------
+                      00063 ; End of file
+                      00064 ;------------------------------------------------------------------------------ 
+                      00065                 
+                      00066                 
+                      00067 ;------------------------------------------------------------------------------
+                      00068 ; Defines
+                      00069 ;------------------------------------------------------------------------------
+                      00070                 radix DEC
+                      00071                 
+                      00072                 #define VERMAJ          1                                                               
+                                            ;firmware version major
+                      00073                 #define VERMIN          0                                                               
+                                            ;firmware version minor
+                      00074                 #define VERREV          2                                                               
+                                            ;firmware version revision
+                      00075                 
+                      00076                 #define HELLO           0xC1
+                      00077                 #define OK                      'K'                                                     
+                                                    ;erase/write ok
+                      00078                 #define CHECKSUMERR     'N'                                                             
+                                            ;checksum error
+                      00079                 #define VERFAIL         'V'                                                             
+                                            ;verification failed
+                      00080                 #define BLPROT          'P'                                             ;bl protection t
+                            ripped
+                      00081                 #define UCMD            'U'                                             ;unknown command
+                                    
+                      00082                                 
+                      00083                 if BLTIME >= 500
+                      00084                         #define delay2          100
+                      00085                 else
+                      00086                         #define delay2          5
+                      00087                 endif   
+                      00088                 
+                      00089                 #define BLSTART         ( BLINIT * (FOSC / 4000) / ((delay2 * ((256*9)+4))+5) )
+                      00090                 #define BLDELAY         ( BLTIME * (FOSC / 4000) / ((delay2 * ((256*9)+4))+5) )
+                      00091                 
+                      00092                 
+                      00093                 ifndef USE_BRGH
+                      00094                         ifndef USE_BRG16
+                      00095                                 #define UBRG            ( (((FOSC / BAUDRATE) / 32) - 1) / 2 )  ;baudrat
+                            e
+                      00096                         else
+                      00097                                 #define UBRG            ( (((FOSC / BAUDRATE) / 8) - 1) / 2 )   ;baudrat
+                            e
+                      00098                         endif
+                      00099                 endif
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 18
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00100                                 
+                      00101                 ifdef USE_BRGH
+                      00102                         ifdef USE_BRG16
+                      00103                                 #define UBRG            ( (((FOSC / BAUDRATE) / 2) - 1) / 2 )   ;baudrat
+                            e
+                      00104                         else
+                      00105                                 #define UBRG            ( (((FOSC / BAUDRATE) / 8) - 1) / 2 )   ;baudrat
+                            e
+                      00106                         endif
+                      00107                 else
+                      00108                         
+                      00109                 endif
+                      00110                 
+                      00111                 #define BLPLP           (BLPLW / PAGESIZEW)                                             
+                            ;bootloader placement, pages from end
+                      00112                 #define PAGESIZER       (PAGESIZEW/ROWSIZEW)                                    ;pagesiz
+                            e [rows]
+                      00113                 #define ROWSIZEB        (ROWSIZEW*2)                                                    
+                            ;rowsize [bytes]
+                      00114                 #define STARTADDR       ( MAX_FLASH - BLPLP * PAGESIZER * ROWSIZEW )                    
+                            ;bootloader placement           
+                      00115 
+                      00116                 ; Debug output
+                      00117                 ;messg  UBRG_IS #v(UBRG)
+                      00118                 ;messg  blstartis       #v(BLSTART)
+                      00119                 ;messg  bldelayis       #v(BLDELAY)
+                      00120                 
+                      00121                 ;
+                      00122                 errorlevel                      1, -305                                                 
+                                            ; suppress warning msg that takes f as default
+                      00123                 
+                      00124                 
+                      00125 ;------------------------------------------------------------------------------
+                      00126 ; Extended PIC16F
+                      00127 ;------------------------------------------------------------------------------
+                      00128         ifndef EEDATL
+                      00129                 #define EEDATL  EEDATA
+                      00130         endif   
+                      00131         ifndef EEADRL
+                      00132                 #define EEADRL  EEADR
+                      00133         endif
+                      00134         ifndef INDF
+                      00135                 #define INDF_   INDF0
+                      00136         else
+                      00137                 #define INDF_   INDF
+                      00138         endif
+                      00139         ifndef FSR
+                      00140                 #define FSR_    FSR0L
+                      00141         else
+                      00142                 #define FSR_    FSR
+                      00143         endif
+                      00144         
+                      00145         ifndef EEADRL
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 19
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00146                 #define EEADRL          EEADR
+                      00147         endif
+                      00148         
+                      00149         ifndef PMCON1
+                      00150                 #define EECON1_         EECON1
+                      00151                 #define EECON2_         EECON2
+                      00152                 #define EEDATL_         EEDATL
+                      00153                 #define EEDATH_         EEDATH
+                      00154                 #define EEADRL_         EEADRL
+                      00155                 #define EEADRH_         EEADRH
+                      00156         else
+                      00157                 #define EECON1_         PMCON1
+                      00158                 #define EECON2_         PMCON2
+                      00159                 #define EEDATL_         PMDATL
+                      00160                 #define EEDATH_         PMDATH
+                      00161                 #define EEADRL_         PMADRL
+                      00162                 #define EEADRH_         PMADRH
+                      00163         endif
+                      00164 
+                      00165 
+                      00166 ;------------------------------------------------------------------------------
+                      00167 ; Variables
+                      00168 ;------------------------------------------------------------------------------ 
+                      00169                 cblock 0x70             ;0x70-0x7f are available in all banks
+  00000070            00170                         crc                     ;receive checksum
+  00000071            00171                         dcnt            ;datacount
+  00000072            00172                         cnt1            ;receive timeout timer
+  00000073            00173                         cnt2            ;receive timeout timer
+  00000074            00174                         cnt3            ;receive timeout timer
+  00000075            00175                         cntHello        ;
+  00000076            00176                         addrh           ;high address byte
+  00000077            00177                         cmd                     ;command
+  00000078            00178                         doerase         ;
+  00000079            00179                         rowcnt
+  0000007A            00180                         rowcnt2
+  0000007B            00181             Delay1
+  0000007C            00182             Delay2
+  0000007D            00183             serbuf
+  0000007E            00184             TEMP
+  0000007F            00185             unused
+                      00186             ;only 16 bytes available in all banks
+                      00187                 endc
+                      00188                 cblock 0x20             ;only bank 0 but accessed using indirect addressing, 0x20-0x70 =
+                             80bytes
+  00000020            00189                         buffer:(PAGESIZEW*2 + 1)        ;receive buffer
+                      00190                 endc
+                      00191                 
+                      00192                 
+                      00193 ;------------------------------------------------------------------------------
+                      00194 ; Macros
+                      00195 ;------------------------------------------------------------------------------         
+                      00196 SendL   macro   sbyte
+                      00197                         movlw   sbyte
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 20
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00198                         call    Send
+                      00199                 endm
+                      00200 
+                      00201         
+                      00202 ;------------------------------------------------------------------------------
+                      00203 ; Reset vector
+                      00204 ;------------------------------------------------------------------------------ 
+0000                  00205                 org     0x0000
+0000   158A 160A      00206                 PAGESEL blstart
+0002   2F00           00207                 goto    blstart
+                      00208 
+                      00209 
+                      00210 ;------------------------------------------------------------------------------
+                      00211 ; GOTO user application
+                      00212 ;------------------------------------------------------------------------------         
+1EFD                  00213                 org     STARTADDR - 3   ;space to deposit goto to user application
+1EFD                  00214 loadusr 
+1EFD   0000           00215                 nop                                             ;page select, replaced by gui
+1EFE   0000           00216                 nop                                             ;page select, replaced by gui
+1EFF   0000           00217                 nop                                             ;goto, replaced by gui
+                      00218         
+                      00219         
+                      00220 ;------------------------------------------------------------------------------
+                      00221 ; Start of bootloader code
+                      00222 ;------------------------------------------------------------------------------         
+1F00                  00223                 org     STARTADDR
+1F00                  00224 blstart 
+                      00225         
+                      00226                 
+                      00227 ;------------------------------------------------------------------------------
+                      00228 ; Init
+                      00229 ;------------------------------------------------------------------------------ 
+                      00230 
+                      00231                 UserInit                                ;macro in user_code.inc
+                          M                 ifndef DEV_MODE
+                          M                         ; Set internal oscillator to 8MHz
+                          M                         ;banksel        OSCCON
+                          M                         ;bsf            OSCCON, IRCF0   ;bank 1
+                          M                         ;bsf            OSCCON, IRCF1
+                          M                         ;bsf            OSCCON, IRCF2                                   
+                          M                         
+                          M                         ; Make uart pins digital
+                          M                         ifdef   ANSEL                           
+                          M                                 error Do you need to configura uart pins to be digital? If not, remove t
+                            his line
+                          M                                 ;banksel ANSEL
+                          M                         endif
+                          M                         ifdef   ANSELA
+                          M                                 error Do you need to configura uart pins to be digital? If not, remove t
+                            his line
+                          M                                 ;banksel ANSELA
+                          M                         endif
+                          M                 endif ;DEV_MODE
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 21
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00232                 
+                      00233                 ifdef   DEV_MODE
+                      00234                         dev_init
+                      00235                 endif           
+                      00236                 
+                      00237                 
+                      00238                 ;----------------------------------------------------------------------
+                      00239                 ; TX enable, make tx enable pin output and set to 0
+                      00240                 ;----------------------------------------------------------------------
+                      00241                 ifdef USE_TXENABLE
+                      00242                         banksel TRISR_TXE
+                      00243                         bcf             TRISR_TXE, TRISB_TXE
+                      00244                         banksel PORTR_TXE
+                      00245                         bcf             PORTR_TXE, PORTB_TXE
+                      00246                 endif           
+                      00247                 
+                      00248                 
+                      00249                 ;----------------------------------------------------------------------
+                      00250                 ; Init communication module
+                      00251                 ;----------------------------------------------------------------------                 
+1F00   278D           00252                 call    CommInit
+                      00253                 
+                      00254                 
+                      00255 ;------------------------------------------------------------------------------
+                      00256 ; Wait for computer
+                      00257 ;------------------------------------------------------------------------------
+1F01   3002           00258 waitpc  movlw   HELLOTRIES
+1F02   00F5           00259                 movwf   cntHello
+1F03   302B           00260 rhello  movlw   BLSTART
+1F04   27A2           00261                 call    RcvIni                          ;->bank ?
+1F05   3CC1           00262                 sublw   HELLO
+1F06   1903           00263                 skpnz   
+1F07   2F0B           00264                 goto    sendid
+                      00265                 ; Not hello received
+1F08   0BF5           00266                 decfsz  cntHello
+1F09   2F03           00267                 goto    rhello  
+1F0A   2F3A           00268                 goto    exit
+                      00269                         
+                      00270                 
+                      00271 ;------------------------------------------------------------------------------
+                      00272 ; Send device id and firmware version
+                      00273 ;------------------------------------------------------------------------------
+                      00274 sendid  SendL   ( DEVICEID & 0xff )     ;->bank ?
+1F0B   30EB               M                         movlw   ( 491 & 0xff )
+1F0C   27B6               M                         call    Send
+                      00275                 SendL   ( ((DEVICEID&0x100)>>1) + VERMAJ )
+1F0D   3081               M                         movlw   ( ((491&0x100)>>1) + 1 )
+1F0E   27B6               M                         call    Send
+                      00276                 SendL   ( ((DEVICEID&0x200)>>2) + (VERMIN<<4) + VERREV )
+1F0F   3002               M                         movlw   ( ((491&0x200)>>2) + (0<<4) + 2 )
+1F10   27B6               M                         call    Send
+                      00277                 
+                      00278                 
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 22
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00279 ;------------------------------------------------------------------------------
+                      00280 ; Main loop
+                      00281 ;------------------------------------------------------------------------------ 
+1F11   0183           00282 Main    clrf    STATUS
+                      00283                 SendL   OK                              ;->bank ?, everything OK, ready and waiting
+1F12   304B               M                         movlw   'K'
+1F13   27B6               M                         call    Send
+1F14   01F0           00284 mainl   clrf    crc
+                      00285                 
+                      00286 
+                      00287                 ;----------------------------------------------------------------------
+                      00288                 ; Receive address
+                      00289                 ;----------------------------------------------------------------------                 
+                      00290                 ; Dummy upper byte
+1F15   27A1           00291                 call    Receive                 ;->bank ?
+                      00292                 ; High byte
+1F16   27A1           00293                 call    Receive                 ;->bank ?
+1F17   1283 1703      00294                 banksel EEADRH_                 
+1F19   008F           00295                 movwf   EEADRH_                 ;bank 2/3
+1F1A   00F6           00296                 movwf   addrh
+                      00297                 ; Low byte                              
+1F1B   27A1           00298                 call    Receive                 ;->bank ?
+1F1C   1283 1703      00299                 banksel EEADRL_
+1F1E   008D           00300                 movwf   EEADRL_                 ;bank 2/3
+                      00301                 
+                      00302                 
+                      00303                 ;----------------------------------------------------------------------
+                      00304                 ; Receive command
+                      00305                 ;----------------------------------------------------------------------                 
+1F1F   27A1           00306                 call    Receive                 ;->bank ?       
+1F20   00F7           00307                 movwf   cmd     
+                      00308                 
+                      00309                                 
+                      00310                 ;----------------------------------------------------------------------
+                      00311                 ; Receive nr of data bytes that will follow
+                      00312                 ;----------------------------------------------------------------------                 
+1F21   27A1           00313                 call    Receive                 ;->bank ?       
+1F22   00F1           00314                 movwf   dcnt    
+                      00315                 
+                      00316                 
+                      00317                 ;----------------------------------------------------------------------
+                      00318                 ; Receive data
+                      00319                 ;---------------------------------------------------------------------- 
+1F23   3020           00320                 movlw   buffer
+1F24   0084           00321                 movwf   FSR_
+1F25   27A1           00322 rcvoct  call    Receive                 ;->bank ?
+1F26   0080           00323                 movwf   INDF_
+1F27   0A84           00324                 incf    FSR_
+1F28   0BF1           00325                 decfsz  dcnt
+1F29   2F25           00326                 goto    rcvoct
+                      00327                 
+                      00328                 
+                      00329                 ;----------------------------------------------------------------------
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 23
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00330                 ; Check checksum
+                      00331                 ;----------------------------------------------------------------------                 
+1F2A   08F0           00332                 movf    crc, f
+1F2B   1D03           00333                 skpz
+1F2C   2F7C           00334                 goto    crcfail
+                      00335                 
+                      00336                 
+                      00337                 ;----------------------------------------------------------------------
+                      00338                 ; Init buffer pointer
+                      00339                 ;----------------------------------------------------------------------
+1F2D   3020           00340                 movlw   buffer
+1F2E   0084           00341                 movwf   FSR_                    ;available in all banks
+                      00342                 
+                      00343                                 
+                      00344                 ;----------------------------------------------------------------------
+                      00345                 ; Check command
+                      00346                 ;----------------------------------------------------------------------                 
+                      00347                 ; Erase page
+1F2F   1C77           00348                 btfss   cmd, 0
+1F30   2F33           00349                 goto    cwrrow
+1F31   1478           00350                 bsf             doerase, 0
+1F32   2F11           00351                 goto    Main            
+                      00352                 ; Write row
+1F33   18F7           00353 cwrrow  btfsc   cmd, 1                  
+1F34   2F3D           00354                 goto    erase
+                      00355                 ; Write eeprom word
+                      00356                 ifdef HAS_EE
+1F35   1977           00357                         btfsc   cmd, 2                  
+1F36   2F69           00358                         goto    eeprom
+                      00359                 endif
+                      00360                 ; Else, unknown command
+                      00361                 SendL   UCMD                            ;->bank?
+1F37   3055               M                         movlw   'U'
+1F38   27B6               M                         call    Send
+1F39   2F14           00362                 goto            mainl
+                      00363                 
+                      00364                 
+                      00365 ;------------------------------------------------------------------------------
+                      00366 ; Exit
+                      00367 ;------------------------------------------------------------------------------                 
+1F3A                  00368 exit    
+1F3A   279A           00369                 call    CommExit
+                      00370                 ifdef DEV_MODE
+                      00371                         dev_exit
+                      00372                 endif
+                      00373                 UserExit
+                          M                 
+1F3B   0183           00374                 clrf    STATUS
+1F3C   2EFD           00375                 goto    loadusr
+                      00376 
+                      00377                 
+                      00378                 ;----------------------------------------------------------------------
+                      00379                 ; Erase page
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 24
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00380                 ;----------------------------------------------------------------------                 
+                                            
+1F3D                  00381 erase   
+1F3D   1C78           00382                 btfss   doerase, 0
+1F3E   2F40           00383         goto    writerow                
+                      00384                 ifndef AUTOERASE
+                      00385                         movlw   0x94                    ;program mem, erase, enable write
+                      00386                         call    Write                   ;->bank 3
+                      00387                         banksel EECON1_
+                      00388                         bcf             EECON1_, FREE   ;bank 2/3, disable erase
+                      00389                 endif
+1F3F   01F8           00390                 clrf    doerase
+                      00391                 
+                      00392                                                 
+                      00393                 ;----------------------------------------------------------------------
+                      00394                 ; Write row
+                      00395                 ;----------------------------------------------------------------------                 
+                                            
+1F40                  00396 writerow
+1F40   3004           00397                 movlw   ROWSIZEW
+1F41   00F9           00398                 movwf   rowcnt
+1F42   00FA           00399                 movwf   rowcnt2 
+1F43                  00400 wrword
+                      00401                 ; Load latches
+1F43   0800           00402                 movfw   INDF_
+1F44   1283 1703      00403                 banksel EEDATL_
+1F46   008C           00404                 movwf   EEDATL_                 ;bank 2/3
+1F47   0A84           00405                 incf    FSR_
+1F48   0800           00406                 movfw   INDF_
+1F49   008E           00407                 movwf   EEDATH_                 ;bank 2/3
+1F4A   0A84           00408                 incf    FSR_
+                      00409                 ;Write
+1F4B   3084           00410                 movlw   0x84                    ;program mem, enable write
+1F4C   277F           00411                 call    Write                   ;->bank 3
+                      00412                 ; Word write complete, more words to be writen?
+1F4D   1283 1703      00413                 banksel EEADRL_         
+1F4F   0A8D           00414                 incf    EEADRL_                 ;bank 2/3
+1F50   0BF9           00415                 decfsz  rowcnt
+1F51   2F43           00416                 goto    wrword
+                      00417 
+                      00418                 ;----------------------------------------------------------------------
+                      00419                 ; Write complete, verify row
+                      00420                 ;---------------------------------------------------------------------- 
+                      00421                 ifdef WRITE_VER
+1F52                  00422 verword
+1F52   038D           00423                 decf    EEADRL_                 ;bank 2/3
+                      00424                 ; Read word
+1F53   1683 1703      00425                 banksel EECON1_         
+                      00426                 ifdef HAS_EE    
+1F55   178C           00427                         bsf             EECON1_, EEPGD  ;bank 3
+                      00428                 endif
+1F56   140C           00429                 bsf             EECON1_, RD             ;bank 3
+1F57   0000           00430                 nop
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 25
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+1F58   0000           00431                 nop
+                      00432                 ; Compare high byte     
+1F59   0384           00433                 decf    FSR_
+1F5A   0800           00434                 movfw   INDF_
+1F5B   393F           00435                 andlw   0x3F                    ;maybe we should only compare low 6 bits?
+1F5C   1283 1703      00436                 banksel EEDATH_
+1F5E   028E           00437                 subwf   EEDATH_                 ;bank 2/3
+1F5F   1D03           00438                 btfss   STATUS, Z
+1F60   2F79           00439                 goto    verfail
+                      00440                 ; Compare low byte                      
+1F61   0384           00441                 decf    FSR_
+1F62   0800           00442                 movfw   INDF_
+1F63   028C           00443                 subwf   EEDATL_                 ;bank 2/3
+1F64   1D03           00444                 btfss   STATUS, Z
+1F65   2F79           00445                 goto    verfail
+                      00446                 ; Loop?
+1F66   0BFA           00447                 decfsz  rowcnt2
+1F67   2F52           00448                 goto    verword 
+                      00449                 ; Verify succesfull
+                      00450                 endif
+1F68   2F11           00451                 goto    Main                                            
+                      00452                                 
+                      00453                 
+                      00454                 ;----------------------------------------------------------------------
+                      00455                 ; Write eeprom byte
+                      00456                 ;---------------------------------------------------------------------- 
+                      00457         ifdef HAS_EE                    
+                      00458                 ; Load latch
+1F69   0800           00459 eeprom  movfw   INDF_
+1F6A   1283 1703      00460                 banksel EEDATL_
+1F6C   008C           00461                 movwf   EEDATL_                 ;bank 2/3
+                      00462                 ; Write
+1F6D   3004           00463                 movlw   0x04
+1F6E   277F           00464                 call    Write                   ;->bank 3               
+                      00465                 ; Wait for write to complete
+1F6F                  00466 eewait  
+1F6F   188C           00467                 btfsc   EECON1_, WR             ;bank 3
+1F70   2F6F           00468                 goto    eewait  
+                      00469                 
+                      00470                 
+                      00471                 ;----------------------------------------------------------------------
+                      00472                 ; Write complete, verify byte
+                      00473                 ;----------------------------------------------------------------------                 
+                                    
+                      00474                 ifdef EWRITE_VER                
+                      00475                 ; Read
+1F71   140C           00476                 bsf             EECON1_, RD             ;bank 3
+1F72   0800           00477                 movfw   INDF_
+                      00478                 ; Compare
+1F73   1283 1703      00479                 banksel EEDATL_
+1F75   028C           00480                 subwf   EEDATL_                 ;bank 2/3
+1F76   1D03           00481                 btfss   STATUS, Z
+1F77   2F79           00482                 goto    verfail
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 26
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00483                 ; Verify succesfull
+                      00484                 endif
+1F78   2F11           00485                 goto    Main
+                      00486         endif
+                      00487                                 
+                      00488                                 
+                      00489                 ;----------------------------------------------------------------------
+                      00490                 ; Verify fail
+                      00491                 ;----------------------------------------------------------------------
+1F79                  00492 verfail 
+                      00493                 SendL   VERFAIL                 ;->bank ?
+1F79   3056               M                         movlw   'V'
+1F7A   27B6               M                         call    Send
+1F7B   2F14           00494                 goto    mainl
+                      00495                 
+                      00496                                                 
+                      00497                 ;----------------------------------------------------------------------
+                      00498                 ; Checksum error
+                      00499                 ;----------------------------------------------------------------------
+1F7C                  00500 crcfail 
+                      00501                 SendL   CHECKSUMERR             ;->bank ?
+1F7C   304E               M                         movlw   'N'
+1F7D   27B6               M                         call    Send
+1F7E   2F14           00502                 goto    mainl
+                      00503 
+                      00504                 
+                      00505 ;------------------------------------------------------------------------------
+                      00506 ; Write()
+                      00507 ;------------------------------------------------------------------------------         
+1F7F                  00508 Write
+                      00509                 ;
+1F7F   1683 1703      00510                 banksel EECON1_
+1F81   008C           00511                 movwf   EECON1_                 ;bank 3
+                      00512                 ; Write         
+1F82   3055           00513                 movlw   0x55
+1F83   008D           00514                 movwf   EECON2_                 ;bank 3
+1F84   30AA           00515                 movlw   0xaa
+1F85   008D           00516                 movwf   EECON2_                 ;bank 3
+1F86   148C           00517                 bsf             EECON1_, WR             ;bank 3, start write
+1F87   0000           00518                 nop
+1F88   0000           00519                 nop     
+1F89                  00520 waitwre         
+1F89   188C           00521                 btfsc   EECON1_, WR             ;bank 3
+1F8A   2F89           00522                 goto    waitwre                         
+1F8B   110C           00523                 bcf             EECON1_, WREN   ;bank 3 disable writes
+1F8C   0008           00524                 return
+                      00525                 
+                      00526                 
+                      00527 ;------------------------------------------------------------------------------
+                      00528 ; Functions
+                      00529 ;------------------------------------------------------------------------------         
+                      00530                 #include "uart.inc"
+                      00001 ;------------------------------------------------------------------------------
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 27
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00002 ;
+                      00003 ; Title:                        ds30 Loader for PIC16
+                      00004 ;
+                      00005 ; File description:     UART functions
+                      00006 ;
+                      00007 ; Copyright:            Copyright 2011-2012 Mikael Gustafsson
+                      00008 ;                                                                             
+                      00009 ;------------------------------------------------------------------------------
+                      00010 
+                      00011 ;-----------------------------------------------------------------------------
+                      00012 ;    This file is part of ds30 Loader.
+                      00013 ;
+                      00014 ;    ds30 Loader is free software: you can redistribute it and/or modify
+                      00015 ;    it under the terms of the GNU General Public License as published by
+                      00016 ;    the Free Software Foundation.
+                      00017 ;
+                      00018 ;    ds30 Loader is distributed in the hope that it will be useful,
+                      00019 ;    but WITHOUT ANY WARRANTY; without even the implied warranty of
+                      00020 ;    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+                      00021 ;    GNU General Public License for more details.
+                      00022 ;
+                      00023 ;    You should have received a copy of the GNU General Public License
+                      00024 ;    along with ds30 Loader. If not, see <http:;www.gnu.org/licenses/>.
+                      00025 ;------------------------------------------------------------------------------ 
+                      00026                 
+                      00027 
+                      00028 ;------------------------------------------------------------------------------
+                      00029 ; UARTs
+                      00030 ;------------------------------------------------------------------------------ 
+                      00031                  
+                      00032                 ifndef USE_UART1
+                      00033                         ifndef USE_UART2
+                      00034                                 error "No communication is specified"
+                      00035                         endif
+                      00036                 endif
+                      00037                 
+                      00038                 ifdef USE_UART1
+                      00039                         ifdef USE_UART2
+                      00040                                 error "Both uarts are specified"
+                      00041                         endif
+                      00042                         
+                      00043                         #define PIRRCIF_                PIR1                            ;uart interupt s
+                            tatus register
+                      00044                         #define RCIF_                   RCIF            
+                      00045                         
+                      00046                         ifdef TX1STA
+                      00047                                 #define TXSTA_          TX1STA                          ;uart status
+                      00048                                 #define RCSTA_          RC1STA                          ;uart status
+                      00049                                 #define SPBRG_          SP1BRGL                         ;uart baudrate
+                      00050                                 #define SPBRGH_         SP1BRGH                         ;uart baudrate
+                      00051                                 #define TXREG_          TX1REG                          ;uart transmit
+                      00052                                 #define RCREG_          RC1REG                          ;uart receive
+                      00053                                 #define BAUDCON_        BAUD1CON                        ;uart receive
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 28
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00054                         else
+                      00055                                 #define TXSTA_          TXSTA                           ;uart status
+                      00056                                 #define RCSTA_          RCSTA                           ;uart status
+                      00057                                 #define SPBRG_          SPBRG                           ;uart baudrate
+                      00058                                 #define SPBRGH_         SPBRGH                          ;uart baudrate
+                      00059                                 #define TXREG_          TXREG                           ;uart transmit
+                      00060                                 #define RCREG_          RCREG                           ;uart receive
+                      00061                                 ifdef BAUDCON
+                      00062                                         #define BAUDCON_        BAUDCON                 ;uart receive
+                      00063                                 else
+                      00064                                         #define BAUDCON_        BAUDCTL                         ;uart re
+                            ceive
+                      00065                                 endif
+                      00066                         endif
+                      00067                 endif
+                      00068 
+                      00069                 ifdef USE_UART2
+                      00070                         ifndef HAS_UART2
+                      00071                                 error "UART2 specified for a device that only has uart1"
+                      00072                         endif                   
+                      00073                         
+                      00074                         #define PIRRCIF_        PIR4                                    ;uart interupt s
+                            tatus register
+                      00075                         #define RCIF_           RC2IF
+                      00076 
+                      00077                         #define TXSTA_          TX2STA                                  ;uart status
+                      00078                         #define RCSTA_          RC2STA                                  ;uart status
+                      00079                         #define SPBRG_          SP2BRGL                                 ;uart baudrate
+                      00080                         #define SPBRGH_         SP2BRGH                                 ;uart baudrate
+                      00081                         #define TXREG_          TX2REG                                  ;uart transmit
+                      00082                         #define RCREG_          RC2REG                                  ;uart receive
+                      00083                         #define BAUDCON_        BAUD2CON                                ;uart receive
+                      00084                         #define BAUDCTL_        BAUD2CTL                                ;uart receive
+                      00085                 endif
+                      00086                 
+                      00087                 ;
+                      00088                 ifdef USE_TXENABLE
+                      00089                         #define TXE_DELAY_CNT   ( (TXE_DELAY * FOSC) / (4000000 * 3) )
+                      00090                 endif
+                      00091 
+                      00092                                 
+                      00093 ;------------------------------------------------------------------------------
+                      00094 ; Range check
+                      00095 ;------------------------------------------------------------------------------
+                      00096                 ifndef USE_BRG16
+                      00097                         if UBRG > 255
+                      00098                                 error spbrg_value_ is out of range
+                      00099                         endif
+                      00100                 else
+                      00101                         if UBRG > 65535
+                      00102                                 error spbrg_value_ is out of range
+                      00103                         endif
+                      00104                 endif
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 29
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00105                 
+                      00106                 if UBRG == 0
+                      00107                         error spbrg_value_ might be out of range
+                      00108                 endif
+                      00109                 
+                      00110 
+                      00111 ;------------------------------------------------------------------------------
+                      00112 ; CommInit()
+                      00113 ;------------------------------------------------------------------------------ 
+1F8D                  00114 CommInit
+                      00115                 ; Baud rate     
+1F8D   1683 1303      00116                 banksel SPBRG_
+1F8F   3040           00117                 movlw   (UBRG & 0xff)
+1F90   0099           00118                 movwf   SPBRG_                          ;bank 1/3
+                      00119                 
+                      00120                 ; Brg16
+                      00121                 ifdef USE_BRG16
+                      00122                         movlw   (UBRG >> 8)
+                      00123                         banksel SPBRGH_
+                      00124                         movwf   SPBRGH_                 ;bank 1/3
+                      00125                         banksel BAUDCON_
+                      00126                         bsf             BAUDCON_, BRG16 ;bank 1/3
+                      00127                 endif
+                      00128                 ; Receive               
+1F91   3090           00129                 movlw   b'10010000'
+1F92   1283 1303      00130                 banksel RCSTA_
+1F94   0098           00131                 movwf   RCSTA_                          ;bank 0/3
+                      00132                 ; Transmit              
+                      00133                 ifdef USE_BRGH
+1F95   3024           00134                         movlw   b'00100100'
+                      00135                 else
+                      00136                         movlw   b'00100000'
+                      00137                 endif
+1F96   1683 1303      00138                 banksel TXSTA_
+1F98   0098           00139                 movwf   TXSTA_                          ;bank 1/3
+                      00140                 
+                      00141                 
+                      00142                 ;----------------------------------------------------------------------
+                      00143                 ; UART with auto baudrate detection
+                      00144                 ;----------------------------------------------------------------------
+                      00145                 ifdef USE_ABAUD
+                      00146                         ;Enable auto baud rate detection
+                      00147                         banksel BAUDCON_                ;bank 3
+                      00148                         bsf             BAUDCON_, ABDEN                 
+                      00149                         ; Wait for auto baud rate detection to complete and do timeout control
+                      00150                         movlw   BLDELAY
+                      00151                         movwf   cnt1                                                            
+                      00152 rpt2_           movlw   delay2
+                      00153                         movwf   cnt2            
+                      00154 rpt3_           clrf    cnt3            
+                      00155 rptc_           clrwdt
+                      00156                         banksel BAUDCON_
+                      00157                         btfss   BAUDCON_, ABDEN ;bank 3
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 30
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00158                         goto    abaudok
+                      00159 notrcv_         decfsz  cnt3, f
+                      00160                         goto    rptc_
+                      00161                         decfsz  cnt2, f
+                      00162                         goto    rpt3_
+                      00163                         decfsz  cnt1, f
+                      00164                         goto    rpt2_
+                      00165                         ; Timed out if we get here                      
+                      00166                         goto    exit
+                      00167                         ;Send ok
+                      00168 abaudok         SendL   OK                              ;->bank ?
+                      00169                 endif   
+                      00170                 
+1F99   0008           00171                 return
+                      00172                 
+                      00173 
+                      00174 ;------------------------------------------------------------------------------
+                      00175 ; CommExit()
+                      00176 ;------------------------------------------------------------------------------ 
+1F9A                  00177 CommExit
+1F9A   1283 1303      00178                 banksel RCSTA_
+1F9C   0198           00179                 clrf    RCSTA_                  ;reset receive status and control register
+1F9D   1683 1303      00180                 banksel TXSTA_          
+1F9F   0198           00181                 clrf    TXSTA_                  ;reset transmit status and control register
+                      00182                 
+1FA0   0008           00183                 return  
+                      00184                 
+                      00185                 
+                      00186 ;------------------------------------------------------------------------------
+                      00187 ; Receive()
+                      00188 ;------------------------------------------------------------------------------ 
+1FA1   302B           00189 Receive movlw   BLDELAY
+1FA2   00F2           00190 RcvIni  movwf   cnt1                                                            
+1FA3   3064           00191 rpt2    movlw   delay2
+1FA4   00F3           00192                 movwf   cnt2            
+1FA5   01F4           00193 rpt3    clrf    cnt3            
+1FA6                  00194 rptc    
+                      00195                 ifdef KICK_WD
+                      00196                         clrwdt
+                      00197                 endif
+1FA6   1283 1303      00198                 banksel PIRRCIF_
+1FA8   1E8C           00199                 btfss   PIRRCIF_, RCIF_ ;bank 0
+1FA9   2FAF           00200                 goto    notrcv
+1FAA   1283 1303      00201                 banksel RCREG_
+1FAC   081A           00202                 movfw   RCREG_                  ;bank 0/3, return read data in W, same bank as PIR1
+1FAD   07F0           00203                 addwf   crc, f                  ;compute crc
+1FAE   0008           00204                 return          
+1FAF   0BF4           00205 notrcv  decfsz  cnt3, f
+1FB0   2FA6           00206                 goto    rptc
+1FB1   0BF3           00207                 decfsz  cnt2, f
+1FB2   2FA5           00208                 goto    rpt3
+1FB3   0BF2           00209                 decfsz  cnt1, f
+1FB4   2FA3           00210                 goto    rpt2
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 31
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00211                 ; Receive timed out if we get here
+1FB5   2F3A           00212                 goto    exit
+                      00213                 
+                      00214                 
+                      00215 ;------------------------------------------------------------------------------
+                      00216 ; Send()
+                      00217 ;------------------------------------------------------------------------------         
+1FB6                  00218 Send    ; Enable tx
+                      00219                 ifdef USE_TXENABLE
+                      00220                         movwf   TEMP
+                      00221                         banksel PORTR_TXE                       
+                      00222                         bsf             PORTR_TXE, PORTB_TXE;bank ?
+                      00223                         movlw   TXE_DELAY_CNT
+                      00224                         movwf   cnt1
+                      00225 txe_del_lo      decfsz  cnt1
+                      00226                         goto    txe_del_lo
+                      00227                         movfw   TEMP
+                      00228                 endif           
+                      00229                 ;Send byte
+1FB6   1283 1303      00230                 banksel TXREG_
+1FB8   0099           00231                 movwf   TXREG_                                  ;bank 0/3
+                      00232                 ; Wait for transmit shift register to get empty
+1FB9   1683 1303      00233                 banksel TXSTA_  
+1FBB   1C98           00234 txwait  btfss   TXSTA_, TRMT                    ;bank 1/3
+1FBC   2FBB           00235                 goto    txwait
+                      00236                 ; Disable tx 
+                      00237                 ifdef USE_TXENABLE
+                      00238                         banksel PORTR_TXE
+                      00239                         bcf             PORTR_TXE, PORTB_TXE;bank ?
+                      00240                 endif
+                      00241                 ; Send complete
+1FBD   0008           00242                 return
+                      00243         
+                      00244         
+                      00245 ;------------------------------------------------------------------------------ 
+                      00246 ; End of file
+                      00247 ;------------------------------------------------------------------------------ 
+                      00531 
+                      00532 
+                      00533 ;------------------------------------------------------------------------------
+                      00534 ; End of code
+                      00535 ;
+                      00536 ; After reset
+                      00537 ; Do not expect the memory to be zero,
+                      00538 ; Do not expect registers to be initialised like in catalog.
+                      00539 ;------------------------------------------------------------------------------                 
+                      00540                 end
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 32
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ACKDT                             00000005
+ACKEN                             00000004
+ACKSTAT                           00000006
+ADCON0                            0000001F
+ADCON1                            0000009F
+ADCS0                             00000006
+ADCS1                             00000007
+ADCS2                             00000006
+ADDEN                             00000003
+ADFM                              00000007
+ADIE                              00000006
+ADIF                              00000006
+ADON                              00000000
+ADRESH                            0000001E
+ADRESL                            0000009E
+AUTOERASE                         1
+BAUDCON_                          BAUDCTL
+BAUDRATE                          19200
+BCLIE                             00000003
+BCLIF                             00000003
+BF                                00000000
+BLDELAY                           ( BLTIME * (FOSC / 4000) / ((delay2 * ((256*9)+4))+5) )
+BLINIT                            2000
+BLPLP                             (BLPLW / PAGESIZEW)
+BLPLW                             256
+BLPROT                            'P'
+BLSTART                           ( BLINIT * (FOSC / 4000) / ((delay2 * ((256*9)+4))+5) )
+BLTIME                            2000
+BRGH                              00000002
+C                                 00000000
+C1INV                             00000004
+C1OUT                             00000006
+C2INV                             00000005
+C2OUT                             00000007
+CCP1CON                           00000017
+CCP1IE                            00000002
+CCP1IF                            00000002
+CCP1M0                            00000000
+CCP1M1                            00000001
+CCP1M2                            00000002
+CCP1M3                            00000003
+CCP1X                             00000005
+CCP1Y                             00000004
+CCP2CON                           0000001D
+CCP2IE                            00000000
+CCP2IF                            00000000
+CCP2M0                            00000000
+CCP2M1                            00000001
+CCP2M2                            00000002
+CCP2M3                            00000003
+CCP2X                             00000005
+CCP2Y                             00000004
+CCPR1                             00000015
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 33
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+CCPR1H                            00000016
+CCPR1L                            00000015
+CCPR2                             0000001B
+CCPR2H                            0000001C
+CCPR2L                            0000001B
+CHECKSUMERR                       'N'
+CHS0                              00000003
+CHS1                              00000004
+CHS2                              00000005
+CIS                               00000003
+CKE                               00000006
+CKP                               00000004
+CM0                               00000000
+CM1                               00000001
+CM2                               00000002
+CMCON                             0000009C
+CMIE                              00000006
+CMIF                              00000006
+CREN                              00000004
+CSRC                              00000007
+CVR0                              00000000
+CVR1                              00000001
+CVR2                              00000002
+CVR3                              00000003
+CVRCON                            0000009D
+CVREN                             00000007
+CVROE                             00000006
+CVRR                              00000005
+CommExit                          00001F9A
+CommInit                          00001F8D
+D                                 00000005
+DATA_ADDRESS                      00000005
+DC                                00000001
+DEVICEID                          491
+D_A                               00000005
+D_NOT_A                           00000005
+Delay1                            0000007B
+Delay2                            0000007C
+EEADR                             0000010D
+EEADRH                            0000010F
+EEADRH_                           EEADRH
+EEADRL                            EEADR
+EEADRL_                           EEADRL
+EECON1                            0000018C
+EECON1_                           EECON1
+EECON2                            0000018D
+EECON2_                           EECON2
+EEDATA                            0000010C
+EEDATH                            0000010E
+EEDATH_                           EEDATH
+EEDATL                            EEDATA
+EEDATL_                           EEDATL
+EEIE                              00000004
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 34
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+EEIF                              00000004
+EEPGD                             00000007
+EWRITE_VER                        1
+F                                 00000001
+FERR                              00000002
+FOSC                              20000000
+FSR                               00000004
+FSR_                              FSR
+GCEN                              00000007
+GIE                               00000007
+GO                                00000002
+GO_DONE                           00000002
+GO_NOT_DONE                       00000002
+HAS_EE                            1
+HELLO                             0xC1
+HELLOTRIES                        2
+I2C_DATA                          00000005
+I2C_READ                          00000002
+I2C_START                         00000003
+I2C_STOP                          00000004
+IBF                               00000007
+IBOV                              00000005
+INDF                              00000000
+INDF_                             INDF
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+MAX_FLASH                         0x2000
+Main                              00001F11
+NOT_A                             00000005
+NOT_ADDRESS                       00000005
+NOT_BO                            00000000
+NOT_BOR                           00000000
+NOT_DONE                          00000002
+NOT_PD                            00000003
+NOT_POR                           00000001
+NOT_RBPU                          00000007
+NOT_RC8                           00000006
+NOT_T1SYNC                        00000002
+NOT_TO                            00000004
+NOT_TX8                           00000006
+NOT_W                             00000002
+NOT_WRITE                         00000002
+OBF                               00000006
+OERR                              00000001
+OK                                'K'
+OPTION_REG                        00000081
+P                                 00000004
+PAGESIZER                         (PAGESIZEW/ROWSIZEW)
+PAGESIZEW                         4
+PCFG0                             00000000
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 35
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+PCFG1                             00000001
+PCFG2                             00000002
+PCFG3                             00000003
+PCL                               00000002
+PCLATH                            0000000A
+PCON                              0000008E
+PEIE                              00000006
+PEN                               00000002
+PIE1                              0000008C
+PIE2                              0000008D
+PIR1                              0000000C
+PIR2                              0000000D
+PIRRCIF_                          PIR1
+PORTA                             00000005
+PORTB                             00000006
+PORTC                             00000007
+PORTD                             00000008
+PORTE                             00000009
+PR2                               00000092
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+PSPIE                             00000007
+PSPIF                             00000007
+PSPMODE                           00000004
+R                                 00000002
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RA5                               00000005
+RAM_SIZEB                         368
+RAM_START                         
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RC0                               00000000
+RC1                               00000001
+RC2                               00000002
+RC3                               00000003
+RC4                               00000004
+RC5                               00000005
+RC6                               00000006
+RC7                               00000007
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 36
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RC8_9                             00000006
+RC9                               00000006
+RCD8                              00000000
+RCEN                              00000003
+RCIE                              00000005
+RCIF                              00000005
+RCIF_                             RCIF
+RCREG                             0000001A
+RCREG_                            RCREG
+RCSTA                             00000018
+RCSTA_                            RCSTA
+RD                                00000000
+RD0                               00000000
+RD1                               00000001
+RD2                               00000002
+RD3                               00000003
+RD4                               00000004
+RD5                               00000005
+RD6                               00000006
+RD7                               00000007
+RE0                               00000000
+RE1                               00000001
+RE2                               00000002
+READ_WRITE                        00000002
+ROWSIZEB                          (ROWSIZEW*2)
+ROWSIZEW                          4
+RP0                               00000005
+RP1                               00000006
+RSEN                              00000001
+RX9                               00000006
+RX9D                              00000000
+R_NOT_W                           00000002
+R_W                               00000002
+RcvIni                            00001FA2
+Receive                           00001FA1
+S                                 00000003
+SEN                               00000000
+SMP                               00000007
+SPBRG                             00000099
+SPBRGH_                           SPBRGH
+SPBRG_                            SPBRG
+SPEN                              00000007
+SREN                              00000005
+SSPADD                            00000093
+SSPBUF                            00000013
+SSPCON                            00000014
+SSPCON2                           00000091
+SSPEN                             00000005
+SSPIE                             00000003
+SSPIF                             00000003
+SSPM0                             00000000
+SSPM1                             00000001
+SSPM2                             00000002
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 37
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+SSPM3                             00000003
+SSPOV                             00000006
+SSPSTAT                           00000094
+STARTADDR                         ( MAX_FLASH - BLPLP * PAGESIZER * ROWSIZEW )
+STATUS                            00000003
+SYNC                              00000004
+Send                              00001FB6
+SendL                             
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+T1CKPS0                           00000004
+T1CKPS1                           00000005
+T1CON                             00000010
+T1INSYNC                          00000002
+T1OSCEN                           00000003
+T1SYNC                            00000002
+T2CKPS0                           00000000
+T2CKPS1                           00000001
+T2CON                             00000012
+TEMP                              0000007E
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TMR1                              0000000E
+TMR1CS                            00000001
+TMR1H                             0000000F
+TMR1IE                            00000000
+TMR1IF                            00000000
+TMR1L                             0000000E
+TMR1ON                            00000000
+TMR2                              00000011
+TMR2IE                            00000001
+TMR2IF                            00000001
+TMR2ON                            00000002
+TOUTPS0                           00000003
+TOUTPS1                           00000004
+TOUTPS2                           00000005
+TOUTPS3                           00000006
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISA5                            00000005
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 38
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+TRISC                             00000087
+TRISC0                            00000000
+TRISC1                            00000001
+TRISC2                            00000002
+TRISC3                            00000003
+TRISC4                            00000004
+TRISC5                            00000005
+TRISC6                            00000006
+TRISC7                            00000007
+TRISD                             00000088
+TRISD0                            00000000
+TRISD1                            00000001
+TRISD2                            00000002
+TRISD3                            00000003
+TRISD4                            00000004
+TRISD5                            00000005
+TRISD6                            00000006
+TRISD7                            00000007
+TRISE                             00000089
+TRISE0                            00000000
+TRISE1                            00000001
+TRISE2                            00000002
+TRMT                              00000001
+TX8_9                             00000006
+TX9                               00000006
+TX9D                              00000000
+TXD8                              00000000
+TXEN                              00000005
+TXIE                              00000004
+TXIF                              00000004
+TXREG                             00000019
+TXREG_                            TXREG
+TXSTA                             00000098
+TXSTA_                            TXSTA
+UA                                00000001
+UBRG                              ( (((FOSC / BAUDRATE) / 8) - 1) / 2 )
+UCMD                              'U'
+USE_BRGH                          1
+USE_UART1                         1
+UserExit                          
+UserInit                          
+VALID_DEV                         1
+VERFAIL                           'V'
+VERMAJ                            1
+VERMIN                            0
+VERREV                            2
+W                                 00000000
+WCOL                              00000007
+WR                                00000001
+WREN                              00000002
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 39
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+WRERR                             00000003
+WRITE_VER                         1
+Write                             00001F7F
+Z                                 00000002
+_BODEN_OFF                        00003FBF
+_BODEN_ON                         00003FFF
+_BOREN_OFF                        00003FBF
+_BOREN_ON                         00003FFF
+_CONFIG                           00002007
+_CPD_OFF                          00003FFF
+_CPD_ON                           00003EFF
+_CP_ALL                           00001FFF
+_CP_OFF                           00003FFF
+_CP_ON                            00001FFF
+_DEBUG_OFF                        00003FFF
+_DEBUG_ON                         000037FF
+_DEVID1                           00002006
+_FOSC_EXTRC                       00003FFF
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_LVP_OFF                          00003F7F
+_LVP_ON                           00003FFF
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_WRT_1FOURTH                      00003BFF
+_WRT_256                          00003DFF
+_WRT_HALF                         000039FF
+_WRT_OFF                          00003FFF
+_XT_OSC                           00003FFD
+__16F877A                         00000001
+__DEBUG                           1
+addrh                             00000076
+blstart                           00001F00
+buffer                            00000020
+cmd                               00000077
+cnt1                              00000072
+cnt2                              00000073
+cnt3                              00000074
+cntHello                          00000075
+crc                               00000070
+crcfail                           00001F7C
+MPASM  5.49                    DS30LOADER.ASM   2-7-2014  13:19:33         PAGE 40
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+cwrrow                            00001F33
+dcnt                              00000071
+delay2                            100
+doerase                           00000078
+eeprom                            00001F69
+eewait                            00001F6F
+erase                             00001F3D
+exit                              00001F3A
+loadusr                           00001EFD
+mainl                             00001F14
+notrcv                            00001FAF
+rcvoct                            00001F25
+rhello                            00001F03
+rowcnt                            00000079
+rowcnt2                           0000007A
+rpt2                              00001FA3
+rpt3                              00001FA5
+rptc                              00001FA6
+sendid                            00001F0B
+serbuf                            0000007D
+txwait                            00001FBB
+unused                            0000007F
+verfail                           00001F79
+verword                           00001F52
+waitpc                            00001F01
+waitwre                           00001F89
+writerow                          00001F40
+wrword                            00001F43
+
+
+MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
+
+0000 : XXX------------- ---------------- ---------------- ----------------
+1EC0 : ---------------- ---------------- ---------------- -------------XXX
+1F00 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+1F40 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+1F80 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXX--
+
+All other memory blocks unused.
+
+Program Memory Words Used:   196
+Program Memory Words Free:  7996
+
+
+Errors   :     0
+Warnings :     0 reported,     0 suppressed
+Messages :     0 reported,    39 suppressed
+
+

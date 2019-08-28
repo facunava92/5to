@@ -82,18 +82,26 @@ xc16-ld 1.36 (B)
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x200               0x146           0x1e9  (489)
-.text                        0x346                0xb0           0x108  (264)
+.text                        0x200               0x16e           0x225  (549)
+.text                        0x36e               0x21a           0x327  (807)
+.dinit                       0x588                0x82            0xc3  (195)
+.text                        0x60a                 0xe            0x15  (21)
 
-                 Total "program" memory used (bytes):          0x2f1  (753) <1%
+                 Total "program" memory used (bytes):          0x624  (1572) 1%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x4000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
+.ndata                       0x800                   0             0x4  (4)
+.nbss                        0x804                   0             0x2  (2)
+_0xf71377305d66ecf6         0x4700                   0            0x40  (64)
+_0xf71376d45d66ecf6         0x4740                   0            0x40  (64)
+_0xf71376785d66ecf6         0x4780                   0            0x40  (64)
+_0xf713761c5d66ecf6         0x47c0                   0            0x40  (64)
 
-                 Total "data" memory used (bytes):              0  (0) 
+                 Total "data" memory used (bytes):          0x106  (262) 1%
 
 
 Dynamic Memory Usage
@@ -101,10 +109,32 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0x800                              0x4000  (16384)
+stack                        0x806                              0x3efa  (16122)
 
-                 Maximum dynamic memory (bytes):         0x4000  (16384)
+                 Maximum dynamic memory (bytes):         0x3efa  (16122)
 
+
+External Symbols in Data Memory (by address):
+
+                    0x0800                  _max_pos
+                    0x0802                  _max_neg
+                    0x0804                  _RDAC
+                    0x0805                  _LDAC
+                    0x4700                  _LeftBufferB
+                    0x4740                  _LeftBufferA
+                    0x4780                  _RightBufferB
+                    0x47c0                  _RightBufferA
+
+External Symbols in Data Memory (by name):
+
+                    0x0805                  _LDAC
+                    0x4740                  _LeftBufferA
+                    0x4700                  _LeftBufferB
+                    0x0804                  _RDAC
+                    0x47c0                  _RightBufferA
+                    0x4780                  _RightBufferB
+                    0x0802                  _max_neg
+                    0x0800                  _max_pos
 
 External Symbols in Program Memory (by address):
 
@@ -113,54 +143,78 @@ External Symbols in Program Memory (by address):
                   0x000252                  __data_init
                   0x000252                  __data_init_standard
                   0x0002c8                  __T3Interrupt
-                  0x000304                  __OscillatorFail
-                  0x00030a                  __AddressError
-                  0x000310                  __StackError
-                  0x000316                  __MathError
-                  0x00031c                  __DMACError
-                  0x000322                  __AltOscillatorFail
-                  0x000328                  __AltAddressError
-                  0x00032e                  __AltStackError
-                  0x000334                  __AltMathError
-                  0x00033a                  __AltDMACError
-                  0x000340                  __DefaultInterrupt
-                  0x000346                  _InitApp
-                  0x000352                  _LED
-                  0x000360                  _Timer
-                  0x000394                  _PLL
-                  0x0003e8                  _main
-                  0x0003f0                  _ConfigureOscillator
+                  0x00031c                  __DMA0Interrupt
+                  0x000324                  __DMA1Interrupt
+                  0x00032c                  __OscillatorFail
+                  0x000332                  __AddressError
+                  0x000338                  __StackError
+                  0x00033e                  __MathError
+                  0x000344                  __DMACError
+                  0x00034a                  __AltOscillatorFail
+                  0x000350                  __AltAddressError
+                  0x000356                  __AltStackError
+                  0x00035c                  __AltMathError
+                  0x000362                  __AltDMACError
+                  0x000368                  __DefaultInterrupt
+                  0x00036e                  _InitApp
+                  0x00037c                  _LED
+                  0x00038c                  _TIMER
+                  0x0003c0                  _PLL
+                  0x00041e                  _DAC
+                  0x00043e                  _DMA_CH0
+                  0x000472                  _DMA_CH1
+                  0x0004a6                  _DMA_CH2
+                  0x0004da                  _TIMER_5
+                  0x000504                  _ADC
+                  0x00055c                  _Ej1
+                  0x000564                  _Ej2
+                  0x00056e                  _Ej3
+                  0x00057a                  _Ej4
+                  0x00060a                  _main
+                  0x000612                  _ConfigureOscillator
                   0xf80000                  __FBS.sec
                   0xf80002                  __FSS.sec
                   0xf80004                  __FGS.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x0003f0                  _ConfigureOscillator
-                  0x000346                  _InitApp
-                  0x000352                  _LED
-                  0x000394                  _PLL
-                  0x000360                  _Timer
-                  0x00030a                  __AddressError
-                  0x000328                  __AltAddressError
-                  0x00033a                  __AltDMACError
-                  0x000334                  __AltMathError
-                  0x000322                  __AltOscillatorFail
-                  0x00032e                  __AltStackError
-                  0x00031c                  __DMACError
-                  0x000340                  __DefaultInterrupt
+                  0x000504                  _ADC
+                  0x000612                  _ConfigureOscillator
+                  0x00041e                  _DAC
+                  0x00043e                  _DMA_CH0
+                  0x000472                  _DMA_CH1
+                  0x0004a6                  _DMA_CH2
+                  0x00055c                  _Ej1
+                  0x000564                  _Ej2
+                  0x00056e                  _Ej3
+                  0x00057a                  _Ej4
+                  0x00036e                  _InitApp
+                  0x00037c                  _LED
+                  0x0003c0                  _PLL
+                  0x00038c                  _TIMER
+                  0x0004da                  _TIMER_5
+                  0x000332                  __AddressError
+                  0x000350                  __AltAddressError
+                  0x000362                  __AltDMACError
+                  0x00035c                  __AltMathError
+                  0x00034a                  __AltOscillatorFail
+                  0x000356                  __AltStackError
+                  0x00031c                  __DMA0Interrupt
+                  0x000324                  __DMA1Interrupt
+                  0x000344                  __DMACError
+                  0x000368                  __DefaultInterrupt
                   0xf80000                  __FBS.sec
                   0xf80004                  __FGS.sec
                   0xf80002                  __FSS.sec
-                  0x000316                  __MathError
-                  0x000304                  __OscillatorFail
-                  0x000310                  __StackError
+                  0x00033e                  __MathError
+                  0x00032c                  __OscillatorFail
+                  0x000338                  __StackError
                   0x0002c8                  __T3Interrupt
                   0x000252                  __data_init
                   0x000252                  __data_init_standard
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x0003e8                  _main
+                  0x00060a                  _main
 
 Memory Configuration
 
@@ -224,7 +278,7 @@ LOAD /opt/microchip/xc16/v1.36B/bin/bin/../../lib/libfx-elf.a
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000200        0x146
+.text             0x000200        0x16e
  *(.init)
  .init            0x000200         0x4c /opt/microchip/xc16/v1.36B/bin/bin/../../lib/libpic30-elf.a(crt0_standard.o)
                   0x000200                  __reset
@@ -236,45 +290,47 @@ LOAD /opt/microchip/xc16/v1.36B/bin/bin/../../lib/libfx-elf.a
  *(.user_init)
  *(.handle)
  *(.isr*)
- .isr.text        0x0002c8         0x3c build/XC16_dsPIC33FJ128GP804/production/interrupts.o
+ .isr.text        0x0002c8         0x64 build/XC16_dsPIC33FJ128GP804/production/interrupts.o
                   0x0002c8                  __T3Interrupt
- .isr.text        0x000304         0x40 build/XC16_dsPIC33FJ128GP804/production/traps.o
-                  0x000304                  __OscillatorFail
-                  0x00030a                  __AddressError
-                  0x000310                  __StackError
-                  0x000316                  __MathError
-                  0x00031c                  __DMACError
-                  0x000322                  __AltOscillatorFail
-                  0x000328                  __AltAddressError
-                  0x00032e                  __AltStackError
-                  0x000334                  __AltMathError
-                  0x00033a                  __AltDMACError
-                  0x000340                  __DefaultInterrupt
+                  0x00031c                  __DMA0Interrupt
+                  0x000324                  __DMA1Interrupt
+ .isr.text        0x00032c         0x40 build/XC16_dsPIC33FJ128GP804/production/traps.o
+                  0x00032c                  __OscillatorFail
+                  0x000332                  __AddressError
+                  0x000338                  __StackError
+                  0x00033e                  __MathError
+                  0x000344                  __DMACError
+                  0x00034a                  __AltOscillatorFail
+                  0x000350                  __AltAddressError
+                  0x000356                  __AltStackError
+                  0x00035c                  __AltMathError
+                  0x000362                  __AltDMACError
+                  0x000368                  __DefaultInterrupt
  *(.libc)
  *(.libm)
  *(.libdsp)
  *(.lib*)
  .libpic30_crt_start_mode
-                  0x000344          0x2 /opt/microchip/xc16/v1.36B/bin/bin/../../lib/libpic30-elf.a(crt_start_mode_normal.eo)
-                  0x000344                  __crt_start_mode_normal
-                  0x000344                  __crt_start_mode
+                  0x00036c          0x2 /opt/microchip/xc16/v1.36B/bin/bin/../../lib/libpic30-elf.a(crt_start_mode_normal.eo)
+                  0x00036c                  __crt_start_mode_normal
+                  0x00036c                  __crt_start_mode
 
 usercode
  *(usercode)
 
 __FBS             0xf80000          0x2
  *(__FBS.sec*)
- __FBS.sec        0xf80000          0x2 /CW/_FBSàÎL	ÏL	__FBS.sec
+ __FBS.sec        0xf80000          0x2 /CW/_FBS
                   0xf80000                  __FBS.sec
 
 __FSS             0xf80002          0x2
  *(__FSS.sec*)
- __FSS.sec        0xf80002          0x2 /CW/_FSSð¾L	$¿L	__FSS.sec
+ __FSS.sec        0xf80002          0x2 /CW/_FSSµDµ__FSS.sec
                   0xf80002                  __FSS.sec
 
 __FGS             0xf80004          0x2
  *(__FGS.sec*)
- __FGS.sec        0xf80004          0x2 /CW/_FGS`NL	”NL	__FGS.sec
+ __FGS.sec        0xf80004          0x2 /CW/_FGS€£´´£´__FGS.sec
                   0xf80004                  __FGS.sec
 
 __FOSCSEL
@@ -307,47 +363,47 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x19e5
+.debug_info       0x000000       0x37c3
  *(.debug_info)
- .debug_info      0x000000        0x119 build/XC16_dsPIC33FJ128GP804/production/configuration_bits.o
- .debug_info      0x000119        0x444 build/XC16_dsPIC33FJ128GP804/production/interrupts.o
- .debug_info      0x00055d        0x11f build/XC16_dsPIC33FJ128GP804/production/main.o
- .debug_info      0x00067c        0x130 build/XC16_dsPIC33FJ128GP804/production/system.o
- .debug_info      0x0007ac        0x3f1 build/XC16_dsPIC33FJ128GP804/production/traps.o
- .debug_info      0x000b9d        0xe48 build/XC16_dsPIC33FJ128GP804/production/user.o
+ .debug_info      0x000000        0x128 build/XC16_dsPIC33FJ128GP804/production/configuration_bits.o
+ .debug_info      0x000128        0x59f build/XC16_dsPIC33FJ128GP804/production/interrupts.o
+ .debug_info      0x0006c7        0x218 build/XC16_dsPIC33FJ128GP804/production/main.o
+ .debug_info      0x0008df        0x13f build/XC16_dsPIC33FJ128GP804/production/system.o
+ .debug_info      0x000a1e        0x400 build/XC16_dsPIC33FJ128GP804/production/traps.o
+ .debug_info      0x000e1e       0x29a5 build/XC16_dsPIC33FJ128GP804/production/user.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x260
+.debug_abbrev     0x000000        0x2c8
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0x1f build/XC16_dsPIC33FJ128GP804/production/configuration_bits.o
  .debug_abbrev    0x00001f         0x8a build/XC16_dsPIC33FJ128GP804/production/interrupts.o
- .debug_abbrev    0x0000a9         0x34 build/XC16_dsPIC33FJ128GP804/production/main.o
- .debug_abbrev    0x0000dd         0x34 build/XC16_dsPIC33FJ128GP804/production/system.o
- .debug_abbrev    0x000111         0x8a build/XC16_dsPIC33FJ128GP804/production/traps.o
- .debug_abbrev    0x00019b         0xc5 build/XC16_dsPIC33FJ128GP804/production/user.o
+ .debug_abbrev    0x0000a9         0x64 build/XC16_dsPIC33FJ128GP804/production/main.o
+ .debug_abbrev    0x00010d         0x34 build/XC16_dsPIC33FJ128GP804/production/system.o
+ .debug_abbrev    0x000141         0x8a build/XC16_dsPIC33FJ128GP804/production/traps.o
+ .debug_abbrev    0x0001cb         0xfd build/XC16_dsPIC33FJ128GP804/production/user.o
 
-.debug_line       0x000000        0x31e
+.debug_line       0x000000        0x3c8
  *(.debug_line)
  .debug_line      0x000000         0x1a build/XC16_dsPIC33FJ128GP804/production/configuration_bits.o
- .debug_line      0x00001a         0xcc build/XC16_dsPIC33FJ128GP804/production/interrupts.o
- .debug_line      0x0000e6         0x38 build/XC16_dsPIC33FJ128GP804/production/main.o
- .debug_line      0x00011e         0x38 build/XC16_dsPIC33FJ128GP804/production/system.o
- .debug_line      0x000156         0xe4 build/XC16_dsPIC33FJ128GP804/production/traps.o
- .debug_line      0x00023a         0xe4 build/XC16_dsPIC33FJ128GP804/production/user.o
+ .debug_line      0x00001a         0xd4 build/XC16_dsPIC33FJ128GP804/production/interrupts.o
+ .debug_line      0x0000ee         0x75 build/XC16_dsPIC33FJ128GP804/production/main.o
+ .debug_line      0x000163         0x38 build/XC16_dsPIC33FJ128GP804/production/system.o
+ .debug_line      0x00019b         0xe4 build/XC16_dsPIC33FJ128GP804/production/traps.o
+ .debug_line      0x00027f        0x149 build/XC16_dsPIC33FJ128GP804/production/user.o
 
-.debug_frame      0x000000        0x264
+.debug_frame      0x000000        0x3b4
  *(.debug_frame)
- .debug_frame     0x000000         0x38 build/XC16_dsPIC33FJ128GP804/production/interrupts.o
- .debug_frame     0x000038         0x30 build/XC16_dsPIC33FJ128GP804/production/main.o
- .debug_frame     0x000068         0x30 build/XC16_dsPIC33FJ128GP804/production/system.o
- .debug_frame     0x000098        0x148 build/XC16_dsPIC33FJ128GP804/production/traps.o
- .debug_frame     0x0001e0         0x84 build/XC16_dsPIC33FJ128GP804/production/user.o
+ .debug_frame     0x000000         0x70 build/XC16_dsPIC33FJ128GP804/production/interrupts.o
+ .debug_frame     0x000070         0x30 build/XC16_dsPIC33FJ128GP804/production/main.o
+ .debug_frame     0x0000a0         0x30 build/XC16_dsPIC33FJ128GP804/production/system.o
+ .debug_frame     0x0000d0        0x148 build/XC16_dsPIC33FJ128GP804/production/traps.o
+ .debug_frame     0x000218        0x19c build/XC16_dsPIC33FJ128GP804/production/user.o
 
-.debug_str        0x000000         0x6d
+.debug_str        0x000000        0x1a6
  *(.debug_str)
- .debug_str       0x000000         0x12 build/XC16_dsPIC33FJ128GP804/production/interrupts.o
- .debug_str       0x000012          0xc build/XC16_dsPIC33FJ128GP804/production/traps.o
- .debug_str       0x00001e         0x4f build/XC16_dsPIC33FJ128GP804/production/user.o
+ .debug_str       0x000000         0x1b build/XC16_dsPIC33FJ128GP804/production/interrupts.o
+ .debug_str       0x00001b          0xc build/XC16_dsPIC33FJ128GP804/production/traps.o
+ .debug_str       0x000027        0x17f build/XC16_dsPIC33FJ128GP804/production/user.o
 
 .debug_loc
  *(.debug_loc)
@@ -356,18 +412,18 @@ __FUID3
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x17f
+                  0x000000        0x271
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000         0x23 build/XC16_dsPIC33FJ128GP804/production/interrupts.o
+                  0x000000         0x49 build/XC16_dsPIC33FJ128GP804/production/interrupts.o
  .debug_pubnames
-                  0x000023         0x1b build/XC16_dsPIC33FJ128GP804/production/main.o
+                  0x000049         0x87 build/XC16_dsPIC33FJ128GP804/production/main.o
  .debug_pubnames
-                  0x00003e         0x2a build/XC16_dsPIC33FJ128GP804/production/system.o
+                  0x0000d0         0x2a build/XC16_dsPIC33FJ128GP804/production/system.o
  .debug_pubnames
-                  0x000068         0xdf build/XC16_dsPIC33FJ128GP804/production/traps.o
+                  0x0000fa         0xdf build/XC16_dsPIC33FJ128GP804/production/traps.o
  .debug_pubnames
-                  0x000147         0x38 build/XC16_dsPIC33FJ128GP804/production/user.o
+                  0x0001d9         0x98 build/XC16_dsPIC33FJ128GP804/production/user.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -1382,43 +1438,78 @@ LOAD /opt/microchip/xc16/v1.36B/bin/bin/../../lib/libm-elf.a
 LOAD /opt/microchip/xc16/v1.36B/bin/bin/../../lib/libc-elf.a
 END GROUP
 OUTPUT(dist/XC16_dsPIC33FJ128GP804/production/dspic1.X.production.elf elf32-pic30)
-LOAD /CW/_FGS`NL	”NL	__FGS.sec
-LOAD /CW/_FSSð¾L	$¿L	__FSS.sec
-LOAD /CW/_FBSàÎL	ÏL	__FBS.sec
+LOAD /CW/_FGS€£´´£´__FGS.sec
+LOAD /CW/_FSSµDµ__FSS.sec
+LOAD /CW/_FBS
+LOAD data_init
 
 .debug_pubtypes
-                  0x000078        0x1e6
+                  0x000078        0x435
  .debug_pubtypes
                   0x000078         0x12 build/XC16_dsPIC33FJ128GP804/production/configuration_bits.o
  .debug_pubtypes
-                  0x00008a         0x59 build/XC16_dsPIC33FJ128GP804/production/interrupts.o
+                  0x00008a         0x76 build/XC16_dsPIC33FJ128GP804/production/interrupts.o
  .debug_pubtypes
-                  0x0000e3         0x12 build/XC16_dsPIC33FJ128GP804/production/main.o
+                  0x000100         0x2a build/XC16_dsPIC33FJ128GP804/production/main.o
  .debug_pubtypes
-                  0x0000f5         0x12 build/XC16_dsPIC33FJ128GP804/production/system.o
+                  0x00012a         0x12 build/XC16_dsPIC33FJ128GP804/production/system.o
  .debug_pubtypes
-                  0x000107         0x42 build/XC16_dsPIC33FJ128GP804/production/traps.o
+                  0x00013c         0x42 build/XC16_dsPIC33FJ128GP804/production/traps.o
  .debug_pubtypes
-                  0x000149        0x115 build/XC16_dsPIC33FJ128GP804/production/user.o
+                  0x00017e        0x32f build/XC16_dsPIC33FJ128GP804/production/user.o
 
 __c30_signature
-                  0x00025e         0x30
+                  0x0004ad         0x30
  __c30_signature
-                  0x00025e          0x6 build/XC16_dsPIC33FJ128GP804/production/configuration_bits.o
+                  0x0004ad          0x6 build/XC16_dsPIC33FJ128GP804/production/configuration_bits.o
  __c30_signature
-                  0x000264          0x6 build/XC16_dsPIC33FJ128GP804/production/interrupts.o
+                  0x0004b3          0x6 build/XC16_dsPIC33FJ128GP804/production/interrupts.o
  __c30_signature
-                  0x00026a          0x6 build/XC16_dsPIC33FJ128GP804/production/main.o
+                  0x0004b9          0x6 build/XC16_dsPIC33FJ128GP804/production/main.o
  __c30_signature
-                  0x000270          0x6 build/XC16_dsPIC33FJ128GP804/production/system.o
+                  0x0004bf          0x6 build/XC16_dsPIC33FJ128GP804/production/system.o
  __c30_signature
-                  0x000276          0x6 build/XC16_dsPIC33FJ128GP804/production/traps.o
+                  0x0004c5          0x6 build/XC16_dsPIC33FJ128GP804/production/traps.o
  __c30_signature
-                  0x00027c          0x6 build/XC16_dsPIC33FJ128GP804/production/user.o
+                  0x0004cb          0x6 build/XC16_dsPIC33FJ128GP804/production/user.o
  __c30_signature
-                  0x000282          0x6 /opt/microchip/xc16/v1.36B/bin/bin/../../lib/libpic30-elf.a(crt0_standard.o)
+                  0x0004d1          0x6 /opt/microchip/xc16/v1.36B/bin/bin/../../lib/libpic30-elf.a(crt0_standard.o)
  __c30_signature
-                  0x000288          0x6 /opt/microchip/xc16/v1.36B/bin/bin/../../lib/libpic30-elf.a(data_init_standard.o)
+                  0x0004d7          0x6 /opt/microchip/xc16/v1.36B/bin/bin/../../lib/libpic30-elf.a(data_init_standard.o)
+
+_0xf713761c5d66ecf6
+                    0x47c0         0x40
+ _0xf713761c5d66ecf6
+                    0x47c0         0x40 build/XC16_dsPIC33FJ128GP804/production/main.o
+                    0x47c0                  _RightBufferA
+
+_0xf71376785d66ecf6
+                    0x4780         0x40
+ _0xf71376785d66ecf6
+                    0x4780         0x40 build/XC16_dsPIC33FJ128GP804/production/main.o
+                    0x4780                  _RightBufferB
+
+_0xf71376d45d66ecf6
+                    0x4740         0x40
+ _0xf71376d45d66ecf6
+                    0x4740         0x40 build/XC16_dsPIC33FJ128GP804/production/main.o
+                    0x4740                  _LeftBufferA
+
+_0xf71377305d66ecf6
+                    0x4700         0x40
+ _0xf71377305d66ecf6
+                    0x4700         0x40 build/XC16_dsPIC33FJ128GP804/production/main.o
+                    0x4700                  _LeftBufferB
+
+.ndata              0x0800          0x4
+ .ndata             0x0800          0x4 build/XC16_dsPIC33FJ128GP804/production/main.o
+                    0x0800                  _max_pos
+                    0x0802                  _max_neg
+
+.nbss               0x0804          0x2
+ .nbss              0x0804          0x2 build/XC16_dsPIC33FJ128GP804/production/main.o
+                    0x0804                  _RDAC
+                    0x0805                  _LDAC
 
 .config_JTAGEN    0xf8000e          0x2
  .config_JTAGEN
@@ -1442,6 +1533,16 @@ __c30_signature
                   0x000024          0x2
  .ivt._T3Interrupt
                   0x000024          0x2 build/XC16_dsPIC33FJ128GP804/production/interrupts.o
+
+.ivt._DMA0Interrupt
+                  0x00001c          0x2
+ .ivt._DMA0Interrupt
+                  0x00001c          0x2 build/XC16_dsPIC33FJ128GP804/production/interrupts.o
+
+.ivt._DMA1Interrupt
+                  0x000030          0x2
+ .ivt._DMA1Interrupt
+                  0x000030          0x2 build/XC16_dsPIC33FJ128GP804/production/interrupts.o
 
 .ivt._OscillatorFail
                   0x000006          0x2
@@ -1493,13 +1594,28 @@ __c30_signature
  .aivt._AltDMACError
                   0x00010e          0x2 build/XC16_dsPIC33FJ128GP804/production/traps.o
 
-.text             0x000346         0xb0
- .text            0x000346         0xa2 build/XC16_dsPIC33FJ128GP804/production/user.o
-                  0x000346                  _InitApp
-                  0x000352                  _LED
-                  0x000360                  _Timer
-                  0x000394                  _PLL
- .text            0x0003e8          0x8 build/XC16_dsPIC33FJ128GP804/production/main.o
-                  0x0003e8                  _main
- .text            0x0003f0          0x6 build/XC16_dsPIC33FJ128GP804/production/system.o
-                  0x0003f0                  _ConfigureOscillator
+.text             0x00036e        0x21a
+ .text            0x00036e        0x21a build/XC16_dsPIC33FJ128GP804/production/user.o
+                  0x00036e                  _InitApp
+                  0x00037c                  _LED
+                  0x00038c                  _TIMER
+                  0x0003c0                  _PLL
+                  0x00041e                  _DAC
+                  0x00043e                  _DMA_CH0
+                  0x000472                  _DMA_CH1
+                  0x0004a6                  _DMA_CH2
+                  0x0004da                  _TIMER_5
+                  0x000504                  _ADC
+                  0x00055c                  _Ej1
+                  0x000564                  _Ej2
+                  0x00056e                  _Ej3
+                  0x00057a                  _Ej4
+
+.dinit            0x000588         0x82
+ .dinit           0x000588         0x82 data_init
+
+.text             0x00060a          0xe
+ .text            0x00060a          0x8 build/XC16_dsPIC33FJ128GP804/production/main.o
+                  0x00060a                  _main
+ .text            0x000612          0x6 build/XC16_dsPIC33FJ128GP804/production/system.o
+                  0x000612                  _ConfigureOscillator

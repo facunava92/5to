@@ -14,3 +14,16 @@ void InitApp(void);         /* I/O and Peripheral Initialization */
 void LED(void);
 void Timer(void);
 void PLL(void);
+void LED(void);
+void TIMER(void);
+void PLL(void);
+void DAC(void);
+void DMA_CH0(void);
+void DMA_CH1(void);
+void DMA_CH2(void);
+void TIMER_5(void);
+void ADC(void);
+void Ej1(void);
+void Ej2(void);
+void Ej3(void);
+void Ej4(void);
