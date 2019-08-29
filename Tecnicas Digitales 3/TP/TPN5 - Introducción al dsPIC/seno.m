@@ -28,3 +28,4 @@ end
 printf("unsigned int LeftBufferA [32]__attribute__((space(dma))) = %s \n",Y);
 printf("unsigned int LeftBufferB [32]__attribute__((space(dma))) = %s \n",Y);
 
+pause

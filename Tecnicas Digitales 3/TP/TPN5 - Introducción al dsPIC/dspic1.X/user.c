@@ -34,12 +34,8 @@ void InitApp(void)
     /* Setup analog functionality and port direction */
 
     /* Initialize peripherals */
-    Ej1();
-    Ej2();
-    Ej3();
-    Ej4();
-
-
+//    Ej1();    Ej2();      Ej3();    Ej4();
+    Ej5();
 }
 
 void LED(void)
@@ -185,6 +181,17 @@ void ADC(void){
     AD1CON1bits.ADON = 1; // Turn on the ADC
 }
 
+void COM_UART(void){
+U1MODEbits.STSEL = 0; // 1-stop bit
+U1MODEbits.PDSEL = 0; // No Parity, 8-data bits
+U1MODEbits.ABAUD = 0; // Auto-Baud disabled
+U1MODEbits.BRGH = 0; // Standard-Speed mode
+U1BRG = BRGVAL; // Baud Rate setting for 9600
+U1STAbits.URXISEL = 1; //Enable interrupt after one RX character is received;
+U1MODEbits.UARTEN = 1; // Enable UART
+
+}
+
 void Ej1(void)
 {
     LED();
@@ -205,5 +212,10 @@ void Ej4(void){
     Ej3();
     DMA_CH2();
     TIMER_5();
+    ADC();
+}
+
+void Ej5(void){
+    PLL();   
     ADC();
 }

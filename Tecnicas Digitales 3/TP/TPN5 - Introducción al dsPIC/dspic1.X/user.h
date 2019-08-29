@@ -1,7 +1,9 @@
 /******************************************************************************/
 /* User Level #define Macros                                                  */
 /******************************************************************************/
-
+#define FP 40000000
+#define BAUDRATE 9600
+#define BRGVAL ((FP/BAUD RATE)/16) - 1
 /* TODO Application specific user parameters used in user.c may go here */
 
 /******************************************************************************/
@@ -27,3 +29,4 @@ void Ej1(void);
 void Ej2(void);
 void Ej3(void);
 void Ej4(void);
+void Ej5(void);
