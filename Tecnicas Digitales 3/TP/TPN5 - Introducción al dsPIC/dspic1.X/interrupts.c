@@ -122,6 +122,10 @@
 /******************************************************************************/
 /* Interrupt Routines                                                         */
 /******************************************************************************/
+extern int16_t max_pos;
+extern int16_t max_neg;
+extern uint8_t RDAC;
+extern uint8_t LDAC;
 
 /* TODO Add interrupt routine code here. */
 /* Example code for Timer3 ISR */
@@ -132,4 +136,56 @@ IFS0bits.T3IF = 0; // Clear Timer3 Interrupt Flag
 
     _LATB2 = ~_LATB2;
     _LATB3 = ~_LATB3;
+    _LATC3 = ~_LATC3;
 }
+
+ /* Rest of User Code Goes Here */
+void __attribute__((interrupt, no_auto_psv))_DMA0Interrupt(void)
+{
+IFS0bits.DMA0IF = 0; /* Clear DMA Channel 0 Interrupt Flag */
+/* User Code to update Right Buffer in DMA*/
+}
+void __attribute__((interrupt, no_auto_psv))_DMA1Interrupt(void)
+{
+IFS0bits.DMA1IF = 0; /* Clear DMA Channel 1 Interrupt Flag */
+/* User Code to update Left Buffer in DMA */
+}
+
+/*
+  void __attribute__((interrupt, no_auto_psv)) _DAC1RInterrupt(void)
+{
+IFS4bits.DAC1RIF = 0; // Clear Right Channel Interrupt Flag 
+
+if(RDAC == 0)
+{
+    DAC1RDAT = max_pos; // User Code to Write to FIFO Goes Here
+    RDAC=1;
+}
+
+else if( RDAC == 1)
+{
+    DAC1RDAT = max_neg; // User Code to Write to FIFO Goes Here
+    RDAC=0;
+}
+}
+
+void __attribute__((interrupt, no_auto_psv)) _DAC1LInterrupt(void)
+{
+IFS4bits.DAC1LIF = 0; // Clear Left Channel Interrupt Flag
+
+if(LDAC == 0)
+{
+    DAC1LDAT = max_neg; // User Code to Write to FIFO Goes Here
+    LDAC=1;
+}
+
+else if( LDAC == 1)
+{
+    DAC1LDAT = max_pos; // User Code to Write to FIFO Goes Here
+    LDAC=0;
+}
+}
+ 
+ */
+
+
