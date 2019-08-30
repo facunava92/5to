@@ -28,13 +28,14 @@ extern unsigned int RightBufferB[32]__attribute__((space(dma)));
 extern unsigned int LeftBufferA[32]__attribute__((space(dma)));
 extern unsigned int LeftBufferB[32]__attribute__((space(dma)));
 
+
 void InitApp(void)
 {
     /* TODO Initialize User Ports/Peripherals/Project here */
     /* Setup analog functionality and port direction */
 
     /* Initialize peripherals */
-//    Ej1();    Ej2();      Ej3();    Ej4();
+    Ej1();    Ej2();      Ej3();    Ej4();
     Ej5();
 }
 
@@ -182,14 +183,25 @@ void ADC(void){
 }
 
 void COM_UART(void){
-U1MODEbits.STSEL = 0; // 1-stop bit
 U1MODEbits.PDSEL = 0; // No Parity, 8-data bits
+U1MODEbits.STSEL = 0; // 1-stop bit
 U1MODEbits.ABAUD = 0; // Auto-Baud disabled
 U1MODEbits.BRGH = 0; // Standard-Speed mode
 U1BRG = BRGVAL; // Baud Rate setting for 9600
-U1STAbits.URXISEL = 1; //Enable interrupt after one RX character is received;
-U1MODEbits.UARTEN = 1; // Enable UART
 
+U1STAbits.URXISEL = 0; //Enable interrupt after one RX character is received;
+IEC0bits.U1RXIE = 1;    //Enable UART RX Interruption
+IFS0bits.U1RXIF=0;      // Erase RX flag
+
+IPC2bits.U1RXIP = 7; // Set URX Interrupt Priority Level
+
+
+//Port remaping
+RPINR18bits.U1RXR = 5;
+RPOR3bits.RP6R = 3;
+
+U1MODEbits.UARTEN = 1; // Enable UARTN
+U1STAbits.UTXEN = 1;    //Enable UART TX
 }
 
 void Ej1(void)
@@ -216,6 +228,7 @@ void Ej4(void){
 }
 
 void Ej5(void){
+    LED();
     PLL();   
-    ADC();
+    COM_UART();
 }
