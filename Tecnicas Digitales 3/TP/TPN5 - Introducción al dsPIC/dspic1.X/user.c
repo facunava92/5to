@@ -35,7 +35,10 @@ void InitApp(void)
     /* Setup analog functionality and port direction */
 
     /* Initialize peripherals */
-    Ej1();    Ej2();      Ej3();    Ej4();
+    Ej1();
+    Ej2();
+    Ej3(); 
+    Ej4();
     Ej5();
 }
 
@@ -145,7 +148,7 @@ void DMA_CH2(void){
     DMA2CONbits.CHEN = 1; /* Enable DMA Channel 1 */
 }
 
-    void TIMER_5(void){    
+void TIMER_5(void){    
     T5CONbits.TON = 0;      // Stop any 16-bit Timer3 operation
     T5CONbits.TCS = 0;      // Select internal instruction cycle clock
     T5CONbits.TGATE = 0;    // Disable Gated Timer mode
@@ -156,7 +159,7 @@ void DMA_CH2(void){
     IFS1bits.T5IF = 0;      // Clear Timer3 Interrupt Flag
     IEC1bits.T5IE = 0;      // Enable Timer3 interrupt
     T5CONbits.TON = 1;      // Start 16-bit Timer
-    }
+ }
 
 void ADC(void){
     AD1CON1bits.AD12B = 1;  // Select 12-bit mode
@@ -210,6 +213,7 @@ void Ej1(void)
 }
 
 void Ej2(void){
+    LED();
     PLL();   
     TIMER();
 }
@@ -221,14 +225,14 @@ void Ej3(void){
 }
     
 void Ej4(void){
-    Ej3();
+
+    DMA_CH1();
+    DAC();
     DMA_CH2();
     TIMER_5();
     ADC();
 }
 
 void Ej5(void){
-    LED();
-    PLL();   
     COM_UART();
 }

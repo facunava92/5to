@@ -194,7 +194,7 @@ void __attribute__((interrupt, no_auto_psv))_U1RXInterrupt(void)
 
  
 IFS0bits.U1RXIF = 0; /* Clear DMA Channel 0 Interrupt Flag */
-    U1TXREG = U1RXREG;
+    U1TXREG = U1RXREG-32;
 
 /* User Code to update Right Buffer in DMA*/
 }
