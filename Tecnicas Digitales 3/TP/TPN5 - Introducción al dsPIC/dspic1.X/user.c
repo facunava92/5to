@@ -28,13 +28,17 @@ extern unsigned int RightBufferB[32]__attribute__((space(dma)));
 extern unsigned int LeftBufferA[32]__attribute__((space(dma)));
 extern unsigned int LeftBufferB[32]__attribute__((space(dma)));
 
+
 void InitApp(void)
 {
     /* TODO Initialize User Ports/Peripherals/Project here */
     /* Setup analog functionality and port direction */
 
     /* Initialize peripherals */
-//    Ej1();    Ej2();      Ej3();    Ej4();
+    Ej1();
+    Ej2();
+    Ej3(); 
+    Ej4();
     Ej5();
 }
 
@@ -144,7 +148,7 @@ void DMA_CH2(void){
     DMA2CONbits.CHEN = 1; /* Enable DMA Channel 1 */
 }
 
-    void TIMER_5(void){    
+void TIMER_5(void){    
     T5CONbits.TON = 0;      // Stop any 16-bit Timer3 operation
     T5CONbits.TCS = 0;      // Select internal instruction cycle clock
     T5CONbits.TGATE = 0;    // Disable Gated Timer mode
@@ -155,7 +159,7 @@ void DMA_CH2(void){
     IFS1bits.T5IF = 0;      // Clear Timer3 Interrupt Flag
     IEC1bits.T5IE = 0;      // Enable Timer3 interrupt
     T5CONbits.TON = 1;      // Start 16-bit Timer
-    }
+ }
 
 void ADC(void){
     AD1CON1bits.AD12B = 1;  // Select 12-bit mode
@@ -182,14 +186,25 @@ void ADC(void){
 }
 
 void COM_UART(void){
-U1MODEbits.STSEL = 0; // 1-stop bit
 U1MODEbits.PDSEL = 0; // No Parity, 8-data bits
+U1MODEbits.STSEL = 0; // 1-stop bit
 U1MODEbits.ABAUD = 0; // Auto-Baud disabled
 U1MODEbits.BRGH = 0; // Standard-Speed mode
 U1BRG = BRGVAL; // Baud Rate setting for 9600
-U1STAbits.URXISEL = 1; //Enable interrupt after one RX character is received;
-U1MODEbits.UARTEN = 1; // Enable UART
 
+U1STAbits.URXISEL = 0; //Enable interrupt after one RX character is received;
+IEC0bits.U1RXIE = 1;    //Enable UART RX Interruption
+IFS0bits.U1RXIF=0;      // Erase RX flag
+
+IPC2bits.U1RXIP = 7; // Set URX Interrupt Priority Level
+
+
+//Port remaping
+RPINR18bits.U1RXR = 5;
+RPOR3bits.RP6R = 3;
+
+U1MODEbits.UARTEN = 1; // Enable UARTN
+U1STAbits.UTXEN = 1;    //Enable UART TX
 }
 
 void Ej1(void)
@@ -198,6 +213,7 @@ void Ej1(void)
 }
 
 void Ej2(void){
+    LED();
     PLL();   
     TIMER();
 }
@@ -209,13 +225,14 @@ void Ej3(void){
 }
     
 void Ej4(void){
-    Ej3();
+
+    DMA_CH1();
+    DAC();
     DMA_CH2();
     TIMER_5();
     ADC();
 }
 
 void Ej5(void){
-    PLL();   
-    ADC();
+    COM_UART();
 }

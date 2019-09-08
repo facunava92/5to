@@ -34,6 +34,8 @@ int16_t max_neg = 0x8000;
 uint8_t RDAC = 0;
 uint8_t LDAC = 0;
 
+char data = 0;
+
 unsigned int RightBufferA[32]__attribute__((space(dma))) = {0};
 unsigned int RightBufferB[32]__attribute__((space(dma))) = {0};
 
