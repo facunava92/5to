@@ -1,0 +1,15 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{2}
+\contentsline {section}{\numberline {2}Enunciado}{3}
+\contentsline {section}{\numberline {3}Circuito}{3}
+\contentsline {subsection}{\numberline {3.1}Actuador}{3}
+\contentsline {subsubsection}{\numberline {3.1.1}Transistores}{3}
+\contentsline {subsubsection}{\numberline {3.1.2}Driver}{3}
+\contentsline {subsection}{\numberline {3.2}Control}{4}
+\contentsline {subsubsection}{\numberline {3.2.1}Generador de PWM}{4}
+\contentsline {subsubsection}{\numberline {3.2.2}Generador de Tiempos Muertos}{5}
+\contentsline {subsection}{\numberline {3.3}Protecci\IeC {\'o}n}{6}
+\contentsline {section}{\numberline {4}Mediciones}{6}
+\contentsline {subsection}{\numberline {4.1}Volts vs RPM}{7}
+\contentsline {subsection}{\numberline {4.2}Protecci\IeC {\'o}n}{7}
+\contentsline {section}{\numberline {5}Conclusiones}{8}

@@ -1,0 +1,49 @@
+IC:
+TL494   x2
+CD4049  x2
+CD4013  x1  (FLIP FLOP D, cualquier FF D anda)
+IR2110  x4
+LM393   x2
+Zocalo DIP14 x4
+Zocalo DIP16 x4
+Zocalo DIP8 x4
+
+RES:
+Potenciometro 10k x 1
+Trimpot azul multivuelta 1k x2
+Trimpot azul multivuelta 2k x1
+Trimpot azul multivuelta 5k x2
+Trimpot azul multivuelta 10k x2
+Res 3w     10    x5
+Res 1/4w   68    x5
+Res 1/4w   100   x5
+Res 1/4w   1k    x10
+Res 1/4w   10k   x10
+Res 1/4w   100k  x5
+Res 1/4w   33k   x2
+Res 1/4w   56k   x5
+Res 1/4w   6,8k  x5
+
+
+Diodos:
+1N4148 x6
+mur160 x12
+
+Capacitores:
+1    uf  15v x2
+4,7  uf  15v x6
+10   uf  15v x6
+10   uf  15v x6
+100  uf  15v x2
+100  nf      x6
+10   nf      x2
+
+Mosfet:
+IR840 x8
+
+LED:
+Led transparente azul 5mm
+Led transparente rojo 5mm
+Led transparente verde 5mm
+TCST1103 x2 (ELECTROCOMPONENTES ES EL UNICO Q LO PUEDE TENER)
+

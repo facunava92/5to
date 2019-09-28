@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name LLaveH)(type Legacy)(uri ${KIPRJMOD}/lib_sch/LLaveH.lib)(options "")(descr ""))
+  (lib (name LLaveH-rescue)(type Legacy)(uri ${KIPRJMOD}/LLaveH-rescue.lib)(options "")(descr ""))
+)
