@@ -1,0 +1,52 @@
+diagrama en bloque esta basado en el pdf : 
+
+
+AAE15 ............ pag 17 
+
+-----------------------------------------------------------------
+
+explicacion de las etapas se saco del 
+
+Qi-PC0-part1&2-v1.2.3a (bajados de la pagina oficial)  y del AAE15    (revisar)
+
+*si queres agrega algo mas en el circuito rectificador 
+
+
+*TRATE DE SACAR INFO DE LOS 2 PDF Y HACER UNA SOLA DEFICION.. ESTA MUY DESPROLIJO ESO Y HABRIA Q ORDENARLO BIEN 
+-----------------------------------------------------------
+
+
+compatibliad electrogmagnetica esta sacado todo 
+
+Qi-PC0-part1&2-v1.2.3a........ pag 143 / 165
+
+*los cuadros fueron cortados y pegados ( estan en ingles)
+
+--------------------------------------------------------------------
+conclucion  
+
+me base mas que nada en la TESIS osea el pdf AAE15 .
+
+el pto 6 Denis te pide una variantes de algo similar 
+yo estaba por sacar algo del pdf  R-REP-SM.2392-2016-PDF-S (carpeta conclucion...) 
+
+---------------------------------------------------------------------------
+
+texto en ROJO
+
+
+los que esta en rojo SON INFO QUE SAQUE DE INTERNET y de algun pdf q encontre 
+
+EL TRABAJO LO BASE en EL  ESTANDAR Qi (MAS USADO) , existe el otro que es
+ 
+"acoplamiento RESONANCIA MAGNETICA " que solo puse una deficion q lo saque del PDF:
+
+  [ paper sobre la carga inalambrica (AYUDA) ]  
+-----------------------------------------------------------------------------------
+
+
+PTO 3 NO ESTA HECHO (INSTRUMENTO VISTO EN LA MATERIA CUALES ITULIZARIA  .......)
+
+
+
+
