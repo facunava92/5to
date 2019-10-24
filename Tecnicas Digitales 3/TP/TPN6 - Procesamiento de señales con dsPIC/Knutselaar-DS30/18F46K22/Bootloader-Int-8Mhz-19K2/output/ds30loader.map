@@ -1,0 +1,127 @@
+MPLINK 4.47, Linker
+Linker Map File - Created Fri Aug 19 08:14:32 2016
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000004
+                   .org_2       code   0x00fdfc    program   0x000004
+                   .org_3       code   0x00fe00    program   0x0001a4
+.config_300001_DS30LOADER.O    romdata   0x300001    program   0x000001
+.config_300002_DS30LOADER.O    romdata   0x300002    program   0x000001
+.config_300003_DS30LOADER.O    romdata   0x300003    program   0x000001
+.config_300005_DS30LOADER.O    romdata   0x300005    program   0x000001
+.config_300006_DS30LOADER.O    romdata   0x300006    program   0x000001
+.config_300008_DS30LOADER.O    romdata   0x300008    program   0x000001
+.config_300009_DS30LOADER.O    romdata   0x300009    program   0x000001
+.config_30000A_DS30LOADER.O    romdata   0x30000a    program   0x000001
+.config_30000B_DS30LOADER.O    romdata   0x30000b    program   0x000001
+.config_30000C_DS30LOADER.O    romdata   0x30000c    program   0x000001
+.config_30000D_DS30LOADER.O    romdata   0x30000d    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000003      
+                            0x00fdfc    0x00ffa3      
+                            0x300001    0x300003      
+                            0x300005    0x300006      
+                            0x300008    0x30000d      
+            439 out of 66584 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                 CommExit   0x00ff72    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                 CommInit   0x00ff64    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                     Main   0x00fe2c    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   RcvIni   0x00ff7a    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                  Receive   0x00ff78    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                     Send   0x00ff9c    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                    Write   0x00ff50    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   blprot   0x00fea2    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                 blprotok   0x00fef2    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  blstart   0x00fe00    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                 calcpage   0x00feb6    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                      cfg   0x00ff38    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                    chkgt   0x00fed2    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   chkgt2   0x00fedc    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                 chksumok   0x00fe5c    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   cmdrow   0x00fe8c    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  crcfail   0x00ff4a    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   eeprom   0x00ff24    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                    erase   0x00fef2    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                     exit   0x00fe9e    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  loadusr   0x00fdfc    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                    mainl   0x00fe30    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   notrcv   0x00ff8e    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                  proterr   0x00feec    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+               protgotook   0x00fe80    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   rcvoct   0x00fe50    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   rhello   0x00fe0e    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                 rhellook   0x00fe20    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                     rpt2   0x00ff7c    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                     rpt3   0x00ff80    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                     rptc   0x00ff82    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                   sendid   0x00fe20    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   txwait   0x00ff9e    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                  verbyte   0x00ff16    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  verfail   0x00ff44    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  waitwre   0x00ff5c    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   wrbyte   0x00ff02    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   wrloop   0x00fefc    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                      ﻿   0x000000    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\settings.inc
+                      ﻿   0x000000    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                      ﻿   0x000000    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                      ﻿   0x000000    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\settings.inc
+                  loadusr   0x00fdfc    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  blstart   0x00fe00    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   rhello   0x00fe0e    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   sendid   0x00fe20    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                 rhellook   0x00fe20    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                     Main   0x00fe2c    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                    mainl   0x00fe30    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   rcvoct   0x00fe50    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                 chksumok   0x00fe5c    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+               protgotook   0x00fe80    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   cmdrow   0x00fe8c    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                     exit   0x00fe9e    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   blprot   0x00fea2    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                 calcpage   0x00feb6    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                    chkgt   0x00fed2    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   chkgt2   0x00fedc    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  proterr   0x00feec    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                    erase   0x00fef2    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                 blprotok   0x00fef2    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   wrloop   0x00fefc    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   wrbyte   0x00ff02    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  verbyte   0x00ff16    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   eeprom   0x00ff24    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                      cfg   0x00ff38    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  verfail   0x00ff44    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  crcfail   0x00ff4a    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                    Write   0x00ff50    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  waitwre   0x00ff5c    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                 CommInit   0x00ff64    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                 CommExit   0x00ff72    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                  Receive   0x00ff78    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                   RcvIni   0x00ff7a    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                     rpt2   0x00ff7c    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                     rpt3   0x00ff80    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                     rptc   0x00ff82    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                   notrcv   0x00ff8e    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                     Send   0x00ff9c    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+                   txwait   0x00ff9e    program     static C:\Users\Zeeman\Knutselaar\ds30\Knutselaar-DS30\18F46K22\Bootloader-Int-8Mhz-19K2\src\uart.inc
+
+
