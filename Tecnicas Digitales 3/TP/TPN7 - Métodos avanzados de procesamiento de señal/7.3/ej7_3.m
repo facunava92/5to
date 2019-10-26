@@ -1,77 +1,50 @@
-%Guia 7, Ejercicio 3
-%5R2; 24-10-19 
-%Amaya, Lamas, Navarro, Veron
+Fs = 39062.5;         % Sampling frequency                    
+T = 1/Fs;             % Sampling period       
+L = 512;             % Length of signal
+t = (0:L-1)*T;        % Time vector
 
-close all;
-clear all;
-clc;
+S = sin(2*pi*5000*t) + sin(2*pi*1500*t);
+ 
+X = S + 2*randn(size(t));
 
-%PUNTO 3.1
-N = input('Ingrese un valor de cantidad de elementos a calcular la FFT:');
-b = ceil(log2(N));
-N = 2^b; %con estas 3 líneas puedo tomar por teclado cualquier número, pero luego lo fuerzo a que sea potencia de base 2, ya que la FFT es recomendable que sea así su cantidad de elementos
+figure()
+plot(1000*t(1:50),X(1:50))
+title('Signal Corrupted with Zero-Mean Random Noise')
+xlabel('t (milliseconds)')
+ylabel('X(t)')
 
-%N = 4096; %tamaño de la secuencia de números, puede cambiar en: 4, 8, 16, 64 elementos
-
-%vector = round(10*rand(1, N), 8); %se crea un vector de N elementos aleatorios con valores entre 0 y 10
-
-%vector = [5, 0, -3, 4]; %vector de prueba despues eliminarlo
-%vector = [0 4 4*i 4 0 4 -4*i 4]; %vector de prueba despues eliminarlo
-
-%paso a la frecuencia el "vector" con mi fft
 tic
-VECTOR_MI_FFT = mi_fft(vector); %llamo a mi funcion de calculo de FFT
-tiempo_miFFT = toc;
-%paso a la frecuencia el "vector" con fft de MatLab
+Y3 = mi3_fft(X);
+tiempo_mi3FFT = toc;
+
 tic
-VECTOR_Matlab = fft(vector); %llamo a la funcion de calculo de la FFT de MatLab
+Y2 = mi2_fft(X);
+tiempo_mi2FFT = toc;
+
+tic
+Z= fft(X);
 tiempo_MatLabFFT = toc;
 
-
-disp('El tiempo requerido con "mi FFT" es (en segundos) de:')
-disp(tiempo_miFFT)
+disp('El tiempo requerido con "mi FFT" [3 bucles] es (en segundos) de:')
+disp(tiempo_mi3FFT)
+disp('El tiempo requerido con "mi FFT" [2 bucles] es (en segundos) de:')
+disp(tiempo_mi2FFT)
 disp('El tiempo requerido con "MatLab FFT" es (en segundos) de:')
 disp(tiempo_MatLabFFT)
 
-%por los resultados que se pueden observar, se llega al mismo valor
-%(o casi el mismo valor, más adelante se muestra que difieren por infinitesimales)
-%de FFT en cada funcion, pero la de MatLab
-%está muy optimizada en cuestion de tiempo de calculo
 
-% 
-% figure()
-% plot([0:N-1], real(VECTOR_MI_FFT), '-.m')
-% grid on
-% hold on
-% plot([0:N-1], real(VECTOR_Matlab), '-b')
-% xlim([0 N-1])
-% xlabel('Elementos de las partes reales de las FFT.')
-% ylabel('Valores de los elementos de las partes reales de las FFT')
-% title('Comparacion de Partes Reales.')
-% legend('mi_fft', 'MatLab')
-% 
-% figure()
-% plot([0:N-1], imag(VECTOR_MI_FFT), ':m')
-% grid on
-% hold on
-% plot([0:N-1], imag(VECTOR_Matlab), '-b')
-% xlim([0 N-1])
-% xlabel('Elementos de las partes imaginarias de las FFT.')
-% ylabel('Valores de los elementos de las partes imaginarias de las FFT')
-% title('Comparacion de Partes Imaginarias.')
-% legend('mi_fft', 'MatLab')
-% 
-% figure()
-% plot([0:N-1], real(VECTOR_MI_FFT) - real(VECTOR_Matlab), 'b')
-% grid on
-% hold on
-% plot([0:N-1], imag(VECTOR_MI_FFT) - imag(VECTOR_Matlab), 'r')
-% xlim([0 N-1])
-% xlabel('Elementos de las FFT.')
-% ylabel('Valores de diferencias entre los elementos de las FFT')
-% title('Diferencias de Partes Real y Partes Imaginarias entre las FFT.')
-% legend('diferencia en Real', 'diferencias en Imaginario')
-% 
-% %como se puede ver, existe una mínima diferencia numérica entre la FFT obtenida en "mi_fft"
-% %y la arrojada por MatLab, pero se puede conciderar "iguales" ya que se está en el orden de 10^-14 o 10^-15.
-% %Ello se debe a que el algoritmo que utiliza MatLab es distinto al implementado.
+P2 = abs(Y3/L);
+P1 = P2(1:(L/2)+1);
+
+P4= abs(Z/L);
+P3 = P4(1:(L/2)+1);
+
+figure()
+f = Fs*(0:L/2)/L;
+fd = (0:Fs/L:Fs/2);
+plot(f,P1) 
+figure()
+plot(f,P3) 
+title('Single-Sided Amplitude Spectrum of X(t)')
+xlabel('f (Hz)')
+ylabel('|P1(f)|')
