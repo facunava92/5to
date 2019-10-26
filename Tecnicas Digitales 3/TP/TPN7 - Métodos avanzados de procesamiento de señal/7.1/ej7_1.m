@@ -42,7 +42,7 @@ title('Espectro de la señal filtrada.')
 legend('Espectro señal filtrada con pasa bajos.')
 %y_filtrado_sinL = y_filtrado;
 
-y_filtrado = y_filtrado*L; %esto se hace para mantener la amplitud del audio
+y_filtrado = y_filtrado*L; 
 
 signal_down = downsample(y_filtrado, M);
 %signal_down_sinL = downsample(y_filtrado_sinL, M);
