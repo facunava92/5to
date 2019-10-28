@@ -1,6 +1,8 @@
+clc;
+
 Fs = 39062.5;         % Sampling frequency                    
 T = 1/Fs;             % Sampling period       
-L = 512;             % Length of signal
+L = 2^12;             % Length of signal
 t = (0:L-1)*T;        % Time vector
 
 S = sin(2*pi*5000*t) + sin(2*pi*1500*t);

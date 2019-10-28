@@ -1,13 +1,10 @@
-function y = mi_fft(x)
+function y = mi2_fft(x)
 %esta funcion implementa la FFT de un vector de tamaño N, siendo N potencia de base 2
 
 
 N = length(x); %determino el tamaño del vector de entrada
 k = [0 : N/2-1]; %el indice de muestras k va de 0 a (N-1), pero calculo sola la mitad ya que la otra mitad va con signo cambiado
 fac_giro = exp(-1i*2*pi*k/N); %desarrollo los factores de giro segun la cantidad N, solo N/2 elementos para los factores
-
-stage=(log2(N):-1:1);
-step=2.^(0:log2(N/2));
 
 y = bitrevorder(x); %aplico la revercion de bits y obtengo el vector acomodado en "pares" e "impares"
 
@@ -19,8 +16,4 @@ for step = 2.^(0 : log2(N/2))
 	end
 end
 
-for i=1 : 3
-  for index=(0:(N/2^(stage-1)):(N-1))
-    [y(index), y(index+step(stage))] 
-  end
 end
