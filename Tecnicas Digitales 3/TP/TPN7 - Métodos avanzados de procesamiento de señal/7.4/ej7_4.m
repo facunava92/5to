@@ -2,6 +2,9 @@
 %5R2; 24-10-19 
 %Amaya, Lamas, Navarro, Veron
 
+clc;
+
+
 %PUNTO 4.1 ----MÉTODO OVERLAP & SAVE----
 [h, fs]=audioread('s1_r1_b_cd.wav');%este audio contiene la respuesta al impulso de la sala de concierto; está grabada en 2 canales(izquierdo y derecho)
                                     %fs es igual a 44100Hz
