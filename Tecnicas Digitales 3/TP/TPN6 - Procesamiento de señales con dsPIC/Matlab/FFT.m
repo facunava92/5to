@@ -1,19 +1,11 @@
-% fftserial interface v 2
-
-%Sam Bobb, Daniel Cornew, Ryan Deeter
-%ME 333 Lab 5: FFT of Analog Input, Winter 2010
-
-%This code receives the single sided magnitude FFT calculated on the PIC
-%and the raw samples through serial communication.  Matlab calculates its
-%own FFT of the raw samples, then plots the input signal, PIC calculated
-%FFT, and Matlab calculated FFT.
 
 
 
 
-Fs = 39062.5;                    % Sampling frequency
+
+Fs = 39062.5                  % Sampling frequency
 T = 1/Fs;                     % Sample time
-L = 256;                     % Length of signal
+L = 256;                      % Length of signal
 P =T*L;
 x= (0:(Fs/(L-1)):Fs);
 x2=(0: P/(L-1) :P);
@@ -31,12 +23,12 @@ if exist('COM','var')
 end
 
 % open the serial port
-port = 'COM34';
+port = 'COM15';
 Baud_Rate = 115200;
 Data_Bits = 8;
 Stop_Bits = 1;
 
-COM = serial('COM34','BaudRate',Baud_Rate,'DataBits',Data_Bits,'StopBits',Stop_Bits);
+COM = serial('COM15','BaudRate',Baud_Rate,'DataBits',Data_Bits,'StopBits',Stop_Bits);
 fopen(COM);     
 
 disp('port opened');
@@ -75,15 +67,6 @@ end
 
 %reads last line
 last = fscanf(COM, '%s');
-
-%verifies that last line read is the last line
-%if strcmp(last,'END')
-%    disp('Success')
-%else
-%    disp('Problem')
-%end
-
-%disp(COM.BytesAvailable)       %for debugging
 
 %plotting input signal
 subplot(3, 1, 1)
