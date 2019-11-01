@@ -4829,7 +4829,7 @@
   (gr_line (start 232.50888 28.98668) (end 235.50888 31.98668) (layer Edge.Cuts) (width 0.5))
   (gr_line (start 235.50888 102.98668) (end 232.50888 105.98668) (layer Edge.Cuts) (width 0.5))
   (gr_line (start 235.50888 31.98668) (end 235.50888 102.98668) (layer Edge.Cuts) (width 0.5) (tstamp 5D5A5C48))
-  (gr_line (start 228.774 134.037) (end 89.73912 134.05732) (layer Edge.Cuts) (width 0.5))
+  (gr_line (start 232.50888 28.98668) (end 93.474 29.007) (layer Edge.Cuts) (width 0.5))
   (gr_line (start 90.474 102.98668) (end 90.474 32.007) (layer Edge.Cuts) (width 0.5) (tstamp 5D722A1A))
   (gr_line (start 232.50888 105.98668) (end 93.474 105.98668) (layer Edge.Cuts) (width 0.5))
 

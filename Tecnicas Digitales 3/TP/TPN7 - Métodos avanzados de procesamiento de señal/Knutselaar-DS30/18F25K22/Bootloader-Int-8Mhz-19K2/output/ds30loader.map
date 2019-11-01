@@ -1,0 +1,127 @@
+MPLINK 4.41, Linker
+Linker Map File - Created Mon Dec 05 12:29:44 2011
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000004
+                   .org_2       code   0x007dfc    program   0x000004
+                   .org_3       code   0x007e00    program   0x0001a2
+.config_300001_DS30LOADER.O    romdata   0x300001    program   0x000001
+.config_300002_DS30LOADER.O    romdata   0x300002    program   0x000001
+.config_300003_DS30LOADER.O    romdata   0x300003    program   0x000001
+.config_300005_DS30LOADER.O    romdata   0x300005    program   0x000001
+.config_300006_DS30LOADER.O    romdata   0x300006    program   0x000001
+.config_300008_DS30LOADER.O    romdata   0x300008    program   0x000001
+.config_300009_DS30LOADER.O    romdata   0x300009    program   0x000001
+.config_30000A_DS30LOADER.O    romdata   0x30000a    program   0x000001
+.config_30000B_DS30LOADER.O    romdata   0x30000b    program   0x000001
+.config_30000C_DS30LOADER.O    romdata   0x30000c    program   0x000001
+.config_30000D_DS30LOADER.O    romdata   0x30000d    program   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000003      
+                            0x007dfc    0x007fa1      
+                            0x300001    0x300003      
+                            0x300005    0x300006      
+                            0x300008    0x30000d      
+            437 out of 33048 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                 CommExit   0x007f70    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                 CommInit   0x007f62    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                     Main   0x007e2c    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   RcvIni   0x007f78    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                  Receive   0x007f76    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                     Send   0x007f9a    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                    Write   0x007f4e    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   blprot   0x007ea0    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                 blprotok   0x007ef0    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  blstart   0x007e00    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                 calcpage   0x007eb4    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                      cfg   0x007f36    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                    chkgt   0x007ed0    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   chkgt2   0x007eda    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                 chksumok   0x007e5a    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   cmdrow   0x007e8a    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  crcfail   0x007f48    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   eeprom   0x007f22    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                    erase   0x007ef0    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                     exit   0x007e9c    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  loadusr   0x007dfc    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                    mainl   0x007e30    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   notrcv   0x007f8c    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                  proterr   0x007eea    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+               protgotook   0x007e7e    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   rcvoct   0x007e4e    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   rhello   0x007e0e    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                 rhellook   0x007e20    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                     rpt2   0x007f7a    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                     rpt3   0x007f7e    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                     rptc   0x007f80    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                   sendid   0x007e20    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   txwait   0x007f9c    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                  verbyte   0x007f14    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  verfail   0x007f42    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  waitwre   0x007f5a    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   wrbyte   0x007f00    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   wrloop   0x007efa    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                      ﻿   0x000000    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\settings.inc
+                      ﻿   0x000000    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                      ﻿   0x000000    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                      ﻿   0x000000    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\settings.inc
+                  loadusr   0x007dfc    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  blstart   0x007e00    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   rhello   0x007e0e    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   sendid   0x007e20    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                 rhellook   0x007e20    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                     Main   0x007e2c    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                    mainl   0x007e30    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   rcvoct   0x007e4e    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                 chksumok   0x007e5a    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+               protgotook   0x007e7e    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   cmdrow   0x007e8a    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                     exit   0x007e9c    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   blprot   0x007ea0    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                 calcpage   0x007eb4    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                    chkgt   0x007ed0    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   chkgt2   0x007eda    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  proterr   0x007eea    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                    erase   0x007ef0    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                 blprotok   0x007ef0    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   wrloop   0x007efa    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   wrbyte   0x007f00    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  verbyte   0x007f14    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                   eeprom   0x007f22    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                      cfg   0x007f36    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  verfail   0x007f42    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  crcfail   0x007f48    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                    Write   0x007f4e    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                  waitwre   0x007f5a    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\ds30loader.asm
+                 CommInit   0x007f62    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                 CommExit   0x007f70    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                  Receive   0x007f76    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                   RcvIni   0x007f78    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                     rpt2   0x007f7a    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                     rpt3   0x007f7e    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                     rptc   0x007f80    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                   notrcv   0x007f8c    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                     Send   0x007f9a    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+                   txwait   0x007f9c    program     static C:\PIC-Programs\18F25K22\bootloader-Int-8Mhz-19K2\src\uart.inc
+
+
