@@ -1,0 +1,1026 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.4.9)  1 NOV 2019 23:39
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**TP5.tex
+(./TP5.tex
+LaTeX2e <2018-12-01>
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/ucs/ucs.sty
+Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-global.de
+f
+File: uni-global.def 2013/05/13 UCS: Unicode global data
+)
+\uc@secondtry=\count88
+\uc@combtoks=\toks16
+\uc@combtoksb=\toks17
+\uc@temptokena=\toks18
+) (d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count89
+) (d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/11/13 3.27 The Babel package
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/11/13 3.27 Babel switching mechanism
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/babel-spanish/spanis
+h.ldf
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/11/13 3.27 Babel common definitions
+\babel@savecnt=\count90
+\U@D=\dimen103
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count91
+)
+\es@quottoks=\toks19
+\es@quotdepth=\count92
+Package babel Info: Making " an active character on input line 561.
+Package babel Info: Making . an active character on input line 662.
+Package babel Info: Making < an active character on input line 707.
+Package babel Info: Making > an active character on input line 707.
+))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/02/04 v3.8 Customized lists
+\enitkv@toks@=\toks20
+\labelindent=\skip45
+\enit@outerparindent=\dimen104
+\enit@toks=\toks21
+\enit@inbox=\box27
+\enit@count@id=\count93
+\enitdp@description=\count94
+) (d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.st
+y
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.
+cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.de
+f
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen105
+\Gin@req@width=\dimen106
+) (d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count95
+\float@exts=\toks23
+\float@box=\box28
+\@float@everytoks=\toks24
+\@floatcapt=\box29
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count96
+) (d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip46
+
+For additional information on amsmath, use the `?' option.
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks25
+\ex@=\dimen107
+))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen108
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count97
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count98
+\leftroot@=\count99
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count100
+\DOTSCASE@=\count101
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box30
+\strutbox@=\box31
+\big@size=\dimen109
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count102
+\c@MaxMatrixCols=\count103
+\dotsspace@=\muskip10
+\c@parentequation=\count104
+\dspbrk@lvl=\count105
+\tag@help=\toks26
+\row@=\count106
+\column@=\count107
+\maxfields@=\count108
+\andhelp@=\toks27
+\eqnshift@=\dimen110
+\alignsep@=\dimen111
+\tagshift@=\dimen112
+\tagwidth@=\dimen113
+\totwidth@=\dimen114
+\lineht@=\dimen115
+\@envbody=\toks28
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks29
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/tools/array.sty
+Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
+\col@sep=\dimen116
+\ar@mcellbox=\box32
+\extrarowheight=\dimen117
+\NC@list=\toks30
+\extratabsurround=\skip49
+\backup@length=\skip50
+\ar@cellbox=\box33
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip51
+\f@nch@O@elh=\skip52
+\f@nch@O@erh=\skip53
+\f@nch@O@olh=\skip54
+\f@nch@O@orh=\skip55
+\f@nch@O@elf=\skip56
+\f@nch@O@erf=\skip57
+\f@nch@O@olf=\skip58
+\f@nch@O@orf=\skip59
+) (d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/multirow/multirow.st
+y
+Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
+\multirow@colwidth=\skip60
+\multirow@cntb=\count109
+\multirow@dima=\skip61
+\bigstrutjot=\dimen118
+) (d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
+\c@tracingmulticols=\count110
+\mult@box=\box34
+\multicol@leftmargin=\dimen119
+\c@unbalance=\count111
+\c@collectmore=\count112
+\doublecol@number=\count113
+\multicoltolerance=\count114
+\multicolpretolerance=\count115
+\full@width=\dimen120
+\page@free=\dimen121
+\premulticols=\dimen122
+\postmulticols=\dimen123
+\multicolsep=\skip62
+\multicolbaselineskip=\skip63
+\partial@page=\box35
+\last@line=\box36
+\maxbalancingoverflow=\dimen124
+\mult@rightbox=\box37
+\mult@grightbox=\box38
+\mult@gfirstbox=\box39
+\mult@firstbox=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\c@columnbadness=\count116
+\c@finalcolumnbadness=\count117
+\last@try=\dimen125
+\multicolovershoot=\dimen126
+\multicolundershoot=\dimen127
+\mult@nat@firstbox=\box58
+\colbreak@box=\box59
+\mc@col@check@num=\count118
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
+\everycr=\toks31
+\minrowclearance=\skip64
+)
+\rownum=\count119
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/pgf/frontendlayer/tikz
+.sty
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgfrcs.s
+ty
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfuti
+l-common.tex
+\pgfutil@everybye=\toks32
+\pgfutil@tempdima=\dimen128
+\pgfutil@tempdimb=\dimen129
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfuti
+l-common-lists.tex))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfuti
+l-latex.def
+\pgfutil@abb=\box60
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfrcs
+.code.tex
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/pgf.revision.tex
+)
+Package: pgfrcs 2019/02/02 v3.1.1 (3.1.1)
+))
+Package: pgf 2019/02/02 v3.1.1 (3.1.1)
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/pgf/basiclayer/pgfcore
+.sty
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/pgf/systemlayer/pgfsys
+.sty
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfs
+ys.code.tex
+Package: pgfsys 2019/02/02 v3.1.1 (3.1.1)
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfkey
+s.code.tex
+\pgfkeys@pathtoks=\toks33
+\pgfkeys@temptoks=\toks34
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfkey
+sfiltered.code.tex
+\pgfkeys@tmptoks=\toks35
+))
+\pgf@x=\dimen130
+\pgf@y=\dimen131
+\pgf@xa=\dimen132
+\pgf@ya=\dimen133
+\pgf@xb=\dimen134
+\pgf@yb=\dimen135
+\pgf@xc=\dimen136
+\pgf@yc=\dimen137
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count120
+\c@pgf@countb=\count121
+\c@pgf@countc=\count122
+\c@pgf@countd=\count123
+\t@pgf@toka=\toks36
+\t@pgf@tokb=\toks37
+\t@pgf@tokc=\toks38
+\pgf@sys@id@count=\count124
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgf.
+cfg
+File: pgf.cfg 2019/02/02 v3.1.1 (3.1.1)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfs
+ys-pdftex.def
+File: pgfsys-pdftex.def 2019/02/02 v3.1.1 (3.1.1)
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfs
+ys-common-pdf.def
+File: pgfsys-common-pdf.def 2019/02/02 v3.1.1 (3.1.1)
+)))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfs
+yssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfsyssoftpath@smallbuffer@items=\count125
+\pgfsyssoftpath@bigbuffer@items=\count126
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfs
+ysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2019/02/02 v3.1.1 (3.1.1)
+))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfco
+re.code.tex
+Package: pgfcore 2019/02/02 v3.1.1 (3.1.1)
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmath.cod
+e.tex
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathcalc
+.code.tex
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathutil
+.code.tex)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathpars
+er.code.tex
+\pgfmath@dimen=\dimen138
+\pgfmath@count=\count127
+\pgfmath@box=\box61
+\pgfmath@toks=\toks39
+\pgfmath@stack@operand=\toks40
+\pgfmath@stack@operation=\toks41
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunc
+tions.code.tex
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunc
+tions.basic.code.tex)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunc
+tions.trigonometric.code.tex)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunc
+tions.random.code.tex)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunc
+tions.comparison.code.tex)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunc
+tions.base.code.tex)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunc
+tions.round.code.tex)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunc
+tions.misc.code.tex)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunc
+tions.integerarithmetics.code.tex)))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfloa
+t.code.tex
+\c@pgfmathroundto@lastzeros=\count128
+))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfco
+repoints.code.tex
+File: pgfcorepoints.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@picminx=\dimen139
+\pgf@picmaxx=\dimen140
+\pgf@picminy=\dimen141
+\pgf@picmaxy=\dimen142
+\pgf@pathminx=\dimen143
+\pgf@pathmaxx=\dimen144
+\pgf@pathminy=\dimen145
+\pgf@pathmaxy=\dimen146
+\pgf@xx=\dimen147
+\pgf@xy=\dimen148
+\pgf@yx=\dimen149
+\pgf@yy=\dimen150
+\pgf@zx=\dimen151
+\pgf@zy=\dimen152
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfco
+repathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@path@lastx=\dimen153
+\pgf@path@lasty=\dimen154
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfco
+repathusage.code.tex
+File: pgfcorepathusage.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@shorten@end@additional=\dimen155
+\pgf@shorten@start@additional=\dimen156
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfco
+rescopes.code.tex
+File: pgfcorescopes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfpic=\box62
+\pgf@hbox=\box63
+\pgf@layerbox@main=\box64
+\pgf@picture@serial@count=\count129
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfco
+regraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgflinewidth=\dimen157
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfco
+retransformations.code.tex
+File: pgfcoretransformations.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@pt@x=\dimen158
+\pgf@pt@y=\dimen159
+\pgf@pt@temp=\dimen160
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfco
+requick.code.tex
+File: pgfcorequick.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfco
+reobjects.code.tex
+File: pgfcoreobjects.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfco
+repathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfco
+rearrows.code.tex
+File: pgfcorearrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfarrowsep=\dimen161
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfco
+reshade.code.tex
+File: pgfcoreshade.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@max=\dimen162
+\pgf@sys@shading@range@num=\count130
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfco
+reimage.code.tex
+File: pgfcoreimage.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfco
+reexternal.code.tex
+File: pgfcoreexternal.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfexternal@startupbox=\box65
+))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfco
+relayers.code.tex
+File: pgfcorelayers.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfco
+retransparency.code.tex
+File: pgfcoretransparency.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfco
+repatterns.code.tex
+File: pgfcorepatterns.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfco
+rerdf.code.tex
+File: pgfcorerdf.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmodul
+eshapes.code.tex
+File: pgfmoduleshapes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfnodeparttextbox=\box66
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmodul
+eplot.code.tex
+File: pgfmoduleplot.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/pgf/compatibility/pgfc
+omp-version-0-65.sty
+Package: pgfcomp-version-0-65 2019/02/02 v3.1.1 (3.1.1)
+\pgf@nodesepstart=\dimen163
+\pgf@nodesepend=\dimen164
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/pgf/compatibility/pgfc
+omp-version-1-18.sty
+Package: pgfcomp-version-1-18 2019/02/02 v3.1.1 (3.1.1)
+))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgffor.s
+ty
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/pgf/utilities/pgfkeys.
+sty
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgfkey
+s.code.tex))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmath.cod
+e.tex))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/utilities/pgffor
+.code.tex
+Package: pgffor 2019/02/02 v3.1.1 (3.1.1)
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmath.cod
+e.tex)
+\pgffor@iter=\dimen165
+\pgffor@skip=\dimen166
+\pgffor@stack=\toks42
+\pgffor@toks=\toks43
+))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/ti
+kz/tikz.code.tex
+Package: tikz 2019/02/02 v3.1.1 (3.1.1)
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflib
+raryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@plot@mark@count=\count131
+\pgfplotmarksize=\dimen167
+)
+\tikz@lastx=\dimen168
+\tikz@lasty=\dimen169
+\tikz@lastxsaved=\dimen170
+\tikz@lastysaved=\dimen171
+\tikzleveldistance=\dimen172
+\tikzsiblingdistance=\dimen173
+\tikz@figbox=\box67
+\tikz@figbox@bg=\box68
+\tikz@tempbox=\box69
+\tikz@tempbox@bg=\box70
+\tikztreelevel=\count132
+\tikznumberofchildren=\count133
+\tikznumberofcurrentchild=\count134
+\tikz@fig@count=\count135
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmodul
+ematrix.code.tex
+File: pgfmodulematrix.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfmatrixcurrentrow=\count136
+\pgfmatrixcurrentcolumn=\count137
+\pgf@matrix@numberofcolumns=\count138
+)
+\tikz@expandcount=\count139
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/ti
+kz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/ti
+kz/libraries/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/libraries/shapes
+/pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2019/02/02 v3.1.1 (3.1.1)
+))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/ti
+kz/libraries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflib
+raryarrows.code.tex
+File: pgflibraryarrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\arrowsize=\dimen174
+))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+) (d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.st
+y
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count140
+\Gm@cntv=\count141
+\c@Gm@tempcnt=\count142
+\Gm@bindingoffset=\dimen175
+\Gm@wd@mp=\dimen176
+\Gm@odd@mp=\dimen177
+\Gm@even@mp=\dimen178
+\Gm@layoutwidth=\dimen179
+\Gm@layoutheight=\dimen180
+\Gm@layouthoffset=\dimen181
+\Gm@layoutvoffset=\dimen182
+\Gm@dimlist=\toks44
+)
+
+Package geometry Warning: Over-specification in `h'-direction.
+    `width' (483.69684pt) is ignored.
+
+(./TP5.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+
+
+LaTeX Warning: Label `emi' multiply defined.
+
+)
+\openout1 = `TP5.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+ (d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/ucs/ucsencs.def
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+)
+LaTeX Info: Redefining \. on input line 48.
+LaTeX Info: Redefining \% on input line 48.
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.m
+kii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count143
+\scratchdimen=\dimen183
+\scratchbox=\box71
+\nofMPsegments=\count144
+\nofMParguments=\count145
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count146
+\MPscratchDim=\dimen184
+\MPnumerator=\count147
+\makeMPintoPDFobject=\count148
+\everyMPtoPDFconversion=\toks46
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base
+.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.s
+ty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekey
+s.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.s
+ty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.st
+y
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.st
+y
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.
+sty
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-s
+ys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Info: Redefining \celsius on input line 48.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 48.
+
+
+
+Package gensymb Warning: Not defining \perthousand.
+
+LaTeX Info: Redefining \ohm on input line 48.
+Package gensymb Info: Using \Omega for \ohm on input line 48.
+
+Package gensymb Warning: Not defining \micro.
+
+ABD: EveryShipout initializing macros
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(42.67912pt, 512.14963pt, 42.67912pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23582pt, 56.90552pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=512.14963pt
+* \textheight=731.23582pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=14.22636pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<Imagenes/LOGO.jpg, id=4, 295.1025pt x 302.12875pt>
+File: Imagenes/LOGO.jpg Graphic file (type jpg)
+<use Imagenes/LOGO.jpg>
+Package pdftex.def Info: Imagenes/LOGO.jpg  used on input line 51.
+(pdftex.def)             Requested size: 236.0823pt x 241.70332pt.
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)
+[1
+
+{d:/ASUS/Program Files/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.ma
+p} <./Imagenes/LOGO.jpg>] (./TP5.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+\tf@toc=\write4
+\openout4 = `TP5.toc'.
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+Make it at least 13.59999pt.
+We now make it that large for the rest of the document.
+This may cause the page layout to be inconsistent, however.
+
+[1]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 127.
+
+ (d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 127.
+
+[2]
+<Imagenes/esquema.png, id=28, 621.82312pt x 313.17pt>
+File: Imagenes/esquema.png Graphic file (type png)
+<use Imagenes/esquema.png>
+Package pdftex.def Info: Imagenes/esquema.png  used on input line 166.
+(pdftex.def)             Requested size: 341.43306pt x 171.9573pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Imagenes/halfbridge.png, id=29, 622.57594pt x 269.50688pt>
+File: Imagenes/halfbridge.png Graphic file (type png)
+<use Imagenes/halfbridge.png>
+Package pdftex.def Info: Imagenes/halfbridge.png  used on input line 178.
+(pdftex.def)             Requested size: 341.43306pt x 147.80566pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3]
+<Imagenes/trafo.png, id=34, 309.40594pt x 167.12437pt>
+File: Imagenes/trafo.png Graphic file (type png)
+<use Imagenes/trafo.png>
+Package pdftex.def Info: Imagenes/trafo.png  used on input line 193.
+(pdftex.def)             Requested size: 284.52756pt x 153.70016pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <./Imagenes/esquema.png> <./Imagenes/halfbridge.png>]
+<Imagenes/funcionamiento.png, id=38, 870.25125pt x 323.2075pt>
+File: Imagenes/funcionamiento.png Graphic file (type png)
+<use Imagenes/funcionamiento.png>
+Package pdftex.def Info: Imagenes/funcionamiento.png  used on input line 210.
+(pdftex.def)             Requested size: 512.14963pt x 190.22226pt.
+ [5 <./Imagenes/trafo.png> <./Imagenes/funcionamiento.png>]
+<Imagenes/buck.png, id=43, 489.32813pt x 240.14719pt>
+File: Imagenes/buck.png Graphic file (type png)
+<use Imagenes/buck.png>
+Package pdftex.def Info: Imagenes/buck.png  used on input line 226.
+(pdftex.def)             Requested size: 284.52756pt x 139.64088pt.
+ [6 <./Imagenes/buck.png>] [7]
+<Imagenes/emi2.png, id=51, 874.26625pt x 393.47pt>
+File: Imagenes/emi2.png Graphic file (type png)
+<use Imagenes/emi2.png>
+Package pdftex.def Info: Imagenes/emi2.png  used on input line 312.
+(pdftex.def)             Requested size: 349.7003pt x 157.38521pt.
+<Imagenes/emi.png, id=52, 1131.22626pt x 499.8675pt>
+File: Imagenes/emi.png Graphic file (type png)
+<use Imagenes/emi.png>
+Package pdftex.def Info: Imagenes/emi.png  used on input line 325.
+(pdftex.def)             Requested size: 512.14963pt x 226.31122pt.
+ [8 <./Imagenes/emi2.png> <./Imagenes/emi.png>]
+<Imagenes/rectificador.png, id=56, 614.295pt x 333.245pt>
+File: Imagenes/rectificador.png Graphic file (type png)
+<use Imagenes/rectificador.png>
+Package pdftex.def Info: Imagenes/rectificador.png  used on input line 339.
+(pdftex.def)             Requested size: 512.14963pt x 277.84923pt.
+ [9 <./Imagenes/rectificador.png>]
+<Imagenes/PWM.png, id=60, 558.58687pt x 271.0125pt>
+File: Imagenes/PWM.png Graphic file (type png)
+<use Imagenes/PWM.png>
+Package pdftex.def Info: Imagenes/PWM.png  used on input line 394.
+(pdftex.def)             Requested size: 341.43306pt x 165.6606pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10]
+<Imagenes/driver.png, id=64, 703.87968pt x 319.1925pt>
+File: Imagenes/driver.png Graphic file (type png)
+<use Imagenes/driver.png>
+Package pdftex.def Info: Imagenes/driver.png  used on input line 448.
+(pdftex.def)             Requested size: 341.43306pt x 154.82765pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11 <./Imagenes/PWM.png>]
+<Imagenes/vgsfqg.png, id=68, 357.58594pt x 304.13625pt>
+File: Imagenes/vgsfqg.png Graphic file (type png)
+<use Imagenes/vgsfqg.png>
+Package pdftex.def Info: Imagenes/vgsfqg.png  used on input line 477.
+(pdftex.def)             Requested size: 284.52756pt x 242.00992pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12 <./Imagenes/driver.png>] [13 <./Imagenes/vgsfqg.png>]
+<Imagenes/n27.png, id=77, 527.72156pt x 344.03531pt>
+File: Imagenes/n27.png Graphic file (type png)
+<use Imagenes/n27.png>
+Package pdftex.def Info: Imagenes/n27.png  used on input line 524.
+(pdftex.def)             Requested size: 284.52756pt x 185.48756pt.
+
+(d:/ASUS/Program Files/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+<Imagenes/cazoleta.png, id=78, 365.11406pt x 217.5628pt>
+File: Imagenes/cazoleta.png Graphic file (type png)
+<use Imagenes/cazoleta.png>
+Package pdftex.def Info: Imagenes/cazoleta.png  used on input line 538.
+(pdftex.def)             Requested size: 284.52756pt x 169.5489pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14 <./Imagenes/n27.png>] [15 <./Imagenes/cazoleta.png>] [16]
+<Imagenes/trafo_salida.png, id=89, 757.02824pt x 249.3315pt>
+File: Imagenes/trafo_salida.png Graphic file (type png)
+<use Imagenes/trafo_salida.png>
+Package pdftex.def Info: Imagenes/trafo_salida.png  used on input line 650.
+(pdftex.def)             Requested size: 341.43306pt x 112.45302pt.
+ [17 <./Imagenes/trafo_salida.png>]
+<Imagenes/NIvsE.png, id=95, 639.13782pt x 389.20406pt>
+File: Imagenes/NIvsE.png Graphic file (type png)
+<use Imagenes/NIvsE.png>
+Package pdftex.def Info: Imagenes/NIvsE.png  used on input line 723.
+(pdftex.def)             Requested size: 341.43306pt x 207.91626pt.
+ [18 <./Imagenes/NIvsE.png>]
+<Imagenes/Circuito.png, id=100, 579.96675pt x 424.58624pt>
+File: Imagenes/Circuito.png Graphic file (type png)
+<use Imagenes/Circuito.png>
+Package pdftex.def Info: Imagenes/Circuito.png  used on input line 783.
+(pdftex.def)             Requested size: 579.96533pt x 424.5852pt.
+ [19] [20 <./Imagenes/circuito.png>]
+<Imagenes/VIfunc.jpg, id=107, 5364.04pt x 3017.2725pt>
+File: Imagenes/VIfunc.jpg Graphic file (type jpg)
+<use Imagenes/VIfunc.jpg>
+Package pdftex.def Info: Imagenes/VIfunc.jpg  used on input line 809.
+(pdftex.def)             Requested size: 227.62204pt x 128.03671pt.
+<Imagenes/Vout.png, id=108, 240.9pt x 176.15813pt>
+File: Imagenes/Vout.png Graphic file (type png)
+<use Imagenes/Vout.png>
+Package pdftex.def Info: Imagenes/Vout.png  used on input line 817.
+(pdftex.def)             Requested size: 227.62204pt x 166.45416pt.
+ [21 <./Imagenes/VIfunc.jpg> <./Imagenes/Vout.png>]
+<Imagenes/Ripple.png, id=113, 240.9pt x 176.15813pt>
+File: Imagenes/Ripple.png Graphic file (type png)
+<use Imagenes/Ripple.png>
+Package pdftex.def Info: Imagenes/Ripple.png  used on input line 826.
+(pdftex.def)             Requested size: 227.62204pt x 166.45416pt.
+<Imagenes/spwm.png, id=114, 240.9pt x 176.15813pt>
+File: Imagenes/spwm.png Graphic file (type png)
+<use Imagenes/spwm.png>
+Package pdftex.def Info: Imagenes/spwm.png  used on input line 834.
+(pdftex.def)             Requested size: 284.52756pt x 208.0798pt.
+ [22 <./Imagenes/Ripple.png> <./Imagenes/spwm.png>]
+<Imagenes/VGDs.png, id=120, 240.9pt x 176.15813pt>
+File: Imagenes/VGDs.png Graphic file (type png)
+<use Imagenes/VGDs.png>
+Package pdftex.def Info: Imagenes/VGDs.png  used on input line 852.
+(pdftex.def)             Requested size: 227.62204pt x 166.45416pt.
+<Imagenes/VGDi.png, id=121, 240.9pt x 176.15813pt>
+File: Imagenes/VGDi.png Graphic file (type png)
+<use Imagenes/VGDi.png>
+Package pdftex.def Info: Imagenes/VGDi.png  used on input line 859.
+(pdftex.def)             Requested size: 227.62204pt x 166.45416pt.
+<Imagenes/Vprim.png, id=122, 240.9pt x 176.15813pt>
+File: Imagenes/Vprim.png Graphic file (type png)
+<use Imagenes/Vprim.png>
+Package pdftex.def Info: Imagenes/Vprim.png  used on input line 867.
+(pdftex.def)             Requested size: 227.62204pt x 166.45416pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[23 <./Imagenes/VGDs.png> <./Imagenes/VGDi.png>] [24 <./Imagenes/Vprim.png>]
+[25] (./TP5.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 17237 strings out of 492616
+ 329407 string characters out of 6123697
+ 402376 words of memory out of 5000000
+ 20787 multiletter control sequences out of 15000+600000
+ 11587 words of font info for 41 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,13n,56p,1160b,554s stack positions out of 5000i,500n,10000p,200000b,80000s
+<d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbx10.pfb><d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb><d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmcsc10.pfb><d:/ASUS/Program Files/texlive/2018/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/ASUS/Program Files/texlive/2018/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/ASUS/Program Files/tex
+live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/ASUS/Program
+ Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/ASU
+S/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b><d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr10.pfb><d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr12.pfb><d:/ASUS/Program Files/texlive/2018/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr6.pfb><d:/ASUS/Program Files/texlive/2018/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr8.pfb><d:/ASUS/Program Files/texlive/2018/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/ASUS/Program Files/texlive/20
+18/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/ASUS/Program Files/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/ASUS/Progra
+m Files/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on TP5.pdf (26 pages, 5741911 bytes).
+PDF statistics:
+ 188 PDF objects out of 1000 (max. 8388607)
+ 111 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+
