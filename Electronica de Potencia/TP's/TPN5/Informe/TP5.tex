@@ -1,6 +1,7 @@
 \documentclass[11pt, a4paper]{article}
 \usepackage[utf8x]{inputenc}
 \usepackage[sort]{natbib}
+\usepackage[linktoc=all]{hyperref}
 
 \usepackage[spanish]{babel}
 \usepackage{enumitem}
@@ -115,7 +116,9 @@ En el siguiente trabajo práctico se estudia el diseño y funcionamiento, a part
 \section{Marco Teórico}
 En primer lugar, se llama fuente de alimentación a todo circuito electrónico que convierte una tensión alterna de entrada en una tensión continua estable de salida, con el fin de proveer de energía de forma segura a otros circuitos.
 
-Una fuente conmutada es un convertidor de energía DC/DC, cuya conmutación es producida por semiconductores de potencia, controlando la transferencia dinámica de potencia desde una fuente de entrada de DC hacia la carga, a través de conectar la fuente a la carga en transferencia directa o indirecta durante una duración de tiempo periódica y predeterminada.
+Un convertidor $DC$/$DC$ o fuente “conmutada” puede definirse como un dispositivo electrónico que transforma energía eléctrica de características constantes (corriente continua) de una magnitud en otro nivel de magnitud por medio de la acción de transistores en conmutación.
+
+Básicamente, trabajan en períodos de tiempo, gracias a la acción de un ciclo de trabajo, durante el cual se toma energía por un período de tiempo mientras la señal está a la salida y luego en el tiempo restante se la libera de forma de establecer un flujo prácticamente continuo de energía hacia la carga. Estos convertidos surgen como alternativa a sus contra partes (fuentes) lineales, ya que éstas últimas presentan una gran cantidad de desventajas funcionales y constructivas a medida que la potencia de salida se incrementa.
 
 \subsection{Clasificación}
 Las fuentes conmutadas se pueden clasificar dependiendo de si tienen o no aislación galvánica entre la entrada de alimentación y el circuito de salida:
@@ -136,7 +139,7 @@ Las fuentes conmutadas se pueden clasificar dependiendo de si tienen o no aislac
 	Según la excitación del núcleo magnético se clasifican en:
 		\begin{itemize}
 			\item Unidireccionales (permanecen en un solo cuadrante del ciclo magnético): dependiendo del circuito de salida pueden ser Forward o Flyback.
-			\item Bidireccionales (trabajan en ambos cuadrantes del ciclo magnético): dependiendo de la configuración de los semiconductores de potencia pueden ser Push-Pull, Half-Bridge o Full-Bridge.
+			\item Bidireccionales (trabajan en ambos cuadrantes del ciclo magnético; $I$ y $III$): dependiendo de la configuración de los semiconductores de potencia pueden ser Push-Pull, Half-Bridge o Full-Bridge.
 		\end{itemize}
 \end{itemize}
 
@@ -144,9 +147,18 @@ Las fuentes conmutadas se pueden clasificar dependiendo de si tienen o no aislac
 Respecto a las fuentes lineales, las conmutadas presentan ciertas ventajas y desventajas que se mencionan a continuación.
 \subsubsection{Ventajas}
 \begin{itemize}
-	\item Eficiencia entre el 68 y 90\%.
-	\item Los dispositivos de potencia funcionan entre el corte y la saturación lo que aumenta su eficiencia.
+	\item Bajos costos de fabricación, si la implementación se plantea a partir de los 10 $W$. En caso contrario es
+conveniente una fuente lineal convencional.
+	\item Debido a la acción conmutadora, los dispositivos de conmutación disipan menor potencia (se hace uso más
+eficiente de ellos) respecto a los dispositivos de una fuente lineal, y por lo tanto el rendimiento incrementa
+entre un 68 \% y un 90 \%; en contrapartida con el rendimiento de una fuente lineal, que debido a los
+transistores de paso ubicados para la polarización de las etapas de potencia en la salida, ronda pobremente
+entre 30 \% y 60 \%.
 	\item La tensión de entrada es conmutada en forma de alterna y ubicada en un elemento magnético, por lo que se puede variar la relación de transformación haciendo que la fuente funcione como reductor, elevador o inversor de tensión con múltiples salidas.
+	\item No es necesario el uso del transformador de línea, ya que el elemento magnético de transferencia de energía lo puede reemplazar, funcionando no en 50/60 Hz, sino en alta frecuencia de conmutación, reduciendo el tamaño del transformador y en consecuencia, de la fuente; reduciendo el peso, y el costo. Un transformador de energía de 50/60 Hz tiene un volumen efectivo significativamente  mayor que uno aplicado en una fuente conmutada, cuya frecuencia es típicamente mayor que 15 KHz.
+	\item Son versátiles a las fluctuaciones de tensión de entrada, no necesitando normalmente ajustes para su
+funcionamiento, a diferencia de las fuentes lineales, que suelen padecer a dichas variaciones.
+  
 \end{itemize}
 \subsubsection{Desventajas}
 \begin{itemize}
@@ -322,7 +334,7 @@ En la Fig. \ref{emi} se observa el esquemático de conexión del filtro EMI impl
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width = \textwidth]{Imagenes/emi}
+	\includegraphics[width = 0.8\textwidth]{Imagenes/emi}
 	\caption{Filtro EMI.}
 	\label{emi}
 \end{figure}
@@ -336,7 +348,7 @@ La etapa de rectificación se encarga de convertir la tensión alterna de la lí
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width = \textwidth]{Imagenes/rectificador}
+	\includegraphics[width = 0.8\textwidth]{Imagenes/rectificador}
 	\caption{Etapa rectificadora.}
 	\label{rectificador}
 \end{figure}
@@ -391,7 +403,7 @@ El PWM se implementa con el circuito integrado SG3525 (Fig. \ref{pwm}), el cuál
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width = 12 cm]{Imagenes/PWM}
+		\includegraphics[width = 0.5\textwidth]{Imagenes/PWM}
 	\caption{Circuito generador del PWM.}
 	\label{pwm}
 \end{figure}
@@ -445,7 +457,7 @@ En la Fig. \ref{driver} se observa el circuito de driver de los MOSFETS que form
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width = 12 cm]{Imagenes/driver}
+	\includegraphics[width = 0.6\textwidth]{Imagenes/driver}
 	\caption{Circuito driver de los MOSFETs implementado con IR2110.}
 	\label{driver}
 \end{figure}
@@ -647,7 +659,7 @@ filtro, para convertir la corriente alterna pulsante (generada en la etapa de co
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width = 12 cm]{Imagenes/trafo_salida}
+	\includegraphics[width = \textwidth]{Imagenes/trafo_salida}
 	\caption{Etapa de salida.}
 	\label{salida}
 \end{figure}
@@ -795,6 +807,13 @@ Las siguientes mediciones se realizaron con la fuente funcionando en las siguien
 	\item Tiempo de funcionamiento: 10 minutos	
 \end{itemize}
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width = 8 cm]{Imagenes/VIfuncA}
+	\caption{Tensión y corriente de salida de la fuente conmutada en prueba de 10 minutos de duración.}
+	\label{VIfunc}
+\end{figure}
+
 Luego se realizó una segunda medición con la fuente funcionando en las condiciones que se observan en la Fig. \ref{VIfunc} durante aproximadamente 30 minutos, obteniendo las mismas formas de onda que en el caso anterior. Para aumentar la corriente de salida lo que se hizo fue utilizar una resistencia variable y disminuir su valor hasta lograr la corriente deseada.
 \begin{itemize}
 	\item Tensión de salida: 24.4 V
@@ -806,7 +825,7 @@ Luego se realizó una segunda medición con la fuente funcionando en las condici
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width = 8 cm]{Imagenes/VIfunc}
+	\includegraphics[width = 8 cm]{Imagenes/VIfuncB}
 	\caption{Tensión y corriente de salida de la fuente conmutada en prueba de 30 minutos de duración.}
 	\label{VIfunc}
 \end{figure}

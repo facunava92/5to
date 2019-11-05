@@ -1,0 +1,46 @@
+\BOOKMARK [1][-]{section.1}{Introducci\363n}{}% 1
+\BOOKMARK [1][-]{section.2}{Enunciado}{}% 2
+\BOOKMARK [1][-]{section.3}{Marco Te\363rico}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Clasificaci\363n}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Ventajas y Desventajas}{section.3}% 5
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Ventajas}{subsection.3.2}% 6
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Desventajas}{subsection.3.2}% 7
+\BOOKMARK [2][-]{subsection.3.3}{Fuente de alimentaci\363n off-line forward bidireccional de medio puente}{section.3}% 8
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Fuente off-line}{subsection.3.3}% 9
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Fuente Half-Bridge}{subsection.3.3}% 10
+\BOOKMARK [3][-]{subsubsection.3.3.3}{Transformador de potencia}{subsection.3.3}% 11
+\BOOKMARK [3][-]{subsubsection.3.3.4}{Funcionamiento}{subsection.3.3}% 12
+\BOOKMARK [3][-]{subsubsection.3.3.5}{Modo de conducci\363n discontinua DCM}{subsection.3.3}% 13
+\BOOKMARK [1][-]{section.4}{Dise\361o de la fuente conmutada}{}% 14
+\BOOKMARK [2][-]{subsection.4.1}{Datos iniciales}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.2}{C\341lculos iniciales}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.3}{Circuito de Entrada de L\355nea - Filtro EMI/EMC}{section.4}% 17
+\BOOKMARK [2][-]{subsection.4.4}{Circuito de Rectificaci\363n}{section.4}% 18
+\BOOKMARK [3][-]{subsubsection.4.4.1}{Puente Rectificador}{subsection.4.4}% 19
+\BOOKMARK [3][-]{subsubsection.4.4.2}{Capacitores y Resistencias de Filtro}{subsection.4.4}% 20
+\BOOKMARK [2][-]{subsection.4.5}{Circuito generador del PWM}{section.4}% 21
+\BOOKMARK [2][-]{subsection.4.6}{Selecci\363n del dispositivo de conmutaci\363n}{section.4}% 22
+\BOOKMARK [3][-]{subsubsection.4.6.1}{Encendido o Saturaci\363n}{subsection.4.6}% 23
+\BOOKMARK [3][-]{subsubsection.4.6.2}{Apagado o Corte}{subsection.4.6}% 24
+\BOOKMARK [2][-]{subsection.4.7}{Driver de los MOSFET}{section.4}% 25
+\BOOKMARK [3][-]{subsubsection.4.7.1}{IR2110}{subsection.4.7}% 26
+\BOOKMARK [3][-]{subsubsection.4.7.2}{Velocidad de Conmutaci\363n}{subsection.4.7}% 27
+\BOOKMARK [2][-]{subsection.4.8}{Transformador de Potencia}{section.4}% 28
+\BOOKMARK [3][-]{subsubsection.4.8.1}{Material y Cazoleta}{subsection.4.8}% 29
+\BOOKMARK [3][-]{subsubsection.4.8.2}{Excursi\363n de la densidad de flujo}{subsection.4.8}% 30
+\BOOKMARK [3][-]{subsubsection.4.8.3}{Comprobaci\363n del tama\361o de la cazoleta}{subsection.4.8}% 31
+\BOOKMARK [3][-]{subsubsection.4.8.4}{N\372mero de vueltas del primario y del secundario}{subsection.4.8}% 32
+\BOOKMARK [3][-]{subsubsection.4.8.5}{Di\341metro de los conductores}{subsection.4.8}% 33
+\BOOKMARK [3][-]{subsubsection.4.8.6}{Capacitor de acople C14}{subsection.4.8}% 34
+\BOOKMARK [2][-]{subsection.4.9}{Circuito de salida}{section.4}% 35
+\BOOKMARK [3][-]{subsubsection.4.9.1}{Rectificadores}{subsection.4.9}% 36
+\BOOKMARK [3][-]{subsubsection.4.9.2}{Inductor}{subsection.4.9}% 37
+\BOOKMARK [3][-]{subsubsection.4.9.3}{Capacitor}{subsection.4.9}% 38
+\BOOKMARK [2][-]{subsection.4.10}{Circuito Final}{section.4}% 39
+\BOOKMARK [1][-]{section.5}{Mediciones}{}% 40
+\BOOKMARK [2][-]{subsubsection.5.0.1}{Tensi\363n de salida CC}{section.5}% 41
+\BOOKMARK [3][-]{subsubsection.5.0.2}{Ripple de la Tensi\363n de salida CA}{subsubsection.5.0.1}% 42
+\BOOKMARK [3][-]{subsubsection.5.0.3}{Se\361al de comando del PWM}{subsubsection.5.0.1}% 43
+\BOOKMARK [3][-]{subsubsection.5.0.4}{Tensi\363n de compuerta y de drenador de los MOSFETs}{subsubsection.5.0.1}% 44
+\BOOKMARK [3][-]{subsubsection.5.0.5}{Primario del transformador}{subsubsection.5.0.1}% 45
+\BOOKMARK [1][-]{section.6}{Conclusiones}{}% 46

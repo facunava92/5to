@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Mechanical:MountingHole_Pad H1
+L Fuente-rescue:MountingHole_Pad-Mechanical H1
 U 1 1 5D5A0A2D
 P 8300 6000
 F 0 "H1" H 8400 6049 50  0000 L CNN
@@ -26,7 +26,7 @@ F 3 "~" H 8300 6000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H2
+L Fuente-rescue:MountingHole-Mechanical H2
 U 1 1 5D5A10B5
 P 8300 6350
 F 0 "H2" H 8400 6396 50  0000 L CNN
@@ -37,7 +37,7 @@ F 3 "~" H 8300 6350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H4
+L Fuente-rescue:MountingHole-Mechanical H4
 U 1 1 5D5A1522
 P 9300 6350
 F 0 "H4" H 9400 6396 50  0000 L CNN
@@ -48,7 +48,7 @@ F 3 "~" H 9300 6350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H3
+L Fuente-rescue:MountingHole-Mechanical H3
 U 1 1 5D5A184E
 P 9300 5950
 F 0 "H3" H 9400 5996 50  0000 L CNN
@@ -61,7 +61,7 @@ $EndComp
 Wire Wire Line
 	8300 6150 8300 6100
 $Comp
-L Connector:Conn_WallSocket J1
+L Fuente-rescue:Conn_WallSocket-Connector J1
 U 1 1 5D5A653B
 P 950 1650
 F 0 "J1" H 1050 1400 50  0000 C CNN
@@ -72,7 +72,7 @@ F 3 "~" H 550 1650 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:Thermistor_NTC_US TH1
+L Fuente-rescue:Thermistor_NTC_US-Device TH1
 U 1 1 5D5A82E6
 P 1600 2100
 F 0 "TH1" V 1700 2100 50  0000 C CNN
@@ -83,7 +83,7 @@ F 3 "~" H 1600 2150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:Fuse F1
+L Fuente-rescue:Fuse-Device F1
 U 1 1 5D5A992A
 P 1600 1100
 F 0 "F1" V 1500 1100 50  0000 C CNN
@@ -94,7 +94,7 @@ F 3 "~" H 1600 1100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C6
+L Fuente-rescue:C-Device C6
 U 1 1 5D5B8DCE
 P 3850 1550
 F 0 "C6" H 3965 1596 50  0000 L CNN
@@ -105,7 +105,7 @@ F 3 "~" H 3850 1550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C7
+L Fuente-rescue:C-Device C7
 U 1 1 5D5F824E
 P 4250 1350
 F 0 "C7" H 4365 1396 50  0000 L CNN
@@ -116,7 +116,7 @@ F 3 "~" H 4250 1350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C8
+L Fuente-rescue:C-Device C8
 U 1 1 5D5F85E2
 P 4250 1850
 F 0 "C8" H 4365 1896 50  0000 L CNN
@@ -132,7 +132,7 @@ Connection ~ 4250 1600
 Wire Wire Line
 	4250 1600 4250 1500
 $Comp
-L power:GNDPWR #PWR09
+L Fuente-rescue:GNDPWR-power #PWR09
 U 1 1 5D5FCEC3
 P 4650 1700
 F 0 "#PWR09" H 4650 1500 50  0001 C CNN
@@ -147,7 +147,7 @@ Wire Wire Line
 Wire Wire Line
 	4250 1600 4650 1600
 $Comp
-L power:GNDPWR #PWR018
+L Fuente-rescue:GNDPWR-power #PWR018
 U 1 1 5D5FDE4B
 P 8300 6150
 F 0 "#PWR018" H 8300 5950 50  0001 C CNN
@@ -218,7 +218,7 @@ Wire Notes Line
 Wire Notes Line
 	650  600  5100 600 
 $Comp
-L Device:D_Bridge_+AA- D1
+L Fuente-rescue:D_Bridge_+AA--Device D1
 U 1 1 5D5B1EB7
 P 1200 3400
 F 0 "D1" V 1400 3150 50  0000 L CNN
@@ -229,7 +229,7 @@ F 3 "~" H 1200 3400 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Device:R_US R5
+L Fuente-rescue:R_US-Device R5
 U 1 1 5D5B3828
 P 1900 3200
 F 0 "R5" H 1968 3246 50  0000 L CNN
@@ -240,11 +240,11 @@ F 3 "~" H 1900 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP1 C4
+L Fuente-rescue:CP1-Device C4
 U 1 1 5D5B3E91
 P 2450 3200
 F 0 "C4" H 2565 3246 50  0000 L CNN
-F 1 "330u|200V" H 2565 3155 50  0000 L CNN
+F 1 "470u|200V" H 2565 3155 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn" H 2450 3200 50  0001 C CNN
 F 3 "~" H 2450 3200 50  0001 C CNN
 	1    2450 3200
@@ -271,7 +271,7 @@ Wire Wire Line
 	1900 2950 1200 2950
 Connection ~ 1900 2950
 $Comp
-L Device:R_US R6
+L Fuente-rescue:R_US-Device R6
 U 1 1 5D5C924B
 P 1900 3600
 F 0 "R6" H 1968 3646 50  0000 L CNN
@@ -300,11 +300,11 @@ Connection ~ 1900 3850
 Wire Wire Line
 	1900 3850 2450 3850
 $Comp
-L Device:CP1 C5
+L Fuente-rescue:CP1-Device C5
 U 1 1 5D5E30C7
 P 2450 3600
 F 0 "C5" H 2565 3646 50  0000 L CNN
-F 1 "330u|200V" H 2565 3555 50  0000 L CNN
+F 1 "470u|200V" H 2565 3555 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn" H 2450 3600 50  0001 C CNN
 F 3 "~" H 2450 3600 50  0001 C CNN
 	1    2450 3600
@@ -315,7 +315,7 @@ Wire Wire Line
 Text GLabel 3050 2950 2    50   Output ~ 0
 Vin
 $Comp
-L power:GND #PWR07
+L Fuente-rescue:GND-power #PWR07
 U 1 1 5D5B44A1
 P 3050 3850
 F 0 "#PWR07" H 3050 3600 50  0001 C CNN
@@ -360,7 +360,7 @@ Wire Wire Line
 Wire Wire Line
 	2400 4950 2300 4950
 $Comp
-L power:+15V #PWR04
+L Fuente-rescue:+15V-power #PWR04
 U 1 1 5D5CC936
 P 3050 4550
 F 0 "#PWR04" H 3050 4400 50  0001 C CNN
@@ -383,7 +383,7 @@ Wire Wire Line
 Wire Wire Line
 	2450 1100 2450 1400
 $Comp
-L Device:C C3
+L Fuente-rescue:C-Device C3
 U 1 1 5D5B86D7
 P 2450 1550
 F 0 "C3" H 2565 1596 50  0000 L CNN
@@ -394,7 +394,7 @@ F 3 "~" H 2450 1550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small_US R4
+L Fuente-rescue:R_Small_US-Device R4
 U 1 1 5D5CDBEE
 P 1950 1900
 F 0 "R4" H 1800 1900 50  0000 L CNN
@@ -405,7 +405,7 @@ F 3 "~" H 1950 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small_US R3
+L Fuente-rescue:R_Small_US-Device R3
 U 1 1 5D5CD379
 P 1950 1700
 F 0 "R3" H 1800 1700 50  0000 L CNN
@@ -416,7 +416,7 @@ F 3 "~" H 1950 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small_US R2
+L Fuente-rescue:R_Small_US-Device R2
 U 1 1 5D5CD604
 P 1950 1500
 F 0 "R2" H 1800 1500 50  0000 L CNN
@@ -427,7 +427,7 @@ F 3 "~" H 1950 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small_US R1
+L Fuente-rescue:R_Small_US-Device R1
 U 1 1 5D5CCFAE
 P 1950 1300
 F 0 "R1" H 1800 1300 50  0000 L CNN
@@ -438,7 +438,7 @@ F 3 "~" H 1950 1300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_US R8
+L Fuente-rescue:R_US-Device R8
 U 1 1 5D5FDF5B
 P 3050 4850
 F 0 "R8" V 3250 4800 50  0000 L CNN
@@ -449,7 +449,7 @@ F 3 "~" H 3050 4850 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Driver_FET:IR2110 U1
+L Fuente-rescue:IR2110-Driver_FET U1
 U 1 1 5D609C28
 P 8350 4250
 F 0 "U1" H 8500 4700 50  0000 C CNN
@@ -466,7 +466,7 @@ Wire Notes Line
 Wire Notes Line
 	650  5650 650  4200
 $Comp
-L power:+15V #PWR019
+L Fuente-rescue:+15V-power #PWR019
 U 1 1 5D7F1DD9
 P 8350 3400
 F 0 "#PWR019" H 8350 3250 50  0001 C CNN
@@ -500,7 +500,7 @@ Wire Wire Line
 Wire Wire Line
 	8000 4450 8000 4800
 $Comp
-L Device:R_Small_US R13
+L Fuente-rescue:R_Small_US-Device R13
 U 1 1 5D88FFC9
 P 9700 4050
 F 0 "R13" V 9800 4050 50  0000 C CNN
@@ -512,7 +512,7 @@ F 3 "~" H 9700 4050 50  0001 C CNN
 $EndComp
 Connection ~ 9400 4050
 $Comp
-L Device:R_Small_US R11
+L Fuente-rescue:R_Small_US-Device R11
 U 1 1 5D8EA740
 P 9400 4200
 F 0 "R11" H 9500 4150 50  0000 C CNN
@@ -529,7 +529,7 @@ Wire Wire Line
 Wire Wire Line
 	9400 4100 9400 4050
 $Comp
-L Device:CP1_Small C13
+L Fuente-rescue:CP1_Small-Device C13
 U 1 1 5D942755
 P 9000 3950
 F 0 "C13" V 9200 3900 50  0000 L CNN
@@ -550,7 +550,7 @@ VG1_CTRL
 Text GLabel 10100 4350 2    50   Output ~ 0
 VS1_CTRL
 $Comp
-L Device:D_Small_ALT D5
+L Fuente-rescue:D_Small_ALT-Device D5
 U 1 1 5D965894
 P 8800 4200
 F 0 "D5" V 8762 4268 50  0000 L CNN
@@ -572,7 +572,7 @@ Wire Wire Line
 Wire Wire Line
 	8800 4450 8800 4300
 $Comp
-L power:+15V #PWR020
+L Fuente-rescue:+15V-power #PWR020
 U 1 1 5D97337A
 P 8900 4450
 F 0 "#PWR020" H 8900 4300 50  0001 C CNN
@@ -586,7 +586,7 @@ Wire Wire Line
 	8900 4450 8800 4450
 Connection ~ 8800 4450
 $Comp
-L Device:R_Small_US R12
+L Fuente-rescue:R_Small_US-Device R12
 U 1 1 5D9847FA
 P 9650 4850
 F 0 "R12" V 9750 4850 50  0000 C CNN
@@ -606,7 +606,7 @@ Wire Wire Line
 Wire Wire Line
 	9950 4650 9950 4850
 $Comp
-L Device:R_Small_US R10
+L Fuente-rescue:R_Small_US-Device R10
 U 1 1 5D984808
 P 9350 5000
 F 0 "R10" H 9450 4950 50  0000 C CNN
@@ -653,7 +653,7 @@ Wire Notes Line
 Wire Notes Line
 	7450 2600 10550 2600
 $Comp
-L Device:Q_NMOS_GDS Q1
+L Fuente-rescue:Q_NMOS_GDS-Device Q1
 U 1 1 5DB6AA91
 P 1350 6400
 F 0 "Q1" H 1556 6446 50  0000 L CNN
@@ -664,7 +664,7 @@ F 3 "~" H 1350 6400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Q_NMOS_GDS Q2
+L Fuente-rescue:Q_NMOS_GDS-Device Q2
 U 1 1 5DB6CE86
 P 1350 7000
 F 0 "Q2" H 1556 7046 50  0000 L CNN
@@ -689,7 +689,7 @@ VG2
 Wire Wire Line
 	950  7000 1150 7000
 $Comp
-L power:GND #PWR02
+L Fuente-rescue:GND-power #PWR02
 U 1 1 5DBA7AF2
 P 1450 7400
 F 0 "#PWR02" H 1450 7150 50  0001 C CNN
@@ -716,7 +716,7 @@ Wire Wire Line
 Text GLabel 2600 7500 0    50   Input ~ 0
 Vin|2
 $Comp
-L Device:C C2
+L Fuente-rescue:C-Device C2
 U 1 1 5DBF1CC8
 P 2700 7300
 F 0 "C2" H 2815 7346 50  0000 L CNN
@@ -731,7 +731,7 @@ Wire Wire Line
 Wire Wire Line
 	2700 7100 2800 7100
 $Comp
-L power:GNDREF #PWR06
+L Fuente-rescue:GNDREF-power #PWR06
 U 1 1 5DC5351D
 P 3700 7300
 F 0 "#PWR06" H 3700 7050 50  0001 C CNN
@@ -742,7 +742,7 @@ F 3 "" H 3700 7300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L pspice:INDUCTOR L1
+L Fuente-rescue:INDUCTOR-pspice L1
 U 1 1 5DCBFD54
 P 4500 6700
 F 0 "L1" H 4500 6915 50  0000 C CNN
@@ -753,7 +753,7 @@ F 3 "~" H 4500 6700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP1 C9
+L Fuente-rescue:CP1-Device C9
 U 1 1 5DCDFA0E
 P 4850 7000
 F 0 "C9" V 4600 6900 50  0000 L CNN
@@ -766,7 +766,7 @@ $EndComp
 Wire Wire Line
 	4850 6850 4850 6700
 $Comp
-L power:GNDREF #PWR010
+L Fuente-rescue:GNDREF-power #PWR010
 U 1 1 5DCED133
 P 4850 7300
 F 0 "#PWR010" H 4850 7050 50  0001 C CNN
@@ -779,7 +779,7 @@ $EndComp
 Wire Wire Line
 	4850 7300 4850 7150
 $Comp
-L Device:CP1 C10
+L Fuente-rescue:CP1-Device C10
 U 1 1 5DD04EB1
 P 5250 7000
 F 0 "C10" V 5000 6900 50  0000 L CNN
@@ -790,7 +790,7 @@ F 3 "~" H 5250 7000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDREF #PWR011
+L Fuente-rescue:GNDREF-power #PWR011
 U 1 1 5DD15243
 P 5250 7300
 F 0 "#PWR011" H 5250 7050 50  0001 C CNN
@@ -807,7 +807,7 @@ Wire Wire Line
 Wire Wire Line
 	5250 6700 5250 6850
 $Comp
-L Device:CP1 C11
+L Fuente-rescue:CP1-Device C11
 U 1 1 5DD2B689
 P 5650 7000
 F 0 "C11" V 5400 6900 50  0000 L CNN
@@ -823,7 +823,7 @@ Wire Wire Line
 	5650 6700 5250 6700
 Connection ~ 5250 6700
 $Comp
-L power:GNDREF #PWR013
+L Fuente-rescue:GNDREF-power #PWR013
 U 1 1 5DD36C90
 P 5650 7300
 F 0 "#PWR013" H 5650 7050 50  0001 C CNN
@@ -837,7 +837,7 @@ Wire Wire Line
 	4850 6700 4750 6700
 Connection ~ 4850 6700
 $Comp
-L Connector:Screw_Terminal_01x02 J7
+L Fuente-rescue:Screw_Terminal_01x02-Connector J7
 U 1 1 5DD69F4D
 P 6650 6850
 F 0 "J7" H 6600 7000 50  0000 L CNN
@@ -875,7 +875,7 @@ Wire Notes Line
 Wire Wire Line
 	5650 7150 5650 7300
 $Comp
-L power:GNDREF #PWR015
+L Fuente-rescue:GNDREF-power #PWR015
 U 1 1 5D6B8C98
 P 6450 7300
 F 0 "#PWR015" H 6450 7050 50  0001 C CNN
@@ -886,7 +886,7 @@ F 3 "" H 6450 7300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED_Small D4
+L Fuente-rescue:LED_Small-Device D4
 U 1 1 5D6BB312
 P 6050 7150
 F 0 "D4" V 6050 7100 50  0000 R CNN
@@ -897,7 +897,7 @@ F 3 "~" V 6050 7150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R_Small_US R9
+L Fuente-rescue:R_Small_US-Device R9
 U 1 1 5D6BED7C
 P 6050 6900
 F 0 "R9" H 6118 6946 50  0000 L CNN
@@ -915,7 +915,7 @@ Connection ~ 6050 6700
 Wire Wire Line
 	6050 6700 5650 6700
 $Comp
-L power:GNDREF #PWR014
+L Fuente-rescue:GNDREF-power #PWR014
 U 1 1 5D75ECCA
 P 6050 7300
 F 0 "#PWR014" H 6050 7050 50  0001 C CNN
@@ -928,7 +928,7 @@ $EndComp
 Wire Wire Line
 	6050 7300 6050 7250
 $Comp
-L Device:LED_Small D2
+L Fuente-rescue:LED_Small-Device D2
 U 1 1 5D80BC7D
 P 3050 5200
 F 0 "D2" V 3050 5150 50  0000 R CNN
@@ -939,7 +939,7 @@ F 3 "~" V 3050 5200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Switch:SW_DPST_x2 SW1
+L Fuente-rescue:SW_DPST_x2-Switch SW1
 U 1 1 5D850FF5
 P 1300 1300
 F 0 "SW1" V 1350 1700 50  0000 R CNN
@@ -962,7 +962,7 @@ Wire Wire Line
 Wire Wire Line
 	3450 1450 3350 1450
 $Comp
-L Device:EMI_Filter_CommonMode FL1
+L Fuente-rescue:EMI_Filter_CommonMode-Device FL1
 U 1 1 5D5ACBDB
 P 3150 1550
 F 0 "FL1" H 3150 1750 50  0000 C CNN
@@ -979,7 +979,7 @@ Wire Wire Line
 Wire Wire Line
 	2850 1100 2450 1100
 $Comp
-L Device:D_Small_ALT D7
+L Fuente-rescue:D_Small_ALT-Device D7
 U 1 1 5D657CDF
 P 9700 3800
 F 0 "D7" H 9650 4000 50  0000 L CNN
@@ -994,7 +994,7 @@ Wire Wire Line
 Wire Wire Line
 	9600 4050 9400 4050
 $Comp
-L Device:D_Small_ALT D6
+L Fuente-rescue:D_Small_ALT-Device D6
 U 1 1 5D6A502B
 P 9650 4650
 F 0 "D6" H 9600 4850 50  0000 L CNN
@@ -1020,7 +1020,7 @@ Wire Wire Line
 Wire Wire Line
 	9750 4650 9950 4650
 $Comp
-L Device:D_x2_KCom_AKA D3
+L Fuente-rescue:D_x2_KCom_AKA-Device D3
 U 1 1 5D804D00
 P 3950 6900
 F 0 "D3" V 3996 6979 50  0000 L CNN
@@ -1043,7 +1043,7 @@ Wire Wire Line
 Wire Wire Line
 	4150 6700 4250 6700
 $Comp
-L Device:R_Small_US R7
+L Fuente-rescue:R_Small_US-Device R7
 U 1 1 5D8C0B2D
 P 2700 6800
 F 0 "R7" H 2450 6850 50  0000 L CNN
@@ -1054,7 +1054,7 @@ F 3 "~" H 2700 6800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C1
+L Fuente-rescue:C_Small-Device C1
 U 1 1 5D8C14D4
 P 2700 7000
 F 0 "C1" H 2450 7000 50  0000 L CNN
@@ -1069,7 +1069,7 @@ Wire Wire Line
 	2700 6700 2800 6700
 Connection ~ 2700 7100
 $Comp
-L Device:C_Small C12
+L Fuente-rescue:C_Small-Device C12
 U 1 1 5D6CAC31
 P 9000 3600
 F 0 "C12" V 9200 3550 50  0000 L CNN
@@ -1089,7 +1089,7 @@ Wire Wire Line
 	9150 3600 9150 3950
 Connection ~ 9150 3950
 $Comp
-L Connector_Generic:Conn_01x05 J3
+L Fuente-rescue:Conn_01x05-Connector_Generic J3
 U 1 1 5D6FF26F
 P 5950 1100
 F 0 "J3" H 5900 1450 50  0000 L CNN
@@ -1109,7 +1109,7 @@ Connection ~ 5700 900
 Wire Wire Line
 	5700 900  5750 900 
 $Comp
-L power:GNDD #PWR08
+L Fuente-rescue:GNDD-power #PWR08
 U 1 1 5D76FF86
 P 3050 5300
 F 0 "#PWR08" H 3050 5050 50  0001 C CNN
@@ -1120,7 +1120,7 @@ F 3 "" H 3050 5300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDD #PWR017
+L Fuente-rescue:GNDD-power #PWR017
 U 1 1 5D7959A8
 P 8250 4850
 F 0 "#PWR017" H 8250 4600 50  0001 C CNN
@@ -1131,7 +1131,7 @@ F 3 "" H 8250 4850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR012
+L Fuente-rescue:GND-power #PWR012
 U 1 1 5D79E97F
 P 5650 1350
 F 0 "#PWR012" H 5650 1100 50  0001 C CNN
@@ -1153,7 +1153,7 @@ Connection ~ 5700 1300
 Wire Wire Line
 	5700 1300 5750 1300
 $Comp
-L Connector_Generic:Conn_01x05 J6
+L Fuente-rescue:Conn_01x05-Connector_Generic J6
 U 1 1 5D7CC32E
 P 6200 1100
 F 0 "J6" H 6150 1450 50  0000 L CNN
@@ -1175,7 +1175,7 @@ Connection ~ 6450 900
 Wire Wire Line
 	6450 900  6400 900 
 $Comp
-L power:GNDD #PWR016
+L Fuente-rescue:GNDD-power #PWR016
 U 1 1 5D814C13
 P 6600 1300
 F 0 "#PWR016" H 6600 1050 50  0001 C CNN
@@ -1200,7 +1200,7 @@ Connection ~ 9150 4350
 Connection ~ 9400 4350
 Connection ~ 9350 5150
 $Comp
-L Connector_Generic:Conn_01x05 J5
+L Fuente-rescue:Conn_01x05-Connector_Generic J5
 U 1 1 5D8D34F2
 P 6150 1950
 F 0 "J5" H 6100 2300 50  0000 L CNN
@@ -1217,7 +1217,7 @@ Wire Wire Line
 Wire Wire Line
 	6450 2050 6350 2050
 $Comp
-L Connector_Generic:Conn_01x05 J4
+L Fuente-rescue:Conn_01x05-Connector_Generic J4
 U 1 1 5D98E50A
 P 5950 1950
 F 0 "J4" H 5900 2300 50  0000 L CNN
@@ -1236,7 +1236,7 @@ Wire Wire Line
 Wire Wire Line
 	5750 1750 5700 1750
 $Comp
-L Connector:Screw_Terminal_01x02 J2
+L Fuente-rescue:Screw_Terminal_01x02-Connector J2
 U 1 1 5D72B588
 P 1000 4750
 F 0 "J2" H 950 4900 50  0000 L CNN
@@ -1251,7 +1251,7 @@ Vin_EXT
 Text GLabel 5650 900  0    50   Input ~ 0
 Vin_EXT
 $Comp
-L power:+15V #PWR029
+L Fuente-rescue:+15V-power #PWR029
 U 1 1 5D90D403
 P 6050 3050
 F 0 "#PWR029" H 6050 2900 50  0001 C CNN
@@ -1273,7 +1273,7 @@ Wire Wire Line
 Wire Wire Line
 	3900 5150 3900 4400
 $Comp
-L power:GNDD #PWR021
+L Fuente-rescue:GNDD-power #PWR021
 U 1 1 5DC3A40A
 P 3900 5150
 F 0 "#PWR021" H 3900 4900 50  0001 C CNN
@@ -1284,7 +1284,7 @@ F 3 "" H 3900 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDD #PWR022
+L Fuente-rescue:GNDD-power #PWR022
 U 1 1 5DC39F04
 P 4150 5150
 F 0 "#PWR022" H 4150 4900 50  0001 C CNN
@@ -1295,7 +1295,7 @@ F 3 "" H 4150 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4250 3550 4650 3550
+	4250 3550 4450 3550
 Wire Wire Line
 	4250 4250 4250 3550
 Wire Wire Line
@@ -1306,16 +1306,16 @@ Connection ~ 4150 3750
 Wire Wire Line
 	3900 3750 4150 3750
 Wire Wire Line
-	4850 3550 5100 3550
+	4650 3550 5100 3550
 $Comp
-L Device:R_Small_US R17
+L Fuente-rescue:R_Small_US-Device R17
 U 1 1 5DBD630C
-P 4750 3550
-F 0 "R17" V 4650 3500 50  0000 L CNN
-F 1 "1k" V 4850 3500 50  0000 L CNN
-F 2 "lib_fp:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 4750 3550 50  0001 C CNN
-F 3 "~" H 4750 3550 50  0001 C CNN
-	1    4750 3550
+P 4550 3550
+F 0 "R17" V 4650 3400 50  0000 L CNN
+F 1 "1k" V 4650 3600 50  0000 L CNN
+F 2 "lib_fp:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 4550 3550 50  0001 C CNN
+F 3 "~" H 4550 3550 50  0001 C CNN
+	1    4550 3550
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -1324,26 +1324,24 @@ Connection ~ 4150 4400
 Wire Wire Line
 	4350 4400 4150 4400
 Wire Wire Line
-	4350 3450 4350 4400
+	4350 3400 4350 4400
 Wire Wire Line
-	4950 3450 4350 3450
-Wire Wire Line
-	5150 3450 5500 3450
+	4900 3400 4350 3400
 $Comp
-L Device:R_Small_US R19
+L Fuente-rescue:R_Small_US-Device R19
 U 1 1 5DBB494B
-P 5050 3450
-F 0 "R19" V 4950 3400 50  0000 L CNN
-F 1 "1k" V 5150 3400 50  0000 L CNN
-F 2 "lib_fp:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5050 3450 50  0001 C CNN
-F 3 "~" H 5050 3450 50  0001 C CNN
-	1    5050 3450
+P 5000 3400
+F 0 "R19" V 4900 3300 50  0000 L CNN
+F 1 "1k" V 4900 3500 50  0000 L CNN
+F 2 "lib_fp:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5000 3400 50  0001 C CNN
+F 3 "~" H 5000 3400 50  0001 C CNN
+	1    5000 3400
 	0    1    1    0   
 $EndComp
 Wire Wire Line
 	4150 4100 4150 4400
 $Comp
-L Device:R_Small_US R15
+L Fuente-rescue:R_Small_US-Device R15
 U 1 1 5DB9EF68
 P 4150 4750
 F 0 "R15" H 3950 4800 50  0000 L CNN
@@ -1358,7 +1356,7 @@ Wire Wire Line
 Wire Wire Line
 	5500 3750 4150 3750
 $Comp
-L Device:R_Small_US R14
+L Fuente-rescue:R_Small_US-Device R14
 U 1 1 5DB66F62
 P 4150 4000
 F 0 "R14" H 4000 4050 50  0000 L CNN
@@ -1371,7 +1369,7 @@ $EndComp
 Wire Wire Line
 	5300 4750 5300 5150
 $Comp
-L power:GNDD #PWR026
+L Fuente-rescue:GNDD-power #PWR026
 U 1 1 5DB48E39
 P 5300 5150
 F 0 "#PWR026" H 5300 4900 50  0001 C CNN
@@ -1392,7 +1390,7 @@ Wire Wire Line
 Wire Wire Line
 	5300 4550 5300 3850
 $Comp
-L Device:R_Small_US R21
+L Fuente-rescue:R_Small_US-Device R21
 U 1 1 5DA348C3
 P 5300 4650
 F 0 "R21" H 5350 4600 50  0000 L CNN
@@ -1407,7 +1405,7 @@ Wire Wire Line
 Wire Wire Line
 	5100 5150 5100 5050
 $Comp
-L power:GNDD #PWR023
+L Fuente-rescue:GNDD-power #PWR023
 U 1 1 5DA157C6
 P 4450 5150
 F 0 "#PWR023" H 4450 4900 50  0001 C CNN
@@ -1418,7 +1416,7 @@ F 3 "" H 4450 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDD #PWR025
+L Fuente-rescue:GNDD-power #PWR025
 U 1 1 5DA15208
 P 5100 5150
 F 0 "#PWR025" H 5100 4900 50  0001 C CNN
@@ -1429,7 +1427,7 @@ F 3 "" H 5100 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDD #PWR027
+L Fuente-rescue:GNDD-power #PWR027
 U 1 1 5DA14CFE
 P 5450 5150
 F 0 "#PWR027" H 5450 4900 50  0001 C CNN
@@ -1440,7 +1438,7 @@ F 3 "" H 5450 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small_US R18
+L Fuente-rescue:R_Small_US-Device R18
 U 1 1 5D9B76F5
 P 4950 4350
 F 0 "R18" V 5050 4300 50  0000 L CNN
@@ -1453,7 +1451,7 @@ $EndComp
 Wire Wire Line
 	4700 4150 5500 4150
 $Comp
-L Device:R_Small_US R16
+L Fuente-rescue:R_Small_US-Device R16
 U 1 1 5D9A5817
 P 4600 4150
 F 0 "R16" V 4700 4100 50  0000 L CNN
@@ -1471,11 +1469,11 @@ Wire Wire Line
 Wire Wire Line
 	4450 4600 4450 4650
 $Comp
-L Device:R_POT_US RV2
+L Fuente-rescue:R_POT_US-Device RV2
 U 1 1 5D9832CB
 P 4450 4800
-F 0 "RV2" H 4350 5050 50  0000 R CNN
-F 1 "200k" H 4383 4755 50  0000 R CNN
+F 0 "RV2" H 4400 4850 50  0000 R CNN
+F 1 "10k" H 4383 4755 50  0000 R CNN
 F 2 "lib_fp:Potentiometer_Bourns_3266Y_Vertical" H 4450 4800 50  0001 C CNN
 F 3 "~" H 4450 4800 50  0001 C CNN
 	1    4450 4800
@@ -1493,7 +1491,7 @@ Wire Wire Line
 Wire Wire Line
 	5500 4350 5050 4350
 $Comp
-L Device:R_POT_US RV3
+L Fuente-rescue:R_POT_US-Device RV3
 U 1 1 5D967631
 P 4850 4800
 F 0 "RV3" H 4783 4846 50  0000 R CNN
@@ -1508,7 +1506,7 @@ Wire Wire Line
 Wire Wire Line
 	5100 4850 5100 4250
 $Comp
-L Device:C_Small C14
+L Fuente-rescue:C_Small-Device C14
 U 1 1 5D945A2B
 P 5100 4950
 F 0 "C14" H 4900 4950 50  0000 L CNN
@@ -1519,7 +1517,7 @@ F 3 "~" H 5100 4950 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R_POT_US RV1
+L Fuente-rescue:R_POT_US-Device RV1
 U 1 1 5D93CFD9
 P 3900 4250
 F 0 "RV1" H 3832 4296 50  0000 R CNN
@@ -1534,7 +1532,7 @@ Wire Wire Line
 Wire Wire Line
 	5450 4850 5450 4450
 $Comp
-L Device:CP1_Small C15
+L Fuente-rescue:CP1_Small-Device C15
 U 1 1 5D92B5A7
 P 5450 4950
 F 0 "C15" H 5550 4950 50  0000 L CNN
@@ -1551,7 +1549,7 @@ Wire Wire Line
 Wire Wire Line
 	6800 4700 6800 4400
 $Comp
-L power:GNDD #PWR031
+L Fuente-rescue:GNDD-power #PWR031
 U 1 1 5D899A64
 P 6800 4700
 F 0 "#PWR031" H 6800 4450 50  0001 C CNN
@@ -1564,7 +1562,7 @@ $EndComp
 Wire Wire Line
 	6550 4700 6550 4400
 $Comp
-L power:GNDD #PWR030
+L Fuente-rescue:GNDD-power #PWR030
 U 1 1 5D881FC2
 P 6550 4700
 F 0 "#PWR030" H 6550 4450 50  0001 C CNN
@@ -1577,7 +1575,7 @@ $EndComp
 Wire Wire Line
 	6000 5150 6000 4650
 $Comp
-L power:GNDD #PWR028
+L Fuente-rescue:GNDD-power #PWR028
 U 1 1 5D868C27
 P 6000 5150
 F 0 "#PWR028" H 6000 4900 50  0001 C CNN
@@ -1600,7 +1598,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 4050 6800 4050
 $Comp
-L Device:R_Small_US R23
+L Fuente-rescue:R_Small_US-Device R23
 U 1 1 5D81280F
 P 6800 4300
 F 0 "R23" H 6868 4346 50  0000 L CNN
@@ -1617,7 +1615,7 @@ PWM_A
 Text GLabel 6850 4050 2    50   Output ~ 0
 PWM_B
 $Comp
-L Device:R_Small_US R22
+L Fuente-rescue:R_Small_US-Device R22
 U 1 1 5D7DEEF6
 P 6550 4300
 F 0 "R22" H 6618 4346 50  0000 L CNN
@@ -1628,7 +1626,7 @@ F 3 "~" H 6550 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Controller:SG3525 U2
+L Fuente-rescue:SG3525-Regulator_Controller U2
 U 1 1 5D7D4BD3
 P 6000 3950
 F 0 "U2" H 6350 4600 50  0000 C CNN
@@ -1639,11 +1637,11 @@ F 3 "www.st.com/resource/en/datasheet/sg3525.pdf" H 6000 3950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small_US R20
+L Fuente-rescue:R_Small_US-Device R20
 U 1 1 5DD11516
 P 5300 3650
-F 0 "R20" V 5200 3600 50  0000 L CNN
-F 1 "1k" V 5400 3600 50  0000 L CNN
+F 0 "R20" V 5350 3450 50  0000 L CNN
+F 1 "1k" V 5350 3700 50  0000 L CNN
 F 2 "lib_fp:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 5300 3650 50  0001 C CNN
 F 3 "~" H 5300 3650 50  0001 C CNN
 	1    5300 3650
@@ -1659,7 +1657,7 @@ Connection ~ 5100 3550
 Wire Wire Line
 	5100 3550 5500 3550
 $Comp
-L power:GND #PWR0101
+L Fuente-rescue:GND-power #PWR0101
 U 1 1 5DD8E4D5
 P 1200 5150
 F 0 "#PWR0101" H 1200 4900 50  0001 C CNN
@@ -1676,7 +1674,7 @@ Wire Wire Line
 Wire Wire Line
 	1200 4650 1500 4650
 $Comp
-L power:GND #PWR0102
+L Fuente-rescue:GND-power #PWR0102
 U 1 1 5DE5514A
 P 1400 5150
 F 0 "#PWR0102" H 1400 4900 50  0001 C CNN
@@ -1687,7 +1685,7 @@ F 3 "" H 1400 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0103
+L Fuente-rescue:GND-power #PWR0103
 U 1 1 5DE55E1A
 P 2400 5150
 F 0 "#PWR0103" H 2400 4900 50  0001 C CNN
@@ -1760,7 +1758,7 @@ VS1
 Text GLabel 5700 2050 0    50   Input ~ 0
 VS2
 $Comp
-L Device:R_Small_US R24
+L Fuente-rescue:R_Small_US-Device R24
 U 1 1 5D7530F1
 P 2300 6150
 F 0 "R24" V 2200 6100 50  0000 L CNN
@@ -1771,7 +1769,7 @@ F 3 "~" H 2300 6150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D_Small_ALT D9
+L Fuente-rescue:D_Small_ALT-Device D9
 U 1 1 5D7E5847
 P 1900 6900
 F 0 "D9" V 1900 6950 50  0000 L CNN
@@ -1782,7 +1780,7 @@ F 3 "~" V 1900 6900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R_Small_US R25
+L Fuente-rescue:R_Small_US-Device R25
 U 1 1 5D7E584D
 P 2300 6900
 F 0 "R25" V 2200 6850 50  0000 L CNN
@@ -1793,7 +1791,7 @@ F 3 "~" H 2300 6900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C17
+L Fuente-rescue:C_Small-Device C17
 U 1 1 5D7E5853
 P 2100 7200
 F 0 "C17" H 1900 7200 50  0000 L CNN
@@ -1804,7 +1802,7 @@ F 3 "~" H 2100 7200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Transformer_1P_SS T1
+L Fuente-rescue:Transformer_1P_SS-Device T1
 U 1 1 5DBE0A86
 P 3200 6900
 F 0 "T1" H 3200 7281 50  0000 C CNN
@@ -1823,7 +1821,7 @@ Wire Wire Line
 Wire Wire Line
 	2700 7500 2700 7450
 $Comp
-L Device:C_Small C16
+L Fuente-rescue:C_Small-Device C16
 U 1 1 5D7595B7
 P 2100 6450
 F 0 "C16" H 1900 6450 50  0000 L CNN
@@ -1859,7 +1857,7 @@ Connection ~ 1450 6750
 Wire Wire Line
 	1450 6750 1450 6700
 $Comp
-L Device:D_Small_ALT D8
+L Fuente-rescue:D_Small_ALT-Device D8
 U 1 1 5D74CD47
 P 1900 6150
 F 0 "D8" V 1900 6200 50  0000 L CNN
@@ -1916,4 +1914,10 @@ Wire Wire Line
 Wire Wire Line
 	4850 5050 4850 4950
 Connection ~ 5100 4850
+Wire Wire Line
+	5500 3450 5400 3450
+Wire Wire Line
+	5400 3450 5400 3400
+Wire Wire Line
+	5400 3400 5100 3400
 $EndSCHEMATC
