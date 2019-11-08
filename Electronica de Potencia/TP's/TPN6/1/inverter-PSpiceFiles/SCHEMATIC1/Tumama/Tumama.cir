@@ -1,0 +1,20 @@
+** Profile: "SCHEMATIC1-Tumama"  [ C:\Users\Pablo\Desktop\Pablo\Facu\Quinto año\Electronica de Potencia\TP6\1\inverter-pspicefiles\schematic1\tumama.sim ] 
+
+** Creating circuit file "Tumama.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Pablo\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 100ms 0 
+.STEP PARAM A LIST 0.25 0.5 0.75 1 1.25 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

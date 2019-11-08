@@ -1,0 +1,25 @@
+** Profile: "SCHEMATIC1-inverter"  [ C:\Users\Pablo\Desktop\Pablo\Facu\Quinto año\Electronica de Potencia\TP6\1\inverter-pspicefiles\schematic1\inverter.sim ] 
+
+** Creating circuit file "inverter.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Pablo\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN 1m 100ms 0 
+.FOUR 50 20 V([VA],[VN]) 
+.OPTIONS ADVCONV
+.PROBE64 N([VA])
+.PROBE64 N([VN])
+.PROBE64 N([VB])
+.PROBE64 N([VN])
+.PROBE64 N([VC])
+.PROBE64 N([VN])
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

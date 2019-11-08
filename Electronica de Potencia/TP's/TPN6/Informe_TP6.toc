@@ -1,0 +1,20 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{1}{section.1}% 
+\contentsline {section}{\numberline {2}Enunciado}{1}{section.2}% 
+\contentsline {section}{\numberline {3}Marco Te\IeC {\'o}rico}{2}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}Generalidades}{2}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}Par\IeC {\'a}metros de Rendimiento}{2}{subsection.3.2}% 
+\contentsline {subsubsection}{\numberline {3.2.1}Factor arm\IeC {\'o}nico de la en\IeC {\'e}sima componente $HF_n$}{3}{subsubsection.3.2.1}% 
+\contentsline {subsubsection}{\numberline {3.2.2}Distorsi\IeC {\'o}n arm\IeC {\'o}nica total $THD$}{3}{subsubsection.3.2.2}% 
+\contentsline {subsubsection}{\numberline {3.2.3}Factor de distorsi\IeC {\'o}n $DF$}{3}{subsubsection.3.2.3}% 
+\contentsline {subsubsection}{\numberline {3.2.4}Arm\IeC {\'o}nica de menor orden $LOH$}{3}{subsubsection.3.2.4}% 
+\contentsline {subsection}{\numberline {3.3}Inversor Trif\IeC {\'a}sico}{3}{subsection.3.3}% 
+\contentsline {subsection}{\numberline {3.4}Modulaci\IeC {\'o}n senoidal del ancho de pulso SPWM}{4}{subsection.3.4}% 
+\contentsline {section}{\numberline {4}Dise\IeC {\~n}o del Inversor}{5}{section.4}% 
+\contentsline {section}{\numberline {5}Simulaci\IeC {\'o}n}{6}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Se\IeC {\~n}ales de Control}{6}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}Tensi\IeC {\'o}n eficaz de l\IeC {\'\i }nea y de fase, Corriente de fase}{6}{subsection.5.2}% 
+\contentsline {subsection}{\numberline {5.3}Simulaci\IeC {\'o}n 1}{8}{subsection.5.3}% 
+\contentsline {subsection}{\numberline {5.4}Simulaci\IeC {\'o}n 2}{9}{subsection.5.4}% 
+\contentsline {subsection}{\numberline {5.5}Simulaci\IeC {\'o}n 3}{10}{subsection.5.5}% 
+\contentsline {section}{\numberline {6}Conclusiones}{11}{section.6}% 

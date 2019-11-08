@@ -1,0 +1,210 @@
+
+**** 10/25/18 21:15:06 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Espectro"  [ C:\Users\Pablo\Desktop\Pablo\Facu\Quinto año\Electronica de Potencia\TP6\1\inverter-pspicefiles
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Espectro.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Pablo\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 100ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source INVERSOR
+E_ABM1         N00059 0 VALUE { -A*sin(2*3.1416*fm*time)    }
+E_E1         VG1 0 TABLE { V(N00059, N00604) } 
++ ( (-1,-1) (-0.005,-1) (0,0) (0.005,1) (1,1) )
+V_V1         N00604 0  
++PULSE 1V -1V 238.096us 476.2us 476.2us 0.00000000001ns {1/fs}
+G_ABMII1         0 VG4 VALUE { 1 - V(VG1)    }
+R_R1         0 VG4  0.5  
+E_ABM2         N29631 0 VALUE { -A*sin(2*3.1416*fm*time+(2*3.1416/3))    }
+E_E2         VG3 0 TABLE { V(N29631, N00604) } 
++ ( (-1,-1) (-0.005,-1) (0,0) (0.005,1) (1,1) )
+G_ABMII2         0 VG6 VALUE { 1 - V(VG3)    }
+R_R2         0 VG6  0.5  
+E_E3         VG5 0 TABLE { V(N30075, N00604) } 
++ ( (-1,-1) (-0.005,-1) (0,0) (0.005,1) (1,1) )
+E_ABM3         N30075 0 VALUE { -A*sin(2*3.1416*fm*time-(2*3.1416/3))    }
+R_R3         0 VG2  0.5  
+G_ABMII3         0 VG2 VALUE { 1 - V(VG5)    }
+X_S1    VG1 0 N33647 VA SCHEMATIC1_S1 
+X_S2    VG4 0 VA 0 SCHEMATIC1_S2 
+X_S3    VG3 0 N33647 VB SCHEMATIC1_S3 
+X_S4    VG6 0 VB 0 SCHEMATIC1_S4 
+X_S5    VG5 0 N33647 VC SCHEMATIC1_S5 
+X_S6    VG2 0 VC 0 SCHEMATIC1_S6 
+R_Ra         VA N33637  10  
+R_Rb         VB N33631  10  
+R_Rc         VC N33625  10  
+V_V2         N33647 0 550
+D_D1         VA N33647 Dbreak 
+D_D2         VB N33647 Dbreak 
+D_D3         VC N33647 Dbreak 
+D_D4         0 VA Dbreak 
+D_D5         0 VB Dbreak 
+D_D6         0 VC Dbreak 
+L_Lb         N33631 VN  10mH  
+L_La         N33637 VN  10mH  
+L_Lc         N33625 VN  10mH  
+.PARAM  fm=200 a=1 fs=400
+
+.subckt SCHEMATIC1_S1 1 2 3 4  
+S_S1         3 4 1 2 _S1
+RS_S1         1 2 1G
+.MODEL         _S1 VSWITCH Roff=1e6 Ron=1.0 Voff=0.0V Von=1.0V
+.ends SCHEMATIC1_S1
+
+.subckt SCHEMATIC1_S2 1 2 3 4  
+S_S2         3 4 1 2 _S2
+RS_S2         1 2 1G
+.MODEL         _S2 VSWITCH Roff=1e6 Ron=1.0 Voff=0.0V Von=1.0V
+.ends SCHEMATIC1_S2
+
+.subckt SCHEMATIC1_S3 1 2 3 4  
+S_S3         3 4 1 2 _S3
+RS_S3         1 2 1G
+.MODEL         _S3 VSWITCH Roff=1e6 Ron=1.0 Voff=0.0V Von=1.0V
+.ends SCHEMATIC1_S3
+
+.subckt SCHEMATIC1_S4 1 2 3 4  
+S_S4         3 4 1 2 _S4
+RS_S4         1 2 1G
+.MODEL         _S4 VSWITCH Roff=1e6 Ron=1.0 Voff=0.0V Von=1.0V
+.ends SCHEMATIC1_S4
+
+.subckt SCHEMATIC1_S5 1 2 3 4  
+S_S5         3 4 1 2 _S5
+RS_S5         1 2 1G
+.MODEL         _S5 VSWITCH Roff=1e6 Ron=1.0 Voff=0.0V Von=1.0V
+.ends SCHEMATIC1_S5
+
+.subckt SCHEMATIC1_S6 1 2 3 4  
+S_S6         3 4 1 2 _S6
+RS_S6         1 2 1G
+.MODEL         _S6 VSWITCH Roff=1e6 Ron=1.0 Voff=0.0V Von=1.0V
+.ends SCHEMATIC1_S6
+
+**** RESUMING Espectro.cir ****
+.END
+
+**** 10/25/18 21:15:06 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Espectro"  [ C:\Users\Pablo\Desktop\Pablo\Facu\Quinto año\Electronica de Potencia\TP6\1\inverter-pspicefiles
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          
+          IS   10.000000E-15 
+          RS     .1          
+         CJO  100.000000E-15 
+
+
+**** 10/25/18 21:15:06 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Espectro"  [ C:\Users\Pablo\Desktop\Pablo\Facu\Quinto año\Electronica de Potencia\TP6\1\inverter-pspicefiles
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_S1._S1        X_S2._S2        X_S3._S3        X_S4._S4        
+         RON    1               1               1               1            
+        ROFF    1.000000E+06    1.000000E+06    1.000000E+06    1.000000E+06 
+         VON    1               1               1               1            
+        VOFF    0               0               0               0            
+
+
+               X_S5._S5        X_S6._S6        
+         RON    1               1            
+        ROFF    1.000000E+06    1.000000E+06 
+         VON    1               1            
+        VOFF    0               0            
+
+
+**** 10/25/18 21:15:06 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Espectro"  [ C:\Users\Pablo\Desktop\Pablo\Facu\Quinto año\Electronica de Potencia\TP6\1\inverter-pspicefiles
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VA) 550.0E-06  (   VB) 550.0E-06  (   VC) 550.0E-06  (   VN) 550.0E-06      
+
+(  VG1)   -1.0000  (  VG2)    1.0000  (  VG3)   -1.0000  (  VG4)    1.0000      
+
+(  VG5)   -1.0000  (  VG6)    1.0000  (N00059)    0.0000 (N00604)    1.0000     
+
+(N29631)    -.8660 (N30075)     .8660 (N33625) 550.0E-06 (N33631) 550.0E-06     
+
+(N33637) 550.0E-06 (N33647)  550.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2        -1.650E-03
+
+    TOTAL POWER DISSIPATION   9.08E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/25/18 21:15:06 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Espectro"  [ C:\Users\Pablo\Desktop\Pablo\Facu\Quinto año\Electronica de Potencia\TP6\1\inverter-pspicefiles
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .92
+

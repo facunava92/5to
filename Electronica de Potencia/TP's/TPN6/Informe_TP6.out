@@ -1,0 +1,19 @@
+\BOOKMARK [1][-]{section.1}{Introducci\363n}{}% 1
+\BOOKMARK [1][-]{section.2}{Enunciado}{}% 2
+\BOOKMARK [1][-]{section.3}{Marco Te\363rico}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Generalidades}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Par\341metros de Rendimiento}{section.3}% 5
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Factor arm\363nico de la en\351sima componente HFn}{subsection.3.2}% 6
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Distorsi\363n arm\363nica total THD}{subsection.3.2}% 7
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Factor de distorsi\363n DF}{subsection.3.2}% 8
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Arm\363nica de menor orden LOH}{subsection.3.2}% 9
+\BOOKMARK [2][-]{subsection.3.3}{Inversor Trif\341sico}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.4}{Modulaci\363n senoidal del ancho de pulso SPWM}{section.3}% 11
+\BOOKMARK [1][-]{section.4}{Dise\361o del Inversor}{}% 12
+\BOOKMARK [1][-]{section.5}{Simulaci\363n}{}% 13
+\BOOKMARK [2][-]{subsection.5.1}{Se\361ales de Control}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.2}{Tensi\363n eficaz de l\355nea y de fase, Corriente de fase}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.3}{Simulaci\363n 1}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.4}{Simulaci\363n 2}{section.5}% 17
+\BOOKMARK [2][-]{subsection.5.5}{Simulaci\363n 3}{section.5}% 18
+\BOOKMARK [1][-]{section.6}{Conclusiones}{}% 19

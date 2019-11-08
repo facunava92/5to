@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.9.8)  3 NOV 2019 18:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.9.8)  6 NOV 2019 11:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -708,29 +708,28 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 File: Imagenes/esquema.png Graphic file (type png)
 <use Imagenes/esquema.png>
 Package pdftex.def Info: Imagenes/esquema.png  used on input line 178.
-(pdftex.def)             Requested size: 341.43306pt x 171.9573pt.
+(pdftex.def)             Requested size: 512.14963pt x 257.93835pt.
  [3]
 <Imagenes/halfbridge.png, id=330, 622.57594pt x 269.50688pt>
 File: Imagenes/halfbridge.png Graphic file (type png)
 <use Imagenes/halfbridge.png>
 Package pdftex.def Info: Imagenes/halfbridge.png  used on input line 190.
 (pdftex.def)             Requested size: 341.43306pt x 147.80566pt.
- [4pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.198 \[ D \leq 0,5 \]
-                      pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.198 \[ D \leq 0,5 \]
-                       <./Imagenes/esquema.png> <./Imagenes/halfbridge.png>]
-<Imagenes/trafo.png, id=337, 309.40594pt x 167.12437pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Imagenes/trafo.png, id=331, 309.40594pt x 167.12437pt>
 File: Imagenes/trafo.png Graphic file (type png)
 <use Imagenes/trafo.png>
 Package pdftex.def Info: Imagenes/trafo.png  used on input line 205.
 (pdftex.def)             Requested size: 284.52756pt x 153.70016pt.
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.208 \end{figure}
+                   <./Imagenes/esquema.png>]
 <Imagenes/funcionamiento.png, id=340, 870.25125pt x 323.2075pt>
 File: Imagenes/funcionamiento.png Graphic file (type png)
 <use Imagenes/funcionamiento.png>
@@ -740,12 +739,17 @@ Package pdftex.def Info: Imagenes/funcionamiento.png  used on input line 222.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.235 R
-       especto al circuito de salida, como la fuente es tipo forward es deri... <./Imagenes/trafo.png>]
+l.230 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.230 
+       <./Imagenes/halfbridge.png> <./Imagenes/trafo.png>]
 <Imagenes/buck.png, id=350, 489.32813pt x 240.14719pt>
 File: Imagenes/buck.png Graphic file (type png)
 <use Imagenes/buck.png>
@@ -755,12 +759,12 @@ Package pdftex.def Info: Imagenes/buck.png  used on input line 238.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.255 
+l.250 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.255 
+l.250 
        <./Imagenes/funcionamiento.png> <./Imagenes/buck.png>] [7]
 <Imagenes/emi2.png, id=361, 874.26625pt x 393.47pt>
 File: Imagenes/emi2.png Graphic file (type png)
@@ -1022,9 +1026,9 @@ Here is how much of TeX's memory you used:
  24223 multiletter control sequences out of 15000+600000
  11587 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,13n,56p,1160b,574s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,13n,56p,1160b,554s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on TP5.pdf (27 pages, 2390345 bytes).
+Output written on TP5.pdf (27 pages, 2390445 bytes).
 PDF statistics:
  646 PDF objects out of 1000 (max. 8388607)
  564 compressed objects within 6 object streams

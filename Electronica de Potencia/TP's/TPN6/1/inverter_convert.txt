@@ -1,0 +1,9 @@
+The conversion of the project was successful.
+
+The new directory structure is as follows:
+
+C:/Users/Pablo/Desktop/Pablo/Facu/Quinto año/Electronica de Potencia/TP6/1
+    inverter.opj
+    inversor.dsn
+C:/Users/Pablo/Desktop/Pablo/Facu/Quinto año/Electronica de Potencia/TP6/1/inverter-PSpiceFiles
+C:/Users/Pablo/Desktop/Pablo/Facu/Quinto año/Electronica de Potencia/TP6/1/inverter-PSpiceFiles/SCHEMATIC1

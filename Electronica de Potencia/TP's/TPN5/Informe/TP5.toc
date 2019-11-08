@@ -9,7 +9,7 @@
 \contentsline {subsection}{\numberline {3.3}Fuente de alimentaci\IeC {\'o}n off-line forward bidireccional de medio puente}{3}{subsection.3.3}% 
 \contentsline {subsubsection}{\numberline {3.3.1}Fuente off-line}{4}{subsubsection.3.3.1}% 
 \contentsline {subsubsection}{\numberline {3.3.2}Fuente Half-Bridge}{4}{subsubsection.3.3.2}% 
-\contentsline {subsubsection}{\numberline {3.3.3}Transformador de potencia}{5}{subsubsection.3.3.3}% 
+\contentsline {subsubsection}{\numberline {3.3.3}Transformador de potencia}{4}{subsubsection.3.3.3}% 
 \contentsline {subsubsection}{\numberline {3.3.4}Funcionamiento}{5}{subsubsection.3.3.4}% 
 \contentsline {subsubsection}{\numberline {3.3.5}Modo de conducci\IeC {\'o}n discontinua DCM}{7}{subsubsection.3.3.5}% 
 \contentsline {section}{\numberline {4}Dise\IeC {\~n}o de la fuente conmutada}{7}{section.4}% 
