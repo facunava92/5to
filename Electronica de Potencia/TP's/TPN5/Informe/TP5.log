@@ -1,14 +1,17 @@
+<<<<<<< HEAD
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.17)  8 NOV 2019 16:40
+=======
 This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.9.8)  6 NOV 2019 11:08
+>>>>>>> 22d11425847b23a064871391b78c65941959e36d
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **TP5.tex
 (./TP5.tex
 LaTeX2e <2018-12-01>
-(/usr/share/texmf-dist/tex/latex/base/article.cls
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
-(/usr/share/texmf-dist/tex/latex/base/size11.clo
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -22,32 +25,44 @@ File: size11.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
- (/usr/share/texmf-dist/tex/latex/ucs/utf8x.def
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/ucs/utf8x.def
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
-)) (/usr/share/texmf-dist/tex/latex/ucs/ucs.sty
+))
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/ucs/ucs.sty
 Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
- (/usr/share/texmf-dist/tex/latex/ucs/data/uni-global.def
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/ucs/data/uni-global.d
+ef
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
 \uc@secondtry=\count88
 \uc@combtoks=\toks16
 \uc@combtoksb=\toks17
 \uc@temptokena=\toks18
-) (/usr/share/texmf-dist/tex/latex/natbib/natbib.sty
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip43
 \bibsep=\skip44
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count89
-) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
- (/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/oberdiek/hobsub-hyp
+erref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
- (/usr/share/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/oberdiek/hobsub-gen
+eric.sty
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
@@ -61,13 +76,15 @@ Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
 Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
 Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
 )
@@ -80,24 +97,32 @@ Package atveryend Info: \enddocument detected (standard20110627).
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
-) (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks19
-) (/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-) (/usr/share/texmf-dist/tex/latex/oberdiek/auxhook.sty
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
-) (/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.st
+y
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen103
 \Hy@linkcounter=\count90
 \Hy@pagecounter=\count91
- (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count92
- (/usr/share/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/latexconfig/hyperref.
+cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4519.
@@ -108,7 +133,7 @@ Package hyperref Info: Backreferencing OFF on input line 4539.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4772.
 \c@Hy@tempcnt=\count93
- (/usr/share/texmf-dist/tex/latex/url/url.sty
+ (d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -131,26 +156,36 @@ LaTeX Info: Redefining \pageref on input line 6454.
 \c@Hfootnote=\count97
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
 \Fld@listcount=\count98
 \c@bookmark@seq@number=\count99
- (/usr/share/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/oberdiek/rerunfileche
+ck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
 )
 \Hy@SectionHShift=\skip45
-) (/usr/share/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2019/04/03 3.29 The Babel package
- (/usr/share/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2019/04/03 3.29 Babel switching mechanism
-) (/usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2019/06/03 3.32 The Babel package
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2019/06/03 3.32 Babel switching mechanism
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/babel-spanish/spani
+sh.ldf
 Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
- (/usr/share/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2019/04/03 3.29 Babel common definitions
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2019/06/03 3.32 Babel common definitions
 \babel@savecnt=\count100
 \U@D=\dimen107
- (/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@dirlevel=\count101
 )
 \es@quottoks=\toks20
@@ -159,7 +194,8 @@ Package babel Info: Making " an active character on input line 561.
 Package babel Info: Making . an active character on input line 662.
 Package babel Info: Making < an active character on input line 707.
 Package babel Info: Making > an active character on input line 707.
-)) (/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty
+))
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/02/04 v3.8 Customized lists
 \labelindent=\skip46
 \enit@outerparindent=\dimen108
@@ -167,46 +203,55 @@ Package: enumitem 2019/02/04 v3.8 Customized lists
 \enit@inbox=\box27
 \enit@count@id=\count103
 \enitdp@description=\count104
-) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
- (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics
+.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
- (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.d
+ef
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen109
 \Gin@req@width=\dimen110
-) (/usr/share/texmf-dist/tex/latex/float/float.sty
+) (d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count105
 \float@exts=\toks22
 \float@box=\box28
 \@float@everytoks=\toks23
 \@floatcapt=\box29
-) (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count106
-) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip47
-
 For additional information on amsmath, use the `?' option.
-(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
- (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks24
 \ex@=\dimen111
-)) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen112
-) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count107
@@ -246,7 +291,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \mathdisplay@stack=\toks28
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
-) (/usr/share/texmf-dist/tex/latex/tools/array.sty
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/tools/array.sty
 Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \col@sep=\dimen120
 \ar@mcellbox=\box32
@@ -255,10 +301,13 @@ Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \extratabsurround=\skip50
 \backup@length=\skip51
 \ar@cellbox=\box33
-) (/usr/share/texmf-dist/tex/latex/was/gensymb.sty
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
-) (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
 \f@nch@headwidth=\skip52
 \f@nch@O@elh=\skip53
 \f@nch@O@erh=\skip54
@@ -268,13 +317,14 @@ Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
 \f@nch@O@erf=\skip58
 \f@nch@O@olf=\skip59
 \f@nch@O@orf=\skip60
-) (/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip61
 \multirow@cntb=\count119
 \multirow@dima=\skip62
 \bigstrutjot=\dimen122
-) (/usr/share/texmf-dist/tex/latex/tools/multicol.sty
+) (d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
 \c@tracingmulticols=\count120
 \mult@box=\box34
@@ -322,13 +372,16 @@ Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
 \mult@nat@firstbox=\box58
 \colbreak@box=\box59
 \mc@col@check@num=\count128
-) (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
- (/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cf
+g
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
- (/usr/share/texmf-dist/tex/latex/colortbl/colortbl.sty
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
 \everycr=\toks30
 \minrowclearance=\skip65
@@ -343,24 +396,51 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-) (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/pgf/frontendlayer/tik
+z.sty
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/pgf/basiclayer/pgf.st
+y
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/pgf/utilities/pgfrcs.
+sty
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfut
+il-common.tex
 \pgfutil@everybye=\toks31
 \pgfutil@tempdima=\dimen132
 \pgfutil@tempdimb=\dimen133
- (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfut
+il-common-lists.tex))
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfut
+il-latex.def
 \pgfutil@abb=\box60
- (/usr/share/texmf-dist/tex/latex/ms/everyshi.sty
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-)) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texmf-dist/tex/generic/pgf/pgf.revision.tex)
-Package: pgfrcs 2019/02/02 v3.1.1 (3.1.1)
 ))
-Package: pgf 2019/02/02 v3.1.1 (3.1.1)
- (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2019/02/02 v3.1.1 (3.1.1)
- (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfrc
+s.code.tex
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/pgf.revision.te
+x)
+Package: pgfrcs 2019/05/09 v3.1.3 (3.1.3)
+))
+Package: pgf 2019/05/09 v3.1.3 (3.1.3)
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/pgf/basiclayer/pgfcor
+e.sty
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/pgf/systemlayer/pgfsy
+s.sty
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgf
+sys.code.tex
+Package: pgfsys 2019/05/09 v3.1.3 (3.1.3)
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfke
+ys.code.tex
 \pgfkeys@pathtoks=\toks32
 \pgfkeys@temptoks=\toks33
- (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfke
+ysfiltered.code.tex
 \pgfkeys@tmptoks=\toks34
 ))
 \pgf@x=\dimen134
@@ -371,6 +451,8 @@ Package: pgfsys 2019/02/02 v3.1.1 (3.1.1)
 \pgf@yb=\dimen139
 \pgf@xc=\dimen140
 \pgf@yc=\dimen141
+\pgf@xd=\dimen142
+\pgf@yd=\dimen143
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
 \c@pgf@counta=\count130
@@ -381,167 +463,280 @@ Package: pgfsys 2019/02/02 v3.1.1 (3.1.1)
 \t@pgf@tokb=\toks36
 \t@pgf@tokc=\toks37
 \pgf@sys@id@count=\count134
- (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
-File: pgf.cfg 2019/02/02 v3.1.1 (3.1.1)
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgf
+.cfg
+File: pgf.cfg 2019/05/09 v3.1.3 (3.1.3)
 )
 Driver file for pgf: pgfsys-pdftex.def
- (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
-File: pgfsys-pdftex.def 2019/02/02 v3.1.1 (3.1.1)
- (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
-File: pgfsys-common-pdf.def 2019/02/02 v3.1.1 (3.1.1)
-))) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgf
+sys-pdftex.def
+File: pgfsys-pdftex.def 2019/05/09 v3.1.3 (3.1.3)
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgf
+sys-common-pdf.def
+File: pgfsys-common-pdf.def 2019/05/09 v3.1.3 (3.1.3)
+)))
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgf
+syssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2019/05/09 v3.1.3 (3.1.3)
 \pgfsyssoftpath@smallbuffer@items=\count135
 \pgfsyssoftpath@bigbuffer@items=\count136
-) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
-File: pgfsysprotocol.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2019/02/02 v3.1.1 (3.1.1)
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgf
+sysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2019/05/09 v3.1.3 (3.1.3)
+))
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfc
+ore.code.tex
+Package: pgfcore 2019/05/09 v3.1.3 (3.1.3)
 
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen142
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmath.co
+de.tex
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathcal
+c.code.tex
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathuti
+l.code.tex)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathpar
+ser.code.tex
+\pgfmath@dimen=\dimen144
 \pgfmath@count=\count137
 \pgfmath@box=\box61
 \pgfmath@toks=\toks38
 \pgfmath@stack@operand=\toks39
 \pgfmath@stack@operation=\toks40
-) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfun
+ctions.code.tex
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfun
+ctions.basic.code.tex)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfun
+ctions.trigonometric.code.tex)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfun
+ctions.random.code.tex)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfun
+ctions.comparison.code.tex)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfun
+ctions.base.code.tex)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfun
+ctions.round.code.tex)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfun
+ctions.misc.code.tex)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfun
+ctions.integerarithmetics.code.tex)))
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathflo
+at.code.tex
 \c@pgfmathroundto@lastzeros=\count138
-)) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
-File: pgfcorepoints.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@picminx=\dimen143
-\pgf@picmaxx=\dimen144
-\pgf@picminy=\dimen145
-\pgf@picmaxy=\dimen146
-\pgf@pathminx=\dimen147
-\pgf@pathmaxx=\dimen148
-\pgf@pathminy=\dimen149
-\pgf@pathmaxy=\dimen150
-\pgf@xx=\dimen151
-\pgf@xy=\dimen152
-\pgf@yx=\dimen153
-\pgf@yy=\dimen154
-\pgf@zx=\dimen155
-\pgf@zy=\dimen156
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@path@lastx=\dimen157
-\pgf@path@lasty=\dimen158
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
-File: pgfcorepathusage.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@shorten@end@additional=\dimen159
-\pgf@shorten@start@additional=\dimen160
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
-File: pgfcorescopes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+))
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfint.cod
+e.tex)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfc
+orepoints.code.tex
+File: pgfcorepoints.code.tex 2019/05/09 v3.1.3 (3.1.3)
+\pgf@picminx=\dimen145
+\pgf@picmaxx=\dimen146
+\pgf@picminy=\dimen147
+\pgf@picmaxy=\dimen148
+\pgf@pathminx=\dimen149
+\pgf@pathmaxx=\dimen150
+\pgf@pathminy=\dimen151
+\pgf@pathmaxy=\dimen152
+\pgf@xx=\dimen153
+\pgf@xy=\dimen154
+\pgf@yx=\dimen155
+\pgf@yy=\dimen156
+\pgf@zx=\dimen157
+\pgf@zy=\dimen158
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfc
+orepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2019/05/09 v3.1.3 (3.1.3)
+\pgf@path@lastx=\dimen159
+\pgf@path@lasty=\dimen160
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfc
+orepathusage.code.tex
+File: pgfcorepathusage.code.tex 2019/05/09 v3.1.3 (3.1.3)
+\pgf@shorten@end@additional=\dimen161
+\pgf@shorten@start@additional=\dimen162
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfc
+orescopes.code.tex
+File: pgfcorescopes.code.tex 2019/05/09 v3.1.3 (3.1.3)
 \pgfpic=\box62
 \pgf@hbox=\box63
 \pgf@layerbox@main=\box64
 \pgf@picture@serial@count=\count139
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgflinewidth=\dimen161
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
-File: pgfcoretransformations.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@pt@x=\dimen162
-\pgf@pt@y=\dimen163
-\pgf@pt@temp=\dimen164
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
-File: pgfcorequick.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
-File: pgfcoreobjects.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
-File: pgfcorepathprocessing.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
-File: pgfcorearrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfarrowsep=\dimen165
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@max=\dimen166
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfc
+oregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2019/05/09 v3.1.3 (3.1.3)
+\pgflinewidth=\dimen163
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfc
+oretransformations.code.tex
+File: pgfcoretransformations.code.tex 2019/05/09 v3.1.3 (3.1.3)
+\pgf@pt@x=\dimen164
+\pgf@pt@y=\dimen165
+\pgf@pt@temp=\dimen166
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfc
+orequick.code.tex
+File: pgfcorequick.code.tex 2019/05/09 v3.1.3 (3.1.3)
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfc
+oreobjects.code.tex
+File: pgfcoreobjects.code.tex 2019/05/09 v3.1.3 (3.1.3)
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfc
+orepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2019/05/09 v3.1.3 (3.1.3)
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfc
+orearrows.code.tex
+File: pgfcorearrows.code.tex 2019/05/09 v3.1.3 (3.1.3)
+\pgfarrowsep=\dimen167
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfc
+oreshade.code.tex
+File: pgfcoreshade.code.tex 2019/05/09 v3.1.3 (3.1.3)
+\pgf@max=\dimen168
 \pgf@sys@shading@range@num=\count140
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@shadingcount=\count141
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfc
+oreimage.code.tex
+File: pgfcoreimage.code.tex 2019/05/09 v3.1.3 (3.1.3)
 
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
-File: pgfcoreexternal.code.tex 2019/02/02 v3.1.1 (3.1.1)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfc
+oreexternal.code.tex
+File: pgfcoreexternal.code.tex 2019/05/09 v3.1.3 (3.1.3)
 \pgfexternal@startupbox=\box65
-)) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
-File: pgfcorelayers.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
-File: pgfcoretransparency.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
-File: pgfcorepatterns.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
-File: pgfcorerdf.code.tex 2019/02/02 v3.1.1 (3.1.1)
-))) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+))
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfc
+orelayers.code.tex
+File: pgfcorelayers.code.tex 2019/05/09 v3.1.3 (3.1.3)
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfc
+oretransparency.code.tex
+File: pgfcoretransparency.code.tex 2019/05/09 v3.1.3 (3.1.3)
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfc
+orepatterns.code.tex
+File: pgfcorepatterns.code.tex 2019/05/09 v3.1.3 (3.1.3)
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfc
+orerdf.code.tex
+File: pgfcorerdf.code.tex 2019/05/09 v3.1.3 (3.1.3)
+)))
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/modules/pgfmodu
+leshapes.code.tex
+File: pgfmoduleshapes.code.tex 2019/05/09 v3.1.3 (3.1.3)
 \pgfnodeparttextbox=\box66
-) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2019/02/02 v3.1.1 (3.1.1)
-) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
-Package: pgfcomp-version-0-65 2019/02/02 v3.1.1 (3.1.1)
-\pgf@nodesepstart=\dimen167
-\pgf@nodesepend=\dimen168
-) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
-Package: pgfcomp-version-1-18 2019/02/02 v3.1.1 (3.1.1)
-)) (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2019/02/02 v3.1.1 (3.1.1)
- (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen169
-\pgffor@skip=\dimen170
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/modules/pgfmodu
+leplot.code.tex
+File: pgfmoduleplot.code.tex 2019/05/09 v3.1.3 (3.1.3)
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/pgf/compatibility/pgf
+comp-version-0-65.sty
+Package: pgfcomp-version-0-65 2019/05/09 v3.1.3 (3.1.3)
+\pgf@nodesepstart=\dimen169
+\pgf@nodesepend=\dimen170
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/pgf/compatibility/pgf
+comp-version-1-18.sty
+Package: pgfcomp-version-1-18 2019/05/09 v3.1.3 (3.1.3)
+))
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/pgf/utilities/pgffor.
+sty
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/pgf/utilities/pgfkeys
+.sty
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfke
+ys.code.tex))
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmath.co
+de.tex))
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgffo
+r.code.tex
+Package: pgffor 2019/05/09 v3.1.3 (3.1.3)
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmath.co
+de.tex)
+\pgffor@iter=\dimen171
+\pgffor@skip=\dimen172
 \pgffor@stack=\toks41
 \pgffor@toks=\toks42
-)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2019/02/02 v3.1.1 (3.1.1)
- (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
-File: pgflibraryplothandlers.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgf@plot@mark@count=\count141
-\pgfplotmarksize=\dimen171
+))
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/t
+ikz/tikz.code.tex
+Package: tikz 2019/05/09 v3.1.3 (3.1.3)
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/libraries/pgfli
+braryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2019/05/09 v3.1.3 (3.1.3)
+\pgf@plot@mark@count=\count142
+\pgfplotmarksize=\dimen173
 )
-\tikz@lastx=\dimen172
-\tikz@lasty=\dimen173
-\tikz@lastxsaved=\dimen174
-\tikz@lastysaved=\dimen175
-\tikzleveldistance=\dimen176
-\tikzsiblingdistance=\dimen177
+\tikz@lastx=\dimen174
+\tikz@lasty=\dimen175
+\tikz@lastxsaved=\dimen176
+\tikz@lastysaved=\dimen177
+\tikzleveldistance=\dimen178
+\tikzsiblingdistance=\dimen179
 \tikz@figbox=\box67
 \tikz@figbox@bg=\box68
 \tikz@tempbox=\box69
 \tikz@tempbox@bg=\box70
-\tikztreelevel=\count142
-\tikznumberofchildren=\count143
-\tikznumberofcurrentchild=\count144
-\tikz@fig@count=\count145
- (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\pgfmatrixcurrentrow=\count146
-\pgfmatrixcurrentcolumn=\count147
-\pgf@matrix@numberofcolumns=\count148
+\tikztreelevel=\count143
+\tikznumberofchildren=\count144
+\tikznumberofcurrentchild=\count145
+\tikz@fig@count=\count146
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/modules/pgfmodu
+lematrix.code.tex
+File: pgfmodulematrix.code.tex 2019/05/09 v3.1.3 (3.1.3)
+\pgfmatrixcurrentrow=\count147
+\pgfmatrixcurrentcolumn=\count148
+\pgf@matrix@numberofcolumns=\count149
 )
-\tikz@expandcount=\count149
- (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2019/02/02 v3.1.1 (3.1.1)
-))) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
-File: tikzlibraryshapes.geometric.code.tex 2019/02/02 v3.1.1 (3.1.1)
- (/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
-File: pgflibraryshapes.geometric.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
-File: tikzlibraryarrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
- (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
-File: pgflibraryarrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
-\arrowsize=\dimen178
-)) (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+\tikz@expandcount=\count150
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/t
+ikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2019/05/09 v3.1.3 (3.1.3)
+)))
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/t
+ikz/libraries/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2019/05/09 v3.1.3 (3.1.3)
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/libraries/shape
+s/pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2019/05/09 v3.1.3 (3.1.3)
+))
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/t
+ikz/libraries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2019/05/09 v3.1.3 (3.1.3)
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/pgf/libraries/pgfli
+braryarrows.code.tex
+File: pgflibraryarrows.code.tex 2019/05/09 v3.1.3 (3.1.3)
+\arrowsize=\dimen180
+))
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
-\Gm@cnth=\count150
-\Gm@cntv=\count151
-\c@Gm@tempcnt=\count152
-\Gm@bindingoffset=\dimen179
-\Gm@wd@mp=\dimen180
-\Gm@odd@mp=\dimen181
-\Gm@even@mp=\dimen182
-\Gm@layoutwidth=\dimen183
-\Gm@layoutheight=\dimen184
-\Gm@layouthoffset=\dimen185
-\Gm@layoutvoffset=\dimen186
+\Gm@cnth=\count151
+\Gm@cntv=\count152
+\c@Gm@tempcnt=\count153
+\Gm@bindingoffset=\dimen181
+\Gm@wd@mp=\dimen182
+\Gm@odd@mp=\dimen183
+\Gm@even@mp=\dimen184
+\Gm@layoutwidth=\dimen185
+\Gm@layoutheight=\dimen186
+\Gm@layouthoffset=\dimen187
+\Gm@layoutvoffset=\dimen188
 \Gm@dimlist=\toks43
 )
 
@@ -575,17 +770,20 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
- (/usr/share/texmf-dist/tex/latex/ucs/ucsencs.def
+ (d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 \AtBeginShipoutBox=\box71
 Package hyperref Info: Link coloring OFF on input line 49.
- (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
- (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlest
+ring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count153
+\c@section@level=\count154
 )
 LaTeX Info: Redefining \ref on input line 49.
 LaTeX Info: Redefining \pageref on input line 49.
@@ -596,33 +794,44 @@ LaTeX Info: Redefining \nameref on input line 49.
 
 LaTeX Info: Redefining \. on input line 49.
 LaTeX Info: Redefining \% on input line 49.
- (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.
+mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count154
-\scratchdimen=\dimen187
+\scratchcounter=\count155
+\scratchdimen=\dimen189
 \scratchbox=\box72
-\nofMPsegments=\count155
-\nofMParguments=\count156
+\nofMPsegments=\count156
+\nofMParguments=\count157
 \everyMPshowfont=\toks44
-\MPscratchCnt=\count157
-\MPscratchDim=\dimen188
-\MPnumerator=\count158
-\makeMPintoPDFobject=\count159
+\MPscratchCnt=\count158
+\MPscratchDim=\dimen190
+\MPnumerator=\count159
+\makeMPintoPDFobject=\count160
 \everyMPtoPDFconversion=\toks45
-) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+)
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-bas
+e.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
- (/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
- (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-
+sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
 LaTeX Info: Redefining \celsius on input line 49.
 Package gensymb Info: Faking symbols for \degree and \celsius on input line 49.
+
 
 
 Package gensymb Warning: Not defining \perthousand.
@@ -667,16 +876,18 @@ ABD: EveryShipout initializing macros
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<Imagenes/LOGO.jpg, id=191, 295.1025pt x 302.12875pt>
+<Imagenes/LOGO.jpg, id=195, 295.1025pt x 302.12875pt>
 File: Imagenes/LOGO.jpg Graphic file (type jpg)
 <use Imagenes/LOGO.jpg>
 Package pdftex.def Info: Imagenes/LOGO.jpg  used on input line 52.
 (pdftex.def)             Requested size: 236.0823pt x 241.70332pt.
-(/usr/share/texmf-dist/tex/latex/ucs/data/uni-0.def
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-) [1
+)
+[1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Imagenes/LOGO.jpg>] (./TP5.toc
+{d:/Program Files (x86)/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.m
+ap} <./Imagenes/LOGO.jpg>] (./TP5.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
@@ -690,40 +901,65 @@ Make it at least 13.59999pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.92 	\item
-            Tensión de salida 24 V. [1] (/usr/share/texmf-dist/tex/latex/ucs/data/uni-32.def
+            Tensión de salida 24 V. [1]
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 130.
- (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+
+
+(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 130.
- [2]
-<Imagenes/esquema.png, id=323, 621.82312pt x 313.17pt>
+
+[2]
+<Imagenes/esquema.png, id=329, 621.82312pt x 313.17pt>
 File: Imagenes/esquema.png Graphic file (type png)
 <use Imagenes/esquema.png>
 Package pdftex.def Info: Imagenes/esquema.png  used on input line 178.
 (pdftex.def)             Requested size: 512.14963pt x 257.93835pt.
  [3]
-<Imagenes/halfbridge.png, id=330, 622.57594pt x 269.50688pt>
+<Imagenes/halfbridge.png, id=336, 622.57594pt x 269.50688pt>
 File: Imagenes/halfbridge.png Graphic file (type png)
 <use Imagenes/halfbridge.png>
 Package pdftex.def Info: Imagenes/halfbridge.png  used on input line 190.
 (pdftex.def)             Requested size: 341.43306pt x 147.80566pt.
+<<<<<<< HEAD
+ [4pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.198 \[ D \leq 0,5 \]
+                      pdfTeX warning (ext4): destination with the same identifi
+er (name{figure.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.198 \[ D \leq 0,5 \]
+                       <./Imagenes/esquema.png> <./Imagenes/halfbridge.png>]
+<Imagenes/trafo.png, id=343, 309.40594pt x 167.12437pt>
+=======
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 <Imagenes/trafo.png, id=331, 309.40594pt x 167.12437pt>
+>>>>>>> 22d11425847b23a064871391b78c65941959e36d
 File: Imagenes/trafo.png Graphic file (type png)
 <use Imagenes/trafo.png>
 Package pdftex.def Info: Imagenes/trafo.png  used on input line 205.
 (pdftex.def)             Requested size: 284.52756pt x 153.70016pt.
+<<<<<<< HEAD
+<Imagenes/funcionamiento.png, id=346, 870.25125pt x 323.2075pt>
+=======
 [4pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -731,6 +967,7 @@ Package pdftex.def Info: Imagenes/trafo.png  used on input line 205.
 l.208 \end{figure}
                    <./Imagenes/esquema.png>]
 <Imagenes/funcionamiento.png, id=340, 870.25125pt x 323.2075pt>
+>>>>>>> 22d11425847b23a064871391b78c65941959e36d
 File: Imagenes/funcionamiento.png Graphic file (type png)
 <use Imagenes/funcionamiento.png>
 Package pdftex.def Info: Imagenes/funcionamiento.png  used on input line 222.
@@ -739,6 +976,17 @@ Package pdftex.def Info: Imagenes/funcionamiento.png  used on input line 222.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<<<<<<< HEAD
+[5pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.235 R
+       especto al circuito de salida, como la fuente es tipo forward es deri...
+ <./Imagenes/trafo.png>]
+<Imagenes/buck.png, id=356, 489.32813pt x 240.14719pt>
+=======
 [5pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -751,287 +999,356 @@ l.230
 l.230 
        <./Imagenes/halfbridge.png> <./Imagenes/trafo.png>]
 <Imagenes/buck.png, id=350, 489.32813pt x 240.14719pt>
+>>>>>>> 22d11425847b23a064871391b78c65941959e36d
 File: Imagenes/buck.png Graphic file (type png)
 <use Imagenes/buck.png>
 Package pdftex.def Info: Imagenes/buck.png  used on input line 238.
 (pdftex.def)             Requested size: 284.52756pt x 139.64088pt.
- [6pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+ [6pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
+ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
+<<<<<<< HEAD
+l.255 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+5}) has been already used, duplicate ignored
+=======
 l.250 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+>>>>>>> 22d11425847b23a064871391b78c65941959e36d
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.250 
        <./Imagenes/funcionamiento.png> <./Imagenes/buck.png>] [7]
-<Imagenes/emi2.png, id=361, 874.26625pt x 393.47pt>
+<Imagenes/emi2.png, id=371, 874.26625pt x 393.47pt>
 File: Imagenes/emi2.png Graphic file (type png)
 <use Imagenes/emi2.png>
-Package pdftex.def Info: Imagenes/emi2.png  used on input line 324.
+Package pdftex.def Info: Imagenes/emi2.png  used on input line 323.
 (pdftex.def)             Requested size: 349.7003pt x 157.38521pt.
- [8]
 <Imagenes/emi.png, id=373, 1131.22626pt x 499.8675pt>
 File: Imagenes/emi.png Graphic file (type png)
 <use Imagenes/emi.png>
-Package pdftex.def Info: Imagenes/emi.png  used on input line 337.
+Package pdftex.def Info: Imagenes/emi.png  used on input line 336.
 (pdftex.def)             Requested size: 409.72125pt x 181.04286pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 <Imagenes/rectificador.png, id=375, 614.295pt x 333.245pt>
 File: Imagenes/rectificador.png Graphic file (type png)
 <use Imagenes/rectificador.png>
-Package pdftex.def Info: Imagenes/rectificador.png  used on input line 351.
+Package pdftex.def Info: Imagenes/rectificador.png  used on input line 350.
 (pdftex.def)             Requested size: 409.72125pt x 222.27126pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[9pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+[8pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) 
+has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.360 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+l.353 \end{figure}
+                   <./Imagenes/emi2.png>] [9pdfTeX warning (ext4): destination 
+with the same identifier (name{figure.7}) has been already used, duplicate igno
+red
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.360 
-       <./Imagenes/emi2.png> <./Imagenes/emi.png>] [10pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+l.366 ...geq 3 \cdot I_{in_{max}} \approx 1 \;A \]
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{figure.8}) has been already used, duplicat
+e ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.386 ...= \frac{339.41 \; V}{2} = 169.705 \; V \]
-                                                   <./Imagenes/rectificador.png>]
-<Imagenes/PWM.png, id=391, 448.67625pt x 372.39125pt>
+l.366 ...geq 3 \cdot I_{in_{max}} \approx 1 \;A \]
+                                                   <./Imagenes/emi.png> <./Imag
+enes/rectificador.png>]
+<Imagenes/PWM.png, id=391, 439.6425pt x 367.3725pt>
 File: Imagenes/PWM.png Graphic file (type png)
 <use Imagenes/PWM.png>
-Package pdftex.def Info: Imagenes/PWM.png  used on input line 406.
-(pdftex.def)             Requested size: 256.07481pt x 212.54364pt.
- [11pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
+Package pdftex.def Info: Imagenes/PWM.png  used on input line 405.
+(pdftex.def)             Requested size: 256.07481pt x 213.9843pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10] [11pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.426 
-       <./Imagenes/PWM.png>]
-<Imagenes/driver.png, id=403, 658.46pt x 647.41875pt>
+l.449 
+       <./Imagenes/PWM.PNG>]
+<Imagenes/driver.png, id=413, 445.06274pt x 436.029pt>
 File: Imagenes/driver.png Graphic file (type png)
 <use Imagenes/driver.png>
-Package pdftex.def Info: Imagenes/driver.png  used on input line 460.
-(pdftex.def)             Requested size: 307.2929pt x 302.14314pt.
+Package pdftex.def Info: Imagenes/driver.png  used on input line 459.
+(pdftex.def)             Requested size: 307.2929pt x 301.07323pt.
+ [12pdfTeX warning (ext4): destination with the same identifier (name{figure.10
+}) has been already used, duplicate ignored
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[12]
-<Imagenes/vgsfqg.png, id=415, 357.58594pt x 304.13625pt>
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.471 \end{equation}
+                     <./Imagenes/driver.png>]
+<Imagenes/vgsfqg.png, id=425, 357.58594pt x 304.13625pt>
 File: Imagenes/vgsfqg.png Graphic file (type png)
 <use Imagenes/vgsfqg.png>
-Package pdftex.def Info: Imagenes/vgsfqg.png  used on input line 489.
+Package pdftex.def Info: Imagenes/vgsfqg.png  used on input line 488.
 (pdftex.def)             Requested size: 284.52756pt x 242.00992pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[13pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
+ [13pdfTeX warning (ext4): destination with the same identifier (name{figure.11
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.495 
-       <./Imagenes/driver.png>] [14pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.526 	\item $
-              A_e = 32.1$ $mm^2$ <./Imagenes/vgsfqg.png>]
-<Imagenes/n27.png, id=432, 527.72156pt x 344.03531pt>
+l.505 \end{equation}
+                     <./Imagenes/vgsfqg.png>]
+<Imagenes/n27.png, id=437, 527.72156pt x 344.03531pt>
 File: Imagenes/n27.png Graphic file (type png)
 <use Imagenes/n27.png>
-Package pdftex.def Info: Imagenes/n27.png  used on input line 536.
+Package pdftex.def Info: Imagenes/n27.png  used on input line 535.
 (pdftex.def)             Requested size: 284.52756pt x 185.48756pt.
-<Imagenes/cazoleta.png, id=436, 365.11406pt x 217.5628pt>
-File: Imagenes/cazoleta.png Graphic file (type png)
-<use Imagenes/cazoleta.png>
-Package pdftex.def Info: Imagenes/cazoleta.png  used on input line 550.
-(pdftex.def)             Requested size: 284.52756pt x 169.5489pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[15pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) has been already used, duplicate ignored
+<Imagenes/cazoleta.png, id=441, 365.11406pt x 217.5628pt>
+File: Imagenes/cazoleta.png Graphic file (type png)
+<use Imagenes/cazoleta.png>
+Package pdftex.def Info: Imagenes/cazoleta.png  used on input line 549.
+(pdftex.def)             Requested size: 284.52756pt x 169.5489pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14] [15pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.12}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.569 	\item $
-              P_{out}$: potencia de salida. <./Imagenes/n27.png>] [16pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
+l.577 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+13}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.605 ...^2} = 46.72 \; vueltas = 47 \; vueltas \]
-                                                   <./Imagenes/cazoleta.png>]
+l.577 
+       <./Imagenes/n27.png> <./Imagenes/cazoleta.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 633.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 633.
+(hyperref)                removing `math shift' on input line 632.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 633.
+(hyperref)                removing `subscript' on input line 632.
 
-[17]
-<Imagenes/trafo_salida.png, id=467, 757.02824pt x 249.3315pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 632.
+
+[16]
+<Imagenes/trafo_salida.png, id=470, 757.02824pt x 249.3315pt>
 File: Imagenes/trafo_salida.png Graphic file (type png)
 <use Imagenes/trafo_salida.png>
-Package pdftex.def Info: Imagenes/trafo_salida.png  used on input line 662.
+Package pdftex.def Info: Imagenes/trafo_salida.png  used on input line 697.
 (pdftex.def)             Requested size: 512.14963pt x 168.68335pt.
- [18pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) has been already used, duplicate ignored
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17] [18pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.707 \end{equation}
-                     <./Imagenes/trafo_salida.png>]
-<Imagenes/NIvsE.png, id=487, 639.13782pt x 389.20406pt>
+l.752 ...2} \cdot L \cdot I_{o}^{2} = 375 \mu J \]
+                                                   <./Imagenes/trafo_salida.png
+>]
+<Imagenes/NIvsE.png, id=500, 639.13782pt x 389.20406pt>
 File: Imagenes/NIvsE.png Graphic file (type png)
 <use Imagenes/NIvsE.png>
-Package pdftex.def Info: Imagenes/NIvsE.png  used on input line 735.
+Package pdftex.def Info: Imagenes/NIvsE.png  used on input line 770.
 (pdftex.def)             Requested size: 341.43306pt x 207.91626pt.
- [19pdfTeX warning (ext4): destination with the same identifier (name{figure.15}) has been already used, duplicate ignored
+ [19pdfTeX warning (ext4): destination with the same identifier (name{figure.15
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.756 \end{equation}
-                     <./Imagenes/NIvsE.png>]
-<Imagenes/Circuito.png, id=500, 579.96675pt x 424.58624pt>
+l.792 ...A}{4,2 \; A/mm^2} = 0,59524 \; mm^2 \; \]
+                                                   <./Imagenes/NIvsE.png>]
+<Imagenes/Circuito.png, id=513, 581.7735pt x 419.76825pt>
 File: Imagenes/Circuito.png Graphic file (type png)
 <use Imagenes/Circuito.png>
-Package pdftex.def Info: Imagenes/Circuito.png  used on input line 795.
-(pdftex.def)             Requested size: 579.96533pt x 424.5852pt.
- [20] [21pdfTeX warning (ext4): destination with the same identifier (name{figure.16}) has been already used, duplicate ignored
+Package pdftex.def Info: Imagenes/Circuito.png  used on input line 830.
+(pdftex.def)             Requested size: 581.77208pt x 419.76721pt.
+
+[20]
+<Imagenes/VIfuncA.jpeg, id=523, 222.3507pt x 86.9649pt>
+File: Imagenes/VIfuncA.jpeg Graphic file (type jpg)
+<use Imagenes/VIfuncA.jpeg>
+Package pdftex.def Info: Imagenes/VIfuncA.jpeg  used on input line 847.
+(pdftex.def)             Requested size: 227.62204pt x 89.02812pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21pdfTeX warning (ext4): destination with the same identifier (name{figure.16}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.803 	\item T
-              ensión de salida: 24.8 V <./Imagenes/circuito.png>]
-<Imagenes/VIfuncA.jpeg, id=514, 222.3507pt x 86.9649pt>
-File: Imagenes/VIfuncA.jpeg Graphic file (type jpg)
-<use Imagenes/VIfuncA.jpeg>
-Package pdftex.def Info: Imagenes/VIfuncA.jpeg  used on input line 812.
-(pdftex.def)             Requested size: 227.62204pt x 89.02812pt.
-<Imagenes/VIfuncB.jpg, id=516, 247.50662pt x 118.9192pt>
+l.854 	\item
+             Tensión de salida: 22.4 V <./Imagenes/circuito.png>]
+<Imagenes/VIfuncB.jpg, id=531, 247.50662pt x 118.9192pt>
 File: Imagenes/VIfuncB.jpg Graphic file (type jpg)
 <use Imagenes/VIfuncB.jpg>
-Package pdftex.def Info: Imagenes/VIfuncB.jpg  used on input line 828.
+Package pdftex.def Info: Imagenes/VIfuncB.jpg  used on input line 863.
 (pdftex.def)             Requested size: 227.62204pt x 109.36705pt.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 833.
+(hyperref)                than one, level fixed on input line 868.
 
-<Imagenes/Vout.png, id=517, 240.9pt x 176.15813pt>
+<Imagenes/Vout.png, id=532, 240.9pt x 176.15813pt>
 File: Imagenes/Vout.png Graphic file (type png)
 <use Imagenes/Vout.png>
-Package pdftex.def Info: Imagenes/Vout.png  used on input line 836.
+Package pdftex.def Info: Imagenes/Vout.png  used on input line 871.
 (pdftex.def)             Requested size: 227.62204pt x 166.45416pt.
-[22pdfTeX warning (ext4): destination with the same identifier (name{figure.17}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.840 \[
-        V_{out} = 24.8 \; V\]pdfTeX warning (ext4): destination with the same identifier (name{figure.18}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.840 \[
-        V_{out} = 24.8 \; V\] <./Imagenes/VIfuncA.jpeg> <./Imagenes/VIfuncB.jpg>]
-<Imagenes/Ripple.png, id=524, 240.9pt x 176.15813pt>
+<Imagenes/Ripple.png, id=533, 240.9pt x 176.15813pt>
 File: Imagenes/Ripple.png Graphic file (type png)
 <use Imagenes/Ripple.png>
-Package pdftex.def Info: Imagenes/Ripple.png  used on input line 845.
+Package pdftex.def Info: Imagenes/Ripple.png  used on input line 880.
 (pdftex.def)             Requested size: 227.62204pt x 166.45416pt.
-<Imagenes/spwm.png, id=525, 240.9pt x 176.15813pt>
+[22pdfTeX warning (ext4): destination with the same identifier (name{figure.17}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.884 \[
+        \Delta V_{Ripple} = 200 \; mV \; aprox.\]pdfTeX warning (ext4): destina
+tion with the same identifier (name{figure.18}) has been already used, duplicat
+e ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.884 \[
+        \Delta V_{Ripple} = 200 \; mV \; aprox.\]pdfTeX warning (ext4): destina
+tion with the same identifier (name{figure.19}) has been already used, duplicat
+e ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.884 \[
+        \Delta V_{Ripple} = 200 \; mV \; aprox.\] <./Imagenes/VIfuncA.jpeg> <./
+Imagenes/VIfuncB.jpg> <./Imagenes/Vout.png>]
+<Imagenes/spwm.png, id=542, 240.9pt x 176.15813pt>
 File: Imagenes/spwm.png Graphic file (type png)
 <use Imagenes/spwm.png>
-Package pdftex.def Info: Imagenes/spwm.png  used on input line 853.
+Package pdftex.def Info: Imagenes/spwm.png  used on input line 888.
 (pdftex.def)             Requested size: 284.52756pt x 208.0798pt.
- [23pdfTeX warning (ext4): destination with the same identifier (name{figure.19}) has been already used, duplicate ignored
+ [23pdfTeX warning (ext4): destination with the same identifier (name{figure.20
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.857 E
-       n la Fig. \ref{sPWM} se observa la señal de mando del driver de los ...pdfTeX warning (ext4): destination with the same identifier (name{figure.20}) has been already used, duplicate ignored
+l.901 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+21}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.857 E
-       n la Fig. \ref{sPWM} se observa la señal de mando del driver de los ... <./Imagenes/Vout.png> <./Imagenes/Ripple.png>]
-<Imagenes/VGDs.png, id=538, 240.9pt x 176.15813pt>
+l.901 
+       <./Imagenes/Ripple.png> <./Imagenes/spwm.png>]
+<Imagenes/VGDs.png, id=555, 240.9pt x 176.15813pt>
 File: Imagenes/VGDs.png Graphic file (type png)
 <use Imagenes/VGDs.png>
-Package pdftex.def Info: Imagenes/VGDs.png  used on input line 871.
+Package pdftex.def Info: Imagenes/VGDs.png  used on input line 906.
 (pdftex.def)             Requested size: 227.62204pt x 166.45416pt.
-<Imagenes/VGDi.png, id=539, 240.9pt x 176.15813pt>
+<Imagenes/VGDi.png, id=556, 240.9pt x 176.15813pt>
 File: Imagenes/VGDi.png Graphic file (type png)
 <use Imagenes/VGDi.png>
-Package pdftex.def Info: Imagenes/VGDi.png  used on input line 878.
+Package pdftex.def Info: Imagenes/VGDi.png  used on input line 913.
 (pdftex.def)             Requested size: 227.62204pt x 166.45416pt.
- [24pdfTeX warning (ext4): destination with the same identifier (name{figure.21}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.882 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.22}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.882 
-       <./Imagenes/spwm.png> <./Imagenes/VGDs.png>]
-<Imagenes/Vprim.png, id=550, 195.129pt x 139.2402pt>
+<Imagenes/Vprim.png, id=557, 195.129pt x 139.2402pt>
 File: Imagenes/Vprim.png Graphic file (type png)
 <use Imagenes/Vprim.png>
-Package pdftex.def Info: Imagenes/Vprim.png  used on input line 886.
+Package pdftex.def Info: Imagenes/Vprim.png  used on input line 921.
 (pdftex.def)             Requested size: 227.62204pt x 162.42807pt.
- [25pdfTeX warning (ext4): destination with the same identifier (name{figure.23}) has been already used, duplicate ignored
+ [24pdfTeX warning (ext4): destination with the same identifier (name{figure.22
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.901 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.24}) has been already used, duplicate ignored
+l.929 	\item S
+              e utilizó el driver IR2110 para el manejo de los transistores...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.23}) h
+as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.901 
-       <./Imagenes/VGDi.png> <./Imagenes/Vprim.png (PNG copy)>] [26]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 915.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 915.
+l.929 	\item S
+              e utilizó el driver IR2110 para el manejo de los transistores...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.24}) h
+as been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.929 	\item S
+              e utilizó el driver IR2110 para el manejo de los transistores...
+ <./Imagenes/VGDs.png> <./Imagenes/VGDi.png> <./Imagenes/Vprim.png (PNG copy)>]
+[25] [26]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 957.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 957.
  (./TP5.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 915.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 915.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 957.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 957.
 Package rerunfilecheck Info: File `TP5.out' has not changed.
-(rerunfilecheck)             Checksum: D52635869D57E9BC51A6F9BB5D281432;3611.
+(rerunfilecheck)             Checksum: BF589FFCF20EDFC516D776C62C07E42C;3681.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 915.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 957.
  ) 
 Here is how much of TeX's memory you used:
- 20830 strings out of 492623
- 376638 string characters out of 6135670
- 484217 words of memory out of 5000000
- 24223 multiletter control sequences out of 15000+600000
+ 20965 strings out of 492609
+ 386560 string characters out of 6123310
+ 489790 words of memory out of 5000000
+ 24357 multiletter control sequences out of 15000+600000
  11587 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
+<<<<<<< HEAD
+ 55i,13n,56p,1161b,574s stack positions out of 5000i,500n,10000p,200000b,80000s
+<d:/Program Files (x86)/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx10.pfb><d:/Program Files (x86)/texlive/2019/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb><d:/Program Files (x86)/texlive/2019/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmcsc10.pfb><d:/Program Files (x86)/texlive/2019/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/Program Files (x86)/texlive/
+2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/Program Files (x8
+6)/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/Progra
+m Files (x86)/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
+<d:/Program Files (x86)/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi8.pfb><d:/Program Files (x86)/texlive/2019/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb><d:/Program Files (x86)/texlive/2019/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr12.pfb><d:/Program Files (x86)/texlive/2019/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr6.pfb><d:/Program Files (x86)/texlive/2019/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/Program Files (x86)/texlive
+/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Program Files (x
+86)/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/Progra
+m Files (x86)/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+<d:/Program Files (x86)/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmti10.pfb>
+Output written on TP5.pdf (27 pages, 2402553 bytes).
+=======
  55i,13n,56p,1160b,554s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
 Output written on TP5.pdf (27 pages, 2390445 bytes).
+>>>>>>> 22d11425847b23a064871391b78c65941959e36d
 PDF statistics:
- 646 PDF objects out of 1000 (max. 8388607)
- 564 compressed objects within 6 object streams
- 145 named destinations out of 1000 (max. 500000)
- 506 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 661 PDF objects out of 1000 (max. 8388607)
+ 576 compressed objects within 6 object streams
+ 151 named destinations out of 1000 (max. 500000)
+ 514 words of extra memory for PDF output out of 10000 (max. 10000000)
 
