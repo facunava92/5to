@@ -1,0 +1,103 @@
+Filtro PROMEDIADOR
+fc = (fs/2) * (1/N)          ; N= Taps
+
+
+Filtro pasa bajo base (fc2):
+fc2 = 1 - fc           ; fc = frecuencia de corte del filtro pasa alto (digital)
+
+
+Pasar de 44100 Hz a 48000 Hz:
+Fnueva / Fvieja = L / M         ; L = Factor de sobremuestreo;      M = factor decimado
+1/el mas grande
+
+
+Retardo = taps / fs
+
+
+f = fs/2 * (mod1-mod2)
+
+
+Amplitud del ultimo tap si cambio atenuacion entre retardos de 5dB:
+a = 10 ^ (-(H*K)/20)         ; K= 5 retardos    ;   H = atenuacion entre retardos 5db
+
+
+
+Frecuencia REAL a partir de DIGITAL:
+fR = fs * fD/2
+
+
+
+Convolucion, matriz resultante:   (3x2) * (6x6)
+
+3+6-1 = 8
+2+6-1 = 7 
+
+
+
+
+
+Cuantos bits se necesitan para representar 0,40625 sin perdida por truncado / redondeo (el número es con signo )
+Resolución: convertir a binario 
+0,40625 x 2 = 0,8125 
+0,8125 x 2 = 1,625 
+0,625 x 2 = 1,25 
+0,25 x 2 = 0,5
+0,5 x 2 = 1
+Numero: .01101 son 5 bits, mas 1 bit de signo
+Respuesta: 6bits
+
+(8x7)
+
+
+
+
+
+1_4
+En una senoidal de 400 muestras, frecuencia 3 y amplitud 1, qué valor tiene la muestra 35?
+Respuesta: 0,996
+
+
+
+
+Para una frecuencia de muestreo de 80KHz, cuantos taps son necesarios para un filtro de ventana blackman con frecuencia de paso de 1Khz y frecuencia de corte 2Khz?
+Fs=80000;
+FrecuenciaPaso=1000;
+Frecuenciadecorte=2000;
+AB=abs((FrecuenciaPaso-Frecuenciadecorte)/(Fs/2));
+12/AB          (blackman) 12/M
+
+RTA: 480
+
+
+
+
+(TAPS)M = ANCHO DEL LOBULO/(FCd-FPd)         ; (frecuencia de corte digital - frecuencia de paso difital)
+
+Ancho del lobulo: rectangular=4
+		  hanning=8
+		  hamming=8
+		  blackman=12
+
+
+
+
+
+Fc = (fs/2N) ----->    N = (fs/2fc)
+
+
+
+
+
+
+
+Un filtro pro mediador , cuantos taps (N) necesito para aumentar la SNR en 3
+Respuesta: 2 taps
+
+en un filtro promediador cuantos taps (N) necesito para aumentar la SNR en 5dB (tener en cuenta que la gráfica comienza en 1 tap)
+Respuesta: 3taps
+
+en un filtro promediador cuantos taps (N) necesito para aumentar la SNR en 6dB (tener en cuenta que la gráfica comienza en 1 tap)
+Respuesta: 4 taps
+
+
+

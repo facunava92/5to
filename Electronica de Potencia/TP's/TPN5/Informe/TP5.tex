@@ -255,7 +255,6 @@ En caso de que la carga sea muy elevada puede suceder que la corriente que circu
 
 Esto hace que las propiedades del convertidor cambien radicalmente respecto del modo de conducción continuo. La relación de conversión (función de transferencia) se hace dependiente de la carga y se incrementa la impedancia de salida.
 
-\vfill
 \section{Diseño de la fuente conmutada}
 \subsection{Datos iniciales}
 \begin{itemize}
@@ -411,16 +410,16 @@ El PWM se implementa con el circuito integrado SG3525 (Fig. \ref{pwm}), el cuál
 La frecuencia de oscilación del PWM está definida por la ecuación \ref{fpwm}. Definiendo $C_T = 820$ $pF$ y $R_D = 330$ $\Omega$ podemos determinar el valor de $R_T$ (ecuación \ref{RT}) para la frecuencia de conmutación deseada $f_c = 80$ $KHz$.
 
 \begin{equation}
-f_c = \frac{1}{2 \cdot C_T \cdot (0.7 \cdot R_T + 0.3 \cdot R_D)}
+f_c = \frac{1}{ C_T \cdot (0.7 \cdot R_T + 3 \cdot R_D)}
 \label{fpwm}
 \end{equation}
 \begin{equation}
-R_T = \frac{1}{0.7} \cdot (\frac{1}{2 \cdot f_c \cdot C_T \cdot} - 0.3 \cdot R_D)
+R_T = \frac{1}{0.7} \cdot (\frac{1}{f_c \cdot C_T \cdot} - 3 \cdot R_D)
 \label{RT}
 \end{equation}
-\[ R_T = \frac{1}{0.7)} \cdot (\frac{1}{2 \cdot 80 \; KHz \cdot 820 \; pF \cdot} - 0.3 \cdot 330 \; \Omega) = 10.747 \; K\Omega \]
+\[ R_T = \frac{1}{0.7} \cdot (\frac{1}{80 \; KHz \cdot 1 \; nF \cdot} - 3 \cdot 600 \; \Omega) = 15.714 \; K\Omega \]
 
-La resistencia $R_T$ se forma con un potenciómetro en serie con una resistencia ($R_{V2} + R_{18}$) para poder ajustar la frecuencia de conmutación al valor deseado.
+La resistencia $R_T$ se forma con un potenciómetro en serie con una resistencia ($R_{V2} + R_{16}$) para poder ajustar la frecuencia de conmutación al valor deseado.
 
 La resistencia $R_D$ es la encargada de garantizar la existencia de un tiempo muerto entre cada flanco de disparo de la señal de salida del PWM. Este tiempo muerto es necesario para la conmutación de los transistores de potencia de la fuente conmutada, para evitar que haya conducción simultanea de estos y se produzca un cortocircuito que lleve a la destrucción de los dispositivos de potencia. El tiempo muerto se elije como 10 veces el tiempo de apagado de los transistores utilizados.
 
@@ -462,7 +461,7 @@ En la Fig. \ref{driver} se observa el circuito de driver de los MOSFETS que form
 	\label{driver}
 \end{figure}
 
-La configuración $Bootstrap$ formada por el diodo $D_5$ y el capacitor $C_{17}$ tiene como objetivo elevar el punto de operación del transistor superior, es decir, entrega una tensión flotante entre la salida superior $HO$ y el punto medio entre los transistores $VS$. Cuando se satura el transistor inferior, la tensión en $VS$ es puesta a $0$ $V$ y el capacitor se carga a $V_{CC}$ a través del diodo. Cuando el mismo transistor está en corte, el capacitor entrega la tensión flotante y el diodo impide que la corriente se vaya a través de $V_{CC}$, posibilitando así disparar el transistor superior del medio puente.
+La configuración $Bootstrap$ formada por el diodo $D_5$ y el capacitor $C_{13}$ tiene como objetivo elevar el punto de operación del transistor superior, es decir, entrega una tensión flotante entre la salida superior $HO$ y el punto medio entre los transistores $VS$. Cuando se satura el transistor inferior, la tensión en $VS$ es puesta a $0$ $V$ y el capacitor se carga a $V_{CC}$ a través del diodo. Cuando el mismo transistor está en corte, el capacitor entrega la tensión flotante y el diodo impide que la corriente se vaya a través de $V_{CC}$, posibilitando así disparar el transistor superior del medio puente.
 
 De acuerdo con la nota de aplicación del IR2110, el capacitor de $Bootstrap$ se calcula con la ecuación \ref{CBS}, donde $Q_g$ es la carga necesaria en la compuerta del MOSFET, $f$ la frecuencia de operación, $I_{Cbs(leak)}$  es la corriente de pérdida del capacitor de $Bootstrap$, $I_{qbs(max)}$ es la máxima corriente de reposo, $V_{CC}$ la tensión de alimentación del integrado, $V_f$ la caída de tensión en el diodo de $Bootstrap$ en directa, $V_{LS}$ la caída de tensión en el MOSFET inferior, $V_min$ la tensión $V_BS$ mínima y $Q_ls$ el nivel de carga requerido por ciclo.
 
@@ -473,9 +472,9 @@ C_{BS} \geq \frac{ 2 \cdot [2\cdot Q_g + \frac{I_{qbs(max)}}{f} + Q_ls + \frac{I
 
 \[ C_BS \geq \frac{ 2 \cdot [2\cdot 32nC + \frac{230 \mu A}{80 KHz} + 5 nC + \frac{despreciable}{80 KHz}]}{15 V - 1.25 V - 10 V - 0 V} \geq 38.33 \; nF \]
 
-Los valores anteriores se toman de la hoja de datos del transistor utilizado y de la nota de aplicación del IR2110. Así mismo,la nota indica que el diodo a utilizar para $Bootstrap$ es el $MUR160$ ($D_5$) y que el capacitor debe ser al menos unas 15 veces mas grande al valor calculado por lo que se usa un capacitor de $4.7$ $\mu F\; /\; 16$ $V$ ($C_{17}$).
+Los valores anteriores se toman de la hoja de datos del transistor utilizado y de la nota de aplicación del IR2110. Así mismo,la nota indica que el diodo a utilizar para $Bootstrap$ es el $MUR160$ ($D_5$) y que el capacitor debe ser al menos unas 15 veces mas grande al valor calculado por lo que se usa un capacitor de $4.7$ $\mu F\; /\; 16$ $V$ ($C_{13}$).
 
-Los diodos $D_6$ y $D_7$ son 1N4148 (nota de aplicación) y tienen como objetivo acelerar el proceso de apagado del transistor ya que ayudan "quitando" cargas del gate.
+Los diodos $D_6$ y $D_7$ son MUR160 (nota de aplicación) y tienen como objetivo acelerar el proceso de apagado del transistor ya que ayudan "quitando" cargas del gate.
 
 El criterio de selección del diodo de $Bootstrap$, de acuerdo a la nota de aplicación, es que el tiempo de recuperación inversa ($t_r$) de dicho diodo debe ser mas rápido que el período de conmutación de los transistores ($1/f_c$).
 
@@ -630,7 +629,7 @@ Suponiendo una densidad de corriente $J = 4.2$ $A/mm^2$, el diámetro de los con
 		\[ \phi_P = \sqrt{\frac{4 \cdot 1.677 \; A}{\pi \cdot 4.2 \; A/mm^2}} = 0.713 \; mm = 0.8 \; mm \]
 \end{itemize}
 
-\subsubsection{Capacitor de acople $C_{14}$}
+\subsubsection{Capacitor de acople $C_{2}$}
 El capacitor de acople se coloca porque siempre existe una diferencia de tensión, por las tolerancias de los componentes, que tiene como consecuencia la existencia, entre los terminales del primario del transformador, de un valor de continua que lleva al núcleo a la saturación. 
 
 Este capacitor de acoplamiento es normalmente del tipo sin polaridad capaz de manejar la corriente del primario. Deberá, además, tener un valor bajo de $ESR$ para evitar el calentamiento.
@@ -652,6 +651,42 @@ C =  \frac{I_{Dmax} \cdot t}{\Delta V_C}
 \[ C =  \frac{0.623 \; A \; \cdot 5.625 \; \mu s}{\Delta V_C} \rightarrow 103.07 \; nF \; < C < 206.14 \; nF \]
 
 \[ C_{14} = 120 \; nF \; / \; 400 \; V \]
+\subsubsection{Red Snubber}
+En la conmutación, durante el tiempo muerto cuando ambos transistores permanecen apagados, entra
+en juego la inductancia del bobinado primario del transformador, que tiende a mantener la circulación
+de corriente a través de él produciendo sobre-picos de tensión y eliminando o deformando los tiempos
+muertos necesarios. Se debe plantear un camino alternativo para que el transformador se descargue en
+estos tiempos, para eso se diseña una red Snubber.
+
+para calcular los valores de $C1$ y $R7$ se utilizan dos ecuaciones empíricas
+
+\begin{equation}
+R_{snub} = \frac{V_{pri}}{I{pri}}
+\end{equation}
+
+\begin{equation}
+Csnub = \frac{1}{2 \cdot \pi \cdot R_{snub} \cdot f_t}
+\end{equation}
+
+la resistencia de Snubber es igual a la caída de tensión en el primario del transformador, sobre la
+corriente que circula a través de él. Se tiene idealmente, para un ciclo de 80 %.
+
+\begin{equation}
+R_{snub} = \frac{124}{0,86} = 144 \Omega
+\end{equation}
+
+$f_t$ es la frecuencia de tiempo muerto, que es el doble de la de conmutación, entonces el capacitor
+es.
+\begin{equation}
+Csnub = \frac{1}{2 \cdot \pi \cdot 144 \; \Omega \cdot 160 kHz} = 6.9 \; nF
+\end{equation}
+
+Por último la potencia disipada por la resistencia es
+
+\begin{equation}
+P_{Rsnub}  = C_{snub} \cdot {V_{pri}}^2  \cdot ftm = 6.9 nF \cdot 124 V \cdot 160 kHz = 17 W
+\end{equation}
+
 
 \subsection{Circuito de salida}
 En la etapa de salida se utiliza nuevamente un rectificador junto a un
@@ -792,7 +827,7 @@ En la figura \ref{fuente} se observa el conexionado final de las distintas etapa
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[angle = 90, height = 23 cm]{Imagenes/Circuito}
+	\includegraphics[angle = 90, height = 19 cm]{Imagenes/Circuito}
 	\caption{Fuente conmutada half bridge.}
 	\label{fuente}
 \end{figure}
@@ -800,10 +835,10 @@ En la figura \ref{fuente} se observa el conexionado final de las distintas etapa
 \section{Mediciones}
 Las siguientes mediciones se realizaron con la fuente funcionando en las siguientes condiciones:
 \begin{itemize}
-	\item Tensión de salida: 24.8 V
-	\item Corriente de salida: 2.48 A
+	\item Tensión de salida: 22.4 V
+	\item Corriente de salida: 2.53 A
 	\item Carga fija y resistiva pura: 9.6 $\Omega$
-	\item Potencia: 61.504 $W$
+	\item Potencia: 56,67 $W$
 	\item Tiempo de funcionamiento: 10 minutos	
 \end{itemize}
 
@@ -816,10 +851,10 @@ Las siguientes mediciones se realizaron con la fuente funcionando en las siguien
 
 Luego se realizó una segunda medición con la fuente funcionando en las condiciones que se observan en la Fig. \ref{VIfunc} durante aproximadamente 30 minutos, obteniendo las mismas formas de onda que en el caso anterior. Para aumentar la corriente de salida lo que se hizo fue utilizar una resistencia variable y disminuir su valor hasta lograr la corriente deseada.
 \begin{itemize}
-	\item Tensión de salida: 24.4 V
-	\item Corriente de salida: 2.976 A
+	\item Tensión de salida: 22.4 V
+	\item Corriente de salida: 4.03 A
 	\item Carga variable: 8.2 $\Omega$
-	\item Potencia: 72.614 $W$
+	\item Potencia: 90.272 $W$
 	\item Tiempo de funcionamiento: 30 minutos	
 \end{itemize}
 
@@ -895,18 +930,25 @@ A la hora del cálculo y diseño de la fuente conmutada no se encontraron mayore
 	\item El transformador de potencia a la salida del circuito, debe ser bobinado lo mas cuidadosamente posible para que las espiras queden parejas, evitando que haya distorsión en la señal a la salida de este y que los bobinados calienten de más.
 \end{itemize}
 
-En primer lugar, se procedió al armado de la fuente en 4 placas distintas interconectadas entre si. Estas placas contenían los siguientes circuitos: Filtro EMI + Rectificador, PWM, Driver + Transistores y Circuito de Salida. El trabajar con cuatro placas distintas presentó ciertas ventajas como la facilidad de discriminar el correcto o incorrecto funcionamiento de cada una da las partes del circuito y la sencillez de revisar el estado de las placas al no tener tantos componentes cada una. Sin embargo, el hecho de que el PWM, el driver, los transistores y el transformador de salida no estuviesen en una misma placa hacia que el circuito sea muy susceptible a interferencias. Por esta razón finalmente se implementó la fuente conmutada en dos placas, una con el filtro EMI y el rectificador y otra con el PWM, el driver y el transformador de salida.
-
-Hay que resaltar en el diseño de la placa que contenga el driver, que la longitud de las pistas que conectan el driver con el gate del transistor debe ser la misma para ambos transistores, de acuerdo con la nota de aplicación del integrado, para evitar que haya un desfasare mayor al deseado entre señales. Además, cualquier señal de alta tensión deberá estar lo mas lejos posible de las pistas de gate para evitar que haya interferencia y que se disparen los gates en tiempos no deseados.
-
-Para la prueba de funcionamiento de la fuente conmutada lo que se hizo fue en primer lugar corroborar que el PWM y el driver de los transistores estén funcionando correctamente. Luego se procedió a alimentar con corriente alterna desde una fuente variable a la etapa de rectificación y comprobar la correcta conmutación de los transistores. Aquí fue muy importante la comprobación de la señal en el primario y secundario del transformador de potencia, ya que en un primer momento los secundarios se encontraban bobinados en sentido opuesto haciendo que ambos conduzcan simultáneamente, lo que producía una menor potencia de salida. Por último, se colocó un disipador en los diodos rectificadores de salida debido al gran aumento de temperatura que este sufrió. Queda pendiente el análisis de elevación de temperatura para calcular el disipador adecuado a la aplicación.
+El diseño y la construcción de una fuente conmutada, como se vió a lo largo de este informe, posee
+muchas variantes que no pueden ser dejadas de lado. Su desarrollo lleva un tiempo considerable de
+semanas o meses, ya que se deben tener en cuenta varios aspectos. Uno de ellos, es que el error en los
+cálculos y en las mediciones puede echar a perder días de trabajo. Para saber si el diseño funciona y está
+bien encaminado, es una buena metodología separar la fuente en módulos y probar su funcionamiento
+por separado, antes del ensamblaje; por este motivo se optó por realizar un módulo de control que se
+adosa a la placa de potencia. Esto evita que, si se produce una falla en un módulo, esta no afecte a
+los siguientes y se produzca un daño en cadena. Se debe tener un buen criterio antes de medir algún
+parámetro, ya que se está trabajando con tensiones de línea y pueden causar lesiones a la persona que
+esté midiendo si no se toman las precauciones necesarias. Por eso es importante destacar que a la hora
+de realizar las mediciones se debe hacer un análisis de que se espera obtener y como modifica al circuito
+la medición.
 
 De las diferentes mediciones efectuadas con la fuente en funcionamiento se concluye lo siguiente:
 \begin{itemize}
 	\item El ripple de tensión de salida se encuentra dentro del valor calculado. Los picos de tensión introducidos por la conmutación no tienen una magnitud considerable.
 	\item La señal de disparo de gate del transistor inferior es mucho mas limpia que la del transistor superior. Esto se debe a que el transistor inferior se encuentra referenciado a la masa del circuito, mientras que el superior a una masa virtual. Además se observa claramente en las señales correspondientes al transistor superior la interferencia que produce la conmutación del otro transistor. Esta interferencia debe ser la menor posible de lo contrario se volvería a disparar el transistor superior estando el inferior disparado produciendo un cortocircuito. Para que este pico de tensión sea lo menor posible, las pistas del driver hacia los gates de los transistores deben tener la misma longitud y estar lo mas separadas posibles. Además se debe procurar que ninguna pista de alta tensión se encuentre cerca de estas pistas para evitar inducción de picos de tensión.
 	\item Se observa en la señal de tensión drenador surtidor de los transistores, que la tensión máxima que estos soportan es $V_{in}$, característica de la fuente conmutada Half-Bridge.
-	\item Respecto a la tensión medida en el primario del transformador de salida, se observa que el momento en que la tensión es máxima ($V_{in}$), el transistor superior se encuentra conduciendo y el inferior bloqueado. Cuando la tensión es mínima ($0 \; V$) el transistor superior está bloqueado y el inferior conduce y cuando la tensión es $\frac{V_{in}}{2}$ es porque ambos transistores están bloqueados, debido al tiempo muerto entre conmutación. En el tiempo muerto entre disparo de transistores se observó en un principio la presencia de un transitorio con picos elevados de tensión los cuales crecían a medida que aumentaba la tensión de alimentación de la fuente. Este transitorio se debe a que el transistor en cuestión no se apaga correctamente, haciendo que para elevadas tensiones de entrada este se vuelva a disparar produciendo un corto circuito con el transistor que si se encuentra conduciendo. La solución a esto fue emplear una red snubber en paralelo al primario del transistor sintonizada a la frecuencia del transitorio, por lo que $R = 56 \; \Omega \; 3 \; W$ y $C = 680 \; pF \; 500 \; V$. 
+	\item Respecto a la tensión medida en el primario del transformador de salida, se observa que el momento en que la tensión es máxima ($V_{in}$), el transistor superior se encuentra conduciendo y el inferior bloqueado. Cuando la tensión es mínima ($0 \; V$) el transistor superior está bloqueado y el inferior conduce y cuando la tensión es $\frac{V_{in}}{2}$ es porque ambos transistores están bloqueados, debido al tiempo muerto entre conmutación. En el tiempo muerto entre disparo de transistores se observó en un principio la presencia de un transitorio con picos elevados de tensión los cuales crecían a medida que aumentaba la tensión de alimentación de la fuente. Este transitorio se debe a que el transistor en cuestión no se apaga correctamente, haciendo que para elevadas tensiones de entrada este se vuelva a disparar produciendo un corto circuito con el transistor que si se encuentra conduciendo. La solución a esto fue emplear una red snubber en paralelo al primario del transistor sintonizada a la frecuencia del transitorio, por lo que $R = 150 \; \Omega \; 15 \; W$ y $C = 22 \; nF \; 500 \; V$. 
 \end{itemize}
 
 Para finalizar, se concluye que el diseño de una fuente conmutada es mucho más complejo que el de una fuente lineal, por lo que se debe ser sumamente cuidadoso a la hora de manipular los componentes electrónicos e instrumentos de medición, pero los resultados en cuanto a la eficiencia y potencia de la fuente son muy superiores, obteniendo un mejor aprovechamiento de la energía.

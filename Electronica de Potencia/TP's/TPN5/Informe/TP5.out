@@ -31,16 +31,17 @@
 \BOOKMARK [3][-]{subsubsection.4.8.3}{Comprobaci\363n del tama\361o de la cazoleta}{subsection.4.8}% 31
 \BOOKMARK [3][-]{subsubsection.4.8.4}{N\372mero de vueltas del primario y del secundario}{subsection.4.8}% 32
 \BOOKMARK [3][-]{subsubsection.4.8.5}{Di\341metro de los conductores}{subsection.4.8}% 33
-\BOOKMARK [3][-]{subsubsection.4.8.6}{Capacitor de acople C14}{subsection.4.8}% 34
-\BOOKMARK [2][-]{subsection.4.9}{Circuito de salida}{section.4}% 35
-\BOOKMARK [3][-]{subsubsection.4.9.1}{Rectificadores}{subsection.4.9}% 36
-\BOOKMARK [3][-]{subsubsection.4.9.2}{Inductor}{subsection.4.9}% 37
-\BOOKMARK [3][-]{subsubsection.4.9.3}{Capacitor}{subsection.4.9}% 38
-\BOOKMARK [2][-]{subsection.4.10}{Circuito Final}{section.4}% 39
-\BOOKMARK [1][-]{section.5}{Mediciones}{}% 40
-\BOOKMARK [2][-]{subsubsection.5.0.1}{Tensi\363n de salida CC}{section.5}% 41
-\BOOKMARK [3][-]{subsubsection.5.0.2}{Ripple de la Tensi\363n de salida CA}{subsubsection.5.0.1}% 42
-\BOOKMARK [3][-]{subsubsection.5.0.3}{Se\361al de comando del PWM}{subsubsection.5.0.1}% 43
-\BOOKMARK [3][-]{subsubsection.5.0.4}{Tensi\363n de compuerta y de drenador de los MOSFETs}{subsubsection.5.0.1}% 44
-\BOOKMARK [3][-]{subsubsection.5.0.5}{Primario del transformador}{subsubsection.5.0.1}% 45
-\BOOKMARK [1][-]{section.6}{Conclusiones}{}% 46
+\BOOKMARK [3][-]{subsubsection.4.8.6}{Capacitor de acople C2}{subsection.4.8}% 34
+\BOOKMARK [3][-]{subsubsection.4.8.7}{Red Snubber}{subsection.4.8}% 35
+\BOOKMARK [2][-]{subsection.4.9}{Circuito de salida}{section.4}% 36
+\BOOKMARK [3][-]{subsubsection.4.9.1}{Rectificadores}{subsection.4.9}% 37
+\BOOKMARK [3][-]{subsubsection.4.9.2}{Inductor}{subsection.4.9}% 38
+\BOOKMARK [3][-]{subsubsection.4.9.3}{Capacitor}{subsection.4.9}% 39
+\BOOKMARK [2][-]{subsection.4.10}{Circuito Final}{section.4}% 40
+\BOOKMARK [1][-]{section.5}{Mediciones}{}% 41
+\BOOKMARK [2][-]{subsubsection.5.0.1}{Tensi\363n de salida CC}{section.5}% 42
+\BOOKMARK [3][-]{subsubsection.5.0.2}{Ripple de la Tensi\363n de salida CA}{subsubsection.5.0.1}% 43
+\BOOKMARK [3][-]{subsubsection.5.0.3}{Se\361al de comando del PWM}{subsubsection.5.0.1}% 44
+\BOOKMARK [3][-]{subsubsection.5.0.4}{Tensi\363n de compuerta y de drenador de los MOSFETs}{subsubsection.5.0.1}% 45
+\BOOKMARK [3][-]{subsubsection.5.0.5}{Primario del transformador}{subsubsection.5.0.1}% 46
+\BOOKMARK [1][-]{section.6}{Conclusiones}{}% 47
