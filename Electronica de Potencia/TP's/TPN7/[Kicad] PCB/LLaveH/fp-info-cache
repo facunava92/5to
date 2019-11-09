@@ -1,4 +1,4 @@
-16365210073108319
+16365408792337319
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -72954,13 +72954,6 @@ Choke_A
 4
 4
 lib_fp
-DIP-8_W7.62mm_LongPads
-8-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils), LongPads
-THT DIP DIL PDIP 2.54mm 7.62mm 300mil LongPads
-0
-8
-8
-lib_fp
 DIP-14_W7.62mm_LongPads
 14-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils), LongPads
 THT DIP DIL PDIP 2.54mm 7.62mm 300mil LongPads
@@ -73059,13 +73052,6 @@ NTC-16
 2
 2
 lib_fp
-PinHeader_1x03_P2.54mm_Vertical
-Through hole straight pin header, 1x03, 2.54mm pitch, single row
-Through hole pin header THT 1x03 2.54mm single row
-0
-3
-3
-lib_fp
 Potentiometer_Alps_RK163_Single_Horizontal
 Potentiometer, horizontal, Alps RK163 Single, http://www.alps.com/prod/info/E/HTML/Potentiometer/RotaryPotentiometers/RK16/RK16_list.html
 Potentiometer horizontal Alps RK163 Single
@@ -73090,13 +73076,6 @@ lib_fp
 R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal
 Resistor, Axial_DIN0204 series, Axial, Horizontal, pin pitch=5.08mm, 0.167W, length*diameter=3.6*1.6mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
 Resistor Axial_DIN0204 series Axial Horizontal pin pitch 5.08mm 0.167W length 3.6mm diameter 1.6mm
-0
-2
-2
-lib_fp
-R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal
-Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
-Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm
 0
 2
 2
@@ -73142,20 +73121,6 @@ TCST1103
 0
 4
 4
-lib_fp
-TO-220-3_Vertical
-TO-220-3, Vertical, RM 2.54mm, see https://www.vishay.com/docs/66542/to-220-1.pdf
-TO-220-3 Vertical RM 2.54mm
-0
-3
-3
-lib_fp
-TerminalBlock_bornier-2_P5.08mm
-simple 2-pin terminal block, pitch 5.08mm, revamped version of bornier2
-terminal block bornier2
-0
-2
-2
 lib_fp
 TerminalBlock_screwless-2_P5mm
 

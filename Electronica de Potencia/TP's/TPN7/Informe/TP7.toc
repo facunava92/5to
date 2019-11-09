@@ -1,33 +1,15 @@
-<<<<<<< HEAD
-\select@language {spanish}
-\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{2}
-\contentsline {section}{\numberline {2}Enunciado}{3}
-\contentsline {section}{\numberline {3}Circuito}{3}
-\contentsline {subsection}{\numberline {3.1}Actuador}{3}
-\contentsline {subsubsection}{\numberline {3.1.1}Transistores}{3}
-\contentsline {subsubsection}{\numberline {3.1.2}Driver}{3}
-\contentsline {subsection}{\numberline {3.2}Control}{4}
-\contentsline {subsubsection}{\numberline {3.2.1}Generador de PWM}{4}
-\contentsline {subsubsection}{\numberline {3.2.2}Generador de Tiempos Muertos}{5}
-\contentsline {subsection}{\numberline {3.3}Protecci\IeC {\'o}n}{6}
-\contentsline {section}{\numberline {4}Mediciones}{6}
-\contentsline {subsection}{\numberline {4.1}Volts vs RPM}{7}
-\contentsline {subsection}{\numberline {4.2}Protecci\IeC {\'o}n}{7}
-\contentsline {section}{\numberline {5}Conclusiones}{8}
-=======
-\select@language {spanish}
-\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{2}
-\contentsline {section}{\numberline {2}Enunciado}{3}
-\contentsline {section}{\numberline {3}Circuito}{3}
-\contentsline {subsection}{\numberline {3.1}Actuador}{3}
-\contentsline {subsubsection}{\numberline {3.1.1}Transistores}{3}
-\contentsline {subsubsection}{\numberline {3.1.2}Driver}{3}
-\contentsline {subsection}{\numberline {3.2}Control}{4}
-\contentsline {subsubsection}{\numberline {3.2.1}Generador de PWM}{4}
-\contentsline {subsubsection}{\numberline {3.2.2}Generador de Tiempos Muertos}{5}
-\contentsline {subsection}{\numberline {3.3}Protecci\IeC {\'o}n}{6}
-\contentsline {section}{\numberline {4}Mediciones}{6}
-\contentsline {subsection}{\numberline {4.1}Volts vs RPM}{7}
-\contentsline {subsection}{\numberline {4.2}Protecci\IeC {\'o}n}{7}
-\contentsline {section}{\numberline {5}Conclusiones}{8}
->>>>>>> 9d12e934d1c1893bb0400a79f64badcfbee4410f
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{2}{section.1}% 
+\contentsline {section}{\numberline {2}Enunciado}{2}{section.2}% 
+\contentsline {section}{\numberline {3}Circuito}{3}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}Actuador}{3}{subsection.3.1}% 
+\contentsline {subsubsection}{\numberline {3.1.1}Transistores}{3}{subsubsection.3.1.1}% 
+\contentsline {subsubsection}{\numberline {3.1.2}Driver}{3}{subsubsection.3.1.2}% 
+\contentsline {subsection}{\numberline {3.2}Control}{4}{subsection.3.2}% 
+\contentsline {subsubsection}{\numberline {3.2.1}Generador de PWM}{4}{subsubsection.3.2.1}% 
+\contentsline {subsubsection}{\numberline {3.2.2}Generador de Tiempos Muertos}{5}{subsubsection.3.2.2}% 
+\contentsline {subsection}{\numberline {3.3}Protecci\IeC {\'o}n}{6}{subsection.3.3}% 
+\contentsline {section}{\numberline {4}Mediciones}{7}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Volts vs RPM}{8}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Protecci\IeC {\'o}n}{10}{subsection.4.2}% 
+\contentsline {section}{\numberline {5}Conclusiones}{10}{section.5}% 
