@@ -22,4 +22,4 @@
 \contentsline {subsection}{\numberline {4.2}An\IeC {\'a}lisis del \IeC {\'A}rbol de Fallas (FTA)}{7}{subsection.4.2}% 
 \contentsline {subsection}{\numberline {4.3}An\IeC {\'a}lisis Cr\IeC {\'\i }tico de Modo de Fallas (FMECA)}{8}{subsection.4.3}% 
 \contentsline {subsubsection}{\numberline {4.3.1}Matriz de Criticidad}{10}{subsubsection.4.3.1}% 
-\contentsline {subsection}{\numberline {4.4}Conclusiones}{10}{subsection.4.4}% 
+\contentsline {subsection}{\numberline {4.4}Conclusiones}{11}{subsection.4.4}% 
