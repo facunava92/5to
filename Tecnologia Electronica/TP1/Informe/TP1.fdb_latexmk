@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1573490582 "TP1.tex" "TP1.pdf" "TP1" 1573490583
+["pdflatex"] 1573493593 "TP1.tex" "TP1.pdf" "TP1" 1573493594
   "/dev/null" 1573435607 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1557554374 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1557554374 3332 103109f5612ad95229751940c61aada0 ""
@@ -179,18 +179,18 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1557554374 33301 a3134070eacafb10b1f371612ce2650d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1567912420 3233970 ab845fc2b5afa9d5e4a65f288842af78 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1567912386 7979415 7e1e002ae630f09a996f9c1af585772b ""
-  "TP1.aux" 1573490583 4780 f6111b675cd35da146b7c69aa4343617 "pdflatex"
-  "TP1.out" 1573490583 1833 dbaf878eff72df9533bfce9ab4c3e82f "pdflatex"
-  "TP1.tex" 1573490577 31931 5b8179640942710fcf7471d97034dfbd ""
-  "TP1.toc" 1573490583 2374 c6ac14e32d0cb6095f0dbe7be5699308 "pdflatex"
+  "TP1.aux" 1573493594 4780 f6111b675cd35da146b7c69aa4343617 "pdflatex"
+  "TP1.out" 1573493594 1833 dbaf878eff72df9533bfce9ab4c3e82f "pdflatex"
+  "TP1.tex" 1573493591 31933 86d24274dc0d1d167bd7ad1b75c0b7c4 ""
+  "TP1.toc" 1573493594 2374 c6ac14e32d0cb6095f0dbe7be5699308 "pdflatex"
   "imagenes/Arbol1.png" 1573451963 70765 8489aa2ba41dd771234ad49fcc4305de ""
   "imagenes/Arbol2.png" 1573452725 72770 023441f90575f6a3942e7f21b968e5ea ""
   "imagenes/LOGO.jpg" 1512063114 19747 4772602bbcdd11eac496e15d83f1bf3d ""
   "imagenes/fig1.jpg" 1555945524 167214 61604d1b89880d142c22667adb67015e ""
   "imagenes/matriz.jpeg" 1573490107 31997 e68d1efc459a013515739158a830fee3 ""
   (generated)
-  "TP1.log"
-  "TP1.pdf"
   "TP1.aux"
-  "TP1.toc"
+  "TP1.pdf"
+  "TP1.log"
   "TP1.out"
+  "TP1.toc"
