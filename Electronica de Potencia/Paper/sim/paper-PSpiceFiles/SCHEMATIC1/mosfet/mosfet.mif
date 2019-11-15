@@ -1,0 +1,3 @@
+ lib=D:\Cadence\SPB_17.4\tools\PSpice\Library\diode.lib, offset=511194, size=255
+ lib=D:\Cadence\SPB_17.4\tools\PSpice\Library\irf.lib, offset=135491, size=1758
+ lib=D:\Cadence\SPB_17.4\tools\PSpice\Library\igbt.lib, offset=31090, size=283

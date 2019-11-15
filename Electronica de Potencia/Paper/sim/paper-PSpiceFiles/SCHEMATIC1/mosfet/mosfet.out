@@ -1,0 +1,217 @@
+
+**** 11/15/19 11:31:50 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mosfet"  [ d:\users\facun\desktop\paper\paper-PSpiceFiles\SCHEMATIC1\mosfet.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "mosfet.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Users\facun\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 80us 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PAPER
+V_V1         N00117 0  
++PULSE 0V 10V 0.1us 1us 1us 250us 12.5ms
+R_R1         N00117 N00135  2.35 TC=0,0 
+X_M1         N00509 N00135 0 IRF150
+R_R2         N00538 N00509  1.32 TC=0,0 
+V_V2         N00538 0 50Vdc
+V_V3         N01203 0  
++PULSE 0V 15V 0.1us 1us 1us 50us 12.5ms
+R_R3         N01203 N01199  5 TC=0,0 
+R_R4         N01262 N01258  11.7 TC=0,0 
+Z_Z1         N01258 N01199 0 IRG4PH50S     
+V_V4         N01262 0 480Vdc
+D_D1         N01258 N01262 MUR160 
+
+**** RESUMING mosfet.cir ****
+.END
+
+**** 11/15/19 11:31:50 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mosfet"  [ d:\users\facun\desktop\paper\paper-PSpiceFiles\SCHEMATIC1\mosfet.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               MUR160          X_M1.MD         X_M1.MD1        X_M1.MD2        
+          IS    1.043000E-12    2.018650E-09    0             100.000000E-12 
+           N                    1.5            50                .402271     
+         ISR    7.011000E-09                                                 
+         IKF    2.705000E-03                                                 
+          BV                  100                                            
+         IBV                    1.000000E-03                                 
+          RS     .07444          .11592                         3.000010E-06 
+          TT  123.300000E-09  100.000000E-09                                 
+         CJO   28.430000E-12    3.289740E-09    3.783290E-09                 
+          VJ     .75            4.39387          .607074                     
+           M     .6225           .659734         .893797                     
+          FC                     .1            10.000000E-09                 
+          EG                    1                                            
+         XTI    2               1                                            
+
+
+               X_M1.MD3        
+          IS  100.000000E-12 
+           N     .402271     
+
+
+**** 11/15/19 11:31:50 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mosfet"  [ d:\users\facun\desktop\paper\paper-PSpiceFiles\SCHEMATIC1\mosfet.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M1.MM         
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    4.07861      
+          KP   19.0218       
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA  761.669000E-06 
+          IS    0            
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO   35.778400E-06 
+        CGDO  496.221000E-09 
+        CGBO    0            
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 11/15/19 11:31:50 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mosfet"  [ d:\users\facun\desktop\paper\paper-PSpiceFiles\SCHEMATIC1\mosfet.sim ] 
+
+
+ ****     IGBT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IRG4PH50S       
+               NIGBT           
+          VT    5.2925       
+         BVF    1.7          
+          KF   30.3          
+         CGS   22.255870E-09 
+        COXD   61.058420E-09 
+         VTD    1.7579       
+         TAU  331.090000E-09 
+          KP   13.635        
+        AREA   28.500000E-06 
+         AGD   11.400000E-06 
+          WB  117.000000E-06 
+
+
+**** 11/15/19 11:31:50 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mosfet"  [ d:\users\facun\desktop\paper\paper-PSpiceFiles\SCHEMATIC1\mosfet.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00117)    0.0000 (N00135) 352.5E-12 (N00509)   50.0000 (N00538)   50.0000     
+
+(N01199)    0.0000 (N01203)    0.0000 (N01258)  480.0000 (N01262)  480.0000     
+
+(X_M1.4)    0.0000 (X_M1.5)   50.0000 (X_M1.6)   50.0000 (X_M1.7) 2.168E-09     
+
+(X_M1.8) 1.083E-12 (X_M1.9)   50.0000 (X_M1.10)   50.0000                       
+
+(X_M1.11)   50.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         1.500E-10
+    V_V2        -1.563E-05
+    V_V3         0.000E+00
+    V_V4        -1.927E-05
+    X_M1.VFI2    5.000E-11
+    X_M1.VFI1    0.000E+00
+
+    TOTAL POWER DISSIPATION   1.00E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/15/19 11:31:50 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-mosfet"  [ d:\users\facun\desktop\paper\paper-PSpiceFiles\SCHEMATIC1\mosfet.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        3.30
+  Total job time (using Solver 1)   =         .03
+

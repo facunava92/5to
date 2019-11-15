@@ -1,0 +1,171 @@
+
+**** 11/15/19 01:22:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-paper"  [ d:\users\facun\desktop\paper\paper-PSpiceFiles\SCHEMATIC1\paper.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "paper.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Users\facun\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 500us 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PAPER
+V_V1         N00117 0  
++PULSE 0V 10V 0.1us 1us 1us 250us 500us
+R_R1         N00117 N00135  2.35 TC=0,0 
+X_M1         N00509 N00135 0 IRF150
+R_R2         N00538 N00509  1.32 TC=0,0 
+V_V2         N00538 0 50Vdc
+
+**** RESUMING paper.cir ****
+.END
+
+**** 11/15/19 01:22:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-paper"  [ d:\users\facun\desktop\paper\paper-PSpiceFiles\SCHEMATIC1\paper.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M1.MD         X_M1.MD1        X_M1.MD2        X_M1.MD3        
+          IS    2.018650E-09    0             100.000000E-12  100.000000E-12 
+           N    1.5            50                .402271         .402271     
+          BV  100                                                            
+         IBV    1.000000E-03                                                 
+          RS     .11592                         3.000010E-06                 
+          TT  100.000000E-09                                                 
+         CJO    3.289740E-09    3.783290E-09                                 
+          VJ    4.39387          .607074                                     
+           M     .659734         .893797                                     
+          FC     .1            10.000000E-09                                 
+          EG    1                                                            
+         XTI    1                                                            
+
+
+**** 11/15/19 01:22:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-paper"  [ d:\users\facun\desktop\paper\paper-PSpiceFiles\SCHEMATIC1\paper.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M1.MM         
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    4.07861      
+          KP   19.0218       
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA  761.669000E-06 
+          IS    0            
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO   35.778400E-06 
+        CGDO  496.221000E-09 
+        CGBO    0            
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 11/15/19 01:22:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-paper"  [ d:\users\facun\desktop\paper\paper-PSpiceFiles\SCHEMATIC1\paper.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00117)    0.0000 (N00135) 352.5E-12 (N00509)   50.0000 (N00538)   50.0000     
+
+(X_M1.4)    0.0000 (X_M1.5)   50.0000 (X_M1.6)   50.0000 (X_M1.7) 2.168E-09     
+
+(X_M1.8) 1.083E-12 (X_M1.9)   50.0000 (X_M1.10)   50.0000                       
+
+(X_M1.11)   50.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         1.500E-10
+    V_V2        -1.563E-05
+    X_M1.VFI2    5.000E-11
+    X_M1.VFI1    0.000E+00
+
+    TOTAL POWER DISSIPATION   7.81E-04  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/15/19 01:22:15 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-paper"  [ d:\users\facun\desktop\paper\paper-PSpiceFiles\SCHEMATIC1\paper.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        4.33
+  Total job time (using Solver 1)   =         .03
+

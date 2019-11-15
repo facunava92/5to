@@ -1,0 +1,14 @@
+* source PAPER
+V_V1         N00117 0  
++PULSE 0V 10V 0.1us 1us 1us 250us 12.5ms
+R_R1         N00117 N00135  2.35 TC=0,0 
+X_M1         N00509 N00135 0 IRF150
+R_R2         N00538 N00509  1.32 TC=0,0 
+V_V2         N00538 0 50Vdc
+V_V3         N01203 0  
++PULSE 0V 15V 0.1us 1us 1us 50us 12.5ms
+R_R3         N01203 N01199  5 TC=0,0 
+R_R4         N01262 N01258  11.7 TC=0,0 
+Z_Z1         N01258 N01199 0 IRG4PH50S     
+V_V4         N01262 0 480Vdc
+D_D1         N01258 N01262 MUR160 
