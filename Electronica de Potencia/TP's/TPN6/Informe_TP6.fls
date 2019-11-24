@@ -140,6 +140,7 @@ INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+INPUT /usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
