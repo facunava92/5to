@@ -1,0 +1,6 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1} Descripci\IeC {\'o}n del circuito}{2}{section.1}% 
+\contentsline {section}{\numberline {2}Objetivos}{2}{section.2}% 
+\contentsline {section}{\numberline {3}Introducci\IeC {\'o}n}{3}{section.3}% 
+\contentsline {section}{\numberline {4}Simulaci\IeC {\'o}n}{5}{section.4}% 
+\contentsline {section}{\numberline {5}Conclusi\IeC {\'o}n}{9}{section.5}% 
