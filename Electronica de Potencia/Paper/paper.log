@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.17)  15 NOV 2019 15:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.12.10)  26 DEC 2019 10:31
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **paper.tex
 (./paper.tex
-LaTeX2e <2018-12-01>
-
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+LaTeX2e <2019-10-01> patch level 1
+(/usr/share/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -17,9 +17,8 @@ Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 \@IEEEtrantmpcountB=\count81
 \@IEEEtrantmpcountC=\count82
 \@IEEEtrantmptoksA=\toks14
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
-
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 503.
+(/usr/share/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -- Using 8.5in x 11in (letter) paper.
@@ -33,52 +32,42 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-
 \IEEEquantizedlength=\dimen109
 \IEEEquantizedlengthdiff=\dimen110
 \IEEEquantizedtextheightdiff=\dimen111
@@ -113,27 +102,21 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \IEEEPARstartletwidth=\dimen125
 \c@IEEEbiography=\count94
 \@IEEEtranrubishbin=\box28
-) (d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
+) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
-)
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2019/06/03 3.32 The Babel package
-
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2019/06/03 3.32 Babel switching mechanism
-)
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/babel-spanish/spani
-sh.ldf
+) (/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2019/10/15 3.35 The Babel package
+ (/usr/share/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2019/10/15 3.35 Babel switching mechanism
+) (/usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
 Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
-
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2019/06/03 3.32 Babel common definitions
+ (/usr/share/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2019/10/15 3.35 Babel common definitions
 \babel@savecnt=\count95
 \U@D=\dimen126
-
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/babel/txtbabel.def)
+ (/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@dirlevel=\count96
 )
 \es@quottoks=\toks17
@@ -142,47 +125,44 @@ Package babel Info: Making " an active character on input line 561.
 Package babel Info: Making . an active character on input line 662.
 Package babel Info: Making < an active character on input line 707.
 Package babel Info: Making > an active character on input line 707.
-))
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/multirow/multirow.sty
+)) (/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip44
 \multirow@cntb=\count98
 \multirow@dima=\skip45
 \bigstrutjot=\dimen127
-) (d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2018/12/01 v2.17b AMS math features
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2019/04/01 v2.17c AMS math features
 \@mathmargin=\skip46
-For additional information on amsmath, use the `?' option.
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
 
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
 \ex@=\dimen128
-))
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen129
-)
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count99
-LaTeX Info: Redefining \frac on input line 223.
+LaTeX Info: Redefining \frac on input line 227.
 \uproot@=\count100
 \leftroot@=\count101
-LaTeX Info: Redefining \overline on input line 385.
+LaTeX Info: Redefining \overline on input line 389.
 \classnum@=\count102
 \DOTSCASE@=\count103
-LaTeX Info: Redefining \ldots on input line 482.
-LaTeX Info: Redefining \dots on input line 485.
-LaTeX Info: Redefining \cdots on input line 606.
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
 \Mathstrutbox@=\box29
 \strutbox@=\box30
 \big@size=\dimen130
-LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \macc@depth=\count104
 \c@MaxMatrixCols=\count105
 \dotsspace@=\muskip10
@@ -203,20 +183,17 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \multlinegap=\skip47
 \multlinetaggap=\skip48
 \mathdisplay@stack=\toks22
-LaTeX Info: Redefining \[ on input line 2844.
-LaTeX Info: Redefining \] on input line 2845.
-)
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/float/float.sty
+LaTeX Info: Redefining \[ on input line 2855.
+LaTeX Info: Redefining \] on input line 2856.
+) (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count111
 \float@exts=\toks23
 \float@box=\box31
 \@float@everytoks=\toks24
 \@floatcapt=\box32
-)
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
-s
+) (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
 \f@nch@headwidth=\skip49
 \f@nch@O@elh=\skip50
 \f@nch@O@erh=\skip51
@@ -226,33 +203,27 @@ s
 \f@nch@O@erf=\skip55
 \f@nch@O@olf=\skip56
 \f@nch@O@orf=\skip57
-)
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+ (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks25
-)
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+) (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/10/08 v1.3c Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics
-.cfg
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
-
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.d
-ef
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen137
 \Gin@req@width=\dimen138
 ) (./paper.aux
-LaTeX Info: Redefining \. on input line 9.
-LaTeX Info: Redefining \% on input line 9.
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
 
 
 LaTeX Warning: Label `IEEEhowto:kopka' multiply defined.
@@ -297,9 +268,7 @@ LaTeX Font Info:    ... okay on input line 25.
 -- Lines per column: 56 (exact).
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
-
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.
-mkii
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count112
 \scratchdimen=\dimen139
@@ -312,49 +281,28 @@ mkii
 \MPnumerator=\count116
 \makeMPintoPDFobject=\count117
 \everyMPtoPDFconversion=\toks27
-)
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-bas
-e.sty
+) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/oberdiek/infwarerr.
-sty
+ (/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
+) (/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/oberdiek/kvdefineke
-ys.sty
+ (/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.st
-y
+ (/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.st
-y
+))) (/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/oberdiek/kvsetkeys.
-sty
+ (/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/oberdiek/etexcmds.s
-ty
+ (/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.s
-ty
+ (/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-))))
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/oberdiek/pdftexcmds
-.sty
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+)))) (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -362,17 +310,12 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-
-(d:/Program Files (x86)/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-
-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 LaTeX Font Info:    Calculating math sizes for size <11> on input line 34.
 
@@ -382,8 +325,7 @@ Underfull \hbox (badness 2818) in paragraph at lines 36--38
 
 
 Underfull \hbox (badness 5548) in paragraph at lines 36--38
-\OT1/ptm/b/n/9 (In-su-la-ted Ga-te Bi-po-lar Tran-sis-tor) son dis-po-si-ti-vos
- de
+\OT1/ptm/b/n/9 (In-su-la-ted Ga-te Bi-po-lar Tran-sis-tor) son dis-po-si-ti-vos de
  []
 
 
@@ -396,8 +338,7 @@ File: imagenes/sc1.png Graphic file (type png)
 <use imagenes/sc1.png>
 Package pdftex.def Info: imagenes/sc1.png  used on input line 69.
 (pdftex.def)             Requested size: 252.0pt x 215.84413pt.
-[1{d:/Program Files (x86)/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex
-.map}
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
  <./imagenes/sc1.png>]
@@ -445,8 +386,7 @@ File: imagenes/ic_igbt.png Graphic file (type png)
 <use imagenes/ic_igbt.png>
 Package pdftex.def Info: imagenes/ic_igbt.png  used on input line 174.
 (pdftex.def)             Requested size: 252.0pt x 99.3487pt.
- [3 <./imagenes/id_mosfet.png> <./imagenes/vds_mosfet.png> <./imagenes/vgs_mosf
-et.png> <./imagenes/vds_vgs_mosfet.png> <./imagenes/circuit_igbt.png>]
+ [3 <./imagenes/id_mosfet.png> <./imagenes/vds_mosfet.png> <./imagenes/vgs_mosfet.png> <./imagenes/vds_vgs_mosfet.png> <./imagenes/circuit_igbt.png>]
 <imagenes/vge_igbt.png, id=41, 1020.81375pt x 402.75468pt>
 File: imagenes/vge_igbt.png Graphic file (type png)
 <use imagenes/vge_igbt.png>
@@ -470,8 +410,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
-[4 <./imagenes/ic_igbt.png> <./imagenes/vge_igbt.png> <./imagenes/vce_igbt.png>
- <./imagenes/SOA.png>]
+[4 <./imagenes/ic_igbt.png> <./imagenes/vge_igbt.png> <./imagenes/vce_igbt.png> <./imagenes/SOA.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
@@ -493,8 +432,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 242--243
 
 
 Underfull \hbox (badness 1742) in paragraph at lines 245--246
-[]\OT1/ptm/m/n/8 Ensure Your Sys-tem Ro-bust-ness by Choo-sing Hard Com-mu-ta-t
-ion
+[]\OT1/ptm/m/n/8 Ensure Your Sys-tem Ro-bust-ness by Choo-sing Hard Com-mu-ta-tion
  []
 
 
@@ -514,8 +452,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 251--252
 
 
 Underfull \hbox (badness 4832) in paragraph at lines 255--256
-[]\OT1/ptm/m/n/8 Tech no-tes & Da-ta sheets On Li-ne, In-ter-na-tio-nal Rec-ti-
-fie-rInc,
+[]\OT1/ptm/m/n/8 Tech no-tes & Da-ta sheets On Li-ne, In-ter-na-tio-nal Rec-ti-fie-rInc,
  []
 
 
@@ -535,20 +472,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 261--263
 
 
 Underfull \hbox (badness 5189) in paragraph at lines 273--274
-[]\OT1/ptm/b/n/10 Facundo Emi-lio Na-va-rro\OT1/ptm/m/n/10 , Na-ci-do en Neu-qu
-[]en el
+[]\OT1/ptm/b/n/10 Facundo Emi-lio Na-va-rro\OT1/ptm/m/n/10 , Na-ci-do en Neu-qu[]en el
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 273--274
-\OT1/ptm/m/n/10 04/06/1992. Es-tu-dian-te de In-ge-nier[]^^Pa en Electr[]oni-ca
-,
+\OT1/ptm/m/n/10 04/06/1992. Es-tu-dian-te de In-ge-nier[]^^Pa en Electr[]oni-ca,
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 273--274
-\OT1/ptm/m/n/10 Uni-ver-si-dad Tec-nol[]ogi-ca Na-cio-nal, Fa-cul-tad Re-gio-na
-l
+\OT1/ptm/m/n/10 Uni-ver-si-dad Tec-nol[]ogi-ca Na-cio-nal, Fa-cul-tad Re-gio-nal
  []
 
 
@@ -568,36 +502,23 @@ Before submitting the final camera ready copy, remember to:
  process uses the appropriate paper size.
 
 [5] (./paper.aux
-LaTeX Info: Redefining \. on input line 9.
-LaTeX Info: Redefining \% on input line 9.
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
 )
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4173 strings out of 492609
- 63523 string characters out of 6123310
- 151789 words of memory out of 5000000
- 8026 multiletter control sequences out of 15000+600000
+ 4284 strings out of 492167
+ 63286 string characters out of 6131557
+ 154775 words of memory out of 5000000
+ 8579 multiletter control sequences out of 15000+600000
  41185 words of font info for 82 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,13n,43p,879b,359s stack positions out of 5000i,500n,10000p,200000b,80000s
-{d:/Program Files (x86)/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}<
-d:/Program Files (x86)/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi10.pfb><d:/Program Files (x86)/texlive/2019/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi5.pfb><d:/Program Files (x86)/texlive/2019/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi6.pfb><d:/Program Files (x86)/texlive/2019/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi7.pfb><d:/Program Files (x86)/texlive/2019/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Program Files (x86)/texli
-ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><d:/Program Files (x
-86)/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Progr
-am Files (x86)/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/Pro
-gram Files (x86)/texlive/2019/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/
-Program Files (x86)/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d
-:/Program Files (x86)/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
->
-Output written on paper.pdf (5 pages, 512505 bytes).
+ 46i,13n,45p,879b,361s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (5 pages, 512308 bytes).
 PDF statistics:
  90 PDF objects out of 1000 (max. 8388607)
  47 compressed objects within 1 object stream
